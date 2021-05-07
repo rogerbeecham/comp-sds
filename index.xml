@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Course materials | Visualization for Geographic Data Science</title>
+    <title>Course materials | Computational Methods for Social Data Science</title>
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Course materials</description>
@@ -8235,7 +8235,7 @@ Figure 5: Creating an RStudio Project
 
         &lt;ul class=&#34;icon-list&#34;&gt;
             &lt;li&gt;&lt;i class=&#34;far fa-calendar&#34;&gt;&lt;/i&gt; ODL&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;far fa-calendar-alt&#34;&gt;&lt;/i&gt; 24th May - 30th Jul&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;far fa-calendar-alt&#34;&gt;&lt;/i&gt; 9th Aug - 21st Aug&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;far fa-clock&#34;&gt;&lt;/i&gt; ODL&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; ODL&lt;/li&gt;
             
@@ -8245,7 +8245,7 @@ Figure 5: Creating an RStudio Project
     &lt;div class=&#34;col-md-4 contact-policy&#34;&gt;
         &lt;h3&gt;Contacting me&lt;/h3&gt;
 
-        &lt;p&gt;Questions to do with the substantive aspects of the module should be directed to the #general channel of the course Slack in the first instance. For matters such as absences, extensions, email me: &lt;a href=&#34;mailto:r.j.beecham@leeds.ac.uk&#34;&gt;r.j.beecham@leeds.ac.uk&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;Questions to do with the substantive aspects of the course should be directed to the #general channel of the course Slack in the first instance. For matters such as absences, extensions, email me: &lt;a href=&#34;mailto:r.j.beecham@leeds.ac.uk&#34;&gt;r.j.beecham@leeds.ac.uk&lt;/a&gt;.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
  --&gt;

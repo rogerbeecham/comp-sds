@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading for sessions | Visualization for Geographic Data Science</title>
+    <title>Reading for sessions | Computational Methods for Social Data Science</title>
     <link>/reading/</link>
       <atom:link href="/reading/index.xml" rel="self" type="application/rss+xml" />
     <description>Reading for sessions</description>
