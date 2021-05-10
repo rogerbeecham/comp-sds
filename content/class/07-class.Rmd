@@ -83,15 +83,15 @@ A common approach to treating geographic *dependence* in the **values** of varia
 
 A dummy variable is created for each group (region in our case), and every region receives a constant; you can think of this as a separate intercept for its regression line.  Any group-level sources of variation in the outcome are collapsed into the FE variable, which means that regression coefficients are not complicated by this more messy variation -- they now capture the association between demographics and Leave after adjusting for systematic differences in the Leave vote due to region. So, for example, we know that Scotland is politically different from the rest of GB and that this appears to drag down the observed Leave vote for its constituencies, and so the constant term on region adjusts for this and prevents the estimated regression coefficients (inferred associations between variables) from being affected. The constant term  also allows you to estimate the 'base level' of the outcome for each grouping variable -- e.g. net of demographic composition, the expected Leave vote in a particular region.
 
-The linear regression model introduced last week can be easily extended with the FE term ($\textcolor{highlight}{\gamma_{j}}$). For a single variable model:
+The linear regression model introduced last week can be easily extended with the FE term ($\color{#003c8f}{\gamma_{j}}$). For a single variable model:
 
 \begin{align*}
-       y_{i}&= \textcolor{highlight}{\gamma_{j}}  + \beta_{1}x_{i1} + \varepsilon_{i}  \\
+       y_{i}&= \color{#003c8f}{\gamma_{j}}  + \beta_{1}x_{i1} + \varepsilon_{i}  \\
 \end{align*}
 
 So we now estimate the Leave vote in each constituency ($y_{i}$) as a function of:
 
-* $\textcolor{highlight}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
+* $\color{#003c8f}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
 * $\beta_{1}=\beta_{1}x_{i1}$, the slope, indicating in which direction and to what extent some explanatory variable measured at constituency $i$ is associated with Leave,  $+$
 * $\varepsilon_{i}$, the difference between $y_{i}$ (the observed value) at constituency $i$ and the *unobservable* true population value of the Leave vote in that constituency (statistical error)
 
@@ -130,14 +130,14 @@ include_graphics("/class/07-class_files/plot-outputs-fe.png", error = FALSE)
 
 The benefit of the FE adjustment is that it provides coefficient estimates that are not affected by between-region variation. The derived FE constants themselves also allow group differences to be quantified net of differences in demographics. However, they simply identify the fact that this variation exists -- they do not permit non-stationarity in *process*. It is conceivable that the strength and direction of association between Leave and the candidate demographic variables may vary between regions. For example, that increased levels of *EU-born* (non-UK) residents might affect area-level voting differently in certain regions than others.
 
-Rather than simply allowing a constant term to vary, we can update the linear regression model with an [interaction term](https://en.wikipedia.org/wiki/Interaction_(statistics)) ($\textcolor{highlight}{\beta_{1j}}{x_{i1}}$) that allows the coefficient estimates to vary depending on region. This means we get a separate constant term and coefficient estimate of the effect of each variable on Leave for every region -- it provides a framework for exploring regionally-distinct effects.
+Rather than simply allowing a constant term to vary, we can update the linear regression model with an [interaction term](https://en.wikipedia.org/wiki/Interaction_(statistics)) ($\color{#003c8f}{\beta_{1j}}{x_{i1}}$) that allows the coefficient estimates to vary depending on region. This means we get a separate constant term and coefficient estimate of the effect of each variable on Leave for every region -- it provides a framework for exploring regionally-distinct effects.
 
 \begin{align*}
-       y_{i}&= \textcolor{highlight}{\gamma_{j}}  + \textcolor{highlight}{\beta_{1j}}x_{i1} + \varepsilon_{i}  \\
+       y_{i}&= \color{#003c8f}{\gamma_{j}}  + \color{#003c8f}{\beta_{1j}}x_{i1} + \varepsilon_{i}  \\
 \end{align*}
 
-* $\textcolor{highlight}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
-* $\textcolor{highlight}{\beta_{1j}}x_{i1}$, the region-specific slope, indicating in which direction and to what extent some demographic variable at constituency $i$ and in region $j$ is associated with Leave,  $+$
+* $\color{#003c8f}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
+* $\color{#003c8f}{\beta_{1j}}x_{i1}$, the region-specific slope, indicating in which direction and to what extent some demographic variable at constituency $i$ and in region $j$ is associated with Leave,  $+$
 * $\varepsilon_{i}$, the difference between $y_{i}$ (the observed value) at constituency $i$ and the *unobservable* true 'population' value of the Leave vote in that constituency (statistical error)
 
 

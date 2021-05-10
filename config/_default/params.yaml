@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "Geographic Data Science and Visualization with R and ggplot"
+description: "Course teaching Computational Methods and Visualization for Social Data Science"
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -74,7 +74,7 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/rogerbeecham/vis-for-gds/'
+  repo_url: 'https://github.com/rogerbeecham/comp-sds/'
   content_dir: ''
   repo_branch: main
   editable:
@@ -97,27 +97,27 @@ instructor:
   url: "http://www.roger-beecham.com/"
   twitter: rjbeecham
   github: rogerbeecham
-  office: "10.139 Manton Building"
+  office: "ODL"
   contact_policy: >-
-   Questions to do with the substantive aspects of the module should be directed to the &#35;general channel of the course Slack in the first instance. For matters such as absences, extensions, email me: r.j.beecham@leeds.ac.uk.
+   Questions to do with the substantive aspects of the course should be directed to the &#35;general channel of the course Slack in the first instance. For matters such as absences, extensions, email me: r.j.beecham@leeds.ac.uk.
 
 course:
-  number: "GEOG5009M"
-  semester: "Spring/Summer 2021"
-  days: "ODL"
-  time: "ODL"
+  number: "ESS 2021 | 3D"
+  semester: "August 2021"
+  days: "Mon - Fri"
+  time: "1000 - 1330 BST"
   location: "ODL"
-  dates: "24th May - 30th Jul"
-  github: "rogerbeecham/vis-for-gds"
+  dates: "9th Aug - 21st Aug"
+  github: "rogerbeecham/comp-sds"
   copyrightYear: "2021"
 
 university:
-  name: University of Leeds
-  url: "https://www.leeds.ac.uk/"
+  name: Essex Summer School
+  url: "https://essexsummerschool.com/"
 
 school:
-  name: School of Geography
-  url: "https://environment.leeds.ac.uk/geography"
+  name: Essex Summer School
+  url: "https://essexsummerschool.com/"
 
 
 ############################

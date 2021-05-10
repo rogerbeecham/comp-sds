@@ -1,6 +1,6 @@
-baseurl: "http://www.roger-beecham.com/vis-for-gds/"
+baseurl: "http://www.roger-beecham.com/comp-sds/"
 defaultContentLanguage: "en-uk"
-title: "Visualization for Geographic Data Science"
+title: "Computational Methods for Social Data Science"
 theme: hugo-academic/wowchemy
 canonifyURLs: true
 relativeURLs: true

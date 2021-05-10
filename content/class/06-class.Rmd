@@ -130,17 +130,17 @@ include_graphics("/class/06-class_files/scatters.png", error = FALSE)
 
 Linear regression provides a framework for explicitly describing these linear associations. The ultimate objective is to quantify how much of the variation in an outcome variable, summarised in Figure \@ref(fig:map-uniform), can be explained using information on other variables, the candidate demographic variables in Figure \@ref(fig:scatters).
 
-To express this in equation form, we can update the uniform model such that Leave vote is a *function* of the candidate explanatory variables. For single-variable linear regression,  we could update with the proportion of residents educated at least to *degree-level* ($\textcolor{highlight}{d_{i1}}$):
+To express this in equation form, we can update the uniform model such that Leave vote is a *function* of the candidate explanatory variables. For single-variable linear regression,  we could update with the proportion of residents educated at least to *degree-level* ($\color{#003c8f}{d_{i1}}$):
 
 \begin{align*}
-       y_{i}&= \beta_{0} + \beta_{1}\textcolor{highlight}{d_{i1}} + \varepsilon_{i}  \\
+       y_{i}&= \beta_{0} + \beta_{1}\color{#003c8f}{d_{i1}} + \varepsilon_{i}  \\
 \end{align*}
 
 
 So we now estimate the Leave vote in each constituency ($y_{i}$) as a function of:
 
 * $\beta_{0}$, the intercept, the GB average vote share ($\bar{y}$) $+$
-* $\beta_{1}=\beta_{1}\textcolor{highlight}{d_{i1}}$, the slope, indicating in which direction and to what extent *degree-educated* is associated with Leave,  $+$
+* $\beta_{1}=\beta_{1}\color{#003c8f}{d_{i1}}$, the slope, indicating in which direction and to what extent *degree-educated* is associated with Leave,  $+$
 * $\varepsilon_{i}$, the difference between $y_{i}$ (the observed value) and the *unobservable* true 'population' value of the Leave vote in that constituency (statistical error)
 
 There are different algorithms that can be used to estimate these parameters. Most obvious is ordinary least squares (OLS), which aims to minimise $\sum{\hat{\varepsilon}_{i...n}}$, the sum of the (squared) residuals between the observed Leave vote in a constituency, $y_{i}$, and that expected, $\hat{y_{i}}$, given the association with the *degree-educated* explanatory variable $d_{i1}$.

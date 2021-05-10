@@ -4,7 +4,7 @@
 # git submodule add  https://github.com/gcushen/hugo-academic.git themes/hugo-academic
 # cd ./themes/hugo-academic
 # git checkout 6f36c16
-
+# 64b7d51
 
 
 echo "Deleting old public"

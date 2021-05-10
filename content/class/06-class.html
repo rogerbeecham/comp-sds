@@ -215,14 +215,14 @@ Figure 5: Scatterplots of synthetic bivariate data with extent of correlation co
 <div id="modelling-for-co-variation" class="section level3">
 <h3>Modelling for co-variation</h3>
 <p>Linear regression provides a framework for explicitly describing these linear associations. The ultimate objective is to quantify how much of the variation in an outcome variable, summarised in Figure <a href="#fig:map-uniform">1</a>, can be explained using information on other variables, the candidate demographic variables in Figure <a href="#fig:scatters">4</a>.</p>
-<p>To express this in equation form, we can update the uniform model such that Leave vote is a <em>function</em> of the candidate explanatory variables. For single-variable linear regression, we could update with the proportion of residents educated at least to <em>degree-level</em> (<span class="math inline">\(\textcolor{highlight}{d_{i1}}\)</span>):</p>
+<p>To express this in equation form, we can update the uniform model such that Leave vote is a <em>function</em> of the candidate explanatory variables. For single-variable linear regression, we could update with the proportion of residents educated at least to <em>degree-level</em> (<span class="math inline">\(\color{#003c8f}{d_{i1}}\)</span>):</p>
 <p><span class="math display">\[\begin{align*}
-       y_{i}&amp;= \beta_{0} + \beta_{1}\textcolor{highlight}{d_{i1}} + \varepsilon_{i}  \\
+       y_{i}&amp;= \beta_{0} + \beta_{1}\color{#003c8f}{d_{i1}} + \varepsilon_{i}  \\
 \end{align*}\]</span></p>
 <p>So we now estimate the Leave vote in each constituency (<span class="math inline">\(y_{i}\)</span>) as a function of:</p>
 <ul>
 <li><span class="math inline">\(\beta_{0}\)</span>, the intercept, the GB average vote share (<span class="math inline">\(\bar{y}\)</span>) <span class="math inline">\(+\)</span></li>
-<li><span class="math inline">\(\beta_{1}=\beta_{1}\textcolor{highlight}{d_{i1}}\)</span>, the slope, indicating in which direction and to what extent <em>degree-educated</em> is associated with Leave, <span class="math inline">\(+\)</span></li>
+<li><span class="math inline">\(\beta_{1}=\beta_{1}\color{#003c8f}{d_{i1}}\)</span>, the slope, indicating in which direction and to what extent <em>degree-educated</em> is associated with Leave, <span class="math inline">\(+\)</span></li>
 <li><span class="math inline">\(\varepsilon_{i}\)</span>, the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> true ‘population’ value of the Leave vote in that constituency (statistical error)</li>
 </ul>
 <p>There are different algorithms that can be used to estimate these parameters. Most obvious is ordinary least squares (OLS), which aims to minimise <span class="math inline">\(\sum{\hat{\varepsilon}_{i...n}}\)</span>, the sum of the (squared) residuals between the observed Leave vote in a constituency, <span class="math inline">\(y_{i}\)</span>, and that expected, <span class="math inline">\(\hat{y_{i}}\)</span>, given the association with the <em>degree-educated</em> explanatory variable <span class="math inline">\(d_{i1}\)</span>.</p>

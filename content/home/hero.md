@@ -5,7 +5,7 @@ headless: true
 active: true
 weight: 10
 
-title: "Visualization for Geographic Data Science"
+title: "Computational Methods for Social Data Science: Exploring Society through Visualization and Modelling"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media: vis-for-gds.png
@@ -20,7 +20,7 @@ design:
     text_color_light: false
 
 cta_note:
-  label: Summer 2021<br>School of Geography<br>University of Leeds
+  label: August 2021<br>Essex Summer School
 ---
 
-**GEOG5009M**
+**ESS2021 3D**

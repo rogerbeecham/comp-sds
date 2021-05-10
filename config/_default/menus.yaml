@@ -18,7 +18,7 @@ main:
     url: /useful/
     weight: 6
   - name: "<i class=\"fab fa-slack\"></i>"
-    url: https://vis-for-gds.slack.com
+    url: https://comp-sds.slack.com
     weight: 7
 
 reading:

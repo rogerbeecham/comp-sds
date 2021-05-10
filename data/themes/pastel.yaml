@@ -8,15 +8,15 @@ light: true
 primary: "#424242"
 
 # Links
-link: "#003c8f"
-link_hover: "#1565c0"
+link: "#8e0000"
+link_hover: "#c62828"
 
 # Menu
 menu_primary: "#fff"
-menu_text: "#003c8f"
-menu_text_active: "#1565c0"
-menu_title: "#003c8f"
+menu_text: "#8e0000"
+menu_text_active: "#c62828"
+menu_title: "#8e0000"
 
 # Home sections
-home_section_odd: "rgb(255, 255, 255)"
-home_section_even: "rgb(247, 247, 247)"
+home_section_odd: "#FFFFFF"
+home_section_even: "#F7F7F7"
