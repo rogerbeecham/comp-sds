@@ -4,15 +4,19 @@
       xmlns:fb="https://www.facebook.com/2008/fbml">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   
   
-    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo">
   
 
+  
+
+  
   
 
   
@@ -34,39 +38,39 @@
     
   
   <meta name="description" content="Contents  Introduction Concepts Geographic dependency and non-stationarity Representing geographic context Geographic context as grouped nuisance term Geographic context as grouped effects Addressing estimate volatility Geographic context as continuous effects  Techniques Import Model FE Model Interaction Plot tidy models  Conclusions References   By the end of this session you should gain the following knowledge:
-  Understand two categories of geographic effect in regression modelling: geographical dependence in values and non-stationarity in processes." />
+  Understand two categories of geographic effect in regression modelling: geographical dependence in values and non-stationarity in processes.">
 
   
-  <link rel="alternate" hreflang="en-us" href="../../class/07-class/" />
-
-  
-
-
-
-
-
-
+  <link rel="alternate" hreflang="en-us" href="../../class/07-class/">
 
   
 
 
 
 
+
+
+
+  
+
+
+
+
   
   
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
 
   
   
   
-    <meta name="theme-color" content="#424242" />
+  <meta name="theme-color" content="#424242">
   
 
   
   
-    
-    <script src="../../js/mathjax-config.js"></script>
+  
+  <script src="../../js/mathjax-config.js"></script>
   
 
   
@@ -76,9 +80,7 @@
     
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
-
-    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
     
     
@@ -96,14 +98,11 @@
     
 
     
-    
-    
 
     
 
     
     
-      
       
 
       
@@ -112,6 +111,12 @@
       
     
       
+
+      
+      
+
+      
+    
       
 
       
@@ -120,6 +125,12 @@
       
     
       
+
+      
+      
+
+      
+    
       
 
       
@@ -128,6 +139,12 @@
       
     
       
+
+      
+      
+
+      
+    
       
 
       
@@ -136,6 +153,12 @@
       
     
       
+
+      
+      
+
+      
+    
       
 
       
@@ -144,6 +167,12 @@
       
     
       
+
+      
+      
+
+      
+    
       
 
       
@@ -152,6 +181,14 @@
       
     
       
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
       
 
       
@@ -160,54 +197,12 @@
       
     
       
-      
 
       
       
 
       
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
       
 
       
@@ -218,7 +213,6 @@
       
     
       
-      
 
       
       
@@ -226,13 +220,13 @@
       
     
       
-      
 
       
       
 
       
     
+
   
 
   
@@ -251,15 +245,7 @@
   
   
   
-  <link rel="stylesheet" href="../../css/wowchemy.23dbb61e2319b79f78f1b0ccda23af56.css" />
-
-  
-
-
-
-  
-
-  
+  <link rel="stylesheet" href="../../css/wowchemy.47aca16f239751b8ef4bfc0ddfcec7bc.css">
 
   
 
@@ -267,21 +253,24 @@
 
 
   
+
+  
+
+
   
   
 
   
 
   
-    <link rel="manifest" href="../../index.webmanifest" />
+  <link rel="manifest" href="../../index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="../../media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
-  <link rel="apple-touch-icon" type="image/png" href="../../media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="../../class/07-class/" />
+  <link rel="canonical" href="../../class/07-class/">
 
-  
   
   
   
@@ -290,26 +279,22 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image">
   
-    <meta property="twitter:site" content="@rjbeecham" />
-    <meta property="twitter:creator" content="@rjbeecham" />
+  <meta property="twitter:site" content="@rjbeecham">
+  <meta property="twitter:creator" content="@rjbeecham">
   
-  <meta property="og:site_name" content="Computational Methods for Social Data Science" />
-  <meta property="og:url" content="/class/07-class/" />
-  <meta property="og:title" content="Visualization for model building 2: Expose, estimate, evaluate | Computational Methods for Social Data Science" />
+  <meta property="og:site_name" content="Computational Methods for Social Data Science">
+  <meta property="og:url" content="/class/07-class/">
+  <meta property="og:title" content="Visualization for model building 2: Expose, estimate, evaluate | Computational Methods for Social Data Science">
   <meta property="og:description" content="Contents  Introduction Concepts Geographic dependency and non-stationarity Representing geographic context Geographic context as grouped nuisance term Geographic context as grouped effects Addressing estimate volatility Geographic context as continuous effects  Techniques Import Model FE Model Interaction Plot tidy models  Conclusions References   By the end of this session you should gain the following knowledge:
-  Understand two categories of geographic effect in regression modelling: geographical dependence in values and non-stationarity in processes." /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
+  Understand two categories of geographic effect in regression modelling: geographical dependence in values and non-stationarity in processes."><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta
-        property="article:published_time"
-        content="2021-07-05T00:00:00&#43;00:00"
-      />
+      <meta property="article:published_time" content="2021-07-05T00:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2021-05-07T17:24:30&#43;01:00">
   
@@ -320,7 +305,9 @@
 
   
 
+
   
+
 
   <link rel="shortcut icon" href="../../favicon.ico" />
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../img/apple-touch-icon-57x57.png" />
@@ -331,12 +318,13 @@
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../img/apple-touch-icon-152x152.png" />
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16" />
-  <meta name="application-name" content="ESS2021 3D: Computational Methods for Social Data Science" />
+  <meta name="application-name" content="ESS 2021 | 3D: Computational Methods for Social Data Science" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
   <title>Visualization for model building 2: Expose, estimate, evaluate | Computational Methods for Social Data Science</title>
+
 </head>
 
 
@@ -345,7 +333,6 @@
     >
 
     
-
 
 
 
@@ -373,7 +360,7 @@
 
     
     <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="">
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="">
     <span><i class="fas fa-bars"></i></span>
     </button>
     
@@ -622,7 +609,6 @@
       
 
       
-      
 
     </ul>
 
@@ -852,13 +838,13 @@ Figure 1: Map LineUp of residuals in which the ‘real’ dataset is presented a
 <h3>Geographic context as grouped nuisance term</h3>
 <p>A common approach to treating geographic <em>dependence</em> in the <strong>values</strong> of variables is to model geographic context as a Fixed Effect (FE).</p>
 <p>A dummy variable is created for each group (region in our case), and every region receives a constant; you can think of this as a separate intercept for its regression line. Any group-level sources of variation in the outcome are collapsed into the FE variable, which means that regression coefficients are not complicated by this more messy variation – they now capture the association between demographics and Leave after adjusting for systematic differences in the Leave vote due to region. So, for example, we know that Scotland is politically different from the rest of GB and that this appears to drag down the observed Leave vote for its constituencies, and so the constant term on region adjusts for this and prevents the estimated regression coefficients (inferred associations between variables) from being affected. The constant term also allows you to estimate the ‘base level’ of the outcome for each grouping variable – e.g. net of demographic composition, the expected Leave vote in a particular region.</p>
-<p>The linear regression model introduced last week can be easily extended with the FE term (<span class="math inline">\(\textcolor{highlight}{\gamma_{j}}\)</span>). For a single variable model:</p>
+<p>The linear regression model introduced last week can be easily extended with the FE term (<span class="math inline">\(\color{#003c8f}{\gamma_{j}}\)</span>). For a single variable model:</p>
 <p><span class="math display">\[\begin{align*}
-       y_{i}&amp;= \textcolor{highlight}{\gamma_{j}}  + \beta_{1}x_{i1} + \varepsilon_{i}  \\
+       y_{i}&amp;= \color{#003c8f}{\gamma_{j}}  + \beta_{1}x_{i1} + \varepsilon_{i}  \\
 \end{align*}\]</span></p>
 <p>So we now estimate the Leave vote in each constituency (<span class="math inline">\(y_{i}\)</span>) as a function of:</p>
 <ul>
-<li><span class="math inline">\(\textcolor{highlight}{\gamma_{j}}\)</span>, a constant term similar to an intercept for region <span class="math inline">\(j\)</span>, <span class="math inline">\(+\)</span></li>
+<li><span class="math inline">\(\color{#003c8f}{\gamma_{j}}\)</span>, a constant term similar to an intercept for region <span class="math inline">\(j\)</span>, <span class="math inline">\(+\)</span></li>
 <li><span class="math inline">\(\beta_{1}=\beta_{1}x_{i1}\)</span>, the slope, indicating in which direction and to what extent some explanatory variable measured at constituency <span class="math inline">\(i\)</span> is associated with Leave, <span class="math inline">\(+\)</span></li>
 <li><span class="math inline">\(\varepsilon_{i}\)</span>, the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) at constituency <span class="math inline">\(i\)</span> and the <em>unobservable</em> true population value of the Leave vote in that constituency (statistical error)</li>
 </ul>
@@ -892,13 +878,13 @@ Figure 3: Output from multiple regression model of Leave vote by demographic com
 <div id="geographic-context-as-grouped-effects" class="section level3">
 <h3>Geographic context as grouped effects</h3>
 <p>The benefit of the FE adjustment is that it provides coefficient estimates that are not affected by between-region variation. The derived FE constants themselves also allow group differences to be quantified net of differences in demographics. However, they simply identify the fact that this variation exists – they do not permit non-stationarity in <em>process</em>. It is conceivable that the strength and direction of association between Leave and the candidate demographic variables may vary between regions. For example, that increased levels of <em>EU-born</em> (non-UK) residents might affect area-level voting differently in certain regions than others.</p>
-<p>Rather than simply allowing a constant term to vary, we can update the linear regression model with an <a href="https://en.wikipedia.org/wiki/Interaction_(statistics)">interaction term</a> (<span class="math inline">\(\textcolor{highlight}{\beta_{1j}}{x_{i1}}\)</span>) that allows the coefficient estimates to vary depending on region. This means we get a separate constant term and coefficient estimate of the effect of each variable on Leave for every region – it provides a framework for exploring regionally-distinct effects.</p>
+<p>Rather than simply allowing a constant term to vary, we can update the linear regression model with an <a href="https://en.wikipedia.org/wiki/Interaction_(statistics)">interaction term</a> (<span class="math inline">\(\color{#003c8f}{\beta_{1j}}{x_{i1}}\)</span>) that allows the coefficient estimates to vary depending on region. This means we get a separate constant term and coefficient estimate of the effect of each variable on Leave for every region – it provides a framework for exploring regionally-distinct effects.</p>
 <p><span class="math display">\[\begin{align*}
-       y_{i}&amp;= \textcolor{highlight}{\gamma_{j}}  + \textcolor{highlight}{\beta_{1j}}x_{i1} + \varepsilon_{i}  \\
+       y_{i}&amp;= \color{#003c8f}{\gamma_{j}}  + \color{#003c8f}{\beta_{1j}}x_{i1} + \varepsilon_{i}  \\
 \end{align*}\]</span></p>
 <ul>
-<li><span class="math inline">\(\textcolor{highlight}{\gamma_{j}}\)</span>, a constant term similar to an intercept for region <span class="math inline">\(j\)</span>, <span class="math inline">\(+\)</span></li>
-<li><span class="math inline">\(\textcolor{highlight}{\beta_{1j}}x_{i1}\)</span>, the region-specific slope, indicating in which direction and to what extent some demographic variable at constituency <span class="math inline">\(i\)</span> and in region <span class="math inline">\(j\)</span> is associated with Leave, <span class="math inline">\(+\)</span></li>
+<li><span class="math inline">\(\color{#003c8f}{\gamma_{j}}\)</span>, a constant term similar to an intercept for region <span class="math inline">\(j\)</span>, <span class="math inline">\(+\)</span></li>
+<li><span class="math inline">\(\color{#003c8f}{\beta_{1j}}x_{i1}\)</span>, the region-specific slope, indicating in which direction and to what extent some demographic variable at constituency <span class="math inline">\(i\)</span> and in region <span class="math inline">\(j\)</span> is associated with Leave, <span class="math inline">\(+\)</span></li>
 <li><span class="math inline">\(\varepsilon_{i}\)</span>, the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) at constituency <span class="math inline">\(i\)</span> and the <em>unobservable</em> true ‘population’ value of the Leave vote in that constituency (statistical error)</li>
 </ul>
 <p>Figure <a href="#fig:scatters-interaction">4</a> is an updated set of scatterplots again annotated with ‘virtual’ regression lines, now with slopes that vary. Again the structure of these slopes is interesting:</p>
@@ -1153,10 +1139,10 @@ We can control for these unobserved factors by modelling Region as a fixed effec
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>ESS2021 3D: Computational Methods for Social Data Science (August 2021)</strong><br>
+                <strong>ESS 2021 | 3D: Computational Methods for Social Data Science (August 2021)</strong><br>
 
-                <a href="https://www.leeds.ac.uk/" target="_blank" rel="noopener">University of Leeds</a> &emsp;&emsp;
-                <a href="https://environment.leeds.ac.uk/geography" target="_blank" rel="noopener">School of Geography</a>
+                <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a> &emsp;&emsp;
+                <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a>
             </p>
 
             <p>
@@ -1167,8 +1153,8 @@ We can control for these unobserved factors by modelling Region as a fixed effec
             </p>
 
             <p>
-                <i class="far fa-calendar-alt"></i> ODL &emsp;&emsp;
-                <i class="far fa-clock"></i> ODL <br>
+                <i class="far fa-calendar-alt"></i> Mon - Fri &emsp;&emsp;
+                <i class="far fa-clock"></i> 1000 - 1330 BST <br>
                 <i class="fas fa-university"></i> ODL
             </p>
         </div>
@@ -1194,7 +1180,6 @@ We can control for these unobserved factors by modelling Region as a fixed effec
     
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
       
       
@@ -1202,8 +1187,8 @@ We can control for these unobserved factors by modelling Region as a fixed effec
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       
 
-      
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
       
 
@@ -1219,7 +1204,6 @@ We can control for these unobserved factors by modelling Region as a fixed effec
 
     
     
-    
 
     
     
@@ -1230,6 +1214,21 @@ We can control for these unobserved factors by modelling Region as a fixed effec
     
 
     
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
     
     
 
@@ -1240,13 +1239,6 @@ We can control for these unobserved factors by modelling Region as a fixed effec
     
     
     
-
-    
-    <script src="../../js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
-
-    
-    
-
     
     
     
@@ -1254,9 +1246,7 @@ We can control for these unobserved factors by modelling Region as a fixed effec
     
     
     
-    
-    
-    <script src="../../en-uk/js/wowchemy.min.f34c3a19502383149a3d95cd2ea80466.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
 
     
 
