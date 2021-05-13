@@ -15,7 +15,7 @@
     <item>
       <title>Communication and storytelling</title>
       <link>/homework/09-homework/</link>
-      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/09-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -34,7 +34,7 @@
     <item>
       <title>Uncertainty analysis</title>
       <link>/homework/08-homework/</link>
-      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/08-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -53,7 +53,7 @@
     <item>
       <title>Model building 2</title>
       <link>/homework/07-homework/</link>
-      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/07-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -72,7 +72,7 @@
     <item>
       <title>Model building 1</title>
       <link>/homework/06-homework/</link>
-      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/06-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -188,7 +188,7 @@ expl_cors_order
     <item>
       <title>Exploring spatial networks</title>
       <link>/homework/05-homework/</link>
-      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/05-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -294,7 +294,7 @@ Figure 1: OD map of commutes between London boroughs
     <item>
       <title>Exploratory data analysis</title>
       <link>/homework/04-homework/</link>
-      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/04-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -415,7 +415,7 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
     <item>
       <title>Visualization fundamentals</title>
       <link>/homework/03-homework/</link>
-      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/03-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -588,7 +588,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
     <item>
       <title>Data fundamentals</title>
       <link>/homework/02-homework/</link>
-      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/02-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -816,7 +816,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
     <item>
       <title>Introduction</title>
       <link>/homework/01-homework/</link>
-      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/homework/01-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -852,8 +852,8 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;For most sessions I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them as they will form a portfolio of work that will contribute 30% of the module mark. Doing these exercises will also help you build the skills necessary to complete the project coursework that forms the main contribution to your module mark (70%).&lt;/p&gt;
-&lt;p&gt;There has been a lot to take in this session. There are no formal exercises to complete as part of this session’s homework. Instead we want you to really try to solidify your understanding of the core technology for the module.&lt;/p&gt;
+&lt;p&gt;For most sessions I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them.&lt;/p&gt;
+&lt;p&gt;There has been a lot to take in this session. There are no formal exercises to complete as part of this session’s homework. Instead we want you to really try to solidify your understanding of the core technology for the course.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-read-and-complete-basicbasics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/h2&gt;

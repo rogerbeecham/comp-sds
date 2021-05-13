@@ -294,7 +294,7 @@
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-05-31T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-08-10T00:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2021-05-07T17:24:30&#43;01:00">
   
@@ -687,32 +687,32 @@
 
       
       <li >
-        <a href="../../class/04-class/">4: Visualization for exploratory data analysis</a>
+        <a href="../../class/04-class/">4: Exploratory data analysis</a>
       </li>
 
       
       <li >
-        <a href="../../class/05-class/">5: Visualization for exploring spatial networks</a>
+        <a href="../../class/05-class/">5: Exploring spatial networks</a>
       </li>
 
       
       <li >
-        <a href="../../class/06-class/">6: Visualization for model building 1</a>
+        <a href="../../class/06-class/">6: Model building 1</a>
       </li>
 
       
       <li >
-        <a href="../../class/07-class/">7: Visualization for model building 2</a>
+        <a href="../../class/07-class/">7: Model building 2</a>
       </li>
 
       
       <li >
-        <a href="../../class/08-class/">8: Visualization for uncertainty analysis</a>
+        <a href="../../class/08-class/">8: Uncertainty analysis</a>
       </li>
 
       
       <li >
-        <a href="../../class/09-class/">9: Visualization for communication and storytelling</a>
+        <a href="../../class/09-class/">9: Communication and storytelling</a>
       </li>
 
       
@@ -741,7 +741,7 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Monday, May 31, 2021
+                        Materials from class on Tuesday, August 10, 2021
                     </div>
                     
 
@@ -805,7 +805,7 @@
 </div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by <code>tidyverse</code>), where it is common apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in <a href="../../class/01-class/">session 1</a> that Geographic Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.</p>
+<p>This session covers some of the basics around how to describe and organise data. Whilst this might sound prosaic, there are several reasons why being able to consistently describe a dataset is important. First: it is the initial step in any analysis and helps delimit the research themes and technical procedures that can be deployed. This is especially relevant to modern Data Science-type workflows (like those supported by <code>tidyverse</code>), where it is common apply the same analysis templates for working over data. Describing your dataset with a consistent vocabulary enables you to identify which analysis templates to reuse. Second relates to the point in <a href="../../class/01-class/">session 1</a> that Social Data Science projects usually involve repurposing datasets for social science research for the first time. It is often not obvious whether the data contain sufficient detail and structure to characterise the target behaviours to be researched and the target populations they are assumed to represent. This leads to additional levels of uncertainty and places greater importance on the initial step of data processing, description and exploration.</p>
 <p><!-- Data will be "messy", with missing observations, potentially inconsistent structure and levels of precision.
 Paying attention to   --></p>
 <p>Through the session we will learn both language and concepts for describing and thinking about data, but also how to deploy some of the most important data processing and organisation techniques in <code>R</code> to wrangle over a real dataset. We will be working throughout with data from New York’s <a href="https://www.citibikenyc.com/">Citibike</a> scheme, accessed through the <code>bikedata</code> package, an API to Citibike’s <a href="https://www.citibikenyc.com/system-data">publicly available origin-destination trip data</a>.</p>
@@ -820,7 +820,7 @@ Paying attention to   --></p>
 <h2>Concepts</h2>
 <div id="data-structure" class="section level3">
 <h3>Data structure</h3>
-<p>In the module we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables, that is, where they may violate this equal-length requirement, the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, something we’ll return to later in the module.</p>
+<p>In the course we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables, that is, where they may violate this equal-length requirement, the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, something we’ll return to later in the course.</p>
 <p>Organising data according this simple structure – rows as observations, columns as variables – makes working with data more straightforward. A specific set of tools, made available via the <code>tidyverse</code>, can be deployed for doing most data <strong>tidy</strong>ing tasks <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
 </div>
 <div id="types-of-variable" class="section level3">
@@ -951,7 +951,7 @@ Distances; prices
 <div id="types-of-observation" class="section level3">
 <h3>Types of observation</h3>
 <p>Observations either together form an entire <strong>population</strong> or a subset, or <strong>sample</strong> that we expect represents a <strong>target population</strong>.</p>
-<p>You no doubt will be familiar with these concepts, but we have to think a little more about this in Geographic Data Science applications as we may often be working with datasets that are so-called population-level. The <a href="(https://www.citibikenyc.com/system-data)">Citibike dataset</a> is a complete, population-level dataset in that every journey made through the scheme is recorded. Whether or not this is truly a population-level dataset, however, depends on the analysis purpose. When analysing the bikeshare dataset are we interested only in describing use within the Citibike scheme or are we taking the patterns observed through our analysis to make claims and inferences about cycling more generally?</p>
+<p>You no doubt will be familiar with these concepts, but we have to think a little more about this in Social Data Science applications as we may often be working with datasets that are so-called population-level. The <a href="(https://www.citibikenyc.com/system-data)">Citibike dataset</a> is a complete, population-level dataset in that every journey made through the scheme is recorded. Whether or not this is truly a population-level dataset, however, depends on the analysis purpose. When analysing the bikeshare dataset are we interested only in describing use within the Citibike scheme or are we taking the patterns observed through our analysis to make claims and inferences about cycling more generally?</p>
 <p>If the latter, then there are problems as the level of detail we have on our sample is pretty trivial compared to traditional datasets, where we deliberately design data collection activities with a specified target population in mind. It may therefore be difficult to gauge how representative Citibike users and Citibike cycling is of New York’s general cycling population. The flipside is that passively collected data do not suffer from the same problems such as non-response bias and social-desirability bias as traditionally collected datasets.</p>
 </div>
 <div id="tidy-data" class="section level3">
@@ -1718,7 +1718,7 @@ Factors – represent categorical variables of fixed and potentially orderable v
 </tr>
 </tbody>
 </table>
-<p>The object type of a variable in a data frane relates to that variable’s <em>measurement level</em>. It is often useful to convert to types with greater specificity. For example, we may which to convert the <code>start_time</code> and <code>stop_time</code> variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the <em>station identifier</em> variables as <code>int</code> types by removing the redundant “ny” text which prefaces <code>end_station_id</code>, <code>end_station_id</code>, <code>stn_id</code>. The geographic coordinates are currently stored as type <code>chr</code>. These could be regarded as quantitative variables, floating points with decimals. So converting to type <code>dbl</code> or as a <a href="https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types"><code>POINT</code></a> geometry type (more on this later in the module) may be sensible.</p>
+<p>The object type of a variable in a data frane relates to that variable’s <em>measurement level</em>. It is often useful to convert to types with greater specificity. For example, we may which to convert the <code>start_time</code> and <code>stop_time</code> variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the <em>station identifier</em> variables as <code>int</code> types by removing the redundant “ny” text which prefaces <code>end_station_id</code>, <code>end_station_id</code>, <code>stn_id</code>. The geographic coordinates are currently stored as type <code>chr</code>. These could be regarded as quantitative variables, floating points with decimals. So converting to type <code>dbl</code> or as a <a href="https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types"><code>POINT</code></a> geometry type (more on this later in the course) may be sensible.</p>
 <p>In the <a href="../../homework/02-homework_files/02-template.Rmd"><i class="fab fa-r-project"></i> 02-template.Rmd</a> file there are code chunks for doing these conversions. There are some slightly more involved data transform procedures in this code. Don’t fixate too much on these, but the upshot can be seen when running <code>glimpse()</code> on the converted data frames:</p>
 <pre class="r"><code>glimpse(ny_trips)
 ## Rows: 1,882,273
@@ -2122,7 +2122,7 @@ Figure 3: Histograms generated with <code>ggplot2</code>. Plot data computed usi
 </div>
 <div id="write-functions-of-your-own" class="section level4">
 <h4>Write functions of your own</h4>
-<p>Through most of the module we will be making use of functions written by others – mainly those developed for packages that form the <code>tidyverse</code> and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. <a href="https://r4ds.had.co.nz/functions.html">Chapter 19</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span> presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.</p>
+<p>Through most of the course we will be making use of functions written by others – mainly those developed for packages that form the <code>tidyverse</code> and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. <a href="https://r4ds.had.co.nz/functions.html">Chapter 19</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span> presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.</p>
 <p>Functions have three key characteristics:</p>
 <ol style="list-style-type: decimal">
 <li>They are (usually) <strong>named</strong> – the name should be expressive and communicate what the function does (we talk about <code>dplyr</code> <strong>verbs</strong>).</li>
@@ -2152,7 +2152,7 @@ Figure 4: Line charts generated with <code>ggplot2</code>. Plot data computed us
 </div>
 <div id="tidy" class="section level3">
 <h3>Tidy</h3>
-<p>The <code>ny_trips</code> and <code>ny_stations</code> data already comply with the rules for <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>. Each row in <code>ny_trips</code> is a distinct trip and each row in <code>ny_stations</code> a distinct station. However throughout the module we will undoubtedly encounter datasets that need to be reshaped. There are two key functions to learn here, made available via the <a href="https://tidyr.tidyverse.org/articles/pivot.html"><code>tidyr</code></a> package: <a href="https://tidyr.tidyverse.org/reference/pivot_longer.html"><code>pivot_longer()</code></a> and <a href="https://tidyr.tidyverse.org/reference/pivot_wider.html"><code>pivot_wider()</code></a>. <code>pivot_longer()</code> is used to tidy data in which observations are spread across columns, as in Table <a href="#tab:gapminder-untidy1">6</a> (the <code>gapminder</code> dataset). <code>pivot_wider()</code> is used to tidy data in which observations are spread across rows, as in Table <a href="#tab:gapminder-untidy2">7</a> (the <code>gapminder</code> dataset). You will find yourself using these functions, particularly <code>pivot_longer()</code>, not only for fixing messy data, but for flexibly reshaping data for use in <code>ggplot2</code> specifications (more on this in sessions 3 and 4) or joining tables.</p>
+<p>The <code>ny_trips</code> and <code>ny_stations</code> data already comply with the rules for <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>. Each row in <code>ny_trips</code> is a distinct trip and each row in <code>ny_stations</code> a distinct station. However throughout the course we will undoubtedly encounter datasets that need to be reshaped. There are two key functions to learn here, made available via the <a href="https://tidyr.tidyverse.org/articles/pivot.html"><code>tidyr</code></a> package: <a href="https://tidyr.tidyverse.org/reference/pivot_longer.html"><code>pivot_longer()</code></a> and <a href="https://tidyr.tidyverse.org/reference/pivot_wider.html"><code>pivot_wider()</code></a>. <code>pivot_longer()</code> is used to tidy data in which observations are spread across columns, as in Table <a href="#tab:gapminder-untidy1">6</a> (the <code>gapminder</code> dataset). <code>pivot_wider()</code> is used to tidy data in which observations are spread across rows, as in Table <a href="#tab:gapminder-untidy2">7</a> (the <code>gapminder</code> dataset). You will find yourself using these functions, particularly <code>pivot_longer()</code>, not only for fixing messy data, but for flexibly reshaping data for use in <code>ggplot2</code> specifications (more on this in sessions 3 and 4) or joining tables.</p>
 <p>A quick breakdown of <code>pivot_longer</code>:</p>
 <pre><code>pivot_longer(
   data,

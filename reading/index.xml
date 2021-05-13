@@ -13,9 +13,9 @@
     </image>
     
     <item>
-      <title>Visualization for communication and storytelling</title>
+      <title>Communication and storytelling</title>
       <link>/reading/09-reading/</link>
-      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/09-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -54,9 +54,9 @@
     </item>
     
     <item>
-      <title>Visualization for uncertainty analysis</title>
+      <title>Uncertainty analysis</title>
       <link>/reading/08-reading/</link>
-      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/08-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -99,9 +99,9 @@
     </item>
     
     <item>
-      <title>Visualization for model building 2</title>
+      <title>Model building 2</title>
       <link>/reading/07-reading/</link>
-      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/07-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -137,9 +137,9 @@
     </item>
     
     <item>
-      <title>Visualization for model building 1</title>
+      <title>Model building 1</title>
       <link>/reading/06-reading/</link>
-      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/06-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -178,9 +178,9 @@
     </item>
     
     <item>
-      <title>Visualization for exploring spatial networks</title>
+      <title>Exploring spatial networks</title>
       <link>/reading/05-reading/</link>
-      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/05-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -207,9 +207,9 @@
     </item>
     
     <item>
-      <title>Visualization for exploratory data analysis</title>
+      <title>Exploratory data analysis</title>
       <link>/reading/04-reading/</link>
-      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/04-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -251,7 +251,7 @@
     <item>
       <title>Visualization Fundamentals</title>
       <link>/reading/03-reading/</link>
-      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/03-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -285,7 +285,7 @@
     <item>
       <title>Data Fundamentals</title>
       <link>/reading/02-reading/</link>
-      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/02-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -320,7 +320,7 @@
     <item>
       <title>Introduction</title>
       <link>/reading/01-reading/</link>
-      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/reading/01-reading/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
@@ -329,8 +329,8 @@
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
-&lt;div id=&#34;defining-geographic-data-science&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Defining (Geographic) Data science&lt;/h3&gt;
+&lt;div id=&#34;defining-social-geographic-data-science&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Defining Social (Geographic) Data science&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;D. Arribas-Bel and J. Reades, “Geography and Computers: Past, Present, and Future,” &lt;em&gt;Geography Compass&lt;/em&gt; 12, no. 10 (&lt;a href=&#34;#ref-arribas_geography_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;): e12403, doi:&lt;a href=&#34;https://doi.org/10.1111/gec3.12403&#34; role=&#34;doc-biblioref&#34;&gt;10.1111/gec3.12403&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;A. Singleton and D. Arribas-Bel, “Geographic Data Science,” &lt;em&gt;Geographical Analysis&lt;/em&gt; (&lt;a href=&#34;#ref-singleton_geographic_2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;), doi:&lt;a href=&#34;https://doi.org/10.1111/gean.12194&#34; role=&#34;doc-biblioref&#34;&gt;10.1111/gean.12194&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;

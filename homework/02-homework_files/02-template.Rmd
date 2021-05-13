@@ -74,6 +74,10 @@ bike_rm_db(bikedb)
 rm(db,stations, trips, bikedb)
 ```
 
+
+
+
+
 #### Import pre-processed data (**All**)
 
 Run the code block below to download the pre-processed and extracted data to your project's data folder. Note that you should only run the import code below once. When returning to this work in a new R session, you need only then read in the `ny_trips.fst` and `ny_stations.csv` file that is held locally on your machines. Unfortunately due to storage limitations I had to make `ny_trips.fst` just a 500k random sample of the c.2million records that appear in the session.
