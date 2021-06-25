@@ -7,7 +7,7 @@ output: html_document
 
 ## Class
 
-Reopen your `vis-for-gds` project and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute.
+Reopen your `comp-sds` project and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute.
 
 The technical element demonstrates how the plots and uncertainty estimates of STATS19 road crash data introduced in the session can be produced.
 

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Visualization fundamentals: Codify, map, evaluate</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roger Beecham" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="slides-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, title-slide
+
+# Visualization fundamentals: Codify, map, evaluate
+### Roger Beecham
+### <p>11 Aug 2021</p>
+<a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a>
+
+---
+
+
+
+
+## Conceptual Element
+
+.small-font[
+1. Recognise the **characteristics of effective data graphics**.
+
+2. Understand that there is a **grammar of graphics**, and that this grammar underpins modern **visualization toolkits**.
+
+3. Be aware of the **vocabulary** used by these toolkits -- that of **encoding data through visual channels**.
+
+4. Be able to **select appropriate visual channels** given a data item’s measurement type.
+
+5. Appreciate how visual channels and evidence of their encoding effectiveness can be used to **evaluate data graphics**.
+]
+
+
+---
+
+## Introducing Fundamentals
+
+&lt;div class="embed-responsive embed-responsive-16by9"&gt;
+&lt;iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sua0xDCf8MA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+---
+
+## Characteristics of effective data graphics
+
+.tiny-font[
+&gt; Data graphics visually display measured quantities by means of the combined use of points, lines, a coordinate system, numbers, symbols, words, shading, and color.
+&gt;
+&gt; Tufte 1983
+]
+
+&lt;br&gt;&lt;br&gt;
+
+--
+.tiny-font[
+* Represent complex datasets graphically to expose structure, connections and comparisons that could not be achieved easily via other means.
+]
+
+--
+.tiny-font[
+* Are data rich: present many numbers in a small space.
+]
+
+--
+
+.tiny-font[
+* Reveal patterns at several levels of detail: from broad overview to fine structure.
+]
+
+--
+
+.tiny-font[
+* Have elegance – emphasise dimensions of a dataset without extraneous details.
+]
+
+--
+.tiny-font[
+* Generate an aesthetic response that encourages people to engage with the data or question.
+]
+
+---
+
+## Characteristics of effective data graphics
+
+.tiny-font[
+&gt; Data graphics visually display measured quantities by means of the combined use of points, lines, a coordinate system, numbers, symbols, words, shading, and color.
+&gt;
+&gt; Tufte 1983
+]
+
+&lt;br&gt;
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/03-class_files/trump_maps.png" alt="Maps of 2016 US presidential election results. Left - two-colour choropleth in Medium. Right - information-rich data graphic in The Washington Post." width="70%" /&gt;
+&lt;p class="caption"&gt;Maps of 2016 US presidential election results. Left - two-colour choropleth in Medium. Right - information-rich data graphic in The Washington Post.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+
+## Grammar of Graphics
+
+.xtiny-font[
+&lt;div class="figure" style="text-align: left"&gt;
+&lt;img src="../class/03-class_files/gog.png" alt="Components of Wickham 2010's Layered Grammar of Graphics." width="50%" /&gt;
+&lt;p class="caption"&gt;Components of Wickham 2010's Layered Grammar of Graphics.&lt;/p&gt;
+&lt;/div&gt;
+]
+---
+
+## Grammar of Graphics
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/03-class_files/gog-demo.png" alt="Plots, grammars and associated ggplot2 specifications for the scatterplot." width="50%" /&gt;
+&lt;p class="caption"&gt;Plots, grammars and associated ggplot2 specifications for the scatterplot.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+
+## Marks and visual channels
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/03-class_files/munzner.png" alt="Visual channels to which data items can be encoded, as they appear in Munzner 2014." width="60%" /&gt;
+&lt;p class="caption"&gt;Visual channels to which data items can be encoded, as they appear in Munzner 2014.&lt;/p&gt;
+&lt;/div&gt;
+]
+---
+
+## Upstream evaluate
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/03-class_files/trump_maps.png" alt="Maps of 2016 US presidential election results. Left - two-colour choropleth in Medium. Right - information-rich data graphic in The Washington Post." width="75%" /&gt;
+&lt;p class="caption"&gt;Maps of 2016 US presidential election results. Left - two-colour choropleth in Medium. Right - information-rich data graphic in The Washington Post.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+
+## Checking perceptual rankings: preattentive processing
+
+&lt;img src="../class/03-class_files/no-encoding.png" width="30%" /&gt;
+
+&lt;img src="../class/03-class_files/area-encoding.png" width="30%" /&gt;
+
+&lt;img src="../class/03-class_files/angle-encoding.png" width="30%" /&gt;
+
+&lt;img src="../class/03-class_files/hue-encoding.png" width="30%" /&gt;
+
+---
+
+## Checking perceptual rankings: estimating quantities
+
+
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/03-class_files/perception.png" alt="Differences in power law exponents for the perception of variation in length and area." width="60%" /&gt;
+&lt;p class="caption"&gt;Differences in power law exponents for the perception of variation in length and area.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+
+---
+## Perceiving statistical features
+
+
+
+&lt;a href="http://guessthecorrelation.com/"&gt;
+&lt;img src = "img/guess_correl1.png", width = 45%, style = "position:absolute; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+&lt;img src = "img/guess_correl2.png", width = 45%, style = "position:absolute; top: 25%; left: 40%;"&gt;&lt;/img&gt;
+&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.small-font[
+[`http://guessthecorrelation.com/`](http://guessthecorrelation.com/)
+]
+---
+
+## Technical Element
+
+.small-font[
+1. Plot distributions
+
+2. Plot relationships
+
+3. Plot geography
+
+]
+
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"slideNumberFormat": ""
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

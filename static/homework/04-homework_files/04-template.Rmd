@@ -7,7 +7,7 @@ output: html_document
 
 ## Class
 
-Reopen your `vis-for-gds` project and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute.
+Reopen your `comp-sds` project and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute.
 
 The technical element to this session involves analysing [`stats19`](https://data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data) road crash data.
 
@@ -31,7 +31,7 @@ library(trafficalmr)
 
 ### Import
 
-Run the code block below to download and process the **crashes**, *vehicles** and **casualties** data. These are large datasets so this may take a little time to execute.
+Run the code block below to download and process the **crashes**, *vehicles** and **casualties** data. These are large datasets so this may take a little time to execute. **Note: if you are havung problems, skip to the third code block in this section, where the processed data can be loaded from an external repo.**
 
 ```{r download-data, echo=TRUE, eval=FALSE, message=FALSE}
 # A vector containing years that we will collect data for.
@@ -86,14 +86,14 @@ ped_veh <- ped_veh %>% left_join(temp_ped_vehicles)
 rm(temp_ped_vehicles)
 ```
 
-You may well have had problems due to the fact that we are working with a large dataset, so I have made `ped_veh` available on a personal repository. Run the block below ti download.
+**All**: You may have had problems due to the fact that we are working with a large dataset, so I have made `ped_veh` available on a personal repository. Run the block below to download.
 
 ```{r get-ped-veh, echo=TRUE, eval=FALSE, message=FALSE}
 # Dataset of pedestrian-vehicle crashes.
 url <- "https://www.roger-beecham.com/datasets/ped_veh.fst"
 download.file(url, here("data", "ped_veh.fst"))
 ped_veh <- fst::read_fst(here("data", "ped_veh.fst"))
-``
+```
 
 Run the code block below  to recode IMD to quintiles.
 

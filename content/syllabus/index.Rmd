@@ -21,11 +21,11 @@ library(pander)
 
 ## Overview
 
-In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with geographic datasets.
+In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the critical analysis, design and technical skills to analyse and communicate with social science datasets.
 
 The course emphasises real-world applications. You will work with both new, large-scale behavioural datasets, as well as more traditional, administrative datasets located within various social science domains: Political Science, Crime Science, Urban and Transport Planning. As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from data journalism you will learn how to communicate research findings – how to tell stories with data.
 
-## Module objectives
+## Course objectives
 
 By the end of the course you will:
 
@@ -36,26 +36,26 @@ By the end of the course you will:
 
 ## Assessment
 
-A detailed and formal description of the Assessment for this module can be found on the [Minerva](https://minerva.leeds.ac.uk/webapps/blackboard/content/listContentEditable.jsp?content_id=_7985647_1&course_id=_521510_1&mode=reset) pages. The summative assessment consists of:
+For those taking the course for credits, there are two forms of assessment:
 
-* 30% - Portfolio of work from completing session [homeworks](/homework/) 2-5 (1500 word equivalent)
-* 70% - Visual data analysis report (2500 word equivalent)
+1. *In-class exam*. A set of questions on core concepts with short written answers to be completed within a single 1-hour sitting. There are no software/coding elements to the *in-class* exam. This will take place during the afternoon of **Thursday 19th August**.
+2. *Take-home exam*. A computational notebook to complete containing a set of applied exercises relevant to the course but that are constrained and specific. There will be specific data to work with, outputs to produce and interpretations to be made  in the context of the methods applied.  The notebook should be submitted within 2-weeks of the course finishing, by **Friday 3rd September**. Expect to spend no more than a few hours on this element.
+
 
 ## Software
 
-All work in the module -- data collection, analysis and reporting -- will be completed using [`R`](https://www.r-project.org/) and the [`RStudio`](https://rstudio.com/) [Integrated Development Environment](https://en.wikipedia.org/wiki/Integrated_development_environment) (IDE). Along with [`Python`](https://www.python.org/) `R` is *the* programming environment for modern data analysis.
+All work in the course -- data collection, analysis and reporting -- will be completed using [`R`](https://www.r-project.org/) and the [`RStudio`](https://rstudio.com/) [Integrated Development Environment](https://en.wikipedia.org/wiki/Integrated_development_environment) (IDE). Along with [`Python`](https://www.python.org/) `R` is *the* programming environment for modern data analysis.
 
-## Module breakdown
+## Course breakdown
 
 `r blogdown::shortcode("schedule")`
 
 ## Navigating the course materials
 
-The home for this module is [this website](../../). From here, you will find the course [Schedule](/schedule/) (also above), where for each session there is <i class="fas fa-book-reader"></i> [**Reading**](/reading/), <i class="fas fa-chalkboard-teacher"></i> [**Class**](/class/) content and <i class="fas fa-laptop-code"></i> [**Homework**](/homework/). Also accompanying each session is an [R Markdown](https://rmarkdown.rstudio.com/) file with a template to complete coding activities introduced through the [class](/class/) and [homework](/homework/) pages. These session templates contain pre-prepared code chunks for you to execute.  As the module progresses and you become more familiar and competent in `R`, you will be required to contribute more code of your own to these.
+The home for this course is [this website](../../). From here, you will find the course [Schedule](/schedule/) (also above), where for each session there is <i class="fas fa-book-reader"></i> [**Reading**](/reading/), <i class="fas fa-chalkboard-teacher"></i> [**Class**](/class/) content and <i class="fas fa-laptop-code"></i> [**Homework**](/homework/). Also accompanying each session is an [R Markdown](https://rmarkdown.rstudio.com/) file with a template to complete coding activities introduced through the [class](/class/) and [homework](/homework/) pages. These session templates contain pre-prepared code chunks for you to execute.  As the course progresses and you become more familiar and competent in `R`, you will be required to contribute more code of your own to these.
 
 As you work through the course materials you will notice special icons are used to distinguish **learning outcomes** <i class="fas fa-chevron-circle-down"></i> and **instructions**  <i class="fas fa-tasks"></i> that need to be completed, along with important informational asides <i class="fas fa-info-circle"></i>. Do pay special attention to these, and in particular revisit the **learning outcomes** <i class="fas fa-chevron-circle-down"></i> as you progress through the sessions.
 
- Use [Minerva](https://minerva.leeds.ac.uk/) to access the [Module  Handbook](https://minerva.leeds.ac.uk/webapps/blackboard/execute/announcement?method=search&context=course&course_id=_521510_1&handle=cp_announcements&mode=cpview) and to upload assignments in the usual way.
 
 ## Self-guided learning
 
@@ -63,11 +63,11 @@ As you work through the course materials you will notice special icons are used 
 >
 > Hadley Wickham
 
-From the module overview and outline you will have got the sense that this is a reasonably technical module. You will be introduced to the key components of modern data analysis (Data Science) through doing -- the course inevitably requires you to do a fair amount of "coding", in this case in `R`.
+From the course overview and outline you will have got the sense that this is a reasonably technical course. You will be introduced to the key components of modern data analysis (Data Science) through doing -- the course inevitably requires you to do a fair amount of "coding", in this case in `R`.
 
-It is understandable if this feels like a daunting prospect. The barrier to entry is greater than with point-and-click interfaces such as ArcGIS and SPSS. So do expect that this module  may require a degree of patience and persistence -- but isn't that true of all things that are worth learning?
+It is understandable if this feels like a daunting prospect. The barrier to entry is greater than with point-and-click interfaces such as ArcGIS and SPSS. So do expect that this course  may require a degree of patience and persistence -- but isn't that true of all things that are worth learning?
 
-In order reduce the pain, I've tried to include within the module a balance of content between programming fundamentals, theoretical/conceptual learning and more procedural 'grunt-work' with datasets. I have also carefully considered and incorporated ideas from some of the really high quality [Resources](../useful) out there aimed at lowering the barrier to doing Data Science in `R`.
+In order reduce the pain, I've tried to include within the course a balance of content between programming fundamentals, theoretical/conceptual learning and more procedural 'grunt-work' with datasets. I have also carefully considered and incorporated ideas from some of the really high quality [Resources](../useful) out there aimed at lowering the barrier to doing Data Science in `R`.
 
 In return, I expect you to:
 
@@ -77,12 +77,12 @@ In return, I expect you to:
 
 ## Slack
 
-A key mechanism through which you can **participate** is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the module that will maximise your learning. I have set up a course [Slack](https://vis-for-gds.slack.com), which should provide a useful mechanism for sharing information, resources and importantly posting and discussing `code`.
+A key mechanism through which you can **participate** is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the module that will maximise your learning. I have set up a course [Slack](https://comp-sds.slack.com), which should provide a useful mechanism for sharing information, resources and importantly posting and discussing `code`.
 
-If you've not used Slack before, then follow these pages on [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members). You should post all substantive questions associated with the module to Slack. These will get answered. If you wish to discuss more personal matters around your completing the course, then send those directly to me via e-mail.
+If you've not used Slack before, then follow these pages on [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members). You should post all substantive questions associated with the course to Slack. These will get answered. If you wish to discuss more personal matters around your completing the course, then send those directly to me via e-mail.
 
 {{% callout instruction %}}
-Create an account on the [vis-for-gds Slack](https://vis-for-gds.slack.com). Be sue to register with you `.leeds.ac.uk` e-mail. If you run into any problems, try [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members).
+Create an account on the [comp-sds Slack](https://comp-sds.slack.com). If you run into any problems, try [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members).
 {{% /callout  %}}
 
 ## Asking questions
@@ -92,41 +92,3 @@ As many of you will be learning to program in R for the first time, you should e
 *How* you respond to these obstacles is important. In a face-to-face lab, the temptation when hitting a problem is to raise your hand, gesture towards your screen and have a demonstrator 'de-bug' for you. Whilst this may initially seem like an efficient solution, you risk learning very little if this is your only course of action.
 
 When you encounter problems working through the material in this course, try to force yourself to spend 15-20 minutes troubleshooting the problem individually. [Google](https://www.google.com/) your problem or try [StackOverflow](https://stackoverflow.com/). If you are not able to resolve the problem on your own, then post your question to the course [Slack](https://vis-for-gds.slack.com), which I will monitor regularly. When doing this, make an effort to be specific and unambiguous about your problem. You might wish to consult StackOverflow's guidance on [how to ask a good question](https://stackoverflow.com/help/how-to-ask).
-
-<!--
-## Resources
-
-### Primers
-
-- [@healy_data_2018]\
--- An engaging read that manages to integrate ggplot2 code with key Information Visualization theory and using real social science datasets.\
-[Free online (draft version)](https://socviz.co/).
-
-
-- [@lovelace_geocomputation_2019]\
--- This book comprehensively introduces spatial data handling in R. It is a great complement to R for Data Science in that it draws on brand new libraries that support `tidyverse-style` operations on spatial data.\
-[Free online](https://geocompr.robinlovelace.net/).
-
-- [@wickham_r_2017]\
--- _The_ primer for doing data analysis with R. Wickham and Grolemund present a thesis of the data science workflow and illustrates how R and packages that form the `tidyverse` support this. It is both accessible and coherent and is highly recommended.\
-[Free online](https://r4ds.had.co.nz/).
-
-
-### Blogs
-
-- [Flowingdata](http://flowingdata.com) \
--- Nathan Yau, a former statistics PhD from UCLA, has maintained a data vis blog and online training materials for some time. Numerous excellent examples, on the most part implemented in R and `ggplot2`.
-
-- [giCentre](https://www.gicentre.net)  \
--- World-leading group researching and developing geovisualization. Check out recent work on [litvis](https://www.gicentre.net/software#/litvis-1/) and [elm-vega](https://www.gicentre.net/elmvegalite/).
-
-- [Multiple Views](https://medium.com/multiple-views-visualization-research-explained) \
--- Blog series by leading visualization researchers and practitioners.
-
-### Conferences
-
-- [IEEE VIS](http://ieeevis.org/)\
--- *The* conference at which leading Data Visualization work is published through a special issue of [Transactions on Visualization & Computer Graphics](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945).
-
-- [OpenVis Conf](http://www.openvisconf.com)\
--- New, exciting conference (though last one was in 2018!). Presenters are academics and practitioners. Videos of talks from previous conferences are published online. From the 2018 conference, I'd recommend Matt Kay's on [Uncertainty Visualization](https://www.youtube.com/watch?v=vqzO-9LSoG4&feature=youtu.be), Maarten Lambrechts' [Xenographics](https://www.youtube.com/watch?v=fp-WNqaQG0s&feature=youtu.be) and Heather Krause's [F-Word](https://www.youtube.com/watch?v=uw1Tag08dK4&feature=youtu.be). -->

@@ -1,8 +1,8 @@
 ---
-title: "Introduction: Vis for Geographic Data Science"
+title: "Introduction: Computational Methods for Social Data Science"
 linktitle: "1: Introduction"
-date: "2021-05-24"
-class_date: "2021-05-24"
+date: "2021-08-09"
+class_date: "2021-08-09"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl:  ../../static/bib/chicago-author-date.csl
@@ -28,14 +28,13 @@ editor_options:
 <h2>Contents</h2>
 <div id="TOC">
 <ul>
-<li><a href="#session-outcomes">Session outcomes</a></li>
-<li><a href="#welcome-to-visualization-for-geographic-data-science">Welcome to <em>Visualization for Geographic Data Science</em></a></li>
-<li><a href="#why-vis-for-gds">Why <em>vis-for-gds</em>?</a><ul>
-<li><a href="#geographic-data-science">Geographic Data Science</a></li>
-<li><a href="#geographic-data-science-and-visualization">Geographic Data Science and <em>Visualization</em></a></li>
+<li><a href="#welcome-to-computational-methods-for-social-data-science">Welcome to <em>Computational Methods for Social Data Science</em></a></li>
+<li><a href="#why-comp-sds">Why <em>comp-sds</em>?</a><ul>
+<li><a href="#social-data-science">Social Data Science</a></li>
+<li><a href="#social-data-science-and-visualization">Social Data Science and <em>Visualization</em></a></li>
 </ul></li>
-<li><a href="#what-vis-for-gds">What <em>vis-for-gds</em>?</a></li>
-<li><a href="#how-vis-for-gds">How <em>vis-for-gds</em>?</a><ul>
+<li><a href="#what-comp-sds">What <em>comp-sds</em>?</a></li>
+<li><a href="#how-comp-sds">How <em>comp-sds</em>?</a><ul>
 <li><a href="#r-for-modern-data-analysis">R for modern data analysis</a></li>
 <li><a href="#rmarkdown-for-reproducible-research">Rmarkdown for reproducible research</a></li>
 </ul></li>
@@ -53,11 +52,8 @@ editor_options:
 </ul>
 </div>
 
-<div id="session-outcomes" class="section level2">
-<h2>Session outcomes</h2>
-<p>By the end of this session you should gain the following <strong><em>knowledge</em></strong>:</p>
 <p>{{% callout objective %}}
-- [x] Appreciate the motivation for this module – why visualization, why <code>R</code> and why <code>ggplot2</code>
+- [x] <strong>Appreciate</strong> the motivation for this module – why visualization, why <code>R</code> and why <code>ggplot2</code>
 <!-- - [x] An **awareness** of the challenges modern data analysis -->
 {{% /callout %}}</p>
 <p>By the end of this session you should gain the following <strong><em>practical skills</em></strong>:</p>
@@ -65,21 +61,21 @@ editor_options:
 - [x] Navigate the materials on this course website, having familiarised yourself with its structure
 - [x] Open <code>R</code> using the RStudio Integrated Developer Environment (IDE)
 - [x] Install and enable <code>R</code> packages and query package documentation
-- [x] Perform basic calculations via the <code>R  Console - [x] Render</code>R Markdown<code>files - [x] Create</code>R<code>Projects - [x] Read-in datasets from external resources as objects (specifically</code>tibbles`)
+- [x] Perform basic calculations via the <code>R  Console</code>
+- [x] Render <code>R Markdown</code> files
+- [x] Create <code>R</code> Projects
+- [x] Read-in datasets from external resources as objects (specifically <code>tibbles</code>)
 {{% /callout %}}</p>
+<div id="welcome-to-computational-methods-for-social-data-science" class="section level2">
+<h2>Welcome to <em>Computational Methods for Social Data Science</em></h2>
+<p>Welcome to <em>Computational Methods for Social Data Science</em> (<em>comp-sds</em>). In this first session we’ll cover the background to the module – the why, what and how of <em>comp-sds</em>. If you’ve not already you should check out the course outline on the <a href="/syllabus/">Syllabus</a> page for an overall preview of the module.</p>
 </div>
-<div id="welcome-to-visualization-for-geographic-data-science" class="section level2">
-<h2>Welcome to <em>Visualization for Geographic Data Science</em></h2>
-<p>Welcome to <em>Visualization for Geographic Data Science</em> (<em>vis-for-gds</em>). In this first session we’ll cover the background to the module – the why, what and how of <em><strong>vis</strong>-for-gds</em>. If you’ve not already you should check out the course outline on the <a href="/syllabus/">Syllabus</a> page for an overall preview of the module.</p>
-<p>The main home for this module is <a href="../../">this website</a>. However, via <a href="https://minerva.leeds.ac.uk/webapps/blackboard/execute/announcement?method=search&amp;context=course&amp;course_id=_521510_1&amp;handle=cp_announcements&amp;mode=cpview">Minerva</a> you can access the <a href="https://minerva.leeds.ac.uk/bbcswebdav/pid-8457865-dt-content-rid-18601408_2/courses/202021_37303_GEOG5009M/GEOG5009_handbook.pdf">Module Handbook</a>. You will use submission boxes in <a href="https://minerva.leeds.ac.uk/webapps/blackboard/content/listContentEditable.jsp?content_id=_7985652_1&amp;course_id=_521510_1&amp;mode=reset">Minerva</a> to upload coursework in the usual way.</p>
-</div>
-<div id="why-vis-for-gds" class="section level2">
-<h2>Why <em>vis-for-gds</em>?</h2>
-<!-- https://www.forbes.com/sites/bernardmarr/2020/04/09/the-vital-role-of-big-data-in-the-fight-against-coronavirus/ -->
-<div id="geographic-data-science" class="section level3">
-<h3>Geographic Data Science</h3>
-<p>It is now taken-for-granted that over the last decade or so new data, new technology and new ways of doing science have transformed how we approach the world’s problems. Evidence for this can be seen in the response to the Covid-19 pandemic. Enter <a href="https://www.google.com/search?q=covid-19+github&amp;rlz=1C5CHFA_enGB632GB632&amp;oq=covid-19+github&amp;aqs=chrome..69i57j69i60l3.5575j0j1&amp;sourceid=chrome&amp;ie=UTF-8">Covid19 github</a> into a search and you’ll be confronted with hundreds of repositories demonstrating how an ever-expanding array of data related to the pandemic can be collected, processed and analysed. <em>Data Science</em> is a term used widely to capture this shift and <em>Geographic Data Science</em> (GDS), probably first discussed coherently by <span class="citation">Arribas-Bel and Reades (<a href="#ref-arribas_geography_2018" role="doc-biblioref">2018</a>)</span> and <span class="citation">Singleton and Arribas-Bel (<a href="#ref-singleton_geographic_2019" role="doc-biblioref">2019</a>)</span>, when observing that many of data science’s applications are – or at least should be – of inherent interest to geographers.</p>
-<p>Since gaining traction in the corporate world, the definition of Data Science has been somewhat stretched, but it has its origins in the work of John Tukey’s <em>The Future of Data Analysis</em> (1962). Drawing on this, and a survey of more recent work, <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span> neatly identifies six key facets that a data science discipline might encompass<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> :</p>
+<div id="why-comp-sds" class="section level2">
+<h2>Why <em>comp-sds</em>?</h2>
+<div id="social-data-science" class="section level3">
+<h3>Social Data Science</h3>
+<p>It is now taken-for-granted that over the last decade or so new data, new technology and new ways of doing science have transformed how we approach the world’s problems. Evidence for this can be seen in the response to the Covid-19 pandemic. Enter <a href="https://www.google.com/search?q=covid-19+github&amp;rlz=1C5CHFA_enGB632GB632&amp;oq=covid-19+github&amp;aqs=chrome..69i57j69i60l3.5575j0j1&amp;sourceid=chrome&amp;ie=UTF-8">Covid19 github</a> into a search and you’ll be confronted with hundreds of repositories demonstrating how an ever-expanding array of data related to the pandemic can be collected, processed and analysed. <em>Data Science</em> is a term used widely to capture this shift.</p>
+<p>Since gaining traction in the corporate world, the definition of Data Science has been somewhat stretched, but it has its origins in the work of John Tukey’s <em>The Future of Data Analysis</em> (1962). Drawing on this, and a survey of more recent work, <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span> neatly identifies six key facets that a data science discipline might encompass:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <ol style="list-style-type: decimal">
 <li>data gathering, preparation, and exploration;</li>
 <li>data representation and transformation;</li>
@@ -89,15 +85,15 @@ editor_options:
 <li>and a more introspective “science about data science”</li>
 </ol>
 </div>
-<div id="geographic-data-science-and-visualization" class="section level3">
-<h3>Geographic Data Science and <em>Visualization</em></h3>
+<div id="social-data-science-and-visualization" class="section level3">
+<h3>Social Data Science and <em>Visualization</em></h3>
 <!-- > Visualization is fundamental to meeting the unprecedented challenges and exploiting the wonderful opportunities of the ever-expanding deluge of data confronting virtually every field." \
 > -- Prof. Jim Hollan of UC San Diego -->
 <!-- {{% callout note %}}
 Visual approaches to data analysis are particularly suited to Geographic Data Science applications because where datasets are being repurposed for social and natural sciences research for the first time,  contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone and so where the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance.
 
 {{% /callout %}} -->
-<p>Glancing at this list, <em>visualization</em> could be interpreted as a single facet of Data Science process<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> – something that happens after data gathering, preparation, exploration, but before modelling. In this module you’ll learn that visualization is intrinsic to, and should inform, each of these activities, especially so when working with data sets that are spatial – for Geographic Data Science.</p>
+<p>Glancing at this list, <em>visualization</em> could be interpreted as a single facet of Data Science process<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> – something that happens after data gathering, preparation, exploration, but before modelling. In this module you’ll learn that visualization is intrinsic to, and should inform, each of these activities, especially so when working with data sets that are spatial – for Social Data Science.</p>
 <p>Let’s develop this idea by asking <strong>why data visualizations are used in the first place</strong>. In her book <em>Visualization Analysis and Design</em>, Tamara <span class="citation">Munzner (<a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span> considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions – or to install humans in a ‘decision-making-loop’. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.</p>
 <p>The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe’s quartet</a>. Here, <span class="citation">Anscombe (<a href="#ref-anscombe_graphs_1973" role="doc-biblioref">1973</a>)</span> presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let’s say that they are the weight and height of independent samples taken from a population of postgraduate students studying Data Science.</p>
 <p>Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical – they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we’d expect taller students to be heavier. Given these statistical summaries we can be assured that we are drawing samples from the same population of (Data Science) students.</p>
@@ -116,7 +112,7 @@ Figure 2: Plots of Anscombe’s quartet
 </p>
 </div>
 <p>This is not to undermine the importance of numerical analysis. Numeric summaries that simplify patterns are extremely useful and Statistics has at its disposal an array of tools for helping to guard against making false claims from datasets – a theme that we will return to in session 6, 7 and 8 when we think critically about the use of visual approaches for data anlysis. There remain, though, certain classes of relation and context that cannot be easily captured through statistics alone.</p>
-<p><em>Geographic</em> context is undoubtedly challenging to capture numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers <span class="citation">(see Friendly <a href="#ref-friendly_brief_2007" role="doc-biblioref">2007</a>)</span>. We can also probably make a special case for the use of visual approaches in Geographic Data Science (GDS) applications due to its exploratory nature. Often in GDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we <em>explore</em> (Session 4 and 5), <em>model under uncertainty</em> (Session 6 and 7) and <em>communicate</em> (Session 8 and 9) with various social science datasets.</p>
+<p><em>Geographic</em> context is undoubtedly challenging to capture numerically; many of the early examples of data visualization have been of spatial phenomena and generated by Geographers <span class="citation">(see Friendly <a href="#ref-friendly_brief_2007" role="doc-biblioref">2007</a>)</span>. We can also probably make a special case for the use of visual approaches in Social Data Science (SDS) applications due to its exploratory nature. Often in DDS datasets are being repurposed for social and natural sciences research for the first time; contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone; and so the types of questions that can be asked and the techniques deployed to answer them cannot be easily specified in advance. In this module we will demonstrate this as we <em>explore</em> (Session 4 and 5), <em>model under uncertainty</em> (Session 6 and 7) and <em>communicate</em> (Session 8 and 9) with various social science datasets.</p>
 <p>{{% callout instruction %}}
 Watch <a href="https://www.gicentre.net/jwo/index">Jo Wood’s</a> talk demonstrating how visual techniques can be used to analyse urban travel behaviours. In the video Jo argues that bikeshare schemes can help democratise cycling, but also for their potential contributions to research – he briefly contrasts new, passively collected data sets with more “traditional” actively collected data for analysing how people move around cities. A compelling case is then made for the use of visualization to support this activity. Related work and further discussion is published in <span class="citation">Beecham and Wood (<a href="#ref-beecham_exploring_2014" role="doc-biblioref">2014</a>)</span>.
 {{% /callout %}}</p>
@@ -131,8 +127,8 @@ Watch <a href="https://www.gicentre.net/jwo/index">Jo Wood’s</a> talk demonstr
 <!-- @donoho_fifty_2017 neatly remarks that _data science_ probably has its origins in the work of John Tukey's _The Future of Data Analysis_ (1962), and that a _data science_ discipline might incorporate six key facets: data gathering, preparation, and exploration; data representation and transformation; computing with data; data modelling; data visualisation and presentation; and a more introspective “science about data science”. -->
 </div>
 </div>
-<div id="what-vis-for-gds" class="section level2">
-<h2>What <em>vis-for-gds</em>?</h2>
+<div id="what-comp-sds" class="section level2">
+<h2>What <em>comp-sds</em>?</h2>
 <p>This is a very practical module. With the exception of this Introduction, the weekly sessions will blend both theory and practical coding activity. We will cover fundamentals around visual data analysis from Information Visualization and Statistics. As you read the session materials you will be writing data processing and analysis code and so be generating analysis outputs of your own. We will also be working with real datasets – from the Political Science, Urban and Transport Planning and Health domains. So we will hopefully be generating real findings and knowledge.</p>
 <p>To do this in a genuine way – to generate real knowledge from datasets – we will have to cover a reasonably broad set of data processing and analysis procedures. As well as developing expertise around designing data-rich, visually compelling graphics (of the sort demonstrated in <a href="https://www.gicentre.net/jwo/index">Jo Wood’s TEDx talk</a>), we will need to cover more tedious aspects of <strong>data processing</strong> and <strong>wrangling</strong>. Additionally, if we are to learn how to generate and communicate and make claims under uncertainty with our data graphics, then we will need to cover some aspects of estimation and modelling from Statistics. In short, we will cover most of <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span>’s six key facets of a data science discipline:</p>
 <ol style="list-style-type: decimal">
@@ -145,8 +141,8 @@ Watch <a href="https://www.gicentre.net/jwo/index">Jo Wood’s</a> talk demonstr
 </ol>
 <p>There is already a rich and impressive set of open <a href="../useful">Resources</a> practically introducing how to do modern <a href="https://r4ds.had.co.nz/index.html">Data Science</a>, <a href="https://socviz.co/">Visualization</a> and <a href="https://geocompr.robinlovelace.net/">Geographic Analysis</a>. We will certainly draw on these at different stages in the module. What makes this module different from these existing resources is that we will be <strong>doing</strong> applied data science throughout – we will be identifying and diagnosing problems when gathering data, discovering patterns (some maybe even spurious) as we do exploratory analysis, and attempt to make claims under uncertainty as we generate models based on observed patterns. We will work with both new, passively-collected datasets, as well as more traditional, actively collected datasets located within various social science domains.</p>
 </div>
-<div id="how-vis-for-gds" class="section level2">
-<h2>How <em>vis-for-gds</em>?</h2>
+<div id="how-comp-sds" class="section level2">
+<h2>How <em>comp-sds</em>?</h2>
 <div id="r-for-modern-data-analysis" class="section level3">
 <h3>R for modern data analysis</h3>
 <p>Through the module we will apply modern approaches to data analysis. All data collection, analysis and reporting activity will be completed using <a href="https://www.r-project.org/"><code>R</code></a> and the <a href="https://rstudio.com/"><code>RStudio</code></a> <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Environment</a> (IDE). Released as open source software as part of a research project in 1995, for some time <code>R</code> was the preserve of academics. From 2010s onwards, the <code>R</code> community expanded rapidly and along with <a href="https://www.python.org/"><code>Python</code></a> is regarded as the key technology for doing data analysis. <code>R</code> is used increasingly outside of academia, by organisations such as Google <a href="https://research.google.com/pubs/pub37483.html">[example]</a>, Facebook <a href="http://flowingdata.com/2010/12/13/facebook-worldwide-friendships-mapped/">[example]</a>, Twitter <a href="https://blog.twitter.com/official/en_us/a/2013/the-geography-of-tweets.html">[example]</a>, New York Times <a href="http://www.nytimes.com/interactive/2012/05/05/sports/baseball/mariano-rivera-and-his-peers.html?ref=baseballexample">[example]</a>, BBC <a href="https://bbc.github.io/rcookbook/">[example]</a> and many more.</p>
@@ -367,14 +363,14 @@ Figure 5: Creating an RStudio Project
 <li>Select <code>File</code> &gt; <code>New Project</code> &gt; <code>New Directory</code>.</li>
 <li>Browse to a sensible location and give the project a suitable name. Then click <code>Create Project</code>.</li>
 </ul>
-<p>You will notice that the top of the Console window now indicates the root for this new project, in my case <code>~projects/vis-for-gds</code>.</p>
+<p>You will notice that the top of the Console window now indicates the root for this new project, in my case <code>~projects/comp-sds</code>.</p>
 <ul>
 <li>In the root of your project, create folders called <code>reports</code>, <code>code</code>, <code>data</code>, <code>figures</code>.</li>
 <li>Save this session’s <a href="/homework/01-homework_files/01-template.Rmd"><i class="fab fa-r-project"></i> 01-template.Rmd</a> file to the <code>reports</code> folder.</li>
 </ul>
 <p>Your project’s folder structure should now look like this:</p>
-<pre class="text"><code>vis-for-gds\
-  vis-for-gds.Rproj
+<pre class="text"><code>comp-sds\
+  comp-sds.Rproj
   code\
   data\
   figures\
@@ -384,7 +380,7 @@ Figure 5: Creating an RStudio Project
 </div>
 <div id="conclusions" class="section level2">
 <h2>Conclusions</h2>
-<p>Visual data analysis approaches are necessary for exploring complex patterns in data and to make and communicate claims under uncertainty. This is especially true of Geographic Data Science applications, where:</p>
+<p>Visual data analysis approaches are necessary for exploring complex patterns in data and to make and communicate claims under uncertainty. This is especially true of Social Data Science applications, where:</p>
 <ul>
 <li>datasets are being repurposed for social and natural sciences research for the first time;</li>
 <li>contain complex structure and geo-spatial relations that cannot be easily captured by statistical summaries alone;</li>
@@ -421,15 +417,12 @@ Figure 5: Creating an RStudio Project
 <div id="ref-munzner_visualization_2014">
 <p>Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.</p>
 </div>
-<div id="ref-singleton_geographic_2019">
-<p>Singleton, A., and D. Arribas-Bel. 2019. “Geographic Data Science.” <em>Geographical Analysis</em>. doi:<a href="https://doi.org/10.1111/gean.12194">10.1111/gean.12194</a>.</p>
-</div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>For an excellent precis and interpretation of this for geographers, see <span class="citation">Arribas-Bel and Reades (<a href="#ref-arribas_geography_2018" role="doc-biblioref">2018</a>)</span>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>For an excellent precis and interpretation of this for geographers and social scientists, see <span class="citation">Arribas-Bel and Reades (<a href="#ref-arribas_geography_2018" role="doc-biblioref">2018</a>)</span>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>Although not the case when actually reading <span class="citation">Donoho (<a href="#ref-donoho_fifty_2017" role="doc-biblioref">2017</a>)</span>.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>Checkout <span class="citation">Matejka and Fitzmaurice (<a href="#ref-matejka_same_2017" role="doc-biblioref">2017</a>)</span>’s Same Stats, Different Graphs paper for a fun take one this.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>

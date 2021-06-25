@@ -1,8 +1,8 @@
 ---
-title: "Visualization for exploring spatial networks"
-linktitle: "5: Visualization for exploring spatial networks"
-date: "2021-06-21"
-class_date: "2021-06-21"
+title: "Exploring spatial networks"
+linktitle: "5: Exploring spatial networks"
+date: "2021-08-13"
+class_date: "2021-08-13"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

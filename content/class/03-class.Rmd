@@ -1,8 +1,8 @@
 ---
 title: "Visualization fundamentals: Codify, map, evaluate"
 linktitle: "3: Visualization fundamentals"
-date: "2021-06-07"
-class_date: "2021-06-07"
+date: "2021-08-11"
+class_date: "2021-08-11"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -109,7 +109,7 @@ kbl(data,  caption = "Data items encoded in the Washington Post and Medium artic
 
 In evidence in the Washington Post graphic is a judicious **mapping** of data to visuals, underpinned by a secure understanding of analysis context. This act of carefully considering how best to leverage visual systems given the available data and analysis priorities is key to designing effective data graphics.
 
-In the late 1990s Leland Wilkinson, a Computer Scientist and Statistician, introduced the [Grammar of Graphics](https://www.springer.com/gp/book/9780387245447) as an approach that formalises this process of turning data into visuals. @wilkinson_grammar_1999's thesis is that if graphics can be described in a consistent way according to their structure and composition, then the process of **generating** graphics of different types can be systematised. This has obvious benefits for building visualization toolkits: it makes it easy to specify chart types and combinations and helps formalise the process of designing data visualizations. [vega-lite](https://vega.github.io/vega-lite/), [Tableau](https://www.tableau.com/en-gb) and [`ggplot2`](https://ggplot2.tidyverse.org/) are all underpinned by [Grammar of Graphics](https://www.springer.com/gp/book/9780387245447) thinking.
+In the late 1990s Leland Wilkinson, a Computer Scientist and Statistician, introduced the [Grammar of Graphics](https://www.springer.com/gp/book/9780387245447) as an approach that captures this process of turning data into visuals. @wilkinson_grammar_1999's thesis is that if graphics can be described in a consistent way according to their structure and composition, then the process of **generating** graphics of different types can be systematised. This has obvious benefits for building visualization toolkits: it makes it easy to specify chart types and combinations and helps formalise the process of designing data visualizations. [vega-lite](https://vega.github.io/vega-lite/), [Tableau](https://www.tableau.com/en-gb) and [`ggplot2`](https://ggplot2.tidyverse.org/) are all underpinned by [Grammar of Graphics](https://www.springer.com/gp/book/9780387245447) thinking.
 
 @wilkinson_grammar_1999’s grammar separates the construction of a data graphic into a series of components. Below are the components of the *Layered Grammar of Graphics* on which [`ggplot2`](https://ggplot2.tidyverse.org/) is based [@wickham_layered_2010], a slight edit on @wilkinson_grammar_1999’s original work.
 
@@ -117,7 +117,7 @@ In the late 1990s Leland Wilkinson, a Computer Scientist and Statistician, intro
 ```{r gog, echo=FALSE, fig.cap="Components of @wickham_layered_2010's Layered Grammar of Graphics.", fig.align="left", out.width="80%"}
 include_graphics("/class/03-class_files/gog.png", error = FALSE)
 ```
-The seven components in Figure \@ref(fig:gog) are together used to create [`ggplot2`](https://ggplot2.tidyverse.org/) specifications. The aspects to emphasise at this stage are those in emphasis, which are required in any `ggplot2` specification: the <span style="color:#5A91CA;font-weight:bold">data</span> containing the variables of interest, the `geom` or  <span style="color:#E17637;font-weight:bold">marks</span> to be used to represent data and the **aesthetic** (`mapping=aes(...)`) attributes, or visual <span style="color:#62B743;font-weight:bold">channels</span> through which variables are to be encoded.
+The seven components in Figure \@ref(fig:gog) are together used to create [`ggplot2`](https://ggplot2.tidyverse.org/) specifications. The aspects to emphasise at this stage are those in **emphasis**, which are required in any `ggplot2` specification: the <span style="color:#5A91CA;font-weight:bold">data</span> containing the variables of interest, the `geom` or  <span style="color:#E17637;font-weight:bold">marks</span> to be used to represent data and the **aesthetic** (`mapping=aes(...)`) attributes, or visual <span style="color:#62B743;font-weight:bold">channels</span> through which variables are to be encoded.
 
 To demonstrate this, let's generate some scatterplots based on the 2019 General Election data we will be analysing later in the session. Two variables worth exploring for association here are: `con_1719`, the change in Conservative vote share by constituency between 2017-2019, and `leave_hanretty`, the size of the Leave vote in the 2016 EU referendum, estimated at Parliamentary Constituency level [see @hanretty_areal_2017].
 
@@ -301,13 +301,13 @@ knitr::include_graphics("/class/03-class_files/perception.png", error = FALSE)
 ```
 
 {{% callout note %}}
-This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the **inferences** made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities -- dispersion [@correll_error_2014], correlation [@rensink_perception_2010; @harrison_ranking_2014; @kay_beyond_2016] and spatial autocorrelation [@klippel_interpreting_2011; @beecham_maplineups_2017] -- in commonly used chart types. More on this later in the module.
+This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the **inferences** made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities -- location and dispersion [@correll_error_2014], correlation [@rensink_perception_2010; @harrison_ranking_2014; @kay_beyond_2016] and spatial autocorrelation [@klippel_interpreting_2011; @beecham_maplineups_2017] -- in commonly used chart types. More on this later in the module.
 {{% /callout %}}
 
 
 ### Colour
 
-As demonstrated in the section on [preattentive processing](#detection-and-preattentive-processing-1), colour is very powerful visual channel. When considering how to encode data with colour, it is helpful to consider three properties:
+As demonstrated in the section on [preattentive processing](#detection-and-preattentive-processing-1), colour is a very powerful visual channel. When considering how to encode data with colour, it is helpful to consider three properties:
 
 * **Hue** : what we generally refer to as "colour" in everyday life -- red, blue green, etc.
 * **Saturation** : how much  of a colour there is.
@@ -326,16 +326,18 @@ There are many considerations when using colour to support visual data analysis 
 
 The technical element to this session involves analysing data from the 2019 UK General Election, reported by Parliamentary Constituency. After importing and describing the dataset, you will generate data graphics that expose patterns in voting behaviour. You will do so by writing `ggplot2` specifications.
 
-* Download the [<i class="fab fa-r-project"></i> 03-template.Rmd](/homework/03-homework_files/03-template.Rmd) file for this session and save it to the `reports` folder of your `vis-for-gds` project.
-* Open your `vis-for-gds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/03-template.Rmd`.
+* Download the [<i class="fab fa-r-project"></i> 03-template.Rmd](/homework/03-homework_files/03-template.Rmd) file for this session and save it to the `reports` folder of your `comp-sds` project.
+* Open your `comp-sds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/03-template.Rmd`.
 
 ### Import
 
-The template file lists the required packages -- `tidyverse`, `sf` and also the [`parlitools`](https://cran.r-project.org/web/packages/parlitools/index.html). Installing `parlitools` brings down the 2019 UK General Election dataset, along with other constituency-level datasets. Loading it with `library(parlitools)` makes these data available to your R session.
+The template file lists the required packages -- `tidyverse`, `sf` and also [`parlitools`](https://cran.r-project.org/web/packages/parlitools/index.html). Installing `parlitools` brings down the 2019 UK General Election dataset, along with other constituency-level datasets. Loading it with `library(parlitools)` makes these data available to your R session.
 
 The dataset containing 2019 UK General Election data is called `bes_2019`. This contains results data released by [House of Commons Library](https://commonslibrary.parliament.uk/research-briefings/cbp-8749/). We can get a quick overview  in the usual way -- with a call to `glimpse(<dataset-name>)`. The dataset's variables are also described on the `parlitools` [web pages](https://docs.evanodell.com/parlitools/articles/bes-2019.html). You will notice that `bes_2019` contains 650 rows, one for each Parliamentary Constituency, and 118 columns. Contained in the columns are variables reporting vote numbers and shares for the main political parties for 2019 and 2017 General Elections, as well as names and codes (`ID`s) for each Parliamentary Constituency and the county, region and country in which they are contained. You might want to count the number of counties and regions in the UK, and the number of constituencies contained by counties and regions,  using some of the `dplyr` functions introduced in the last session -- for example with calls to `group_by()` and `count()`.
 
-The aim of this analysis session is to get you familiar with `ggplot2` specifications. We will be replicating some of the visual data analysis of the 2019 UK General Election in @beecham_using_2020, inspired by the [Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/) graphic. For this we need to calculate an additional variable -- Butler Swing [@butler_why_1990] -- which represents the average change in share of the vote won by two parties contesting successive elections. Code for calculating this variable (named  `swing_con_lab`) is in the [<i class="fab fa-r-project"></i> 03-template.Rmd](/homework/03-homework_files/03-template.Rmd). Although initially intuitive, the measure takes a little interpretation. A Swing to the Conservatives, which we observe most often in this dataset, could happen in three ways:
+The aim of this analysis session is to get you familiar with `ggplot2` specifications. We will be replicating some of the visual data analysis of the 2019 UK General Election in @beecham_using_2020, inspired by the [Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/) graphic. For this we need to calculate an additional variable -- Butler Swing [@butler_why_1990] -- which represents the average change in share of the vote won by two parties contesting successive elections. Code for calculating this variable (named  `swing_con_lab`) is in the [<i class="fab fa-r-project"></i> 03-template.Rmd](/homework/03-homework_files/03-template.Rmd).
+
+Although initially intuitive, the measure takes a little interpretation. A Swing to the Conservatives, which we observe most often in this dataset, could happen in three ways:
 
 1. An increase in Conservative vote share and a decrease in Labour vote share.
 2. An increase in both Conservative and Labour vote share, but with the Conservative increase outstripping that of Labour’s.
@@ -347,7 +349,7 @@ The only other dataset to load is a `.geojson` file containing the geometries of
 
 ### Summarise
 
-You will no doubt be familiar with the ultimate result of the 2019 General Election -- a landslide Conservative victory that confounded expectations. To start, we can quickly compute some summary statistics around the vote.  In the code block below, we count the number of seats won by party and overall vote share by party. For the latter, my code is a little more elaborate than I intended it to be. I needed to reshape the data frame using `pivot_wider()` such that each row represents a vote for a party in a constituency. From here I computed in a single function the vote share for each party.
+You will no doubt be familiar with the result of the 2019 General Election -- a landslide Conservative victory that confounded expectations. To start, we can quickly compute some summary statistics around the vote.  In the code block below, we count the number of seats won by party and overall vote share by party. For the latter, my code is a little more elaborate than I intended it to be. I needed to reshape the data frame using `pivot_wider()` such that each row represents a vote for a party in a constituency. From here I computed in a single function the vote share for each party.
 
 Whilst the Conservative party hold 56% of constituencies, they won only 44% of the vote share. The equivalent stats for Labour are 31% and 32% respectively. Incidentally, whilst the Conservatives increased their share of constituencies from 2017 (where they had just 317, 49% of constituencies) their vote share increase was reasonably small -- in 2017 they gained 42.5% of the vote.
 
@@ -374,7 +376,7 @@ bes_2019 %>%
 
 # Share of vote by party.
 bes_2019 %>%
-  select(constituency_name, total_vote_19, con_vote_19:alliance_vote_19) %>% # Select cols containing vote counts by party.
+  select(constituency_name, total_vote_19, con_vote_19:alliance_vote_19, region) %>% # Select cols containing vote counts by party.
   pivot_longer(cols=con_vote_19:alliance_vote_19, names_to="party", values_to="votes") %>% # Pivot to make each row a vote for a party in a constituency.
   mutate(party=str_extract(party, "[^_]+")) %>% # Use some regex to pull out party name.
   group_by(party) %>%
@@ -444,7 +446,7 @@ A reminder of the general form of the `ggplot2` specification (first covered in 
 2. Define the **encoding**: `mapping=aes()`. In this case, we want to summarise over the `swing_con_lab` variable.
 3. Specify the **marks** to be used: `geom_histogram()` in this case.
 
-Different from the scatterplot example, there is more happening in the internals of `ggplot2` when creating a histogram.  Technically `geom_histogram` is what @munzner_visualization_2014 would describe as a  *chart idiom* rather than a *mark* (geometric primitive). The Swing variable is partitioned into bins and observations in each bin are counted. The x-axis (bins) and y-axis (counts by bin) is therefore derived from the supplied variable (`swing_con_lab`). Should you wish, you could enter `?geom_histogram` for fuller detail and documentation around controlling bin sizes amongst other things.
+Different from the scatterplot example, there is more happening in the internals of `ggplot2` when creating a histogram.  Technically `geom_histogram()` is what @munzner_visualization_2014 would describe as a  *chart idiom* rather than a *mark* (geometric primitive). The Swing variable is partitioned into bins and observations in each bin are counted. The x-axis (bins) and y-axis (counts by bin) is therefore derived from the supplied variable (`swing_con_lab`). Should you wish, you could enter `?geom_histogram` for fuller detail and documentation around controlling bin sizes amongst other things.
 
 
 You will notice that by default the histogram's bars are given a grey colour. To *set* them to a different colour, add a `fill=` argument to `geom_histogram()`. In the code block below,  colour is set using [hex codes](https://en.wikipedia.org/wiki/Web_colors) -- `"#003c8f"`, based on the theme for this course website. I use the term *set* here and not *map* or *encode* and there is a principled explanation for this. Any part of a `ggplot2` specification that involves encoding data -- mapping data to a visual channel -- should be specified through the `mapping=aes()` argument. Anything else, for example changing the default colour of marks, their thickness and transparency, needs to be *set* outside of this argument.
@@ -464,7 +466,7 @@ data_gb %>%
 You might have noticed that different elements of a `ggplot2` specification are added (`+`) as layers. In the example above, the additional layer of labels (`labs()`) is not intrinsic to the graphic. However, often you will add layers that do affect the graphic itself: for example the scaling of encoded values (e.g. `scale_*_continuous()`) or whether the graphic is to be conditioned on another variable to generate [small multiples](https://flowingdata.com/tag/small-multiples/) for comparison (e.g. `facet_*()`).
 
 {{% callout note %}}
-Read this design story by [Lunzner and McNamara, 2020](http://tinlizzie.org/histograms/) for an excellent discussion of the analysis and design considerations when working with histograms. There are of course other *geoms* for summarising over 1D distributions: `geom_boxplot()`, `geom_dotplot()`, `geom_violin()`.
+Read this design exposition by [Lunzner and McNamara, 2020](http://tinlizzie.org/histograms/) for an excellent discussion of the analysis and design considerations when working with histograms. There are of course other *geoms* for summarising over 1D distributions: `geom_boxplot()`, `geom_dotplot()`, `geom_violin()`.
 {{% /callout %}}
 
 #### Faceting by region
@@ -483,7 +485,7 @@ Adding a call to `facet_*()`, we can quickly compare how Swing varies by region 
 include_graphics("/class/03-class_files/bars.png", error = FALSE)
 ```
 
-Previously we calculated overall vote share by Political Party. We could continue the exploration of votes by region by re-using this code to generate plots displaying quantities but also comparing region, using marks and encoding channels that are suitable for magnitudes.
+Previously we calculated overall vote share by Political Party. We could continue the exploration of votes by region by re-using this code to generate plots displaying quantities but also comparing by region, using marks and encoding channels that are suitable for magnitudes.
 
 To generate a bar chart similar to the left of Figure  \@ref(fig:bars) the `ggplot2` specification would be^[I'm suggesting that you reuse the code to calculate party vote share in the [summarise](/class/03-class/#summarise-1) code block before piping (`%>%`) to the `ggplot2` specification.]:
 
@@ -514,7 +516,7 @@ A quick breakdown of the specification:
 include_graphics("/class/03-class_files/bars-region.png", error = FALSE)
 ```
 
-In Figure \@ref(fig:bars-region) the graphic is faceted by region. This requires an updated derived dataset grouping by `vote_share` *and* `region` and of course adding a faceting layer (`geom_facet(~region)`) to the `ggplot2` specification. The graphic is more data-rich, but additional cognitive effort is required in relating the bars representing political parties between different graphical subsets. We can assist this *identify* and *associate* task by encoding the bars with an appropriate visual channel: *colour hue*. The `ggplot2` specification for this is as you would expect -- we add a mapping to `geom_col()` and pass the variable name `party` to the fill argument (`aes(fill=party)`.
+In Figure \@ref(fig:bars-region) the graphic is faceted by region. This requires an updated derived dataset grouping by `vote_share` *and* `region` and of course adding a faceting layer (`geom_facet(~region)`) to the `ggplot2` specification^[Again you will reuse and **update** the code to calculate party vote share in the [summarise](/class/03-class/#summarise-1) code block before piping (`%>%`) to the `ggplot2` specification.]. The graphic is more data-rich, but additional cognitive effort is required in relating the bars representing political parties between different graphical subsets. We can assist this *identify* and *associate* task by encoding the bars with an appropriate visual channel: *colour hue*. The `ggplot2` specification for this is as you would expect -- we add a mapping to `geom_col()` and pass the variable name `party` to the fill argument (`aes(fill=party)`).
 
 
 ```{r plot-bars-region, echo=TRUE, eval=FALSE, message=FALSE}
@@ -527,7 +529,7 @@ In Figure \@ref(fig:bars-region) the graphic is faceted by region. This requires
 
 Trying this for yourself, you will observe that the `ggplot2` internals are clever here. Since `party` is a categorical variable, a categorical (hue-based) colour scheme is automatically applied. Try passing a quantitative variable (`fill=vote_share`) and see what happens.
 
-Clever as this is, when encoding political parties with colour **symbolisation** is important. More control over the encoding is necessary in order to specify the colours with which parties are most commonly represented. We can override `ggplot2`'s default colour by adding a `scale_fill_manual()` layer into which a vector of hex codes describing the colour of each political party is passed (`party_colours`). We also need to tell `ggplot2` which element of `party_colours` to apply to which value of `party`. In the code below, a derived table is generated summarising `vote_share` by political party and region. In the final line the `party` variable is recoded as a [`factor`](https://r4ds.had.co.nz/factors.html). You might recall from last session that factors are categorical variables of fixed and potentially orderable values, called `levels`. The call to `mutate()` recodes `party` as a factor variable and orders the levels according to overall vote share.
+Clever as this is, when encoding political parties with colour **symbolisation** is important. More control over the encoding is necessary in order to specify the colours with which parties are most commonly represented. We can override `ggplot2`'s default colour by adding a `scale_fill_manual()` layer into which a vector of hex codes describing the colour of each political party is passed (`party_colours`). We also need to tell `ggplot2` which element of `party_colours` to apply to which value of `party`. In the code below, a derived table is generated summarising `vote_share` by political party and region. In the final line the `party` variable is recoded as a [`factor`](https://r4ds.had.co.nz/factors.html). You might recall from the last session that factors are categorical variables of fixed and orderable values, called `levels`. The call to `mutate()` recodes `party` as a factor variable and orders the levels according to overall vote share.
 
 ```{r calc-shares, echo=TRUE, eval=FALSE, message=FALSE}
 # Generate derived data.
@@ -555,7 +557,7 @@ brexit <- "#25b6ce"
 other <- "#bdbdbd"
 
 party_colours <- c(con, lab, ld, snp, green, brexit, pc)
-names(party_colours) <- levels(temp_party_shares %>% pull(party))
+names(party_colours) <- levels(temp_party_shares_region %>% pull(party))
 ```
 
 The `ggplot2` specification is then updated with the `scale_fill_manual()` layer:

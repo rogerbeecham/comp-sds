@@ -1,8 +1,8 @@
 ---
-title: "Visualization for communication and storytelling"
-linktitle: "9: Visualization for communication and storytelling"
-date: "2021-07-19"
-class_date: "2021-07-19"
+title: "Communication and storytelling"
+linktitle: "9: Communication and storytelling"
+date: "2021-08-19"
+class_date: "2021-08-19"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -181,8 +181,8 @@ Without the careful integration of annotations and non-standard legends, the gra
 
 ### Import
 
-* Download the [<i class="fab fa-r-project"></i> 09-template.Rmd](/homework/09-homework_files/09-template.Rmd) file for this session and save it to the `reports` folder of your `vis-for-gds` project.
-* Open your `vis-for-gds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/09-template.Rmd`.
+* Download the [<i class="fab fa-r-project"></i> 09-template.Rmd](/homework/09-homework_files/09-template.Rmd) file for this session and save it to the `reports` folder of your `comp-sds` project.
+* Open your `comp-sds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/09-template.Rmd`.
 
 The template file lists the required packages -- `tidyverse` and `sf`. The data were collected using [Kieran Healy](https://kieranhealy.org/)'s [`covdata`](https://kjhealy.github.io/covdata/) package, with attribution to the [county-level cumulative cases dataset](https://kjhealy.github.io/covdata/articles/new-york-times.html) released and maintained by data journalists at the New York Times ([this repo](https://github.com/nytimes/covid-19-data)).
 

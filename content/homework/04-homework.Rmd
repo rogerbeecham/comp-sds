@@ -1,8 +1,8 @@
 ---
 title: "Exploratory data analysis"
 linktitle: "4: Exploratory data analysis"
-date: "2021-06-14"
-class_date: "2021-06-14"
+date: "2021-08-12"
+class_date: "2021-08-12"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -36,7 +36,7 @@ By the end of this homework session you should be able to:
 
 ## Introduction
 
-This homework requires you to apply the concepts and skills developed in the class session on [exploratory data anlsysis](/class/04-class/). Do complete the task and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.
+This homework requires you to apply the concepts and skills developed in the class session on [exploratory data anlsysis](/class/04-class/). 
 
 ## Visualization design challenge
 
@@ -44,7 +44,7 @@ This homework requires you to apply the concepts and skills developed in the cla
 ```{r boxplots-class, echo=FALSE, fig.cap="Boxplots of casualty age by vehicle type and class.", fig.align="left", out.width="100%"}
 include_graphics("/class/04-class_files/boxplot-by-class.png", error = FALSE)
 ```
-This week's homework is a single visualization design task. Please do not spend too long on this. The aim of  is to get you thinking a little about the concepts introduced in the session rather than to overly burden you with additional work.
+This week's homework is a single visualization design task. Please do not spend too long on this. The aim of this session is to get you to apply some of the technical detail introduced in the session rather than to overly burden you with additional work.
 
 In the session we discussed visual approaches to summarising within-variable variation in a dataset and later the use of layout and colour for supporting *comparison* across categories. In Figure \@ref(fig:boxplots-class) above, boxplots are used to summarise the age distribution of those involved in pedestrian road crashes, comparing the ages of the injured pedestrians, drivers and how this varies by the vehicle types involved.
 

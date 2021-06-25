@@ -7,7 +7,7 @@ output: html_document
 
 ## Class
 
-Reopen your `vis-for-gds` project and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute.
+Reopen your `comp-sds` project and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute.
 
 The technical element to this session demonstrates how linear regression models can be updated with Fixed Effects and Interaction Terms. Approaches for extracting model summaries and diagnostics introduced in the previous session will be used again.
 
@@ -38,7 +38,7 @@ cons_outline <- st_read(url, crs=27700)
 outcome <- leave_votes_west %>%
   select(ons_const_id, constituency_name, leave=figure_to_use) %>%
   inner_join(explanatory %>% select(ons_const_id, region)) %>%
-  mutate(resid_unform=leave-gb_leave)
+  mutate(gb_leave=.519, resid_unform=leave-gb_leave)
 
 # Collect explanatory variables (from census_11 table in parlitools)
 explanatory <- census_11 %>%

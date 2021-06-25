@@ -1,8 +1,8 @@
 ---
-title: "Visualization for communication and storytelling"
-linktitle: "9: Visualization for communication and storytelling"
-date: "2021-07-19"
-class_date: "2021-07-19"
+title: "Communication and storytelling"
+linktitle: "9: Communication and storytelling"
+date: "2021-08-19"
+class_date: "2021-08-19"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -185,8 +185,8 @@ Figure 6: Glyphmap design displaying growth in COVID-19 cases by US county, base
 <div id="import" class="section level3">
 <h3>Import</h3>
 <ul>
-<li>Download the <a href="/homework/09-homework_files/09-template.Rmd"><i class="fab fa-r-project"></i> 09-template.Rmd</a> file for this session and save it to the <code>reports</code> folder of your <code>vis-for-gds</code> project.</li>
-<li>Open your <code>vis-for-gds</code> project in RStudio and load the template file by clicking <code>File</code> &gt; <code>Open File ...</code> &gt; <code>reports/09-template.Rmd</code>.</li>
+<li>Download the <a href="/homework/09-homework_files/09-template.Rmd"><i class="fab fa-r-project"></i> 09-template.Rmd</a> file for this session and save it to the <code>reports</code> folder of your <code>comp-sds</code> project.</li>
+<li>Open your <code>comp-sds</code> project in RStudio and load the template file by clicking <code>File</code> &gt; <code>Open File ...</code> &gt; <code>reports/09-template.Rmd</code>.</li>
 </ul>
 <p>The template file lists the required packages – <code>tidyverse</code> and <code>sf</code>. The data were collected using <a href="https://kieranhealy.org/">Kieran Healy</a>’s <a href="https://kjhealy.github.io/covdata/"><code>covdata</code></a> package, with attribution to the <a href="https://kjhealy.github.io/covdata/articles/new-york-times.html">county-level cumulative cases dataset</a> released and maintained by data journalists at the New York Times (<a href="https://github.com/nytimes/covid-19-data">this repo</a>).</p>
 <p>The template provides access to a version of this dataset that I have ‘staged’ for charting. For this I filtered cases data on the dates covered by the Washington Post graphic (3rd to 25th May); identified counties whose daily case counts were <span class="math inline">\(\geq20\)</span> cases on 3rd May; calculated daily growth rates, anchored to the recorded case counts on 3rd May; calculated ‘end’ growth rates and daily counts for each county (those recorded on 25th May); and finally a binned growth rate variable identifying counties with daily case counts on 25rd May that were <span class="math inline">\(\leq2\times\)</span>, <span class="math inline">\(\geq2\times\)</span>, <span class="math inline">\(\geq4\times\)</span>, <span class="math inline">\(\geq7\times\)</span> the daily case counts measured on 3rd May. Also there is a <code>state_boundaries</code> dataset to download, which contains <code>geometry</code> data for each US state, collected from <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">US Census Bureau</a> as well as coordinate variables describing the geographic centroid of each state. The <a href="https://en.wikipedia.org/wiki/Albers_projection">Albers Equal Area</a> projection is used.</p>

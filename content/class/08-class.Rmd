@@ -1,8 +1,8 @@
 ---
-title: "Visualization for uncertainty analysis"
-linktitle: "8: Visualization for uncertainty analysis"
-date: "2021-07-12"
-class_date: "2021-07-12"
+title: "Uncertainty analysis"
+linktitle: "8: Uncertainty analysis"
+date: "2021-08-18"
+class_date: "2021-08-18"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -197,8 +197,8 @@ Again, for an excellent discussion of the multiple comparison problem and visual
 The technical element demonstrates how the plots and uncertainty estimates of STATS19 road crash data introduced in the session can be produced.  We will again make use of [functional programming](https://adv-r.hadley.nz/fp.html#:~:text=Functional) approaches via the [`purrr`](https://purrr.tidyverse.org/) package, most obviously for generating and working over boostrap resamples.
 
 
-* Download the [<i class="fab fa-r-project"></i> 08-template.Rmd](/homework/08-homework_files/08-template.Rmd) file for this session and save it to the `reports` folder of your `vis-for-gds` project.
-* Open your `vis-for-gds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/08-template.Rmd`.
+* Download the [<i class="fab fa-r-project"></i> 08-template.Rmd](/homework/08-homework_files/08-template.Rmd) file for this session and save it to the `reports` folder of your `comp-sds` project.
+* Open your `comp-sds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/08-template.Rmd`.
 
 ### Import
 

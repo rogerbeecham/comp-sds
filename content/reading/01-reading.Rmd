@@ -1,8 +1,8 @@
 ---
 title: "Introduction"
 linktitle: "1: Introduction"
-date: "2021-05-24"
-class_date: "2021-05-24"
+date: "2021-08-09"
+class_date: "2021-08-09"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
@@ -21,7 +21,7 @@ editor_options:
 ---
 
 
-### Defining (Geographic) Data science
+### Defining Social (Geographic) Data science
 
 - [@arribas_geography_2018]
 

@@ -1,8 +1,8 @@
 ---
 title: "Visualization fundamentals"
 linktitle: "3: Visualization fundamentals"
-date: "2021-06-07"
-class_date: "2021-06-07"
+date: "2021-08-11"
+class_date: "2021-08-11"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -36,7 +36,7 @@ By the end of this homework session you should be able to:
 
 ## Introduction
 
-This homework requires you to apply the concepts and skills developed in the class session on [visualization fundamentals](/class/03-class/). Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.
+This homework requires you to apply the concepts and skills developed in the class session on [visualization fundamentals](/class/03-class/). 
 
 ## Task 1: Describe and evaluate
 
@@ -77,7 +77,7 @@ include_graphics("/class/03-class_files/hist-region.png", error = FALSE)
 
 ### Scatterplots with multiple encodings
 
-Write some code for reproducing something similar to the graphic below -- a scatterplot comparing 2017 and 2019 vote shares for Labour. Be sure to include **every** encoding (`shape` and `alpha`) as it appears in the graphic. Hint: you may need to use a **conditional statement** to generate a variable for emphasising constituencies that flipped parties between 2017 and 2019. Place your code into the [<i class="fab fa-r-project"></i> 03-template.Rmd](/homework/03-homework_files/03-template.Rmd) file for this session.
+Write some code for reproducing something similar to the graphic below -- a scatterplot comparing 2017 and 2019 vote shares for Labour. Be sure to include **every** encoding as it appears in the graphic (e.g. `shape` and `alpha` according to whether constituencies flipped allegiance). Hint: you may need to use a **conditional statement** to generate a variable for emphasising constituencies that flipped parties between 2017 and 2019. Place your code into the [<i class="fab fa-r-project"></i> 03-template.Rmd](/homework/03-homework_files/03-template.Rmd) file for this session.
 
 ```{r scatters-code, echo=TRUE, eval=FALSE}
 #######################

@@ -1,8 +1,8 @@
 ---
-title: "Visualization for model building 1"
-linktitle: "6: Visualization for model building 1"
-date: "2021-06-28"
-class_date: "2021-06-28"
+title: "Model building 1"
+linktitle: "6: Model building 1"
+date: "2021-08-16"
+class_date: "2021-08-16"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

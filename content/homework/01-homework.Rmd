@@ -1,8 +1,8 @@
 ---
 title: "Introduction"
 linktitle: "1: Introduction"
-date: "2021-05-24"
-class_date: "2021-05-24"
+date: "2021-08-09"
+class_date: "2021-08-09"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
@@ -33,7 +33,7 @@ By the end of this homework session you should:
 
 ## Introduction
 
-For most sessions I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them as they will form a portfolio of work that will contribute 30% of the module mark. Doing these exercises will also help you build the skills necessary to complete the project coursework that forms the main contribution to your module mark (70%).
+For most sessions I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them.
 
 There has been a lot to take in this session. There are no formal exercises to complete as part of this session's homework. Instead we want you to really try to solidify your understanding of the core technology for the module.
 

@@ -1,8 +1,8 @@
 ---
 title: "Data fundamentals"
 linktitle: "2: Data fundamentals"
-date: "2021-05-31"
-class_date: "2021-05-31"
+date: "2021-08-10"
+class_date: "2021-08-10"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -20,8 +20,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Session Outcomes
-
 By the end of this homework session you should be able to:
 
 {{% callout objective %}}
@@ -32,7 +30,7 @@ By the end of this homework session you should be able to:
 
 ## Introduction
 
-This homework requires you to apply the concepts and skills developed in the class session on [data fundamentals](/class/02-class/). Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.
+This homework requires you to apply the concepts and skills developed in the class session on [data fundamentals](/class/02-class/). Do complete each of the tasks and be sure to save your work.
 
 ## Task 1: Describe data
 
@@ -78,16 +76,20 @@ Below are two different tables with results from UK General Elections. We will b
 
 In the [<i class="fab fa-r-project"></i> 02-template.Rmd](/homework/02-homework_files/02-template.Rmd) file for this session I have provided links to two derived tables (`ny_spread_columns` and `ny_spread_rows`) from the New York bikeshare trip data that are not in a tidy format.
 
-Using functions from `dplyr` and `tidyr` reorganise these data so that they are conform to the rules of **tidy** data [@wickham_tidy_2014].
+Using functions from `dplyr` and `tidyr` reorganise these data so that they conform to the rules of **tidy** data [@wickham_tidy_2014].
 
 A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:
 
 * `o_station`: station id  of the origin station
-* `d_station`: station ide of the destination station
+* `d_station`: station id of the destination station
 * `wkday`: identifies whether the OD pair describes weekday or weekend ny_trips
 * `count`: count of trips recorded for that observation (OD pair and weekday/weekend)
 * `dist`: total distance (cumulative) in kms of all trips recorded for that observation (OD pair and weekday/weekend)
 * `duration`: total duration in minutes (cumulative) of all trips recorded for that observation (OD pair and weekday/weekend)
+
+{{% callout note %}}
+You may wish to start with reorganising `ny_spread_rows` as I deliberately made `ny_spread_columns` quite challenging. The intention here was to replicate the sorts of arduous data formatting operations that need to be performed when working with real datasets. As always there are different approaches to this, but it can be achieved with use of `pivot_longer`, `pivot_wider`, plus a call to `separate()`. This may be one to post to the course Slack.
+{{% /callout %}}
 
 ```
 ## # A tibble: 386,762 x 6
@@ -108,6 +110,6 @@ A candidate tidy organisation of the data is below. Each row is an origin-destin
 
 ## Task 4: Compute from data
 
-Using `dplyr` functions, calculate the average distance, duration and speed of trips occuring for each observation.  Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your `ny_stations` table in order to fetch the station names corresponding to the origin and destination stations.
+Using `dplyr` functions, calculate the average distance, duration and speed of trips occurring for each observation.  Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your `ny_stations` table in order to fetch the station names corresponding to the origin and destination stations.
 
 ## References

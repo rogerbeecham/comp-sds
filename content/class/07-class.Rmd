@@ -1,8 +1,8 @@
 ---
-title: "Visualization for model building 2: Expose, estimate, evaluate"
-linktitle: "7: Visualization for model building 2"
-date: "2021-07-05"
-class_date: "2021-07-05"
+title: "Model building 2: Expose, estimate, evaluate"
+linktitle: "7: Model building 2"
+date: "2021-08-17"
+class_date: "2021-08-17"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -83,15 +83,15 @@ A common approach to treating geographic *dependence* in the **values** of varia
 
 A dummy variable is created for each group (region in our case), and every region receives a constant; you can think of this as a separate intercept for its regression line.  Any group-level sources of variation in the outcome are collapsed into the FE variable, which means that regression coefficients are not complicated by this more messy variation -- they now capture the association between demographics and Leave after adjusting for systematic differences in the Leave vote due to region. So, for example, we know that Scotland is politically different from the rest of GB and that this appears to drag down the observed Leave vote for its constituencies, and so the constant term on region adjusts for this and prevents the estimated regression coefficients (inferred associations between variables) from being affected. The constant term  also allows you to estimate the 'base level' of the outcome for each grouping variable -- e.g. net of demographic composition, the expected Leave vote in a particular region.
 
-The linear regression model introduced last week can be easily extended with the FE term ($\color{#003c8f}{\gamma_{j}}$). For a single variable model:
+The linear regression model introduced last week can be easily extended with the FE term ($\textcolor{highlight}{\gamma_{j}}$). For a single variable model:
 
 \begin{align*}
-       y_{i}&= \color{#003c8f}{\gamma_{j}}  + \beta_{1}x_{i1} + \varepsilon_{i}  \\
+       y_{i}&= \textcolor{highlight}{\gamma_{j}}  + \beta_{1}x_{i1} + \varepsilon_{i}  \\
 \end{align*}
 
 So we now estimate the Leave vote in each constituency ($y_{i}$) as a function of:
 
-* $\color{#003c8f}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
+* $\textcolor{highlight}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
 * $\beta_{1}=\beta_{1}x_{i1}$, the slope, indicating in which direction and to what extent some explanatory variable measured at constituency $i$ is associated with Leave,  $+$
 * $\varepsilon_{i}$, the difference between $y_{i}$ (the observed value) at constituency $i$ and the *unobservable* true population value of the Leave vote in that constituency (statistical error)
 
@@ -101,7 +101,7 @@ Plotting the virtual regression lines -- regression lines offset by the FE const
 
 To illustrate this, Figure \@ref(fig:scatters-fe) is an updated set of scatterplots now annotated with 'virtual' regression lines for single variable linear regression models fit separately for each explanatory variable with a region FE. Plotting the virtual regression lines -- regression lines offset by the FE constant -- is interesting as it tells us a little about the nature of association in our explanatory variables. Given the way we have specified our model, the FE constants serve effectively as intercepts, $R^2$ is no longer meaningful and so other measures of fit such as [AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion) should be used to evaluate relative fit.
 
-For the *degree-educated* and *professional* variables especially, regional *dependence* in Leave voting needs to be adjusted for -- once taken into account, there is a very strong association between *degree-education* and *Leave* -- most obvious in the lines for Scotland (red).  Although we are not yet modelling for this explicitly, eyeballing the chart, there is not obvious evidence for regional heterogeneity in the *associations* with Leave for *degree-educated* and so it might be regarded as a 'global' variable -- a clear positive association with Leave irrespective of region. There may be regional specificity in the associations with Leave for the other explanatory variables.
+For the *degree-educated* and *professional* variables especially, regional *dependence* in Leave voting needs to be adjusted for -- once taken into account, there is a very strong association between *degree-education* and *Leave*, most obvious in the lines for Scotland (red).  Although we are not yet modelling for this explicitly, eyeballing the chart, there is not obvious evidence for regional non-stationarity in the *associations* with Leave for *degree-educated* and so it might be regarded as a 'global' variable -- a clear positive association with Leave irrespective of region. There may be regional specificity in the associations with Leave for the other explanatory variables.
 
 
 ```{r scatters-fe, echo=FALSE, fig.cap="Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with FE 'virtual' regression lines, coefficients and model fit (AIC -- the lower the value, better the model). Scotland is highlighted red.", fig.align="left", out.width="100%"}
@@ -130,14 +130,14 @@ include_graphics("/class/07-class_files/plot-outputs-fe.png", error = FALSE)
 
 The benefit of the FE adjustment is that it provides coefficient estimates that are not affected by between-region variation. The derived FE constants themselves also allow group differences to be quantified net of differences in demographics. However, they simply identify the fact that this variation exists -- they do not permit non-stationarity in *process*. It is conceivable that the strength and direction of association between Leave and the candidate demographic variables may vary between regions. For example, that increased levels of *EU-born* (non-UK) residents might affect area-level voting differently in certain regions than others.
 
-Rather than simply allowing a constant term to vary, we can update the linear regression model with an [interaction term](https://en.wikipedia.org/wiki/Interaction_(statistics)) ($\color{#003c8f}{\beta_{1j}}{x_{i1}}$) that allows the coefficient estimates to vary depending on region. This means we get a separate constant term and coefficient estimate of the effect of each variable on Leave for every region -- it provides a framework for exploring regionally-distinct effects.
+Rather than simply allowing a constant term to vary, we can update the linear regression model with an [interaction term](https://en.wikipedia.org/wiki/Interaction_(statistics)) ($\textcolor{highlight}{\beta_{1j}}{x_{i1}}$) that allows the coefficient estimates to vary depending on region. This means we get a separate constant term and coefficient estimate of the effect of each variable on Leave for every region -- it provides a framework for exploring regionally-distinct effects.
 
 \begin{align*}
-       y_{i}&= \color{#003c8f}{\gamma_{j}}  + \color{#003c8f}{\beta_{1j}}x_{i1} + \varepsilon_{i}  \\
+       y_{i}&= \textcolor{highlight}{\gamma_{j}}  + \textcolor{highlight}{\beta_{1j}}x_{i1} + \varepsilon_{i}  \\
 \end{align*}
 
-* $\color{#003c8f}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
-* $\color{#003c8f}{\beta_{1j}}x_{i1}$, the region-specific slope, indicating in which direction and to what extent some demographic variable at constituency $i$ and in region $j$ is associated with Leave,  $+$
+* $\textcolor{highlight}{\gamma_{j}}$, a constant term similar to an intercept for region $j$, $+$
+* $\textcolor{highlight}{\beta_{1j}}x_{i1}$, the region-specific slope, indicating in which direction and to what extent some demographic variable at constituency $i$ and in region $j$ is associated with Leave,  $+$
 * $\varepsilon_{i}$, the difference between $y_{i}$ (the observed value) at constituency $i$ and the *unobservable* true 'population' value of the Leave vote in that constituency (statistical error)
 
 
@@ -162,7 +162,7 @@ include_graphics("/class/07-class_files/plot-outputs-interaction-fe.png", error 
 
  Given the reasonably large standard errors, it is difficult to make strong claims about regional nonstationarity in *process* form the models presented above. This might be due to overfitting, caused by the fact that we introduce additional terms to the regression model (region as an interaction) without adding data -- our coefficients may begin to fit noise rather than true effects.
 
- Given the fact that our data are hierarchically structured, constituencies sit within regions, hierarchical [multi-level modelling](https://en.wikipedia.org/wiki/Multilevel_model) may be more appropriate to modelling this sort of regional grouping. Multi-level modelling uses [partial pooling](https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/) to make estimated coefficients more conservative where there are comparatively few observations in particular groupings. There are numerous resources on multi-level modelling in R (see [Roback & Legler 2021](https://bookdown.org/roback/bookdown-BeyondMLR/) for an in-progress example). The reason for the FE approach here is a prosaic one: I wanted to use model-building functions in R that worked well with [`tidymodels`](https://www.tidymodels.org/), although annoyingly I've recently noticed that  a `package` for combining  multi-level modelling with  `tidymodels` is [under development here](https://github.com/tidymodels/multilevelmod).
+ Given the fact that our data are hierarchically structured (constituencies sit within regions) hierarchical [multi-level modelling](https://en.wikipedia.org/wiki/Multilevel_model) may be more appropriate to modelling this sort of regional grouping. Multi-level modelling uses [partial pooling](https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/) to make estimated coefficients more conservative where there are comparatively few observations in particular groupings. There are numerous resources on multi-level modelling in R (see [Roback & Legler 2021](https://bookdown.org/roback/bookdown-BeyondMLR/) for an in-progress example). The reason for the FE approach here is a prosaic one: I wanted to use model-building functions in R that worked well with [`tidymodels`](https://www.tidymodels.org/), although annoyingly I've recently noticed that  a `package` for combining  multi-level modelling with  `tidymodels` is [under development here](https://github.com/tidymodels/multilevelmod).
 
  Alternatively, it may be useful to generate different model formulations for different regions -- e.g. particular combinations of explanatory variable. [Penalised regression](https://en.wikipedia.org/wiki/Regularization_(mathematics)) provides a principled means of automatic variable selection and has been applied to generate regional and state area-level model specifications for the Brexit [@beecham_locally_2018] and Trump [@beecham_regionally_2020] votes, again with  more reliably coefficient estimates.
 
@@ -176,8 +176,8 @@ Geographically-weighted (GW) statistics provides a mechanism for exploring the e
 
 The technical element to this session demonstrates how linear regression models can be updated with Fixed Effects and Interaction Terms. Approaches for extracting model summaries and diagnostics introduced in the previous session will be used again.
 
-* Download the [<i class="fab fa-r-project"></i> 07-template.Rmd](/homework/07-homework_files/07-template.Rmd) file for this session and save it to the `reports` folder of your `vis-for-gds` project.
-* Open your `vis-for-gds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/07-template.Rmd`.
+* Download the [<i class="fab fa-r-project"></i> 07-template.Rmd](/homework/07-homework_files/07-template.Rmd) file for this session and save it to the `reports` folder of your `comp-sds` project.
+* Open your `comp-sds` project in RStudio and load the template file by clicking `File` > `Open File ...` > `reports/07-template.Rmd`.
 
 ### Import
 
@@ -331,9 +331,9 @@ model %>%
   ) %>%
   filter(term!="cons") %>%
   ggplot() +
-  geom_col(aes(x=reorder(term, -estimate), y=estimate), fill=site_colours$primary, alpha=.3)+
+  geom_col(aes(x=reorder(term, -estimate), y=estimate), alpha=.3)+
   geom_pointrange(aes(x=reorder(term, -estimate),
-                      y=estimate,ymin=estimate-1.96*std.error, ymax=estimate+1.96*std.error), colour=site_colours$primary) +
+                      y=estimate,ymin=estimate-1.96*std.error, ymax=estimate+1.96*std.error)) +
   geom_hline(yintercept = 0, size=.2)+
   facet_wrap(~region) +
   coord_flip()
@@ -341,7 +341,7 @@ model %>%
 
 The plot specification:
 
-1. **Data**: A data frame of model coefficients extracted from the multivariate model object using `tidy`. To make clean plot labels, we need to remove unnecessary text in the `term` variable (e.g. "cons:regionEast Midlands"). [`separate()`](https://tidyr.tidyverse.org/reference/separate.html) allows us to split this column on `:` and then [`str_remove()`] is quite obvious. We do not wish to plot the FE constants and so `filter()` them out.
+1. **Data**: A data frame of model coefficients extracted from the multivariate model object using `tidy`. To make clean plot labels, we need to remove unnecessary text in the `term` variable (e.g. "cons:regionEast Midlands"). [`separate()`](https://tidyr.tidyverse.org/reference/separate.html) allows us to split this column on `:` and then `str_remove()` is quite obvious. We do not wish to plot the FE constants and so `filter()` them out.
 2. **Encoding**: y-position varies according to the size of the coefficient estimate and the 95% confidence intervals, defined using `ymin` and `ymax`.
 3. **Marks**: `geom_pointrange()`, which understands `ymin` and `ymax`, for the dots with Confidence Intervals. I have also included light bars in the background (`geom_col()`) as I think this aids interpretation of the direction and size of the coefficients.
 4. **Setting**: `coord_flip()` to make variable names easier to read.
