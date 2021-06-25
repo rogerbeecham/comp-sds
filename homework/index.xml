@@ -108,7 +108,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/06-class/&#34;&gt;model building 1&lt;/a&gt;. Do complete the task and be sure to save your work as it will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/06-class/&#34;&gt;model building 1&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-calculate-and-plot&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: Calculate and plot&lt;/h2&gt;
@@ -225,7 +225,7 @@ expl_cors_order
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/05-class/&#34;&gt;exploring spatial networks&lt;/a&gt;. Do complete the task and be sure to save your work as it will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/05-class/&#34;&gt;exploring spatial networks&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;visualization-interpretation-challenge&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Visualization interpretation challenge&lt;/h2&gt;
@@ -329,7 +329,7 @@ Figure 1: OD map of commutes between London boroughs
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/04-class/&#34;&gt;exploratory data anlsysis&lt;/a&gt;. Do complete the task and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/04-class/&#34;&gt;exploratory data anlsysis&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;visualization-design-challenge&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Visualization design challenge&lt;/h2&gt;
@@ -339,7 +339,7 @@ Figure 1: OD map of commutes between London boroughs
 Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;This week’s homework is a single visualization design task. Please do not spend too long on this. The aim of is to get you thinking a little about the concepts introduced in the session rather than to overly burden you with additional work.&lt;/p&gt;
+&lt;p&gt;This week’s homework is a single visualization design task. Please do not spend too long on this. The aim of this session is to get you to apply some of the technical detail introduced in the session rather than to overly burden you with additional work.&lt;/p&gt;
 &lt;p&gt;In the session we discussed visual approaches to summarising within-variable variation in a dataset and later the use of layout and colour for supporting &lt;em&gt;comparison&lt;/em&gt; across categories. In Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; above, boxplots are used to summarise the age distribution of those involved in pedestrian road crashes, comparing the ages of the injured pedestrians, drivers and how this varies by the vehicle types involved.&lt;/p&gt;
 &lt;p&gt;Your task is to generate a &lt;em&gt;single&lt;/em&gt; data graphic (I would class Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; as a single graphic) to summarise how casualty age varies by some other interesting combination of categorical variable. For example, you may wish to explore how casualty age varies by injury severity.&lt;/p&gt;
 &lt;p&gt;Once you have generated the graphic, save it as a &lt;code&gt;.png&lt;/code&gt; file and insert a link to it in the associated code block in the &lt;a href=&#34;../homework/04-homework_files/04-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 04-template.Rmd&lt;/a&gt;. Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using &lt;strong&gt;no more than three sentences&lt;/strong&gt;, note how your graphic and any computed values support &lt;em&gt;comparison&lt;/em&gt; – e.g. via juxtaposition, superposition and/or direct encoding &lt;span class=&#34;citation&#34;&gt;(Gleicher and Roberts &lt;a href=&#34;#ref-gleicher_visual_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
@@ -455,7 +455,7 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/03-class/&#34;&gt;visualization fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/03-class/&#34;&gt;visualization fundamentals&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-describe-and-evaluate&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: Describe and evaluate&lt;/h2&gt;
@@ -542,7 +542,7 @@ Figure 2: Histograms of Swing variable, grouped by region.
 &lt;/div&gt;
 &lt;div id=&#34;scatterplots-with-multiple-encodings&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Scatterplots with multiple encodings&lt;/h3&gt;
-&lt;p&gt;Write some code for reproducing something similar to the graphic below – a scatterplot comparing 2017 and 2019 vote shares for Labour. Be sure to include &lt;strong&gt;every&lt;/strong&gt; encoding (&lt;code&gt;shape&lt;/code&gt; and &lt;code&gt;alpha&lt;/code&gt;) as it appears in the graphic. Hint: you may need to use a &lt;strong&gt;conditional statement&lt;/strong&gt; to generate a variable for emphasising constituencies that flipped parties between 2017 and 2019. Place your code into the &lt;a href=&#34;../homework/03-homework_files/03-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 03-template.Rmd&lt;/a&gt; file for this session.&lt;/p&gt;
+&lt;p&gt;Write some code for reproducing something similar to the graphic below – a scatterplot comparing 2017 and 2019 vote shares for Labour. Be sure to include &lt;strong&gt;every&lt;/strong&gt; encoding as it appears in the graphic (e.g. &lt;code&gt;shape&lt;/code&gt; and &lt;code&gt;alpha&lt;/code&gt; according to whether constituencies flipped allegiance). Hint: you may need to use a &lt;strong&gt;conditional statement&lt;/strong&gt; to generate a variable for emphasising constituencies that flipped parties between 2017 and 2019. Place your code into the &lt;a href=&#34;../homework/03-homework_files/03-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 03-template.Rmd&lt;/a&gt; file for this session.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#######################
 # Enter your code in the chunk provided.
 ######################&lt;/code&gt;&lt;/pre&gt;
@@ -599,7 +599,6 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-1-describe-data&#34;&gt;Task 1: Describe data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;&lt;ul&gt;
@@ -612,8 +611,6 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;session-outcomes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Session Outcomes&lt;/h2&gt;
 &lt;p&gt;By the end of this homework session you should be able to:&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-objective&#34;&gt;
   &lt;div&gt;
@@ -626,10 +623,9 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;/div&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/02-class/&#34;&gt;data fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.&lt;/p&gt;
+&lt;p&gt;This homework requires you to apply the concepts and skills developed in the class session on &lt;a href=&#34;../class/02-class/&#34;&gt;data fundamentals&lt;/a&gt;. Do complete each of the tasks and be sure to save your work.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-describe-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: Describe data&lt;/h2&gt;
@@ -773,16 +769,22 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 3: Fix data&lt;/h2&gt;
 &lt;p&gt;In the &lt;a href=&#34;../homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file for this session I have provided links to two derived tables (&lt;code&gt;ny_spread_columns&lt;/code&gt; and &lt;code&gt;ny_spread_rows&lt;/code&gt;) from the New York bikeshare trip data that are not in a tidy format.&lt;/p&gt;
-&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they are conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;o_station&lt;/code&gt;: station id of the origin station&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;d_station&lt;/code&gt;: station ide of the destination station&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d_station&lt;/code&gt;: station id of the destination station&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;wkday&lt;/code&gt;: identifies whether the OD pair describes weekday or weekend ny_trips&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;count&lt;/code&gt;: count of trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;dist&lt;/code&gt;: total distance (cumulative) in kms of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;duration&lt;/code&gt;: total duration in minutes (cumulative) of all trips recorded for that observation (OD pair and weekday/weekend)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You may wish to start with reorganising &lt;code&gt;ny_spread_rows&lt;/code&gt; as I deliberately made &lt;code&gt;ny_spread_columns&lt;/code&gt; quite challenging. The intention here was to replicate the sorts of arduous data formatting operations that need to be performed when working with real datasets. As always there are different approaches to this, but it can be achieved with use of &lt;code&gt;pivot_longer&lt;/code&gt;, &lt;code&gt;pivot_wider&lt;/code&gt;, plus a call to &lt;code&gt;separate()&lt;/code&gt;. This may be one to post to the course Slack.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 386,762 x 6
 ##    o_station d_station wkday   count  dist duration
 ##        &amp;lt;int&amp;gt;     &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
@@ -800,7 +802,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;task-4-compute-from-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 4: Compute from data&lt;/h2&gt;
-&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;dplyr&lt;/code&gt; functions, calculate the average distance, duration and speed of trips occurring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your &lt;code&gt;ny_stations&lt;/code&gt; table in order to fetch the station names corresponding to the origin and destination stations.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
@@ -853,7 +855,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;For most sessions I will post some additional exercises that relate to the practical learning you will be doing in-class. You will be populating R Markdown files as you complete the exercises. The exercises will vary in detail and challenge but you should try your best effort to complete them.&lt;/p&gt;
-&lt;p&gt;There has been a lot to take in this session. There are no formal exercises to complete as part of this session’s homework. Instead we want you to really try to solidify your understanding of the core technology for the course.&lt;/p&gt;
+&lt;p&gt;There has been a lot to take in this session. There are no formal exercises to complete as part of this session’s homework. Instead we want you to really try to solidify your understanding of the core technology for the module.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;task-1-read-and-complete-basicbasics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/h2&gt;

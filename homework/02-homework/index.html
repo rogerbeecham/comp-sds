@@ -37,7 +37,7 @@
   
     
   
-  <meta name="description" content="Contents  Session Outcomes Introduction Task 1: Describe data Task 2: Diagnose data UK General Election Results 2019 UK General Election Results 2017 and 2019  Task 3: Fix data Task 4: Compute from data References   Session Outcomes By the end of this homework session you should be able to:
+  <meta name="description" content="Contents  Introduction Task 1: Describe data Task 2: Diagnose data UK General Election Results 2019 UK General Election Results 2017 and 2019  Task 3: Fix data Task 4: Compute from data References   By the end of this homework session you should be able to:
   Describe data according to its structure and contents. Calculate descriptive summaries over datasets. Apply high-level functions in dplyr and tidyr for working with data.">
 
   
@@ -245,7 +245,7 @@
   
   
   
-  <link rel="stylesheet" href="../../css/wowchemy.47aca16f239751b8ef4bfc0ddfcec7bc.css">
+  <link rel="stylesheet" href="../../css/wowchemy.dd269ef766d14a5f3446f7ad8c8a19cc.css">
 
   
 
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Computational Methods for Social Data Science">
   <meta property="og:url" content="/homework/02-homework/">
   <meta property="og:title" content="Data fundamentals | Computational Methods for Social Data Science">
-  <meta property="og:description" content="Contents  Session Outcomes Introduction Task 1: Describe data Task 2: Diagnose data UK General Election Results 2019 UK General Election Results 2017 and 2019  Task 3: Fix data Task 4: Compute from data References   Session Outcomes By the end of this homework session you should be able to:
+  <meta property="og:description" content="Contents  Introduction Task 1: Describe data Task 2: Diagnose data UK General Election Results 2019 UK General Election Results 2017 and 2019  Task 3: Fix data Task 4: Compute from data References   By the end of this homework session you should be able to:
   Describe data according to its structure and contents. Calculate descriptive summaries over datasets. Apply high-level functions in dplyr and tidyr for working with data."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2021-08-10T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-05-07T17:24:30&#43;01:00">
+    <meta property="article:modified_time" content="2021-06-25T12:30:57&#43;01:00">
   
 
   
@@ -750,7 +750,6 @@
 <h2>Contents</h2>
 <div id="TOC">
 <ul>
-<li><a href="#session-outcomes">Session Outcomes</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#task-1-describe-data">Task 1: Describe data</a></li>
 <li><a href="#task-2-diagnose-data">Task 2: Diagnose data</a><ul>
@@ -763,8 +762,6 @@
 </ul>
 </div>
 
-<div id="session-outcomes" class="section level2">
-<h2>Session Outcomes</h2>
 <p>By the end of this homework session you should be able to:</p>
 <p><div class="alert alert-objective">
   <div>
@@ -777,10 +774,9 @@
   </div>
 </div>
 </p>
-</div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This homework requires you to apply the concepts and skills developed in the class session on <a href="../../class/02-class/">data fundamentals</a>. Do complete each of the tasks and be sure to save your work as this homework will be submitted as part of your portfolio for Assignment 1.</p>
+<p>This homework requires you to apply the concepts and skills developed in the class session on <a href="../../class/02-class/">data fundamentals</a>. Do complete each of the tasks and be sure to save your work.</p>
 </div>
 <div id="task-1-describe-data" class="section level2">
 <h2>Task 1: Describe data</h2>
@@ -924,16 +920,22 @@
 <div id="task-3-fix-data" class="section level2">
 <h2>Task 3: Fix data</h2>
 <p>In the <a href="../../homework/02-homework_files/02-template.Rmd"><i class="fab fa-r-project"></i> 02-template.Rmd</a> file for this session I have provided links to two derived tables (<code>ny_spread_columns</code> and <code>ny_spread_rows</code>) from the New York bikeshare trip data that are not in a tidy format.</p>
-<p>Using functions from <code>dplyr</code> and <code>tidyr</code> reorganise these data so that they are conform to the rules of <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>Using functions from <code>dplyr</code> and <code>tidyr</code> reorganise these data so that they conform to the rules of <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
 <p>A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:</p>
 <ul>
 <li><code>o_station</code>: station id of the origin station</li>
-<li><code>d_station</code>: station ide of the destination station</li>
+<li><code>d_station</code>: station id of the destination station</li>
 <li><code>wkday</code>: identifies whether the OD pair describes weekday or weekend ny_trips</li>
 <li><code>count</code>: count of trips recorded for that observation (OD pair and weekday/weekend)</li>
 <li><code>dist</code>: total distance (cumulative) in kms of all trips recorded for that observation (OD pair and weekday/weekend)</li>
 <li><code>duration</code>: total duration in minutes (cumulative) of all trips recorded for that observation (OD pair and weekday/weekend)</li>
 </ul>
+<p><div class="alert alert-note">
+  <div>
+    You may wish to start with reorganising <code>ny_spread_rows</code> as I deliberately made <code>ny_spread_columns</code> quite challenging. The intention here was to replicate the sorts of arduous data formatting operations that need to be performed when working with real datasets. As always there are different approaches to this, but it can be achieved with use of <code>pivot_longer</code>, <code>pivot_wider</code>, plus a call to <code>separate()</code>. This may be one to post to the course Slack.
+  </div>
+</div>
+</p>
 <pre><code>## # A tibble: 386,762 x 6
 ##    o_station d_station wkday   count  dist duration
 ##        &lt;int&gt;     &lt;int&gt; &lt;chr&gt;   &lt;int&gt; &lt;dbl&gt;    &lt;dbl&gt;
@@ -951,7 +953,7 @@
 </div>
 <div id="task-4-compute-from-data" class="section level2">
 <h2>Task 4: Compute from data</h2>
-<p>Using <code>dplyr</code> functions, calculate the average distance, duration and speed of trips occuring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your <code>ny_stations</code> table in order to fetch the station names corresponding to the origin and destination stations.</p>
+<p>Using <code>dplyr</code> functions, calculate the average distance, duration and speed of trips occurring for each observation. Print out to the Console the top 10 most heavily cycled OD pairs (and their associated summary statistics) separately for weekdays and weekends. You may wish to join on your <code>ny_stations</code> table in order to fetch the station names corresponding to the origin and destination stations.</p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
@@ -972,7 +974,7 @@
                 </div>
 
                 <div class="body-footer">
-                    <p> Fri, 07 May 2021</p>
+                    <p> Fri, 25 Jun 2021</p>
 
                     
 

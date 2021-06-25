@@ -7,7 +7,7 @@ output: html_document
 
 ## Introduction
 
-Welcome to Visualization for Geographic Data Science (vis-for-gds). For each session you will be working in these `.Rmd` templates, which provide scaffolding for completing the activities that appear in class and for the homework. Do make your best attempt to work through these, as you will be required to submit them as a **Portfolio** of activity worth 30% of the total module marks.
+Welcome to Computational Methods for Social Data Science (comp-sds). For each session you will be working in these `.Rmd` templates, which provide scaffolding for completing the activities that appear in class and for the homework.
 
 ## Setup
 

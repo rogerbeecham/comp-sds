@@ -7,7 +7,7 @@ output: html_document
 
 ## Class
 
-Reopen the `vis-for-gds` project you created in Session 1 and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute. We are working with a reasonably large dataset so this is to avoid the tedium of waiting long periods for this document to knit.
+Reopen the `comp-gds` project you created in Session 1 and save this `.Rmd` to the `reports` folder. When working through the materials from this session run each code chunk separately by clicking the small green arrow beside each code chunk. By default I have set `eval=FALSE` on most code chunks, so when you knit the code chunk will not execute. We are working with a reasonably large dataset so this is to avoid the tedium of waiting long periods for this document to knit.
 
 The technical element to this session involves importing, describing and processing data from a large bikeshare scheme -- New York's [Citibike](https://www.citibikenyc.com/) scheme.
 
@@ -20,7 +20,7 @@ IMPORTANT NOTE : I wanted to include the code for downloading and processing dat
 
 Required packages necessary for all aspects of the session (**ALL**). If you have not yet downloaded these packages you will need to make separate calls to `install.packages("<package-name>")` as described in the previous session.
 
-```{r setup-required, echo=TRUE, eval=TRUE, message=FALSE}
+```{r setup-required, echo=TRUE, eval=FALSE, message=FALSE}
 library(tidyverse) # Bundle of packages for doing modern data analysis.
 library(fst) # Fast/efficient working with tbls.
 library(sf) # Spatial operations
@@ -31,7 +31,7 @@ library(here) # For navigating project directory
 
 Packages necessary for working with `bikedata` (optional for **advanced R programmer only**):
 
-```{r setup-optional, echo=TRUE, eval=TRUE, message=FALSE}
+```{r setup-optional, echo=TRUE, eval=FALSE, message=FALSE}
 # remotes::install_github("ropensci/bikedata") # API to TfL's trip data. Uncomment to run.
 library(bikedata)
 # install.packages(DBI) # Uncomment to install.
@@ -73,10 +73,6 @@ write_csv(stations, here("data", "ny_stations.csv"))
 bike_rm_db(bikedb)
 rm(db,stations, trips, bikedb)
 ```
-
-
-
-
 
 #### Import pre-processed data (**All**)
 
@@ -158,7 +154,7 @@ ny_trips %>%
     median_duration=median(trip_duration/60),
     sd_duration=sd(trip_duration/60),
     min_duration=min(trip_duration/60),
-    max_duration=min(trip_duration/60)
+    max_duration=max(trip_duration/60)
     ) %>%
   arrange(desc(count))
 ```
@@ -347,11 +343,12 @@ Display your code for fixing the `ny_spread_columns` dataset below and copy and 
 
 ### Task 4: Compute from data
 
-Display your code for in the block below
+Display your code in the block below
 
-```{r fix-ny-spread-columns, echo=TRUE, eval=FALSE, message=FALSE}
+```{r compute-ny-fixed-data, echo=TRUE, eval=FALSE, message=FALSE}
 # Place code for computing here.
 
 # Copy and paste the RConsole output here.
 
+```
 ```

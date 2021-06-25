@@ -245,7 +245,7 @@
   
   
   
-  <link rel="stylesheet" href="../../css/wowchemy.47aca16f239751b8ef4bfc0ddfcec7bc.css">
+  <link rel="stylesheet" href="../../css/wowchemy.dd269ef766d14a5f3446f7ad8c8a19cc.css">
 
   
 
@@ -296,7 +296,7 @@
     
       <meta property="article:published_time" content="2021-08-16T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-05-10T10:54:21&#43;01:00">
+    <meta property="article:modified_time" content="2021-06-25T12:30:57&#43;01:00">
   
 
   
@@ -831,8 +831,8 @@
 <li><span class="math inline">\(\beta_{1}=0\)</span>, a negated slope, <span class="math inline">\(+\)</span></li>
 <li><span class="math inline">\(\varepsilon_{i}\)</span>, a statistical error term capturing the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> <em>true</em> ‘population’ value of the Leave vote in each constituency</li>
 </ul>
-<p>How does this relate to the idea of quantifying variance? The length and colour of each bar in Figure <a href="#fig:map-uniform">1</a> is scaled according to model <strong>residuals</strong>: estimates of the statistical errors (<span class="math inline">\(\hat{\varepsilon}_{i}\)</span>), the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> expected value of the Leave vote in our dataset (<span class="math inline">\(\hat{y}_{i}\)</span>). The sum of these bar lengths (residuals) is therefore the total variance <span class="math inline">\((\frac{\sum({y_{i...n}-\bar{y}}^2}{n-1})\)</span> – variance that we later try to reduce, or explain, by updating our regression model to generate new expected values using information on the demographic composition of constituencies.</p>
-<p>Figure <a href="#fig:map-uniform">1</a> is similar to the maps that were <a href="https://www.theguardian.com/politics/2016/jun/24/eu-voting-map-lays-bare-depth-of-division-across-britain">published widely in press reports</a> in the aftermath of the vote. The uniform model consistently underestimates Leave in Scotland and most of London. Outside of this, constituencies voting in smaller proportions than would be expected for Leave are distributed more in pockets around the country: the dark red dot with surrounding red area in the east of the country is Cambridge and Cambridgeshire, constituencies in Bristol (south west), Manchester and Liverpool (north west), Brighton (south), are also reasonably strong red.</p>
+<p>How does this relate to the idea of characterising variation? The length and colour of each bar in Figure <a href="#fig:map-uniform">1</a> is scaled according to model <strong>residuals</strong>: estimates of the statistical errors (<span class="math inline">\(\hat{\varepsilon}_{i}\)</span>), the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> expected value of the Leave vote in our dataset (<span class="math inline">\(\hat{y}_{i}\)</span>). The sum of these bar lengths (residuals) is therefore the total <strong>variance</strong> <span class="math inline">\((\frac{\sum({y_{i...n}-\bar{y}}^2}{n-1})\)</span> – variance that we later try to reduce, or explain, by updating our regression model to generate new expected values using information on the demographic composition of constituencies.</p>
+<p>Figure <a href="#fig:map-uniform">1</a> is similar to the maps that were <a href="https://www.theguardian.com/politics/2016/jun/24/eu-voting-map-lays-bare-depth-of-division-across-britain">published widely in press reports</a> in the aftermath of the vote, and demonstrates that there is indeed substantial variation in Leave voting between different parts of the country. The uniform model consistently underestimates Leave in Scotland and most of London. Outside of this, constituencies voting in smaller proportions than would be expected for Leave are distributed more in pockets around the country: the dark red dot with surrounding red area in the east of the country is Cambridge and Cambridgeshire, constituencies in Bristol (south west), Manchester and Liverpool (north west), Brighton (south), are also reasonably strong red.</p>
 <div class="figure" style="text-align: left"><span id="fig:map-uniform"></span>
 <img src="../../class/06-class_files/map-uniform.png" alt="Residuals from uniform model comparing constituency Leave vote to GB average." width="90%" />
 <p class="caption">
@@ -945,7 +945,7 @@ Figure 4: Scatterplots of constituency Leave vote against candidate explanatory 
 </div>
 <p><div class="alert alert-note">
   <div>
-    <p>You will remember from introductory stats courses that that the correlation coefficient can be used to summarise the strength of linear association between two variables. It is a quantity that ranges from perfect negative correlation, -1 – as one value increases another decreases in the same proportion – to perfect positive correlation, +1 – as one value increases another increases in the same proportion. A value of 0 indicates no association – the values increase and decrease independently of each other. It can be considered a measure of effect size to the extent that it describes how much of something (correlation in this case) exists.</p></p>
+    <p>You will remember from introductory stats courses that that the correlation coefficient can be used to summarise the strength of linear association between two variables. It is a quantity that ranges from perfect negative correlation, -1 – as one value increases another decreases in the same proportion – to perfect positive correlation, +1 – as one value increases another increases in the same proportion. A value of 0 indicates no association – the values increase and decrease independently of each other.</p></p>
 <div class="figure" style="text-align: left"><span id="fig:correlations"></span>
 <img src="../../class/06-class_files/correlations.png" alt="Scatterplots of synthetic bivariate data with extent of correlation coefficient systematically varied." width="100%" />
 <p class="caption">
@@ -961,19 +961,19 @@ Figure 5: Scatterplots of synthetic bivariate data with extent of correlation co
 <div id="modelling-for-co-variation" class="section level3">
 <h3>Modelling for co-variation</h3>
 <p>Linear regression provides a framework for explicitly describing these linear associations. The ultimate objective is to quantify how much of the variation in an outcome variable, summarised in Figure <a href="#fig:map-uniform">1</a>, can be explained using information on other variables, the candidate demographic variables in Figure <a href="#fig:scatters">4</a>.</p>
-<p>To express this in equation form, we can update the uniform model such that Leave vote is a <em>function</em> of the candidate explanatory variables. For single-variable linear regression, we could update with the proportion of residents educated at least to <em>degree-level</em> (<span class="math inline">\(\color{#003c8f}{d_{i1}}\)</span>):</p>
+<p>To express this in equation form, we can update the uniform model such that Leave vote is a <em>function</em> of the candidate explanatory variables. For single-variable linear regression, we could update with the proportion of residents educated at least to <em>degree-level</em> (<span class="math inline">\(\textcolor{highlight}{d_{i1}}\)</span>):</p>
 <p><span class="math display">\[\begin{align*}
-       y_{i}&amp;= \beta_{0} + \beta_{1}\color{#003c8f}{d_{i1}} + \varepsilon_{i}  \\
+       y_{i}&amp;= \beta_{0} + \beta_{1}\textcolor{highlight}{d_{i1}} + \varepsilon_{i}  \\
 \end{align*}\]</span></p>
 <p>So we now estimate the Leave vote in each constituency (<span class="math inline">\(y_{i}\)</span>) as a function of:</p>
 <ul>
 <li><span class="math inline">\(\beta_{0}\)</span>, the intercept, the GB average vote share (<span class="math inline">\(\bar{y}\)</span>) <span class="math inline">\(+\)</span></li>
-<li><span class="math inline">\(\beta_{1}=\beta_{1}\color{#003c8f}{d_{i1}}\)</span>, the slope, indicating in which direction and to what extent <em>degree-educated</em> is associated with Leave, <span class="math inline">\(+\)</span></li>
+<li><span class="math inline">\(\beta_{1}=\beta_{1}\textcolor{highlight}{d_{i1}}\)</span>, the slope, indicating in which direction and to what extent <em>degree-educated</em> is associated with Leave, <span class="math inline">\(+\)</span></li>
 <li><span class="math inline">\(\varepsilon_{i}\)</span>, the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> true ‘population’ value of the Leave vote in that constituency (statistical error)</li>
 </ul>
 <p>There are different algorithms that can be used to estimate these parameters. Most obvious is ordinary least squares (OLS), which aims to minimise <span class="math inline">\(\sum{\hat{\varepsilon}_{i...n}}\)</span>, the sum of the (squared) residuals between the observed Leave vote in a constituency, <span class="math inline">\(y_{i}\)</span>, and that expected, <span class="math inline">\(\hat{y_{i}}\)</span>, given the association with the <em>degree-educated</em> explanatory variable <span class="math inline">\(d_{i1}\)</span>.</p>
 <p>To explore the associations further, we could update the scatterplots with regression lines, fit via OLS, modelling the Leave vote separately as a linear function of each explanatory variable. As well as the regression line, observations are now coloured according to the size and direction of their residuals. The plots are also annotated according to the coefficient of determination (<span class="math inline">\(R^2\)</span>) – the proportion of the total constituency-level variation in the Leave vote explained by each model formulation. This tells us how much better than the uniform model, which captures the total variation (Figure <a href="#fig:map-uniform">1</a>), is each of the single variable explanatory models.</p>
-<p>Colouring dots representing constituencies by residuals is instructive. In most of the scatterplots there seems to be a grouping of large negative residuals (dark red) where, after taking into account the association between Leave voting and demographics across all constituencies in GB, the Leave vote is consistently <em>underrepresented</em>. You might be able to guess at where these are located, certainly generating maps of these residuals may expose whether these residuals are grouped in a particular way.</p>
+<p>Colouring dots representing constituencies by residuals is instructive. In most of the scatterplots there seems to be a grouping of large negative residuals (dark red) where, after taking into account the association between Leave voting and demographics across all constituencies in GB, the Leave vote is consistently <em>underrepresented</em>. You might be able to guess at where these are located, certainly generating maps of these residuals may expose whether they are grouped in a particular way.</p>
 <div class="figure" style="text-align: left"><span id="fig:scatters-resids"></span>
 <img src="../../class/06-class_files/scatters-resids.png" alt="Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with regression lines." width="100%" />
 <p class="caption">
@@ -1043,8 +1043,8 @@ Figure 8: Map LineUp of residuals in which the ‘real’ dataset is presented a
 <h2>Techniques</h2>
 <p>The technical element to this session demonstrates how linear regression models can be specified in R, as well as approaches for extracting model summaries and diagnostics; and of course representing them visually. Data recording estimated vote shares for Leave by Parliamentary Constituency, as well as constituency-level 2011 Census demographics, are available via the <code>parlitools</code> package used in <a href="../../class/03-class/">session 3</a>.</p>
 <ul>
-<li>Download the <a href="../../homework/06-homework_files/06-template.Rmd"><i class="fab fa-r-project"></i> 06-template.Rmd</a> file for this session and save it to the <code>reports</code> folder of your <code>vis-for-gds</code> project.</li>
-<li>Open your <code>vis-for-gds</code> project in RStudio and load the template file by clicking <code>File</code> &gt; <code>Open File ...</code> &gt; <code>reports/06-template.Rmd</code>.</li>
+<li>Download the <a href="../../homework/06-homework_files/06-template.Rmd"><i class="fab fa-r-project"></i> 06-template.Rmd</a> file for this session and save it to the <code>reports</code> folder of your <code>comp-sds</code> project.</li>
+<li>Open your <code>com-sds</code> project in RStudio and load the template file by clicking <code>File</code> &gt; <code>Open File ...</code> &gt; <code>reports/06-template.Rmd</code>.</li>
 </ul>
 <div id="import" class="section level3">
 <h3>Import</h3>
@@ -1053,7 +1053,7 @@ Figure 8: Map LineUp of residuals in which the ‘real’ dataset is presented a
 <div id="transform" class="section level3">
 <h3>Transform</h3>
 <p>In the <a href="../../class/06-class/#quantifying-and-exploring-co-variation-1">concepts section</a>, I mentioned that explanatory variables are <a href="https://en.wikipedia.org/wiki/Standard_score">z-score transformed</a>. Here, the distance between observed values for each 2011 Census variable is expressed in standard deviation units from the mean across constituencies for that variable. In the code below, also in the template, <a href="https://dplyr.tidyverse.org/reference/across.html"><code>across()</code></a> is used to apply this formula to each explanatory variable.</p>
-<p><code>across()</code> is a really useful <code>dplyr</code> function. The first argument is the set of columns you would like the same function to be applied to and the second is the function you would like to apply. Remembering that mutate works over columns of a data frame, and that a single column of a dataframe is a vector of values, the notation <code>.x</code> is used to access each element of the vector of values of the columns being worked across.</p>
+<p><code>across()</code> is a really useful <code>dplyr</code> function. The first argument is the set of columns you would like the same function to be applied to and the second is the function you would like to apply. Remembering that <code>mutate()</code> works over columns of a data frame, and that a single column of a dataframe is a vector of values, the notation <code>.x</code> is used to access each element of the vector of values of the columns being worked across.</p>
 <pre class="r"><code>explanatory_z_scores &lt;- explanatory %&gt;%
   mutate(
     across(
@@ -1157,7 +1157,7 @@ augment(model)
 <ol style="list-style-type: decimal">
 <li><strong>Setup</strong>: In order to generate separate models for separate explanatory variables, we need to generate <a href="https://cran.r-project.org/web/packages/tidyr/vignettes/nest.html">nested data frames</a>. These data frames are stored in a special type of column (a <code>list-column</code>) in which the values of the column is a list of data frames – in this case one for each explanatory variable that we would like to generate a model over. You can think of parameterising <code>nest()</code> in a similar way to <code>group_by</code>. We first <code>pivot_longer()</code> to generate a data frame where each observation contains the recorded Leave vote for a constituency and its corresponding <code>z_score</code> value for each explanatory variable. There are 10 explanatory variables and so <code>nest()</code> returns a data frame with the dimensions <code>10x2</code> – a variable identifying the explanatory variable on which the model is to be built (<code>expl_var</code>) and a <code>list-column</code>, each element containing a data frame with the dimensions <code>632x7</code>.</li>
 <li><strong>Build model</strong>: In <code>mutate()</code>, <code>purrr</code>’s <a href="https://purrr.tidyverse.org/reference/map.html"><code>map()</code></a> function is used to iterate over the list of datasets and fit a model to each nested dataset. The new column <code>model</code> is a <code>list-column</code> this time containing a list of model objects.</li>
-<li><strong>Generate outputs</strong>: Next, the different model outputs can be generated using <code>glance(), tidy(), augment()</code> by using <code>map()</code> to iterate over the list of model objects. The new columns are now <code>list-columns</code> of data frames containing model outputs.</li>
+<li><strong>Generate outputs</strong>: Next, the different model outputs can be generated using <code>glance(), tidy(), augment()</code>, with <code>map()</code> to iterate over the list of model objects. The new columns are now <code>list-columns</code> of data frames containing model outputs.</li>
 <li><strong>Extract outputs</strong>: Finally, we will want to variously extract the values from these nested data. This can be achieved using <code>unnest()</code>and supplying to the <code>cols</code> argument the names of the <code>list-columns</code> that we want to flatten over. </li>
 </ol>
 </div>
@@ -1168,7 +1168,7 @@ augment(model)
 <pre class="r"><code>model &lt;- lm(leave ~ degree  + eu_born + white  + no_car + christian +
        not_good_health + heavy_industry, data=data_for_models)
 outputs &lt;- tidy(model)
-plot_outputs &lt;- outputs %&gt;%
+outputs %&gt;%
   filter(term != &quot;(Intercept)&quot;) %&gt;%
   ggplot(
     aes(x=reorder(term, -estimate),
@@ -1177,10 +1177,10 @@ plot_outputs &lt;- outputs %&gt;%
   coord_flip()</code></pre>
 <p>The plot specification:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Data</strong>: A data frame of model coefficients extracted from the multivariate model object using <code>tidy</code>.</li>
+<li><strong>Data</strong>: A data frame of model coefficients extracted from the multivariate model object using <code>tidy()</code>.</li>
 <li><strong>Encoding</strong>: y-position varies according to the size of the coefficient estimate and the 95% confidence intervals, defined using <code>ymin</code> and <code>ymax</code>.</li>
 <li><strong>Marks</strong>: <code>geom_pointrange()</code>, which understands <code>ymin</code> and <code>ymax</code>, for the dots with Confidence Intervals</li>
-<li><strong>Setting</strong>: <code>coord_flip</code> to make variable names easier to read.</li>
+<li><strong>Setting</strong>: <code>coord_flip()</code> to make variable names easier to read.</li>
 </ol>
 </div>
 <div id="plot-residuals" class="section level3">
@@ -1201,7 +1201,7 @@ model_values &lt;- data_for_models %&gt;%
   select(-model)
 # Store max value of residuals for setting limits in map colour scheme.
 max_resid &lt;- max(abs(model_values$.resid))</code></pre>
-<p>Next, create a function that generates in this case nine permutations of the same dataset. I am deliberately not discussing this in too much detail, but you might notice that each permutation is stored in separate columns, and is generated using <a href="http://www.rexamples.com/14/Sample()"><code>sample()</code></a>, with one permutation randomly held back – this represents the <em>real</em> dataset.</p>
+<p>Next, create a function that generates in this case nine permutations of the same dataset. I am deliberately not discussing this in too much detail, but you might notice that each permutation is stored in separate columns and is generated using <a href="http://www.rexamples.com/14/Sample()"><code>sample()</code></a> with one permutation randomly held back – this represents the <em>real</em> dataset.</p>
 <pre class="r"><code># Function for generating random permutations + one real.
 do_lineup &lt;- function(data, col_offset) {
   real &lt;- sample(1:9,1)
@@ -1292,7 +1292,7 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  -->
                 </div>
 
                 <div class="body-footer">
-                    <p> Mon, 10 May 2021</p>
+                    <p> Fri, 25 Jun 2021</p>
 
                     
 
