@@ -13,6 +13,22 @@
     </image>
     
     <item>
+      <title>Sharing your Social Data Science Research</title>
+      <link>/class/10-class/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/class/10-class/</guid>
+      <description>
+&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+
+
+</description>
+    </item>
+    
+    <item>
       <title>Communication and storytelling</title>
       <link>/class/09-class/</link>
       <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
@@ -8074,98 +8090,130 @@ Figure 5: Creating an RStudio Project
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 2&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Data fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/02-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/02-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/02-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 3&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/03-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/03-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/03-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 4&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploratory data analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/04-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/04-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/04-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 5&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploring spatial networks&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/05-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/05-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 6&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Model building 1&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/06-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/06-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/06-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 7&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Model building 2&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/07-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/07-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/07-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 8&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Uncertainty analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/08-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/08-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/08-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 9&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Data storytelling&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/09-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/09-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/09-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/tbody&gt;
@@ -8276,98 +8324,130 @@ Figure 5: Creating an RStudio Project
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 2&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Data fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/02-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/02-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/02-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 3&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Visualization fundamentals&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/03-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/03-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/03-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 4&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploratory data analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/04-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/04-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/04-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 5&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploring spatial networks&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/05-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/05-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/05-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 6&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Model building 1&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/06-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/06-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/06-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 7&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Model building 2&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/07-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/07-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/07-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 8&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Uncertainty analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/08-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/08-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/08-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 9&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Data storytelling&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./reading/09-reading/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/09-class/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;./homework/09-homework/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/tbody&gt;

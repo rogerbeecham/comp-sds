@@ -23,7 +23,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-## Conceptual Element
+<!-- ## Conceptual Element
 
 .small-font[
 1. The vocabulary used to describe data
@@ -32,10 +32,10 @@ library(kableExtra)
 ]
 
 
----
+--- -->
 
 
-## Data Fundamentals
+<!-- ## Data Fundamentals
 
 
 <a href="www.rstudio.com/resources/cheatsheets/">
@@ -48,26 +48,23 @@ library(kableExtra)
 .small-font[
 [`www.rstudio.com/resources/cheatsheets/`](https://www.rstudio.com/resources/cheatsheets/)
 ]
+
+???
+
+Cheatsheets -- useful.
+
+<!-- Preview of session :
+Fundamentals of data using bikeshare.
+Reason: these fundamentals constrain/inform the type of analysis that we can do.
+Describe data -->
+
+
 ---
 
-## Data Fundamentals
-
-
-
-<img src = "img/data1.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"></img>
-
----
-
-
-## Data Fundamentals
-
-
-
-<img src = "img/data2.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"></img>
-
----
 
 ## Stevens levels of measurement
+
+--
 
 .xtiny-font[
 ```{r variable-types, echo=FALSE, fig.cap="Breakdown of variable types", out.width="100%"}
@@ -128,9 +125,163 @@ variable_types <- tibble::tibble(
 kbl(variable_types, protect_latex = TRUE, escape=FALSE) %>%
  pack_rows("Categories", 1, 2, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
  pack_rows("Measures", 3, 4, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
- column_spec(1, width = "8em")
+ column_spec(1, width = "8em") %>%
+ row_spec(c(0,1,2,3,4), color = "grey")
 ```
 ]
+
+
+???
+Stevens's typology  for describing data (Stevens 1946 -- *Science*)
+
+Categories and Measures.
+
+---
+
+
+## Stevens levels of measurement
+
+.xtiny-font[
+```{r variable-types-2, echo=FALSE, fig.cap="Breakdown of variable types", out.width="100%"}
+variable_types <- tibble::tibble(
+  Measurement = c("`Nominal`", "`Ordinal`", "`Quantitative`", "`Temporal`", "`Geospatial`"),
+  Description = c(
+    "Categories that cannot be ordered",
+    "Categories that can be ordered",
+    "Numeric measurements and counts",
+    "Measures related to time",
+    "Geographic locations and features"
+  ),
+  Example = c(
+    "Names of people;  countries; political parties",
+    "Small, Medium, Large; 1st, 2nd, 3rd",
+    "Distances; prices; temperatures; frequencies",
+    "Dates; times",
+    "Long/Lat, Easting/Northing; region/country geometries"
+    )
+)
+
+
+variable_types <- tibble::tibble(
+  Measurement = c("Nominal", "Ordinal", "Interval", "Ratio"),
+  Description = c(
+    "Non-orderable categories",
+    "Orderable categories",
+    "Numeric measurements",
+    "... &#124 Counts"
+  ),
+  Example = c(
+    "Political parties; street names",
+    "Terrorism threat levels",
+    "Temperatures; years",
+    "Distances; prices "
+    ),
+  Operators = c(
+    "&#61;  &#8800;",
+    "... &#124 <>",
+    "... &#124 +  -",
+    "... &#124 &#215; &#247;"
+    ),
+    Midpoint = c(
+      "mode",
+      "... &#124 median",
+      "... &#124 mean",
+      "... &#124 mean"
+      ),
+      Dispersion = c(
+        "entropy",
+        "... &#124 percentile",
+        "... &#124 variance",
+        "... &#124 variance"
+        )
+
+)
+
+kbl(variable_types, protect_latex = TRUE, escape=FALSE) %>%
+ pack_rows("Categories", 1, 2, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ pack_rows("Measures", 3, 4, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ column_spec(1, width = "8em") %>%
+ row_spec(c(0,3,4), color = "grey")
+```
+]
+
+
+???
+
+Need to describe data in a consistent way.
+
+---
+
+## Stevens levels of measurement
+
+.xtiny-font[
+```{r variable-types-3, echo=FALSE, fig.cap="Breakdown of variable types", out.width="100%"}
+variable_types <- tibble::tibble(
+  Measurement = c("`Nominal`", "`Ordinal`", "`Quantitative`", "`Temporal`", "`Geospatial`"),
+  Description = c(
+    "Categories that cannot be ordered",
+    "Categories that can be ordered",
+    "Numeric measurements and counts",
+    "Measures related to time",
+    "Geographic locations and features"
+  ),
+  Example = c(
+    "Names of people;  countries; political parties",
+    "Small, Medium, Large; 1st, 2nd, 3rd",
+    "Distances; prices; temperatures; frequencies",
+    "Dates; times",
+    "Long/Lat, Easting/Northing; region/country geometries"
+    )
+)
+
+
+variable_types <- tibble::tibble(
+  Measurement = c("Nominal", "Ordinal", "Interval", "Ratio"),
+  Description = c(
+    "Non-orderable categories",
+    "Orderable categories",
+    "Numeric measurements",
+    "... &#124 Counts"
+  ),
+  Example = c(
+    "Political parties; street names",
+    "Terrorism threat levels",
+    "Temperatures; years",
+    "Distances; prices "
+    ),
+  Operators = c(
+    "&#61;  &#8800;",
+    "... &#124 <>",
+    "... &#124 +  -",
+    "... &#124 &#215; &#247;"
+    ),
+    Midpoint = c(
+      "mode",
+      "... &#124 median",
+      "... &#124 mean",
+      "... &#124 mean"
+      ),
+      Dispersion = c(
+        "entropy",
+        "... &#124 percentile",
+        "... &#124 variance",
+        "... &#124 variance"
+        )
+
+)
+
+kbl(variable_types, protect_latex = TRUE, escape=FALSE) %>%
+ pack_rows("Categories", 1, 2, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ pack_rows("Measures", 3, 4, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ column_spec(1, width = "8em") %>%
+ row_spec(c(0,1,2), color = "grey")
+```
+]
+
+
+???
+
+Need to describe data in a consistent way.
 
 ---
 
@@ -139,45 +290,76 @@ kbl(variable_types, protect_latex = TRUE, escape=FALSE) %>%
 ## Stevens levels of measurement
 
 .xtiny-font[
-```{r plot-dist, echo=FALSE, fig.cap="Histograms generated with ggplot2. Plot data computed using dplyr and lubridate", out.width="70%"}
-include_graphics("../class/02-class_files/dist.png", error = FALSE)
+```{r variable-types-4, echo=FALSE, fig.cap="Breakdown of variable types", out.width="100%"}
+variable_types <- tibble::tibble(
+  Measurement = c("`Nominal`", "`Ordinal`", "`Quantitative`", "`Temporal`", "`Geospatial`"),
+  Description = c(
+    "Categories that cannot be ordered",
+    "Categories that can be ordered",
+    "Numeric measurements and counts",
+    "Measures related to time",
+    "Geographic locations and features"
+  ),
+  Example = c(
+    "Names of people;  countries; political parties",
+    "Small, Medium, Large; 1st, 2nd, 3rd",
+    "Distances; prices; temperatures; frequencies",
+    "Dates; times",
+    "Long/Lat, Easting/Northing; region/country geometries"
+    )
+)
+
+
+variable_types <- tibble::tibble(
+  Measurement = c("Nominal", "Ordinal", "Interval", "Ratio"),
+  Description = c(
+    "Non-orderable categories",
+    "Orderable categories",
+    "Numeric measurements",
+    "... &#124 Counts"
+  ),
+  Example = c(
+    "Political parties; street names",
+    "Terrorism threat levels",
+    "Temperatures; years",
+    "Distances; prices "
+    ),
+  Operators = c(
+    "&#61;  &#8800;",
+    "... &#124 <>",
+    "... &#124 +  -",
+    "... &#124 &#215; &#247;"
+    ),
+    Midpoint = c(
+      "mode",
+      "... &#124 median",
+      "... &#124 mean",
+      "... &#124 mean"
+      ),
+      Dispersion = c(
+        "entropy",
+        "... &#124 percentile",
+        "... &#124 variance",
+        "... &#124 variance"
+        )
+
+)
+
+kbl(variable_types, protect_latex = TRUE, escape=FALSE) %>%
+ pack_rows("Categories", 1, 2, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ pack_rows("Measures", 3, 4, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ # column_spec(1, width = "8em") %>%
+ column_spec(c(1,2,3), color = "grey")
 ```
 ]
+
+
 ???
 
-E.g. with data graphics --
-
-
+Constrain operations that can be performed.
 
 ---
 
-## Stevens levels of measurement
-.xtiny-font[
-```{r plot-speeds, echo=FALSE, fig.cap="Line charts generated with ggplot`. Plot data computed using dplyr and lubridate", out.width="70%"}
-include_graphics("../class/02-class_files/speeds.png", error = FALSE)
-```
-]
-???
-
-E.g. with data graphics --
-
-
-
----
-
-
-## Stevens levels of measurement
-
-.xtiny-font[
-```{r plot-temporal, echo=FALSE, fig.cap="Line charts generated with ggplot2. Plot data computed using dplyr and lubridate.", out.width="70%"}
-include_graphics("../class/02-class_files/hod_dow.png", error = FALSE)
-```
-]
-???
-
-E.g. with data graphics -- for example in this session. Summarise distribution on quantitative variable (time of day). Though this is a cyclic variable so hour of day necessary
-
----
 
 ## Stevens levels of measurement
 
@@ -205,7 +387,93 @@ kbl(data_types)
 ---
 
 
+## Stevens levels of measurement
+
+
+.tiny-font[
+* dataset: [Citibike OD trip data](https://www.citibikenyc.com/system-data)
+* variable: `trip_distance` | `user_type`
+* measurement: `ratio` | `nominal`
+]
+
+--
+
+.xtiny-font[
+```{r plot-dist, echo=FALSE, fig.cap="Histograms generated with ggplot2. Plot data computed using dplyr and lubridate", out.width="70%"}
+include_graphics("../class/02-class_files/dist.png", error = FALSE)
+```
+]
+???
+
+So we could also calculate the mean and median for each of these, compare them through subtraction and also division -- how many times greater is trip dist for > versus ?. Also variation.
+
+Notice that `subscriber` and `customer` are variables measured at category level.
+
+
+
+
+
+
+---
+
+## Stevens levels of measurement
+
+.tiny-font[
+* dataset: Citibike OD trip data
+* variable: `trip_speed` | `user_age_band` | `user_sex` | `trip_distance`
+* measurement: `ratio` | `ordinal` | `nominal` | `ordinal`
+]
+
+--
+
+.xtiny-font[
+```{r plot-speeds, echo=FALSE, fig.cap="Line charts generated with ggplot`. Plot data computed using dplyr and lubridate", out.width="65%"}
+include_graphics("../class/02-class_files/speeds.png", error = FALSE)
+```
+]
+???
+
+E.g. with data graphics --
+
+
+
+
+---
+
+
+## Stevens levels of measurement
+
+
+.tiny-font[
+* dataset: Citibike OD trip data
+* variable: `trip_count` | `user_age` | `user_sex` | `day_week`
+* measurement: `ratio` | `ratio` | `nominal` | `ordinal`
+]
+
+--
+
+.xtiny-font[
+```{r plot-temporal, echo=FALSE, fig.cap="Line charts generated with ggplot2. Plot data computed using dplyr and lubridate.", out.width="65%"}
+include_graphics("../class/02-class_files/hod_dow.png", error = FALSE)
+```
+]
+
+
+E.g. with data graphics -- for example in this session. Summarise distribution on quantitative variable (time of day). Though this is a cyclic variable so hour of day necessary
+
+---
+
+
 ## Tidy data
+
+
+???
+So that was *describing data*
+
+---
+
+## Tidy data
+
 
 <img src = "img/data3.png", width = 50%, style = "position:absolute; top: 25%; left: 8%;"></img>
 
@@ -223,6 +491,13 @@ drugs <- tibble::tibble(
 kbl(drugs,  caption = "Untidy")
 ```
 ]
+
+???
+Every cell can be unambiguously identified
+
+But not tidy -- as treatment class is spread across columns.
+
+Transpose: observations spread across columns.
 ---
 ## Tidy data
 
@@ -263,7 +538,7 @@ Each **observation** is then a test result returned for each combination of `per
 
 ---
 
-## Tidy data
+<!-- ## Tidy data
 
 .xtiny-font[
 ```{r gapminder-untidy1, echo=FALSE, fig.cap="Untidy excerpt of [`gapminder`](https://www.gapminder.org/data/) dataset.", out.width="100%"}
@@ -276,7 +551,7 @@ gapminder_untidy1 <- tibble::tibble(
 kbl(gapminder_untidy1,  caption = "Untidy")
 ```
 ]
----
+--- -->
 
 ## Tidy data
 
@@ -307,9 +582,14 @@ gapminder_tidy <- tibble::tibble(
 kbl(gapminder_tidy,  caption = "Tidy")
 ```
 ]
+???
+
+Common in social science use cases -- data entry.
+
+
 ---
 
-## Tidy data
+## Tidy data and `dplyr`
 
 
 
@@ -319,21 +599,127 @@ kbl(gapminder_tidy,  caption = "Tidy")
 
 ---
 
-## Tidy data
+## `dplyr`'s grammar of data manipulation
 
+.xtiny-font[
+```{r dplyr-verbs, echo=FALSE, out.width="100%"}
 
+dplyr_verbs <- tibble::tibble(
+  `function` = c("filter()", "arrange()", "select()", "rename()", "mutate()", "group_by()", "summarise()" , "..and more"),
+  Description = c(
+    "Picks rows (observations) if their values match a specified criteria",
+    "Reorders rows (observations) based on their values",
+    "Picks a subset of columns (variables) by name (or name characteristics)",
+    "Changes the name of columns in the data frame",
+    "Adds new columns (or variables)",
+    "Chunks the dataset into groups for grouped operations",
+    "Calculate single-row (non-grouped) or multiple-row (if grouped) summary values",
+    ""
+  )
+)
 
-<img src = "img/transform1.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"></img>
+kbl(dplyr_verbs, caption = "dplyr funcitions (verbs) for manipulating data frames.")
+```
+]
 
 ---
 
-
-## Tidy data
-
+## `dplyr`'s grammar of data manipulation
 
 
-<img src = "img/transform2.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"></img>
+.pull-left[.small-font[
+1. Start with a data frame.
 
+2. Pass some arguments to the function which control what you do to the data frame.
+
+3. Return the updated data frame.
+]]
+
+.pull-right[
+.tiny-font[
+```{r count, echo=TRUE, eval=FALSE, out.width="100%"}
+count(
+  data=ny_trips,
+  gender,
+  sort=TRUE
+  )
+#    gender       n
+# 1    male 1044621
+# 2  female  586361
+# 3 unknown  251291
+```
+]
+]
+
+???
+
+takes the gender variable from ny_trips, organises or groups the rows in the data frame according to its values (female | male | unknown), counts the rows and then orders the summarised output descending on the counts.
+
+
+
+---
+
+## `dplyr`'s grammar of data manipulation
+
+
+
+.tiny-font[
+```{r count-summarise, echo=TRUE, eval=FALSE, out.width="100%"}
+ny_trips %>% # Take the ny_trips data frame.
+  group_by(gender) %>% # Group by gender.
+  summarise(count=n()) %>% # Count the number of observations per group.
+  arrange(desc(count)) # Arrange the grouped and summarised (collapsed) rows according to count.
+## # A tibble: 3 x 2
+##  gender    count
+##  <chr>     <int>
+## 1 male    1044621
+## 2 female   586361
+## 3 unknown  251291
+```
+]
+
+
+???
+
+may also want to be more explicit in the way the data frame is grouped for computation.
+
+A common workflow is to combine group_by() and summarise(), and in this case arrange() to replicate the count() example
+
+---
+
+## Use `%>%` for a layered grammar of manipulation
+
+.tiny-font[
+```{r count-filter-group, echo=TRUE, eval=FALSE, out.width="100%"}
+ny_trips %>% # Take the ny_trips data frame.
+
+  filter(gender != "unknown") %>% # Filter out rows with the value "unknown" on gender.
+
+  group_by(gender) %>% # Group by gender.
+
+  summarise(count=n()) %>% # Count the number of observations per group.
+
+  mutate(prop=count/sum(count)) %>% # Add a new column called `prop`, divide the value in the row for the variable count by the sum of the count variable across all rows.
+
+  arrange(desc(count)) # Arrange on the count variable.
+
+
+## # A tibble: 2 x 3
+##  gender   count  prop
+##  <chr>    <int> <dbl>
+## 1 male   1044621 0.640
+## 2 female  586361 0.360
+```
+]
+
+
+???
+
+dplyr is most effective when its functions are chained together...see this later and in use of ggplot2
+
+Pipe for passing information in a prgram.
+
+Output of one set becomes input of another
 ---
 
 
@@ -348,6 +734,14 @@ kbl(gapminder_tidy,  caption = "Tidy")
 
 4. Create statistical graphics that expose structure in data fir cleaning purposes
 ]
+
+
+???
+
+Demonstrate how to download and load the `.Rmd`
+Show architecture of file
+Data: `bikedata`, then pre-processed
+
 
 
 ---
