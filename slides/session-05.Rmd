@@ -1,0 +1,138 @@
+---
+title: "Exploring spatial networks"
+author: "Roger Beecham"
+date: "12 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+output:
+  xaringan::moon_reader:
+    css: [default, "slides-theme.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ''
+      titleSlideClass: [center, middle]
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+library(tidyverse)
+library(here)
+library(knitr)
+library(kableExtra)
+```
+
+
+## Network data
+
+<img src = "../class/05-class_files/node.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
+
+???
+Nodes -- entities -- bikeshare stations, airports, authors
+
+---
+
+
+## Network data
+
+<img src = "../class/05-class_files/node-size.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
+
+---
+
+
+## Network data
+
+<img src = "../class/05-class_files/node-edge.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
+
+???
+
+* Edges -- connections -- bikeshare trips, flights, (co)authorship
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/node-spatial.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+???
+Origin-Destination network data:
+* Nodes -- entities -- origin (O) and destination (D) locations
+* Edges -- connections -- flows linking OD locations
+
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/node-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/node-edge-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/node-edge-spatial-map-bezier.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+<img src = "../class/05-class_files/bezier-legend.png", width = 10%, style = "position:absolute; top: 85%; left: 72%;"></img>
+
+---
+
+
+## Network data
+
+<img src = "../class/05-class_files/matrix-all.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/matrix-same-removed.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+
+## Network data
+
+<img src = "../class/05-class_files/matrix-local.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/matrix-selected.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+--
+
+<img src = "../class/05-class_files/matrix-reordered-d.png", width = 30%, style = "position:absolute; top: 20%; left: 50%;"></img>
+
+--
+
+<img src = "../class/05-class_files/matrix-reordered-o.png", width = 30%, style = "position:absolute; top: 59%; left: 50%;"></img>
+---
+
+
+## Network data
+
+<img src = "../class/05-class_files/grid-grid.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/d-od-map-global.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+## Network data
+
+<img src = "../class/05-class_files/d-od-map-local.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+---
+
+## Example analysis -- twitter

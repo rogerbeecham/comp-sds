@@ -23,7 +23,11 @@ library(knitr)
 library(kableExtra)
 ```
 
-## Conceptual Element
+???
+
+Objectives | Datasets -- Contituency-level Leave voting
+
+<!-- ## Conceptual Element
 
 .small-font[
 1. Recognise the **characteristics of effective data graphics**.
@@ -35,7 +39,7 @@ library(kableExtra)
 4. Be able to **select appropriate visual channels** given a data item’s measurement type.
 
 5. Appreciate how visual channels and evidence of their encoding effectiveness can be used to **evaluate data graphics**.
-]
+] -->
 
 
 ---
@@ -57,7 +61,7 @@ library(kableExtra)
 > Tufte 1983
 ]
 
-<br><br>
+<br>
 
 --
 .tiny-font[
@@ -108,11 +112,17 @@ knitr::include_graphics("../class/03-class_files/trump_maps.png", error = FALSE)
 
 ## Grammar of Graphics
 
+--
 .xtiny-font[
 ```{r gog, echo=FALSE, fig.cap="Components of Wickham 2010's Layered Grammar of Graphics.", fig.align="left", out.width="50%"}
 include_graphics("../class/03-class_files/gog.png", error = FALSE)
 ```
 ]
+
+???
+Already you will notice that I am describing graphics in a consistent way -- and hopefully that there are advantages to this.
+
+Heard of GoG and want to have a go at defining it?
 ---
 
 ## Grammar of Graphics
@@ -124,6 +134,37 @@ include_graphics("../class/03-class_files/gog-demo.png", error = FALSE)
 ]
 
 ---
+
+## Grammar of Graphics
+
+.xtiny-font[
+```{r gog-demo-1, echo=FALSE, fig.cap="Plots, grammars and associated ggplot2 specifications for the scatterplot.", out.width="70%"}
+include_graphics("../class/03-class_files/gog-demo-1.png", error = FALSE)
+```
+]
+
+---
+
+## Grammar of Graphics
+
+.xtiny-font[
+```{r gog-demo-2, echo=FALSE, fig.cap="Plots, grammars and associated ggplot2 specifications for the scatterplot.", out.width="70%"}
+include_graphics("../class/03-class_files/gog-demo-2.png", error = FALSE)
+```
+]
+
+---
+
+## Grammar of Graphics
+
+.xtiny-font[
+```{r gog-demo-3, echo=FALSE, fig.cap="Plots, grammars and associated ggplot2 specifications for the scatterplot.", out.width="70%"}
+include_graphics("../class/03-class_files/gog-demo-3.png", error = FALSE)
+```
+]
+
+---
+
 
 ## Marks and visual channels
 
@@ -141,6 +182,10 @@ include_graphics("../class/03-class_files/munzner.png", error = FALSE)
 knitr::include_graphics("../class/03-class_files/trump_maps.png", error = FALSE)
 ```
 ]
+
+???
+
+Table 2 of notes
 
 ---
 

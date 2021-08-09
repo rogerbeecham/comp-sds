@@ -23,40 +23,11 @@ library(knitr)
 library(kableExtra)
 ```
 
-<!-- ## Conceptual Element
-
-.small-font[
-1. The vocabulary used to describe data
-
-2. Tidy Data (Wickham 2014) -- its characteristics and importance for SDS
-]
-
-
---- -->
-
-
-<!-- ## Data Fundamentals
-
-
-<a href="www.rstudio.com/resources/cheatsheets/">
-<img src = "img/data1.png", width = 45%, style = "position:absolute; top: 25%; left: 8%;"></img>
-<img src = "img/data2.png", width = 45%, style = "position:absolute; top: 25%; left: 48%;"></img>
-</a>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-.small-font[
-[`www.rstudio.com/resources/cheatsheets/`](https://www.rstudio.com/resources/cheatsheets/)
-]
-
 ???
-
-Cheatsheets -- useful.
-
-<!-- Preview of session :
-Fundamentals of data using bikeshare.
-Reason: these fundamentals constrain/inform the type of analysis that we can do.
-Describe data -->
+Review objectives --
+* why vocab for describing data important.
+* bikedata and citibike -- loading data for the first time; exploring usefulness for cycling research.
+* short on conceptual; large on technical
 
 
 ---
@@ -98,7 +69,7 @@ variable_types <- tibble::tibble(
   Example = c(
     "Political parties; street names",
     "Terrorism threat levels",
-    "Temperatures; years",
+    "Temperatures; calendar years",
     "Distances; prices "
     ),
   Operators = c(
@@ -173,7 +144,7 @@ variable_types <- tibble::tibble(
   Example = c(
     "Political parties; street names",
     "Terrorism threat levels",
-    "Temperatures; years",
+    "Temperatures; calendar years",
     "Distances; prices "
     ),
   Operators = c(
@@ -206,9 +177,7 @@ kbl(variable_types, protect_latex = TRUE, escape=FALSE) %>%
 ]
 
 
-???
 
-Need to describe data in a consistent way.
 
 ---
 
@@ -246,7 +215,7 @@ variable_types <- tibble::tibble(
   Example = c(
     "Political parties; street names",
     "Terrorism threat levels",
-    "Temperatures; years",
+    "Temperatures; calendar years",
     "Distances; prices "
     ),
   Operators = c(
@@ -321,7 +290,7 @@ variable_types <- tibble::tibble(
   Example = c(
     "Political parties; street names",
     "Terrorism threat levels",
-    "Temperatures; years",
+    "Temperatures; calendar years",
     "Distances; prices "
     ),
   Operators = c(
@@ -446,8 +415,8 @@ E.g. with data graphics --
 
 .tiny-font[
 * dataset: Citibike OD trip data
-* variable: `trip_count` | `user_age` | `user_sex` | `day_week`
-* measurement: `ratio` | `ratio` | `nominal` | `ordinal`
+* variable: `trip_count` | `hod` | `user_sex` | `day_week`
+* measurement: `ratio` | `interval|cyclic ratio` | `nominal` | `ordinal`
 ]
 
 --
@@ -458,7 +427,7 @@ include_graphics("../class/02-class_files/hod_dow.png", error = FALSE)
 ```
 ]
 
-
+???
 E.g. with data graphics -- for example in this session. Summarise distribution on quantitative variable (time of day). Though this is a cyclic variable so hour of day necessary
 
 ---
@@ -469,6 +438,7 @@ E.g. with data graphics -- for example in this session. Summarise distribution o
 
 ???
 So that was *describing data*
+Next: how to represent/organise data.
 
 ---
 
@@ -528,7 +498,7 @@ kbl(drugs,  caption = "Tidy")
 ]
 
 ???
-dentify the **variables**:
+identify the **variables** and their **values**:
 
 1. `person`:  a categorical nominal variable which takes three values: John Smith, Jane Doe, Mary Johnson.
 2. `treatment`: a categorical nominal variable which takes values: a and b.
@@ -741,6 +711,7 @@ Output of one set becomes input of another
 Demonstrate how to download and load the `.Rmd`
 Show architecture of file
 Data: `bikedata`, then pre-processed
+Leave to work through and then break-off to discuss.
 
 
 

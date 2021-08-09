@@ -23,40 +23,11 @@ class: center, middle, title-slide
 
 
 
-&lt;!-- ## Conceptual Element
-
-.small-font[
-1. The vocabulary used to describe data
-
-2. Tidy Data (Wickham 2014) -- its characteristics and importance for SDS
-]
-
-
---- --&gt;
-
-
-&lt;!-- ## Data Fundamentals
-
-
-&lt;a href="www.rstudio.com/resources/cheatsheets/"&gt;
-&lt;img src = "img/data1.png", width = 45%, style = "position:absolute; top: 25%; left: 8%;"&gt;&lt;/img&gt;
-&lt;img src = "img/data2.png", width = 45%, style = "position:absolute; top: 25%; left: 48%;"&gt;&lt;/img&gt;
-&lt;/a&gt;
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-.small-font[
-[`www.rstudio.com/resources/cheatsheets/`](https://www.rstudio.com/resources/cheatsheets/)
-]
-
 ???
-
-Cheatsheets -- useful.
-
-&lt;!-- Preview of session :
-Fundamentals of data using bikeshare.
-Reason: these fundamentals constrain/inform the type of analysis that we can do.
-Describe data --&gt;
+Review objectives --
+* why vocab for describing data important.
+* bikedata and citibike -- loading data for the first time; exploring usefulness for cycling research.
+* short on conceptual; large on technical
 
 
 ---
@@ -100,7 +71,7 @@ Describe data --&gt;
 &lt;tr&gt;
    &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
-   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; years &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | +  - &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | mean &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
@@ -162,7 +133,7 @@ Categories and Measures.
 &lt;tr&gt;
    &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
-   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; years &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | +  - &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | mean &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
@@ -180,9 +151,7 @@ Categories and Measures.
 ]
 
 
-???
 
-Need to describe data in a consistent way.
 
 ---
 
@@ -222,7 +191,7 @@ Need to describe data in a consistent way.
 &lt;tr&gt;
    &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Numeric measurements &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Temperatures; years &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | +  - &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | mean &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | variance &lt;/td&gt;
@@ -284,7 +253,7 @@ Need to describe data in a consistent way.
 &lt;tr&gt;
    &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
-   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; years &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | +  - &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | mean &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | variance &lt;/td&gt;
@@ -414,8 +383,8 @@ E.g. with data graphics --
 
 .tiny-font[
 * dataset: Citibike OD trip data
-* variable: `trip_count` | `user_age` | `user_sex` | `day_week`
-* measurement: `ratio` | `ratio` | `nominal` | `ordinal`
+* variable: `trip_count` | `hod` | `user_sex` | `day_week`
+* measurement: `ratio` | `interval|cyclic ratio` | `nominal` | `ordinal`
 ]
 
 --
@@ -427,7 +396,7 @@ E.g. with data graphics --
 &lt;/div&gt;
 ]
 
-
+???
 E.g. with data graphics -- for example in this session. Summarise distribution on quantitative variable (time of day). Though this is a cyclic variable so hour of day necessary
 
 ---
@@ -890,7 +859,7 @@ A common workflow is to combine group_by() and summarise(), and in this case arr
 
 ---
 
-## Use pipes `%&gt;%` for a layered grammar of manipulation
+## Use `%&gt;%` for a layered grammar of manipulation
 
 .tiny-font[
 
