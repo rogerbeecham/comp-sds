@@ -25,9 +25,31 @@ library(kableExtra)
 
 ???
 Review objectives --
-* why vocab for describing data important.
-* bikedata and citibike -- loading data for the first time; exploring usefulness for cycling research.
+* vocab important -- determines the operations that we can perform.
+* vocab important sds -- new data, work out its structure.
+* tidyverse -- end up coming up with analysis templates
+* bikedata and citibike -- loading data for the first time; exploring usefulness for cycling research -- show data
 * short on conceptual; large on technical
+
+
+---
+
+
+## Data structure
+
+#### `data frame` | `tibble`
+
+<img src = "img/data-structure.png", width = 70%, style = "position:relative; top: 10%; left: 0%;"></img>
+
+???
+
+spreadsheet like representations:
+*  rows are observations (case/record)
+*  columns are variables
+* organising not alwats eady -- Tidy
+*  Each variable (column) in a data frame is a vector that must be of equal length
+* Missing - `NA`
+* `list-col`
 
 
 ---
@@ -566,6 +588,9 @@ Common in social science use cases -- data entry.
 <img src = "img/transform1.png", width = 45%, style = "position:absolute; top: 25%; left: 8%;"></img>
 <img src = "img/transform2.png", width = 45%, style = "position:absolute; top: 25%; left: 48%;"></img>
 
+???
+
+Once data are tidied ...
 
 ---
 
@@ -591,6 +616,8 @@ dplyr_verbs <- tibble::tibble(
 kbl(dplyr_verbs, caption = "dplyr funcitions (verbs) for manipulating data frames.")
 ```
 ]
+
+
 
 ---
 
@@ -636,9 +663,14 @@ takes the gender variable from ny_trips, organises or groups the rows in the dat
 .tiny-font[
 ```{r count-summarise, echo=TRUE, eval=FALSE, out.width="100%"}
 ny_trips %>% # Take the ny_trips data frame.
+
   group_by(gender) %>% # Group by gender.
+
   summarise(count=n()) %>% # Count the number of observations per group.
+
   arrange(desc(count)) # Arrange the grouped and summarised (collapsed) rows according to count.
+
+
 ## # A tibble: 3 x 2
 ##  gender    count
 ##  <chr>     <int>
@@ -702,7 +734,7 @@ Output of one set becomes input of another
 
 3. Apply high-level functions in `dplyr` and `tidyr` for transforming data
 
-4. Create statistical graphics that expose structure in data fir cleaning purposes
+4. Create statistical graphics that expose structure in data for cleaning purposes
 ]
 
 

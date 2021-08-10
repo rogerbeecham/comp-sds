@@ -24,7 +24,7 @@ library(kableExtra)
 ```
 
 
-## Network data
+## Network data : nodes
 
 <img src = "../class/05-class_files/node.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
 
@@ -34,14 +34,14 @@ Nodes -- entities -- bikeshare stations, airports, authors
 ---
 
 
-## Network data
+## Network data : nodes
 
 <img src = "../class/05-class_files/node-size.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
 
 ---
 
 
-## Network data
+## Network data : edges
 
 <img src = "../class/05-class_files/node-edge.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
 
@@ -51,7 +51,7 @@ Nodes -- entities -- bikeshare stations, airports, authors
 
 ---
 
-## Network data
+##  OD data : nodes
 
 <img src = "../class/05-class_files/node-spatial.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
@@ -63,19 +63,19 @@ Origin-Destination network data:
 
 ---
 
-## Network data
+## OD data : nodes
 
 <img src = "../class/05-class_files/node-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
-## Network data
+## OD data : edges (flows)
 
 <img src = "../class/05-class_files/node-edge-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
-## Network data
+## OD data : directed edges (flows)
 
 <img src = "../class/05-class_files/node-edge-spatial-map-bezier.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
@@ -84,26 +84,26 @@ Origin-Destination network data:
 ---
 
 
-## Network data
+## OD data : matrix
 
 <img src = "../class/05-class_files/matrix-all.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
-## Network data
+## OD data : matrix
 
 <img src = "../class/05-class_files/matrix-same-removed.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
 
-## Network data
+## OD data : matrix
 
 <img src = "../class/05-class_files/matrix-local.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
-## Network data
+## OD data : matrix (spatially arranged)
 
 <img src = "../class/05-class_files/matrix-selected.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
@@ -117,22 +117,22 @@ Origin-Destination network data:
 ---
 
 
-## Network data
+## OD data : OD map
 
 <img src = "../class/05-class_files/grid-grid.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
-## Network data
+## OD data : OD map
 
 <img src = "../class/05-class_files/d-od-map-global.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
-## Network data
+## OD data : OD map
 
 <img src = "../class/05-class_files/d-od-map-local.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
 ---
 
-## Example analysis -- twitter
+## Example analysis 

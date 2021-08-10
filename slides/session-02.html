@@ -25,9 +25,31 @@ class: center, middle, title-slide
 
 ???
 Review objectives --
-* why vocab for describing data important.
-* bikedata and citibike -- loading data for the first time; exploring usefulness for cycling research.
+* vocab important -- determines the operations that we can perform.
+* vocab important sds -- new data, work out its structure.
+* tidyverse -- end up coming up with analysis templates
+* bikedata and citibike -- loading data for the first time; exploring usefulness for cycling research -- show data
 * short on conceptual; large on technical
+
+
+---
+
+
+## Data structure
+
+#### `data frame` | `tibble`
+
+&lt;img src = "img/data-structure.png", width = 70%, style = "position:relative; top: 10%; left: 0%;"&gt;&lt;/img&gt;
+
+???
+
+spreadsheet like representations:
+*  rows are observations (case/record)
+*  columns are variables
+* organising not alwats eady -- Tidy
+*  Each variable (column) in a data frame is a vector that must be of equal length
+* Missing - `NA`
+* `list-col`
 
 
 ---
@@ -407,6 +429,7 @@ E.g. with data graphics -- for example in this session. Summarise distribution o
 
 ???
 So that was *describing data*
+Next: how to represent/organise data.
 
 ---
 
@@ -535,7 +558,7 @@ Transpose: observations spread across columns.
 ]
 
 ???
-dentify the **variables**:
+identify the **variables** and their **values**:
 
 1. `person`:  a categorical nominal variable which takes three values: John Smith, Jane Doe, Mary Johnson.
 2. `treatment`: a categorical nominal variable which takes values: a and b.
@@ -741,6 +764,9 @@ Common in social science use cases -- data entry.
 &lt;img src = "img/transform1.png", width = 45%, style = "position:absolute; top: 25%; left: 8%;"&gt;&lt;/img&gt;
 &lt;img src = "img/transform2.png", width = 45%, style = "position:absolute; top: 25%; left: 48%;"&gt;&lt;/img&gt;
 
+???
+
+Once data are tidied ...
 
 ---
 
@@ -792,6 +818,8 @@ Common in social science use cases -- data entry.
 &lt;/table&gt;
 ]
 
+
+
 ---
 
 ## `dplyr`'s grammar of data manipulation
@@ -838,9 +866,14 @@ takes the gender variable from ny_trips, organises or groups the rows in the dat
 
 ```r
 ny_trips %&gt;% # Take the ny_trips data frame.
+
   group_by(gender) %&gt;% # Group by gender.
+
   summarise(count=n()) %&gt;% # Count the number of observations per group.
+
   arrange(desc(count)) # Arrange the grouped and summarised (collapsed) rows according to count.
+
+
 ## # A tibble: 3 x 2
 ##  gender    count
 ##  &lt;chr&gt;     &lt;int&gt;
@@ -905,7 +938,7 @@ Output of one set becomes input of another
 
 3. Apply high-level functions in `dplyr` and `tidyr` for transforming data
 
-4. Create statistical graphics that expose structure in data fir cleaning purposes
+4. Create statistical graphics that expose structure in data for cleaning purposes
 ]
 
 
@@ -914,6 +947,7 @@ Output of one set becomes input of another
 Demonstrate how to download and load the `.Rmd`
 Show architecture of file
 Data: `bikedata`, then pre-processed
+Leave to work through and then break-off to discuss.
 
 
 
