@@ -50,43 +50,44 @@ Objectives | Datasets -- Contituency-level Leave voting
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sua0xDCf8MA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+???
 
+Fundamenrals :
+* position on what vis is and should do
+* processes of creating and evaluating data graphics
+* vocabulary for this
+* using 2019 General Election
 ---
 
 ## Characteristics of effective data graphics
 
-.tiny-font[
-> Data graphics visually display measured quantities by means of the combined use of points, lines, a coordinate system, numbers, symbols, words, shading, and color.
->
-> Tufte 1983
-]
+???
 
-<br>
-
+Data vis is a varied field but effective data graphics have ...
 --
-.tiny-font[
+.small-font[
 * Represent complex datasets graphically to expose structure, connections and comparisons that could not be achieved easily via other means.
 ]
 
 --
-.tiny-font[
+.small-font[
 * Are data rich: present many numbers in a small space.
 ]
 
 --
 
-.tiny-font[
+.small-font[
 * Reveal patterns at several levels of detail: from broad overview to fine structure.
 ]
 
 --
 
-.tiny-font[
+.small-font[
 * Have elegance – emphasise dimensions of a dataset without extraneous details.
 ]
 
 --
-.tiny-font[
+.small-font[
 * Generate an aesthetic response that encourages people to engage with the data or question.
 ]
 
@@ -99,7 +100,7 @@ Objectives | Datasets -- Contituency-level Leave voting
 >
 > Tufte 1983
 ]
-
+--
 <br>
 
 .xtiny-font[
@@ -120,9 +121,11 @@ include_graphics("../class/03-class_files/gog.png", error = FALSE)
 ]
 
 ???
-Already you will notice that I am describing graphics in a consistent way -- and hopefully that there are advantages to this.
+Already you will notice that I am describing graphics in a consistent way.
 
-Heard of GoG and want to have a go at defining it?
+There are advantages of doing this.
+
+GoG.
 ---
 
 ## Grammar of Graphics
@@ -207,6 +210,10 @@ knitr::include_graphics("../class/03-class_files/angle-encoding.png", error = FA
 knitr::include_graphics("../class/03-class_files/hue-encoding.png", error = FALSE)
 ```
 
+????
+
+That certain of these take advantage of preattentive processing.
+
 ---
 
 ## Checking perceptual rankings: estimating quantities
@@ -235,6 +242,11 @@ knitr::include_graphics("../class/03-class_files/perception.png", error = FALSE)
 .small-font[
 [`http://guessthecorrelation.com/`](http://guessthecorrelation.com/)
 ]
+
+???
+
+Precision with which we can judge correlation as it increases is non-linear.
+
 ---
 
 ## Technical Element
