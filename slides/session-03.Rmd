@@ -109,6 +109,12 @@ knitr::include_graphics("../class/03-class_files/trump_maps.png", error = FALSE)
 ```
 ]
 
+???
+
+Data vis is a careful thinking through of data you have -- its type -- how it ican be represented using the visual system -- and to support particular analysis tasks.
+
+Data - Visuals -- Tasks
+
 ---
 
 ## Grammar of Graphics
@@ -125,7 +131,9 @@ Already you will notice that I am describing graphics in a consistent way.
 
 There are advantages of doing this.
 
-GoG.
+GoG -- written byWilkinson in late 1990s -- captures process of turning data into visuals.
+
+Graphics have this underlying structure -- levels.
 ---
 
 ## Grammar of Graphics
@@ -171,11 +179,31 @@ include_graphics("../class/03-class_files/gog-demo-3.png", error = FALSE)
 
 ## Marks and visual channels
 
+.small-font[
+> Effective data visualization design is concerned with representing data through **marks** and **visual channels** in a way that best conveys the properties of the data that are to be depicted.
+>
+> via Jo Wood
+]
+
+???
+
+Marks > geom
+Channels > aes
+Tableau and vega-lite
+Munzner
+
+---
+## Marks and visual channels
 .xtiny-font[
 ```{r munzner, echo=FALSE, fig.cap="Visual channels to which data items can be encoded, as they appear in Munzner 2014.", out.width="60%"}
 include_graphics("../class/03-class_files/munzner.png", error = FALSE)
 ```
 ]
+
+???
+
+Two categories > data type
+Some more effective than others
 ---
 
 ## Upstream evaluate
@@ -187,8 +215,9 @@ knitr::include_graphics("../class/03-class_files/trump_maps.png", error = FALSE)
 ]
 
 ???
-
+We can use this to evaluate designs on their encoding effectiveness
 Table 2 of notes
+Also mention symbilisation
 
 ---
 
@@ -209,10 +238,11 @@ knitr::include_graphics("../class/03-class_files/angle-encoding.png", error = FA
 ```{r hue-encoding, echo=FALSE, out.width="30%"}
 knitr::include_graphics("../class/03-class_files/hue-encoding.png", error = FALSE)
 ```
-
 ????
+Notes -- different tasks
 
 That certain of these take advantage of preattentive processing.
+
 
 ---
 

@@ -4611,9 +4611,9 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:wp-map&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;./class/03-class_files/trump_maps.png&#34; alt=&#34;Maps of 2016 US presidential election results. Left - two-colour choropleth in [Medium](https://pensivepost.com/understanding-rural-america-d9695a6b3516). Right - information-rich data graphic in [The Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/).&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;./class/03-class_files/trump_maps.png&#34; alt=&#34;Maps of 2016 US presidential election results. Left - two-colour choropleth in [Medium](https://medium.com/thepensivepost/understanding-rural-america-d9695a6b3516). Right - information-rich data graphic in [The Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/).&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
-Figure 1: Maps of 2016 US presidential election results. Left - two-colour choropleth in &lt;a href=&#34;https://pensivepost.com/understanding-rural-america-d9695a6b3516&#34;&gt;Medium&lt;/a&gt;. Right - information-rich data graphic in &lt;a href=&#34;https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/&#34;&gt;The Washington Post&lt;/a&gt;.
+Figure 1: Maps of 2016 US presidential election results. Left - two-colour choropleth in &lt;a href=&#34;https://medium.com/thepensivepost/understanding-rural-america-d9695a6b3516&#34;&gt;Medium&lt;/a&gt;. Right - information-rich data graphic in &lt;a href=&#34;https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/&#34;&gt;The Washington Post&lt;/a&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Both maps use 2016 county-level results data, but the &lt;a href=&#34;https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/&#34;&gt;The Washington Post&lt;/a&gt; graphic encodes many more data items than the Medium post (see Table &lt;a href=&#34;#tab:wp-data&#34;&gt;1&lt;/a&gt; below).&lt;/p&gt;
@@ -8114,18 +8114,14 @@ Figure 5: Creating an RStudio Project
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 4&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploratory data analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/04-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/04-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/04-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 5&lt;/td&gt;
@@ -8340,18 +8336,14 @@ Figure 5: Creating an RStudio Project
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 4&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploratory data analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/04-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/04-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/04-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 5&lt;/td&gt;
