@@ -1,7 +1,7 @@
 ---
 title: "Exploring spatial networks"
 author: "Roger Beecham"
-date: "12 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+date: "13 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
 output:
   xaringan::moon_reader:
     css: [default, "slides-theme.css"]
@@ -29,6 +29,9 @@ library(kableExtra)
 <img src = "../class/05-class_files/node.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
 
 ???
+
+Special class of data used to represent things (entities) and how they relate to one another.
+
 Nodes -- entities -- bikeshare stations, airports, authors
 
 ---
@@ -37,6 +40,10 @@ Nodes -- entities -- bikeshare stations, airports, authors
 ## Network data : nodes
 
 <img src = "../class/05-class_files/node-size.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"></img>
+
+???
+
+Here's a layout of nodes in 2D, sized according number of connections.
 
 ---
 
@@ -48,6 +55,7 @@ Nodes -- entities -- bikeshare stations, airports, authors
 ???
 
 * Edges -- connections -- bikeshare trips, flights, (co)authorship
+* This is graph layout in two dimensions -- Nodes are positioned such that those sharing greater connection – edges with greater weights (frequencies) – are closer than those that are less well-connected – that do not share edges with such large weights. Edges are drawn as lines connecting nodes.
 
 ---
 
@@ -57,8 +65,7 @@ Nodes -- entities -- bikeshare stations, airports, authors
 
 ???
 Origin-Destination network data:
-* Nodes -- entities -- origin (O) and destination (D) locations
-* Edges -- connections -- flows linking OD locations
+* Nodes -- entities -- origin (O) and destination (D) locations -- they have an inherent 2D position
 
 
 ---
@@ -67,12 +74,16 @@ Origin-Destination network data:
 
 <img src = "../class/05-class_files/node-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
+
 ---
 
 ## OD data : edges (flows)
 
 <img src = "../class/05-class_files/node-edge-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
+???
+
+* Edges -- connections -- flows linking OD locations
 ---
 
 ## OD data : directed edges (flows)
@@ -81,18 +92,34 @@ Origin-Destination network data:
 
 <img src = "../class/05-class_files/bezier-legend.png", width = 10%, style = "position:absolute; top: 85%; left: 72%;"></img>
 
+???
+
+* Edges -- are directed.
+* Problems with design -- layout fine, but occlusion/hairball effect.
+* Salience bias of longer flows hides interesting local structure
+* Can we conclude much about the geog of travel to work from this.
 ---
 
 
 ## OD data : matrix
 
+--
+
 <img src = "../class/05-class_files/matrix-all.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
+
+???
+
+There is some order -- ordered by frequency
 ---
 
 ## OD data : matrix
 
 <img src = "../class/05-class_files/matrix-same-removed.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+???
+
+Dominant workplace boroughs ... isolated larger numbers
 
 ---
 
@@ -100,6 +127,10 @@ Origin-Destination network data:
 ## OD data : matrix
 
 <img src = "../class/05-class_files/matrix-local.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"></img>
+
+???
+
+Local scaling column-wise (destination-wise)
 
 ---
 
@@ -127,6 +158,10 @@ Origin-Destination network data:
 
 <img src = "../class/05-class_files/d-od-map-global.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"></img>
 
+???
+
+Go to h-w pages
+
 ---
 
 ## OD data : OD map
@@ -135,4 +170,4 @@ Origin-Destination network data:
 
 ---
 
-## Example analysis 
+## Example analysis

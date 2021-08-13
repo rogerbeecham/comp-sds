@@ -13,8 +13,8 @@ class: center, middle, title-slide
 
 # Exploring spatial networks
 ### Roger Beecham
-### <p>12 Aug 2021</p>
-<p><a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a></p>
+### <p>13 Aug 2021</p>
+<a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a>
 
 ---
 
@@ -22,86 +22,117 @@ class: center, middle, title-slide
 
 
 
-## Network data
+## Network data : nodes
 
 &lt;img src = "../class/05-class_files/node.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
 
 ???
+
+Special class of data used to represent things (entities) and how they relate to one another.
+
 Nodes -- entities -- bikeshare stations, airports, authors
 
 ---
 
 
-## Network data
+## Network data : nodes
 
 &lt;img src = "../class/05-class_files/node-size.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+Here's a layout of nodes in 2D, sized according number of connections.
 
 ---
 
 
-## Network data
+## Network data : edges
 
 &lt;img src = "../class/05-class_files/node-edge.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
 
 ???
 
 * Edges -- connections -- bikeshare trips, flights, (co)authorship
+* This is graph layout in two dimensions -- Nodes are positioned such that those sharing greater connection – edges with greater weights (frequencies) – are closer than those that are less well-connected – that do not share edges with such large weights. Edges are drawn as lines connecting nodes.
 
 ---
 
-## Network data
+##  OD data : nodes
 
 &lt;img src = "../class/05-class_files/node-spatial.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
 ???
 Origin-Destination network data:
-* Nodes -- entities -- origin (O) and destination (D) locations
-* Edges -- connections -- flows linking OD locations
+* Nodes -- entities -- origin (O) and destination (D) locations -- they have an inherent 2D position
 
 
 ---
 
-## Network data
+## OD data : nodes
 
 &lt;img src = "../class/05-class_files/node-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
+
 ---
 
-## Network data
+## OD data : edges (flows)
 
 &lt;img src = "../class/05-class_files/node-edge-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
+???
+
+* Edges -- connections -- flows linking OD locations
 ---
 
-## Network data
+## OD data : directed edges (flows)
 
 &lt;img src = "../class/05-class_files/node-edge-spatial-map-bezier.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
 &lt;img src = "../class/05-class_files/bezier-legend.png", width = 10%, style = "position:absolute; top: 85%; left: 72%;"&gt;&lt;/img&gt;
 
+???
+
+* Edges -- are directed.
+* Problems with design -- layout fine, but occlusion/hairball effect.
+* Salience bias of longer flows hides interesting local structure
+* Can we conclude much about the geog of travel to work from this.
 ---
 
 
-## Network data
+## OD data : matrix
+
+--
 
 &lt;img src = "../class/05-class_files/matrix-all.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
+
+???
+
+There is some order -- ordered by frequency
 ---
 
-## Network data
+## OD data : matrix
 
 &lt;img src = "../class/05-class_files/matrix-same-removed.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
+???
+
+Dominant workplace boroughs ... isolated larger numbers
+
 ---
 
 
-## Network data
+## OD data : matrix
 
 &lt;img src = "../class/05-class_files/matrix-local.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
+???
+
+Local scaling column-wise (destination-wise)
+
 ---
 
-## Network data
+## OD data : matrix (spatially arranged)
 
 &lt;img src = "../class/05-class_files/matrix-selected.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
@@ -115,25 +146,29 @@ Origin-Destination network data:
 ---
 
 
-## Network data
+## OD data : OD map
 
 &lt;img src = "../class/05-class_files/grid-grid.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
 ---
 
-## Network data
+## OD data : OD map
 
 &lt;img src = "../class/05-class_files/d-od-map-global.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
+???
+
+Go to h-w pages
+
 ---
 
-## Network data
+## OD data : OD map
 
 &lt;img src = "../class/05-class_files/d-od-map-local.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
 
 ---
 
-## Example analysis -- twitter
+## Example analysis
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
