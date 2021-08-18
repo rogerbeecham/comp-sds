@@ -711,6 +711,11 @@
       </li>
 
       
+      <li >
+        <a href="../../class/09-class/">9: Communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -967,8 +972,14 @@ Figure 10: Icon array displaying injury severity rates for Pedestrian-Vehicle cr
 <pre class="r"><code>array_data &lt;- tibble(
   row=rep(1:10, times=1, each=10),
   col=rep(1:10, times=10, each=1),
-  Oxford=sample(c(FALSE,TRUE), size=100, replace=TRUE, prob=c(.83,.17)),
-  Fareham=sample(c(FALSE,TRUE), size=100, replace=TRUE, prob=c(.59,.41))
+  Oxford=
+    sample(
+    c(rep(TRUE, times=1, each=17), rep(FALSE, times=1, each=83)),
+    size=100, replace=FALSE),
+  Fareham=
+    sample(
+    c(rep(TRUE, times=1, each=41), rep(FALSE, times=1, each=59)),
+    size=100, replace=FALSE)
 )</code></pre>
 <p>Plot code:</p>
 <pre class="r"><code>array_data %&gt;%

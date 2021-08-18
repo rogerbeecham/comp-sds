@@ -717,8 +717,14 @@ Figure 10: Icon array displaying injury severity rates for Pedestrian-Vehicle cr
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;array_data &amp;lt;- tibble(
   row=rep(1:10, times=1, each=10),
   col=rep(1:10, times=10, each=1),
-  Oxford=sample(c(FALSE,TRUE), size=100, replace=TRUE, prob=c(.83,.17)),
-  Fareham=sample(c(FALSE,TRUE), size=100, replace=TRUE, prob=c(.59,.41))
+  Oxford=
+    sample(
+    c(rep(TRUE, times=1, each=17), rep(FALSE, times=1, each=83)),
+    size=100, replace=FALSE),
+  Fareham=
+    sample(
+    c(rep(TRUE, times=1, each=41), rep(FALSE, times=1, each=59)),
+    size=100, replace=FALSE)
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Plot code:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;array_data %&amp;gt;%
