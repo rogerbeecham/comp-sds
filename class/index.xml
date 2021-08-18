@@ -817,7 +817,8 @@ Figure 10: Icon array displaying injury severity rates for Pedestrian-Vehicle cr
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rate_boots_temporal %&amp;gt;%
   filter(id!=&amp;quot;Apparent&amp;quot;) %&amp;gt;%
   ggplot(aes(x=year, y=ksi_rate)) +
-  geom_line(aes(group=id), colour=site_colours$primary, size=.6) +
+  geom_line(aes(group=id), size=.6) +
+  facet_wrap(~local_authority_district)+
   transition_states(id, 0,1)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;

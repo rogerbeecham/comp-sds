@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Uncertainty Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roger Beecham" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="slides-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, title-slide
+
+# Uncertainty Analysis
+### Roger Beecham
+### <p>18 Aug 2021</p>
+<p><a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a></p>
+
+---
+
+
+
+
+???
+
+* Core to data analysis
+* Many ways in which it can be understood and represented
+* This session -- parameter uncertainty -- representing the different possible values that a parameter might take
+* Using visualization to imply levels of uncertainty
+* Doing so in a reliable way is challenging
+
+---
+
+## Visual variables / channels for uncertainty
+
+&lt;img src = "../class/08-class_files/uncertainty_variables.png", width = 80%, style = "position:relative; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+
+
+???
+
+Vis research concerned with visual variables / visual channels used to represent uncertainty.
+Ideally:
+* intuitive -- related to precision/accuracy
+* discriminative -- levels can be discriminated
+* exmaples : fuzziness -- effective (semantically related)
+* size/transparency/colour values -- though less logically related to uncertainty
+* * sketchiness
+
+
+---
+## Uncertainty visualization
+
+--
+
+.small-font[
+&gt; *Things that are not precise should not be encoded with symbols that look precise*
+]
+???
+
+Key mantra/guideline for uncertainty vis
+
+---
+
+## Uncertainty visualization: Cone of uncertainty
+
+
+&lt;img src = "../class/08-class_files/hurricane_vis.png", width = 80%, style = "position:relative; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+
+
+???
+
+1. cone starts at the storm’s current location and spreads out to represent the projected path of the storm
+2.  cone implies that the storm is growing as we move away from its current location
+3.  Instead more uncertainty in the areas that could be affected by the storm the further away those areas are from the storm’s current location.
+4.  Cone uses strong lines that imply precision: temptation to think anything contained by the cone is unsafe and anything outside of it is safe.
+5.  Areas beyond the cone fall outside some chosen threshold probability.
+6. Redesign : four binned categories of storm probability suggested by the model
+7. Redesign : curve schematisation (see Van Goethem et al. 2014) to symbolise states using a single line. This provides context but in a way that may discourage binary thinking; precise inferences of location are not possible as the area and state borders are very obviously not exact
+
+
+
+---
+
+## Parameter uncertainty: frequency framing
+
+--
+
+&lt;img src = "../class/08-class_files/icon-arrays.png", width = 60%, style = "position:relative; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+
+???
+* parameter uncertainty: estimated injury severity rates for pedestrian-vehicle crashes in our STATS19 road crash dataset.
+* relative frequencies, risk ratios -- notoriously difficult to generate inuition on these
+* KSI rate of ped-vehicle crashes comparing two areas. Bristol and Sheffield. Similarly sozed but different KSIs -- 15% Bristol; 50% Sheffield
+* Icon arrays -- effective at communicating probabolities of event outcomes -- alternative might be to show lenght in bars. But the random element of arrangement helps intuition around probabilities
+
+---
+## Parameter uncertainty: frequency framing
+
+&lt;img src = "../class/08-class_files/risk-theatre.jpg", width = 70%, style = "position:relative; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+
+---
+
+## Quantifying parameter uncertainty: bootstrapping
+
+&lt;img src = "./img/seeing-theory.png", width = 65%, style = "position:relative; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+
+
+???
+
+* comparing single parameter values
+* but problem with ratios is they are insensitive to sample size -- in notes we compare two other areas that contain radically different rates but based on small numbers
+* We can derive a range of possible values that a parameter might take.
+* Do this by generating empirically a sampling distribution.
+
+---
+
+## Visualizing uncertaity in frequencies
+
+
+&lt;img src = "./img/jobs_report.png", width = 60%, style = "position:relative; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+
+&lt;img src = "./img/jobs_gif1.gif", width = 30%, style = "position:absolute; top: 60%; left: 10%;"&gt;&lt;/img&gt;
+
+&lt;img src = "./img/jobs_gif2.gif", width = 30%, style = "position:absolute; top: 60%; left: 45%;"&gt;&lt;/img&gt;
+
+
+???
+
+https://www.nytimes.com/2014/05/02/upshot/how-not-to-be-misled-by-the-jobs-report.html
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"slideNumberFormat": ""
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
