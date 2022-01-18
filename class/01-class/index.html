@@ -679,41 +679,6 @@
       </li>
 
       
-      <li >
-        <a href="../../class/03-class/">3: Visualization fundamentals</a>
-      </li>
-
-      
-      <li >
-        <a href="../../class/04-class/">4: Exploratory data analysis</a>
-      </li>
-
-      
-      <li >
-        <a href="../../class/05-class/">5: Exploring spatial networks</a>
-      </li>
-
-      
-      <li >
-        <a href="../../class/06-class/">6: Model building 1</a>
-      </li>
-
-      
-      <li >
-        <a href="../../class/07-class/">7: Model building 2</a>
-      </li>
-
-      
-      <li >
-        <a href="../../class/08-class/">8: Uncertainty analysis</a>
-      </li>
-
-      
-      <li >
-        <a href="../../class/09-class/">9: Communication and storytelling</a>
-      </li>
-
-      
     </ul>
     
 
@@ -746,8 +711,6 @@
                     <div class="article-style">
                         
 <!-- BLOGDOWN-HEAD -->
-<link href="../../rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
 <h2>Contents</h2>
@@ -836,7 +799,7 @@
 <p>Let’s develop this idea by asking <strong>why data visualizations are used in the first place</strong>. In her book <em>Visualization Analysis and Design</em>, Tamara <span class="citation">Munzner (<a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span> considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions – or to install humans in a ‘decision-making-loop’. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.</p>
 <p>The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe’s quartet</a>. Here, <span class="citation">Anscombe (<a href="#ref-anscombe_graphs_1973" role="doc-biblioref">1973</a>)</span> presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let’s say that they are the weight and height of independent samples taken from a population of postgraduate students studying Data Science.</p>
 <p>Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical – they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we’d expect taller students to be heavier. Given these statistical summaries we can be assured that we are drawing samples from the same population of (Data Science) students.</p>
-<div class="figure"><span id="fig:anscombe-data"></span>
+<div class="figure"><span style="display:block;" id="fig:anscombe-data"></span>
 <img src="../../class/01-class_files/anscombe_data.png" alt="Data from Anscombe's quartet" width="90%" />
 <p class="caption">
 Figure 1: Data from Anscombe’s quartet
@@ -844,7 +807,7 @@ Figure 1: Data from Anscombe’s quartet
 </div>
 <p>Laying out the data in a meaningful way, horizontally according to <em>weight</em> (<em>x</em>) and vertically according to the <em>height</em> (<em>y</em>) to form a scatterplot, we quickly see that whilst these data contain the same statistical properties they are very different. Only <code>dataset #1</code> now looks plausible if it were truly a measure of weights and heights drawn from a population of students.</p>
 <p>Anscombe’s is a deliberately contrived example<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, but there are real cases of important structure being missed, leading to poorly specified models and potentially faulty claims.</p>
-<div class="figure"><span id="fig:anscombe-plot"></span>
+<div class="figure"><span style="display:block;" id="fig:anscombe-plot"></span>
 <img src="../../class/01-class_files/anscombe.png" alt="Plots of Anscombe's quartet"  />
 <p class="caption">
 Figure 2: Plots of Anscombe’s quartet
@@ -928,7 +891,7 @@ Figure 2: Plots of Anscombe’s quartet
 </div>
 <div id="open-the-rstudio-ide" class="section level3">
 <h3>Open the RStudio IDE</h3>
-<div class="figure"><span id="fig:rstudio-annotate"></span>
+<div class="figure"><span style="display:block;" id="fig:rstudio-annotate"></span>
 <img src="../../class/01-class_files/rstudio_annotate.png" alt="The RStudio IDE" width="100%" />
 <p class="caption">
 Figure 3: The RStudio IDE
@@ -1022,7 +985,7 @@ x_root &lt;- sqrt(x_2)</code></pre>
 <li>TEXT - incorporated throughout to document and comment on your analysis.</li>
 <li>CODE chunks - containing discrete that are to be run when the .Rmd file is typeset or <em>knit</em>.</li>
 </ul>
-<div class="figure"><span id="fig:rmarkdown-annotate"></span>
+<div class="figure"><span style="display:block;" id="fig:rmarkdown-annotate"></span>
 <img src="../../class/01-class_files/rmarkdown_annotate.png" alt="The anatomy of R Markdown" width="100%" />
 <p class="caption">
 Figure 4: The anatomy of R Markdown
@@ -1103,7 +1066,7 @@ get_radians &lt;- function(degrees) {
 <p>Throughout this course we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where <em>file path discipline</em> is used such that all paths are relative to the project’s root folder (see <a href="https://rstats.wtf/project-oriented-workflow.html">Bryan &amp; Hester 2020</a>). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.</p>
 <p>You might have noticed that when you open RStudio it automatically <em>points to</em> a working directory, likely the home folder for your local machine, denoted with <code>~/</code> in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the <code>setwd(&lt;path-to-your-project&gt;)</code> function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.</p>
 <p>RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.</p>
-<div class="figure"><span id="fig:rstudio-project"></span>
+<div class="figure"><span style="display:block;" id="fig:rstudio-project"></span>
 <img src="../../class/01-class_files/rstudio_project.png" alt="Creating an RStudio Project" width="100%" />
 <p class="caption">
 Figure 5: Creating an RStudio Project

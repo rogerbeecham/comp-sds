@@ -19,8 +19,6 @@
       <guid>/class/10-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
@@ -35,8 +33,6 @@
       <guid>/class/09-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -124,7 +120,7 @@ Watching John’s talk, you hopefully got a sense that designing graphics for &l
 &lt;/div&gt;
 &lt;div id=&#34;designed-and-partial&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Designed and partial&lt;/h3&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:ft-vis&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:ft-vis&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/jbm-logchart.jpeg&#34; alt=&#34;[John Burn-Murdoch](https://www.ft.com/john-burn-murdoch)&#39;s international comparison of deaths, as it appeared on [twitter](https://twitter.com/jburnmurdoch/status/1241820210455285760).&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn-Murdoch&lt;/a&gt;’s international comparison of deaths, as it appeared on &lt;a href=&#34;https://twitter.com/jburnmurdoch/status/1241820210455285760&#34;&gt;twitter&lt;/a&gt;.
@@ -158,7 +154,7 @@ Figure 1: &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn
 &lt;/p&gt;
 &lt;!-- For example, the fact that rather than showing absolute time, the &#34;temporal&#34; x-axis is anchored according to days that elapsed since *n* cases/deaths are reported for each country.  --&gt;
 &lt;p&gt;An interesting design alternative that supports between country comparison is &lt;a href=&#34;https://aatishb.com&#34;&gt;Aatish Bhatia&lt;/a&gt;’s &lt;a href=&#34;https://aatishb.com/covidtrends/&#34;&gt;Covid Trends&lt;/a&gt; chart (Figure &lt;a href=&#34;#fig:covid-trends&#34;&gt;2&lt;/a&gt;). A double log scale is used and growth rate in new cases is presented on the y-axis with total case numbers, rather than time elapsed, plotted along the x-axis. Whilst the introduction of a double log scale might be judged to increase visual complexity, actually this design narrows or simplifies the reader’s visual judgement to looking at the thing that we are most interested in: comparison of country growth rates against the two day doubling (annotated with the diagonal). The chart is also accompanied with an excellent &lt;a href=&#34;https://www.hippocraticpost.com/covid-19-update/how-to-tell-if-were-beating-covid-19/&#34;&gt;explanatory video&lt;/a&gt;, in which many of the characteristics of visual data stories enumerated by &lt;span class=&#34;citation&#34;&gt;Roth (&lt;a href=&#34;#ref-roth_cartographic_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;)&lt;/span&gt; can be identified.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:covid-trends&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:covid-trends&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/covid-trends.png&#34; alt=&#34;[Aatish Bhatia](https://aatishb.com)&#39;s [Covid Trends](https://aatishb.com/covidtrends/) chart. [Source](https://github.com/aatishb/covidtrends#credits).&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: &lt;a href=&#34;https://aatishb.com&#34;&gt;Aatish Bhatia&lt;/a&gt;’s &lt;a href=&#34;https://aatishb.com/covidtrends/&#34;&gt;Covid Trends&lt;/a&gt; chart. &lt;a href=&#34;https://github.com/aatishb/covidtrends#credits&#34;&gt;Source&lt;/a&gt;.
@@ -168,7 +164,7 @@ Figure 2: &lt;a href=&#34;https://aatishb.com&#34;&gt;Aatish Bhatia&lt;/a&gt;’
 &lt;div id=&#34;intuitive-and-compelling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Intuitive and compelling&lt;/h3&gt;
 &lt;p&gt;According to &lt;span class=&#34;citation&#34;&gt;Roth (&lt;a href=&#34;#ref-roth_cartographic_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;)&lt;/span&gt;, visual data stories are often &lt;em&gt;explanatory&lt;/em&gt;; they make &lt;strong&gt;compelling&lt;/strong&gt; use of graphical and rhetorical devices to support understanding. This is especially important in data-driven storytelling as it often involves concepts that are initially quite challenging. In Figure &lt;a href=&#34;#fig:lambrechts-connected&#34;&gt;3&lt;/a&gt; is a static image from a &lt;a href=&#34;https://flourish.studio/2021/04/06/masters-connected-scatter-maarten-lambrechts/&#34;&gt;data story written by Flourish&lt;/a&gt; based on design work by &lt;a href=&#34;https://twitter.com/maartenzam/status/1319622943526293505&#34;&gt;Marteen Lambrechts&lt;/a&gt;. The data story is essentially a design exposition &lt;span class=&#34;citation&#34;&gt;(Beecham et al. &lt;a href=&#34;#ref-beecham_design_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;; Wood, Kachkaev, and Dykes &lt;a href=&#34;#ref-wood_design_2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;, guiding readers from the familiar to the unfamiliar. First a standard time series chart of hospitalisations and deaths is presented. Deficiencies in this layout are explained before progressively introducing the transformations involved to generate the preferred graphic, a &lt;a href=&#34;http://steveharoz.com/research/connected_scatterplot/&#34;&gt;connected scatterplot&lt;/a&gt;. Ordering the story in this way explains design decisions and the trade-offs associated with visual design from a familiar starting point and helps justify new, sometimes unfamiliar encodings. Thinking about &lt;span class=&#34;citation&#34;&gt;Roth (&lt;a href=&#34;#ref-roth_cartographic_2020&#34; role=&#34;doc-biblioref&#34;&gt;2020&lt;/a&gt;)&lt;/span&gt;’s characteristics of visual storytelling, formulating a design story in this way helps build &lt;strong&gt;intuition&lt;/strong&gt; – there is a clear entry point and clear progression.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:lambrechts-connected&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:lambrechts-connected&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/lambrechts-connected-flourish.png&#34; alt=&#34;Static image from a data story written by [Flourish](https://flourish.studio/2021/04/06/masters-connected-scatter-maarten-lambrechts/) demonstrating how connected scatterplots can be used to analyse changes in hospitalisations and deaths.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Static image from a data story written by &lt;a href=&#34;https://flourish.studio/2021/04/06/masters-connected-scatter-maarten-lambrechts/&#34;&gt;Flourish&lt;/a&gt; demonstrating how connected scatterplots can be used to analyse changes in hospitalisations and deaths.
@@ -183,7 +179,7 @@ Figure 3: Static image from a data story written by &lt;a href=&#34;https://flou
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;Figure &lt;a href=&#34;#fig:ft-anim&#34;&gt;4&lt;/a&gt;, again by &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn-Murdoch&lt;/a&gt;, is another stellar exposition of how animation can be used to build &lt;strong&gt;intuition&lt;/strong&gt;. The main objective is to demonstrate how different 2020 is in terms of admissions to intensive care compared to a normal year. This was in response to claims that Covid-19 behaves much like seasonal flu; to this extent the graphic is also quite &lt;strong&gt;political&lt;/strong&gt;. Each year from 2013-14 is added to the chart and the y-axis rescaled to reflect the new numbers. This helps build expectation around normal variablitity in a similar way to the &lt;a href=&#34;https://medium.com/hci-design-at-uw/hypothetical-outcomes-plots-experiencing-the-uncertain-b9ea60d7c740&#34;&gt;hypothetical outcome plots&lt;/a&gt; covered in the previous session. The expectation is then roundly debunked by the introduction of the 2020-21 line in red, with animated rescaling of the y-axis used for further emphasis.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:ft-anim&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:ft-anim&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/jbm-anim.gif&#34; alt=&#34;[John Burn-Murdoch](https://www.ft.com/john-burn-murdoch)&#39;s animated rescaling [via twitter](https://twitter.com/jburnmurdoch/status/1347200811303055364) demonstrating how different in terms of intensive care admissions 2020/21 is to a standard flu season.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn-Murdoch&lt;/a&gt;’s animated rescaling &lt;a href=&#34;https://twitter.com/jburnmurdoch/status/1347200811303055364&#34;&gt;via twitter&lt;/a&gt; demonstrating how different in terms of intensive care admissions 2020/21 is to a standard flu season.
@@ -195,7 +191,7 @@ Figure 4: &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn
 &lt;p&gt;Figure &lt;a href=&#34;#fig:ft-vaccine&#34;&gt;5&lt;/a&gt; presents a final example of &lt;a href=&#34;https://twitter.com/jburnmurdoch/status/1382013080448724994&#34;&gt;visual narrative&lt;/a&gt; from &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn-Murdoch&lt;/a&gt; with an obviously political purpose. The graphic was created in response to claims from the UK’s Prime Minister that it is largely restrictions rather than vaccination that has reduced infection rates in the country. Interesting here is how annotation and &lt;strong&gt;visual saliency&lt;/strong&gt; is used to direct how the graphic is perceived. If the graphic was only annotated with points in time when lockdown and vaccination was initiated, it would &lt;em&gt;invite&lt;/em&gt; us to make judgements about the effects of these two events on infectious rates. That John makes highly salient annotations labelling the (unmeasurable) effect of &lt;strong&gt;lockdown&lt;/strong&gt; and &lt;strong&gt;vaccine&lt;/strong&gt; is an interesting addition. There is little room for ambiguity.&lt;/p&gt;
 &lt;p&gt;Initially I was a little surprised by this presentation – labelling the chart with an unmeasurable effect – and wondered if it had graphical integrity (see &lt;span class=&#34;citation&#34;&gt;Tufte (&lt;a href=&#34;#ref-tufte_visual_1983&#34; role=&#34;doc-biblioref&#34;&gt;1983&lt;/a&gt;)&lt;/span&gt;’s &lt;a href=&#34;https://infovis-wiki.net/wiki/Lie_Factor&#34;&gt;lie factor&lt;/a&gt;). Given the fact that John’s work is so carefully considered, communicated transparently and with authority, I think it probably does have integrity. I do wonder whether John’s reflections on his experiences of generating data stories earlier in the pandemic informed his thinking here – that the messages readers interpreted from his cases charts varied depending on the prior expectations and political beliefs of those consuming them.&lt;/p&gt;
 &lt;!-- * design cues facilitate prioritization of particular interpretations in visualizations --&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:ft-vaccine&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:ft-vaccine&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/jbm-vaccine.jpeg&#34; alt=&#34;[John Burn-Murdoch](https://www.ft.com/john-burn-murdoch)&#39;s analysis [via twitter](https://twitter.com/jburnmurdoch/status/1382013080448724994) evaluating the role of lockdown and the vaccine.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn-Murdoch&lt;/a&gt;’s analysis &lt;a href=&#34;https://twitter.com/jburnmurdoch/status/1382013080448724994&#34;&gt;via twitter&lt;/a&gt; evaluating the role of lockdown and the vaccine.
@@ -213,7 +209,7 @@ Figure 5: &lt;a href=&#34;https://www.ft.com/john-burn-murdoch&#34;&gt;John Burn
 &lt;div id=&#34;techniques&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Techniques&lt;/h2&gt;
 &lt;p&gt;The technical element demonstrates how to design plots deliberatively with annotations in &lt;code&gt;ggplot2&lt;/code&gt;. We will recreate a &lt;em&gt;glyphmap&lt;/em&gt; type graphic that originally appeared in &lt;a href=&#34;https://www.washingtonpost.com/nation/2020/05/24/coronavirus-rural-america-outbreaks/?arc404=true&#34;&gt;The Washington Post&lt;/a&gt; to tell a story of growth in Covid-19 cases by US county.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:wp&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:wp&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/wp.png&#34; alt=&#34;Glyphmap design displaying growth in COVID-19 cases by US county, based on the design by Thebault and Hauslohner, original in [The Washington Post](https://www.washingtonpost.com/nation/2020/05/24/coronavirus-rural-america-outbreaks/?arc404=true).&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: Glyphmap design displaying growth in COVID-19 cases by US county, based on the design by Thebault and Hauslohner, original in &lt;a href=&#34;https://www.washingtonpost.com/nation/2020/05/24/coronavirus-rural-america-outbreaks/?arc404=true&#34;&gt;The Washington Post&lt;/a&gt;.
@@ -233,7 +229,7 @@ Figure 6: Glyphmap design displaying growth in COVID-19 cases by US county, base
 &lt;/div&gt;
 &lt;div id=&#34;plot-trajectories&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Plot trajectories&lt;/h3&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:wp-basic&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:wp-basic&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/wp-basic.png&#34; alt=&#34;Glyphmap design displaying growth in COVID-19 cases by US county, without legend and annotations.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Glyphmap design displaying growth in COVID-19 cases by US county, without legend and annotations.
@@ -348,7 +344,7 @@ legend_growth &amp;lt;- county_data %&amp;gt;%
       county == &amp;quot;Bledsoe&amp;quot; ~ &amp;quot;About the same as on May 3&amp;quot;
     )
   )&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:wp-growth-legend&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:wp-growth-legend&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/wp-growth.png&#34; alt=&#34;Legend demonstrating growth rates.&#34; width=&#34;50%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: Legend demonstrating growth rates.
@@ -375,7 +371,7 @@ legend_case &amp;lt;- county_data %&amp;gt;%
       offset == &amp;quot;high&amp;quot; ~ .08
     )
   )&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:wp-case-legend&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:wp-case-legend&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/09-class_files/wp-case.png&#34; alt=&#34;Legend demonstrating case rates.&#34; width=&#34;60%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: Legend demonstrating case rates.
@@ -493,8 +489,6 @@ Figure 9: Legend demonstrating case rates.
       <guid>/class/08-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -564,7 +558,7 @@ Figure 9: Legend demonstrating case rates.
 &lt;h3&gt;Uncertainty visualization&lt;/h3&gt;
 &lt;p&gt;Cartographers, and more recently those working in Information Visualization, have been concerned for some time with &lt;em&gt;visual variables&lt;/em&gt;, or adopting &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;’s vocabulary &lt;em&gt;visual channels&lt;/em&gt;, that might be used to represent uncertainty information. Figure &lt;a href=&#34;#fig:uncertainty-variables&#34;&gt;1&lt;/a&gt; is adapted from &lt;span class=&#34;citation&#34;&gt;Kinkeldey, MacEachren, and Schiewe (&lt;a href=&#34;#ref-kinkeldey_how_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; and displays visual variables that could be used to encode uncertainty information. Ideally, visual variables for representing uncertainty should be intuitive, logically related to notions of precision and accuracy, whilst also allowing sufficient discriminative power when deployed in data dense visualizations.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Kinkeldey, MacEachren, and Schiewe (&lt;a href=&#34;#ref-kinkeldey_how_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; provides an overview of empirical research (controlled experiments) that explore the effectiveness of proposed visual variables against these criteria. As intuitive signifiers of uncertainty, or lack of precision, &lt;em&gt;fuzziness&lt;/em&gt; and &lt;em&gt;location&lt;/em&gt; have been shown to work well. Slightly less intuitive, but nevertheless successful in terms of discrimination are &lt;em&gt;size&lt;/em&gt;, &lt;em&gt;transparency&lt;/em&gt; and &lt;em&gt;colour value&lt;/em&gt;. &lt;em&gt;Sketchiness&lt;/em&gt; is another intuitive signifier, proposed in &lt;span class=&#34;citation&#34;&gt;Boukhelifa et al. (&lt;a href=&#34;#ref-boukhelifa_evaluating_2012&#34; role=&#34;doc-biblioref&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt; and &lt;span class=&#34;citation&#34;&gt;Wood et al. (&lt;a href=&#34;#ref-wood_sketchy_2012&#34; role=&#34;doc-biblioref&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;. As with many visual variables, sketchiness is probably best considered as an ordinal visual variable to the extent that there is a limited range of sketchiness levels that can be discriminated. An additional feature of sketchiness is that, different from the other visual variables, it is related to informality – this may be desirable in certain contexts, less so in others &lt;span class=&#34;citation&#34;&gt;(see Wood et al. &lt;a href=&#34;#ref-wood_sketchy_2012&#34; role=&#34;doc-biblioref&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:uncertainty-variables&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:uncertainty-variables&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/uncertainty_variables.png&#34; alt=&#34;Visual variables that can be used to represent levels of uncertainty information.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Visual variables that can be used to represent levels of uncertainty information.
@@ -581,7 +575,7 @@ Figure 1: Visual variables that can be used to represent levels of uncertainty i
 3. Static vs. Dynamic. Uncertainty might be represented dynamically, for example by alternating between visual representations of a dataset and depictions of its uncertainty.
 Kinkeldey et al. (2014) provide a survey of studies that have variously evaluated these visual variables for uncertainty representation.
  --&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:hurricane-vis&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:hurricane-vis&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/hurricane_vis.png&#34; alt=&#34;*Cone of Uncertainty* produced by [National Hurricane Center](https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/030119.shtml?cone#contents) and example re-design by [Jo Wood](https://www.gicentre.net/jwo/index).&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: &lt;em&gt;Cone of Uncertainty&lt;/em&gt; produced by &lt;a href=&#34;https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/030119.shtml?cone#contents&#34;&gt;National Hurricane Center&lt;/a&gt; and example re-design by &lt;a href=&#34;https://www.gicentre.net/jwo/index&#34;&gt;Jo Wood&lt;/a&gt;.
@@ -600,7 +594,7 @@ Figure 2: &lt;em&gt;Cone of Uncertainty&lt;/em&gt; produced by &lt;a href=&#34;h
 &lt;p&gt;The visual variables in Figure &lt;a href=&#34;#fig:uncertainty-variables&#34;&gt;1&lt;/a&gt; could be used to represent different categories of uncertainty information, not just those associated with parameters – for example, locational or temporal uncertainty at data collection. The rest of the session addresses techniques for quantifying, and charting idioms &lt;span class=&#34;citation&#34;&gt;(Munzner &lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; for representing, parameter uncertainty: estimated injury severity rates for pedestrian-vehicle crashes in our STATS19 road crash dataset.&lt;/p&gt;
 &lt;p&gt;Often parameters are represented as probabilities, or &lt;em&gt;relative frequencies&lt;/em&gt; – ratios or percentages describing the probability of some event happening. It is notoriously difficult to develop intuition around these sorts of relative frequencies. In the STATS19 dataset, we might wish to compare the injury severity rate of pedestrain-vehicle road crashes – the proportion of all crashes that resulted in a serious injury or fatality (KSI) – taking place between two local authority areas, say Bristol and Sheffield. There is in fact quite a difference in the injury severity rate between these two local authority areas in 2019: 15% for Bristol (35 out of 228 reported crashes were KSI) versus 50% for Sheffield (124 out of 248 reported crashes were KSI).&lt;/p&gt;
 &lt;p&gt;This feels like quite a large difference, but it is difficult to imagine or experience these differences in probabilities when written down or encoded visually using say bar length. &lt;a href=&#34;https://mucollective.github.io/visualization/icon-array/&#34;&gt;Icon arrays&lt;/a&gt; are used extensively in health communication and have been demonstrated to be effective at communicating probabilities of event outcomes. They offload the thinking that happens when comparing ratios – the internal weighing up of numerators and denominators. In the example in Figure &lt;a href=&#34;#fig:icon-arrays-injury&#34;&gt;3&lt;/a&gt;, icon arrays are used to compare the two injury severity rates for Bristol and Sheffield. Each crash is a square and crashes are coloured according to whether they resulted in a serious injury or fatality (KSI, dark red) or slight injury (light red).&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:icon-arrays-injury&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:icon-arrays-injury&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/icon-arrays.png&#34; alt=&#34;Icon array displaying injury severity rates for Pedestrian-Vehicle crashes.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Icon array displaying injury severity rates for Pedestrian-Vehicle crashes.
@@ -608,7 +602,7 @@ Figure 3: Icon array displaying injury severity rates for Pedestrian-Vehicle cra
 &lt;/div&gt;
 &lt;p&gt;There are compelling examples of icon arrays being used in data journalism, most obviously to support communication of probabilities in political polling. You might remember that at the time of 2016 US Presidential Election, there was much criticism levelled at pollsters, even the excellent &lt;a href=&#34;https://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/&#34;&gt;FiveThirtyEight&lt;/a&gt;, for not correctly calling the result. Huffpost gave Trump a 2% chance of winning the election, The New York Times 15% and FiveThirtyEight 28%. Clearly, the Huffpost estimate was really quite off, but thinking about FiveThirtyEight’s prediction, how surprised should we be if an outcome does in fact occur, which is predicted to happen with a probability of almost a third?&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://mucollective.github.io/visualization/risk-theatre/&#34;&gt;risk theatre&lt;/a&gt; (Figure &lt;a href=&#34;#fig:risk-theatre&#34;&gt;4&lt;/a&gt;) is a variant of an icon array. In this case it represents polling probabilities as seats of a theatre – a dark seat represents a Trump victory. If you imagine buying a theatre ticket and being randomly allocated to a seat, how confident would you be about not sitting in a “Trump” seat in the FiveThirtyEight image? The distribution of dark seats suggests that the 28% risk of a Trump victory according to the model is not negligible.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:risk-theatre&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:risk-theatre&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/risk-theatre.jpg&#34; alt=&#34;Risk theatre of different election eve forecasts by Justin Gross as it appears in [Washington Post](https://mucollective.github.io/visualization/risk-theatre/)&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Risk theatre of different election eve forecasts by Justin Gross as it appears in &lt;a href=&#34;https://mucollective.github.io/visualization/risk-theatre/&#34;&gt;Washington Post&lt;/a&gt;
@@ -635,7 +629,7 @@ Figure 4: Risk theatre of different election eve forecasts by Justin Gross as it
 &lt;/ol&gt;
 &lt;p&gt;In &lt;a href=&#34;../class/06-class/&#34;&gt;session 6&lt;/a&gt; and &lt;a href=&#34;../class/07-class/&#34;&gt;session 7&lt;/a&gt;, we used Confidence Intervals to estimate uncertainty around regression coefficients. These described the range of the sampling distribution – the range of values that coefficients estimated from a large number of resamples could take. From early stats courses, you might have learnt how these can be calculated using statistical theory. Better still, we can derive these empirically via &lt;a href=&#34;https://en.wikipedia.org/wiki/Bootstrapping_(statistics)&#34;&gt;bootstrapping&lt;/a&gt;. A bootstrap resample involves taking a random sample with replacement from the original sample and of the same size as the original sample. From this resample, a parameter estimate can be derived, in this case the KSI rate. And this process can be repeated many times to generate an empirical &lt;em&gt;sampling distribution&lt;/em&gt; for the parameter. The standard error can be calculated from the standard deviation of the sampling distribution. There are several reasons why bootstrapping is a really useful procedure: it can be applied to almost any sample statistic, makes no distributional assumptions and can work on quite complicated sampling designs.&lt;/p&gt;
 &lt;p&gt;Presented in Figure &lt;a href=&#34;#fig:bootstrap-selected&#34;&gt;5&lt;/a&gt; are KSI rates with error bars used to display 95% Confidence Intervals generated from a bootstrap procedure in which 1000 resamples were taken with replacement. Upper and lower limits were lifted from .025 and .975 percentile positions of the bootstrap sampling distribution. Assuming that the observed data are drawn from a wider (unobtainable) population, the 95% Confidence Intervals demonstrate that whilst Cotswold recorded a very large KSI rate, sampling variation means that this figure could be much lower (or higher), whereas for Bristol and Sheffield, where our KSI rate is derived from more data, the range of plausible values that the KSI rate might take due to sampling variation is much smaller – there is less uncertainty associated with their KSI rates.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:bootstrap-selected&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:bootstrap-selected&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/bootstrap-selected.png&#34; alt=&#34;KSI rates for pedestrian-vehicle crashes in selected local authorities with 95% CIs (derived from 1000 resample bootstraps).&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: KSI rates for pedestrian-vehicle crashes in selected local authorities with 95% CIs (derived from 1000 resample bootstraps).
@@ -645,21 +639,21 @@ Figure 5: KSI rates for pedestrian-vehicle crashes in selected local authorities
 &lt;div id=&#34;visualizing-uncertainty-in-frequencies&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Visualizing uncertainty in frequencies&lt;/h3&gt;
 &lt;p&gt;Error bars are a space-efficient way of conveying parameter uncertainty. However, remembering our maxim for uncertainty visualization – that &lt;em&gt;things that are not precise should not be encoded with symbols that look precise&lt;/em&gt; – they do have problems. The hard borders can lead to a binary/categorical thinking &lt;span class=&#34;citation&#34;&gt;(see Correll and Gleicher &lt;a href=&#34;#ref-correl_error_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. Certain values within a Confidence Interval are more probable than others and so we should endeavour to use a visual encoding that reflects this. Matt Kay’s excellent &lt;a href=&#34;https://mjskay.github.io/ggdist/&#34;&gt;&lt;code&gt;ggdist&lt;/code&gt;&lt;/a&gt; package extends &lt;code&gt;ggplot2&lt;/code&gt; with a range of chart idioms for representing these sorts of intervals. In Figure &lt;a href=&#34;#fig:selected-uncertainty&#34;&gt;6&lt;/a&gt; I have replaced the error bars with &lt;em&gt;half eye plots&lt;/em&gt; and &lt;em&gt;interval bars&lt;/em&gt;, which give greater visual saliency to parameter estimates that are more likely.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:selected-uncertainty&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:selected-uncertainty&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/selected-uncertainty.png&#34; alt=&#34;KSI rates for pedestrian-vehicle crashes in selected local authorities with uncertainty estimates.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: KSI rates for pedestrian-vehicle crashes in selected local authorities with uncertainty estimates.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The STATS19 dataset is released annually, and given the wide uncertainty bands for certain local authorities, it might be instructive to explore the stability of local authority KSI rates year-on-year. In Figure &lt;a href=&#34;#fig:bootstrap-selected&#34;&gt;5&lt;/a&gt; these KSI rates are represented with the bold line and the faint lines are superimposed bootstrap resamples. The overall line probably most clearly demonstrates volatility in the KSI rates for Cotswold and Bromsgrove due to small sample sizes. The observed increase in KSI rates for Sheffield since 2015 does appear to be a genuine one, although may also be affected by uncertainty around data collection – &lt;a href=&#34;https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/904698/rrcgb-provisional-results-2019.pdf&#34;&gt;changes to how police record injury severity&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:temporal-uncertainty&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:temporal-uncertainty&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/temporal-uncertainty.png&#34; alt=&#34;Year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities with bootstrap resamples superimposed.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities with bootstrap resamples superimposed.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The superimposed lines in the figure above are a form of ensemble visualization. An alternative approach might have been to animate over the bootstrap resamples to generate a Hypoethetical Outcome Plot (HOP) &lt;span class=&#34;citation&#34;&gt;(Hullman, Resnick, and Adar &lt;a href=&#34;#ref-hullman_hypothetical_2015&#34; role=&#34;doc-biblioref&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;. HOPs convey a sense of uncertainty by animating over random draws of a distribution. As there is no single outcome to anchor to (although I have actually included one below), HOPs force viewers to account for uncertainty, recognising that less probable outcomes may be possible – essentially to think distributionally (e.g. Figure &lt;a href=&#34;#fig:hop-uncertainty&#34;&gt;8&lt;/a&gt;).&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:hop-uncertainty&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:hop-uncertainty&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/temporal-uncertainty.gif&#34; alt=&#34;HOP of year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: HOP of year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities.
@@ -676,7 +670,7 @@ Figure 8: HOP of year-on-yar KSI rates for pedestrian-vehicle crashes in selecte
 &lt;h3&gt;Multiple comparisons&lt;/h3&gt;
 &lt;p&gt;In road safety monitoring, a common ambition is to compare crash rates across local authorities on a map. We might represent injury severity rates as Risk Ratios (RR) comparing the observed injury severity in each local authority to a benchmark, say the injury severity rate we would expect to see nationally. RRs are an intuitive measure of effect size: &lt;span class=&#34;math inline&#34;&gt;\(RRs &amp;gt;1\)&lt;/span&gt; indicate that the injury severity rate is greater than the national average; &lt;span class=&#34;math inline&#34;&gt;\(RRs &amp;lt;1\)&lt;/span&gt; that it is less than the national average. As they are a ratio of ratios, and therefore agnostic to sample size, RRs can nevertheless be unreliable. Two ratios might be compared that have very different sample sizes and no compensation is made for the one that contains more data. We know this to be a problem in our dataset and so we will want to generate confidence intervals for our RRs.&lt;/p&gt;
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:rrs&#34;&gt;9&lt;/a&gt;, RRs for each local authority is represented with a &lt;span style=&#34;font-weight:bolder&#34;&gt;|&lt;/span&gt; icon, which is then encoded according RR values by continuously varying icon angles: &lt;span class=&#34;math inline&#34;&gt;\(RRs &amp;gt;1\)&lt;/span&gt; are angled to the right &lt;span style=&#34;font-weight:bold&#34;&gt;/&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(RRs &amp;lt;1\)&lt;/span&gt; to the left &lt;span style=&#34;font-weight:bolder&#34;&gt;\&lt;/span&gt;. You might remember this approach being used to represent electoral Swing in &lt;a href=&#34;../class/03-class/&#34;&gt;session 3&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:rrs&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:rrs&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/rrs.png&#34; alt=&#34;Risk Ratios comparing local authority KSI rates to the GB average in 2019. Significance based on 90% bootstrap CI.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: Risk Ratios comparing local authority KSI rates to the GB average in 2019. Significance based on 90% bootstrap CI.
@@ -706,7 +700,7 @@ Figure 9: Risk Ratios comparing local authority KSI rates to the GB average in 2
 &lt;/div&gt;
 &lt;div id=&#34;plot-icon-arrays&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Plot icon arrays&lt;/h3&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:icon-arrays-technical&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:icon-arrays-technical&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/08-class_files/icon-arrays-technical.png&#34; alt=&#34;Icon array displaying injury severity rates for Pedestrian-Vehicle crashes.&#34; width=&#34;70%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 10: Icon array displaying injury severity rates for Pedestrian-Vehicle crashes.
@@ -871,8 +865,6 @@ Figure 10: Icon array displaying injury severity rates for Pedestrian-Vehicle cr
       <guid>/class/07-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -950,7 +942,7 @@ Figure 10: Icon array displaying injury severity rates for Pedestrian-Vehicle cr
 &lt;div id=&#34;representing-geographic-context&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Representing geographic context&lt;/h3&gt;
 &lt;p&gt;There are different ways of constituting geographic context. We have talked about patterning in residuals as being &lt;em&gt;spatial&lt;/em&gt;, with values varying smoothly and continuously depending on location. This might be the case, and spatial autocorrelation is present in almost all datasets (&lt;a href=&#34;https://en.wikipedia.org/wiki/Tobler%27s_first_law_of_geography&#34;&gt;e.g. Tobler’s first law&lt;/a&gt;). But given the phenomena we are studying – variation in political voting behaviour and demographic composition of constituencies deliberately linked to &lt;a href=&#34;https://ppr.lse.ac.uk/articles/10.31389/lseppr.4/&#34;&gt;&lt;em&gt;places&lt;/em&gt;&lt;/a&gt; left-behind by structural-economic change – it also plausible that distinct contexts are linked to regions. The residuals in the &lt;a href=&#34;http://127.0.0.1:4321/class/06-class/#exploring-bias-1&#34;&gt;previous session’s Map LineUp&lt;/a&gt; – also below – do seem to be grouped by regional boundaries, particularly Scotland looks categorically different (for obvious reasons). This suggests that geographic context might be usefully represented as a &lt;em&gt;category&lt;/em&gt; rather than continuous variable (location in &lt;em&gt;x,y&lt;/em&gt;). For most of the session we will represent geographic context as a &lt;em&gt;regional&lt;/em&gt; grouping and cover approaches both to modelling &lt;em&gt;spatial dependence&lt;/em&gt; in &lt;strong&gt;values&lt;/strong&gt; and &lt;em&gt;spatial non-stationarity&lt;/em&gt; in &lt;strong&gt;processes&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:plot-lineup&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-lineup&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/lineups.png&#34; alt=&#34;Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies.
@@ -976,7 +968,7 @@ Figure 1: Map LineUp of residuals in which the ‘real’ dataset is presented a
 Plotting the virtual regression lines -- regression lines offset by the FE constant -- is interesting as it tells us a little about the nature of association in our explanatory variables. For the *degree-educated* and *professional* variables especially, regional *dependence* in Leave voting needs to be adjusted for -- once taken into account, there is a very strong association between *degree-education* and *Leave* -- most obvious in the lines for Scotland (red).  Although we are not yet modelling for this explicitly, eyeballing the chart, there is not obvious evidence for regional heterogeneity in the *associations* with Leave for *degree-educated* and so it might be regarded as a &#39;global&#39; variable -- a clear positive association with Leave irrespective of region. There may be regional specificity in the associations with Leave for the other explanatory variables. --&gt;
 &lt;p&gt;To illustrate this, Figure &lt;a href=&#34;#fig:scatters-fe&#34;&gt;2&lt;/a&gt; is an updated set of scatterplots now annotated with ‘virtual’ regression lines for single variable linear regression models fit separately for each explanatory variable with a region FE. Plotting the virtual regression lines – regression lines offset by the FE constant – is interesting as it tells us a little about the nature of association in our explanatory variables. Given the way we have specified our model, the FE constants serve effectively as intercepts, &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; is no longer meaningful and so other measures of fit such as &lt;a href=&#34;https://en.wikipedia.org/wiki/Akaike_information_criterion&#34;&gt;AIC&lt;/a&gt; should be used to evaluate relative fit.&lt;/p&gt;
 &lt;p&gt;For the &lt;em&gt;degree-educated&lt;/em&gt; and &lt;em&gt;professional&lt;/em&gt; variables especially, regional &lt;em&gt;dependence&lt;/em&gt; in Leave voting needs to be adjusted for – once taken into account, there is a very strong association between &lt;em&gt;degree-education&lt;/em&gt; and &lt;em&gt;Leave&lt;/em&gt;, most obvious in the lines for Scotland (red). Although we are not yet modelling for this explicitly, eyeballing the chart, there is not obvious evidence for regional non-stationarity in the &lt;em&gt;associations&lt;/em&gt; with Leave for &lt;em&gt;degree-educated&lt;/em&gt; and so it might be regarded as a ‘global’ variable – a clear positive association with Leave irrespective of region. There may be regional specificity in the associations with Leave for the other explanatory variables.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:scatters-fe&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:scatters-fe&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/07-class_files/scatters-fe.png&#34; alt=&#34;Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with FE &#39;virtual&#39; regression lines, coefficients and model fit (AIC -- the lower the value, better the model). Scotland is highlighted red.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with FE ‘virtual’ regression lines, coefficients and model fit (AIC – the lower the value, better the model). Scotland is highlighted red.
@@ -985,7 +977,7 @@ Figure 2: Scatterplots of constituency Leave vote against candidate explanatory 
 &lt;p&gt;Presented in Figure &lt;a href=&#34;#fig:plot-outputs-fe&#34;&gt;3&lt;/a&gt; are updated regression coefficients for the model fit with a FE on region. In the left panel are the FE constants. Together these capture the variance in Leave vote between regions after accounting for demographic composition. These coefficients have interesting properties: they are the estimated size of the Leave vote for a constituency in a region &lt;em&gt;net&lt;/em&gt; of demographic composition. London is in interesting here. When initially analysing variation in the vote, constituencies in Scotland and London were distinctive in voting in much smaller proportions than the rest of the country for Leave. Given the associations we observe with Leave voting and demographic composition, however, if we were to randomly sample two constituencies that contain the same demographic characteristics, one in London and one in another region (say North West), on average we’d expect Leave for the constituency in London to be higher (~60%) than that sampled from North West (~51%). A separate, and more anticipated pattern is that Scotland would have a lower Leave vote (~38%) – that is, net of demographics there is some additional context in Scotland that means Leave is lower than in other regions.&lt;/p&gt;
 &lt;p&gt;In the right panel are the regression coefficients net of this between-region variation. Compared to the model specified without FEs, the coefficients are estimated with less uncertainty (tighter standard errors). In the previous session, the &lt;em&gt;white&lt;/em&gt; variable was shown counterintuitively to have a slight negative association with Leave (although there was high uncertainty here). Now the &lt;em&gt;white&lt;/em&gt; variable has a direction of effect that conforms to expectation – net of variation in other demographics increased proportions of &lt;em&gt;white&lt;/em&gt; residents is associated with increased Leave voting. For the other variable with a counterintuitive effect – &lt;em&gt;EU born&lt;/em&gt; – the coefficient still suggests a positive association with Leave.&lt;/p&gt;
 &lt;!-- Standard practice for FE dummy variables is to hold one as a &#34;reference&#34; variable for comparison.   --&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:plot-outputs-fe&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-outputs-fe&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/07-class_files/plot-outputs-fe.png&#34; alt=&#34;Output from multiple regression model of Leave vote by demographic composition of constituency with FE on region.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Output from multiple regression model of Leave vote by demographic composition of constituency with FE on region.
@@ -1015,14 +1007,14 @@ Figure 3: Output from multiple regression model of Leave vote by demographic com
 &lt;li&gt;parallel slopes with large variation in vertical position suggest that there is variation in the outcome (Leave) between regions, but a &lt;em&gt;consistent association&lt;/em&gt; between variables exists;&lt;/li&gt;
 &lt;li&gt;substantial changes in slope (cluttered display) suggests that the pattern of &lt;em&gt;association switches between regions&lt;/em&gt;. Most obvious here is the &lt;em&gt;EU-born&lt;/em&gt; and &lt;em&gt;no-car&lt;/em&gt; variable.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:scatters-interaction&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:scatters-interaction&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/07-class_files/scatters-interaction.png&#34; alt=&#34;Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with FE regression lines for interaction on region. Scotland is highlighted red.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with FE regression lines for interaction on region. Scotland is highlighted red.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:plot-outputs-interaction&#34;&gt;5&lt;/a&gt; are region-specific coefficients derived from a multivariate model with an interaction term introduced on region. In each region, &lt;em&gt;degree-educated&lt;/em&gt; has a negative coefficient and with reasonably tight uncertainty estimates, or at least CIs that do not cross 0. The other variables are subject to more uncertainty. The &lt;em&gt;no-car&lt;/em&gt; variable is also negatively associated with Leave, a variable we thought may separate metropolitan versus peripheral contexts, but the strength of negative association, after controlling for variation in other demographic factors, does vary by region. The &lt;em&gt;heavy industry&lt;/em&gt; variable, previously identified as being strongly associated with Leave (e.g. &lt;a href=&#34;../06-class/#quantifying-and-exploring-co-variation&#34;&gt;previous session&lt;/a&gt;), has a clear positive association only for London and to a much lesser extent for North West and Wales (small coefficients). The EU born variable is again the least consistent as it flips between positive and negative association when analysed at the regional-level: after controlling for variation in other demographic characteristics it is positively associated with Leave for North West, Scotland, South West, but negatively associated with Leave for the North East (though with coefficients that are subject to much variation).&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:plot-outputs-interaction&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-outputs-interaction&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/07-class_files/plot-outputs-interaction-fe.png&#34; alt=&#34;Output from multiple regression model of Leave vote by demographic composition of constituency with FE and interaction on region.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Output from multiple regression model of Leave vote by demographic composition of constituency with FE and interaction on region.
@@ -1239,8 +1231,6 @@ We can control for these unobserved factors by modelling Region as a fixed effec
       <guid>/class/06-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;../rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;../rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
@@ -1324,14 +1314,14 @@ We can control for these unobserved factors by modelling Region as a fixed effec
 &lt;/ul&gt;
 &lt;p&gt;How does this relate to the idea of characterising variation? The length and colour of each bar in Figure &lt;a href=&#34;#fig:map-uniform&#34;&gt;1&lt;/a&gt; is scaled according to model &lt;strong&gt;residuals&lt;/strong&gt;: estimates of the statistical errors (&lt;span class=&#34;math inline&#34;&gt;\(\hat{\varepsilon}_{i}\)&lt;/span&gt;), the difference between &lt;span class=&#34;math inline&#34;&gt;\(y_{i}\)&lt;/span&gt; (the observed value) and the &lt;em&gt;unobservable&lt;/em&gt; expected value of the Leave vote in our dataset (&lt;span class=&#34;math inline&#34;&gt;\(\hat{y}_{i}\)&lt;/span&gt;). The sum of these bar lengths (residuals) is therefore the total &lt;strong&gt;variance&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\((\frac{\sum({y_{i...n}-\bar{y}}^2}{n-1})\)&lt;/span&gt; – variance that we later try to reduce, or explain, by updating our regression model to generate new expected values using information on the demographic composition of constituencies.&lt;/p&gt;
 &lt;p&gt;Figure &lt;a href=&#34;#fig:map-uniform&#34;&gt;1&lt;/a&gt; is similar to the maps that were &lt;a href=&#34;https://www.theguardian.com/politics/2016/jun/24/eu-voting-map-lays-bare-depth-of-division-across-britain&#34;&gt;published widely in press reports&lt;/a&gt; in the aftermath of the vote, and demonstrates that there is indeed substantial variation in Leave voting between different parts of the country. The uniform model consistently underestimates Leave in Scotland and most of London. Outside of this, constituencies voting in smaller proportions than would be expected for Leave are distributed more in pockets around the country: the dark red dot with surrounding red area in the east of the country is Cambridge and Cambridgeshire, constituencies in Bristol (south west), Manchester and Liverpool (north west), Brighton (south), are also reasonably strong red.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:map-uniform&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:map-uniform&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/map-uniform.png&#34; alt=&#34;Residuals from uniform model comparing constituency Leave vote to GB average.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Residuals from uniform model comparing constituency Leave vote to GB average.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;When &lt;strong&gt;evaluating&lt;/strong&gt; the effectiveness of modelled values, there are various checks that can be performed. An obvious one here is wether there is bias in the residuals – whether they have any underlying structure that suggests that they are grouped in a way not captured by the model. Given the motivation behind our analysis, it is no surprise that there is a geographic pattern to the residuals in Figure &lt;a href=&#34;#fig:map-uniform&#34;&gt;1&lt;/a&gt;, but also a histogram of the residuals (Figure &lt;a href=&#34;#fig:hist-uniform&#34;&gt;2&lt;/a&gt;) shows a slight left skew. There are more constituencies with positive values than negative – the Leave vote is underestimated by the uniform model for 57% of constituencies – and certain constituencies with extreme negative values – the strongest vote for Leave was Boston and Skegness (76%) but the strongest for Remain was Hackney North and Stoke Newington (80%).&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:hist-uniform&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:hist-uniform&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/hist-uniform.png&#34; alt=&#34;Histogram of residuals from uniform model comparing constituency Leave vote to GB average.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Histogram of residuals from uniform model comparing constituency Leave vote to GB average.
@@ -1360,22 +1350,22 @@ Census variable
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 degree-educated
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 professional occupations
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 younger adults
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 heavy industry
 &lt;/td&gt;
 &lt;/tr&gt;
@@ -1385,22 +1375,22 @@ heavy industry
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 not good health
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 white British/Irish
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 Christian
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 EU-born (not UK)
 &lt;/td&gt;
 &lt;/tr&gt;
@@ -1410,25 +1400,25 @@ EU-born (not UK)
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 own home
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;&#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
 don’t own car
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:hist-expl&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:hist-expl&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/hist-expl.png&#34; alt=&#34;Histograms of candidate explanatory variables measuring demographic composition of constituencies.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Histograms of candidate explanatory variables measuring demographic composition of constituencies.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;To explore whether these demographics vary systematically with Leave voting in each constituency, Figure &lt;a href=&#34;#fig:scatters&#34;&gt;4&lt;/a&gt; presents scatterplots from which the extent of linear association can be inferred. Each dot is a constituency, arranged on the x-axis according to value of each candidate explanatory variable and the y-axis according to the share of Leave vote. The scatterplots are faceted by explanatory variable and ordered left-to-right and top-to-bottom according to correlation coefficient. The variable most heavily correlated with Leave voting is that measuring levels of &lt;em&gt;degree&lt;/em&gt; education: as the share of a constituency’s population educated at least to &lt;em&gt;degree-level&lt;/em&gt; increases, the share of Leave vote in that constituency decreases. An association in the same direction, but to a lesser extent, is observed for variables representing similar concepts: &lt;em&gt;professional occupations&lt;/em&gt;, &lt;em&gt;younger adults&lt;/em&gt;, &lt;em&gt;EU-born&lt;/em&gt;, &lt;em&gt;no-car&lt;/em&gt; and the reverse for &lt;em&gt;Christian&lt;/em&gt;, &lt;em&gt;not-good health&lt;/em&gt; and &lt;em&gt;heavy industry&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:scatters&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:scatters&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/scatters.png&#34; alt=&#34;Scatterplots of constituency Leave vote against candidate explanatory variables.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Scatterplots of constituency Leave vote against candidate explanatory variables.
@@ -1437,7 +1427,7 @@ Figure 4: Scatterplots of constituency Leave vote against candidate explanatory 
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;You will remember from introductory stats courses that that the correlation coefficient can be used to summarise the strength of linear association between two variables. It is a quantity that ranges from perfect negative correlation, -1 – as one value increases another decreases in the same proportion – to perfect positive correlation, +1 – as one value increases another increases in the same proportion. A value of 0 indicates no association – the values increase and decrease independently of each other.&lt;/p&gt;&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:correlations&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:correlations&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/correlations.png&#34; alt=&#34;Scatterplots of synthetic bivariate data with extent of correlation coefficient systematically varied.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Scatterplots of synthetic bivariate data with extent of correlation coefficient systematically varied.
@@ -1465,7 +1455,7 @@ Figure 5: Scatterplots of synthetic bivariate data with extent of correlation co
 &lt;p&gt;There are different algorithms that can be used to estimate these parameters. Most obvious is ordinary least squares (OLS), which aims to minimise &lt;span class=&#34;math inline&#34;&gt;\(\sum{\hat{\varepsilon}_{i...n}}\)&lt;/span&gt;, the sum of the (squared) residuals between the observed Leave vote in a constituency, &lt;span class=&#34;math inline&#34;&gt;\(y_{i}\)&lt;/span&gt;, and that expected, &lt;span class=&#34;math inline&#34;&gt;\(\hat{y_{i}}\)&lt;/span&gt;, given the association with the &lt;em&gt;degree-educated&lt;/em&gt; explanatory variable &lt;span class=&#34;math inline&#34;&gt;\(d_{i1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;To explore the associations further, we could update the scatterplots with regression lines, fit via OLS, modelling the Leave vote separately as a linear function of each explanatory variable. As well as the regression line, observations are now coloured according to the size and direction of their residuals. The plots are also annotated according to the coefficient of determination (&lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt;) – the proportion of the total constituency-level variation in the Leave vote explained by each model formulation. This tells us how much better than the uniform model, which captures the total variation (Figure &lt;a href=&#34;#fig:map-uniform&#34;&gt;1&lt;/a&gt;), is each of the single variable explanatory models.&lt;/p&gt;
 &lt;p&gt;Colouring dots representing constituencies by residuals is instructive. In most of the scatterplots there seems to be a grouping of large negative residuals (dark red) where, after taking into account the association between Leave voting and demographics across all constituencies in GB, the Leave vote is consistently &lt;em&gt;underrepresented&lt;/em&gt;. You might be able to guess at where these are located, certainly generating maps of these residuals may expose whether they are grouped in a particular way.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:scatters-resids&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:scatters-resids&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/scatters-resids.png&#34; alt=&#34;Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with regression lines.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with regression lines.
@@ -1484,7 +1474,7 @@ Figure 6: Scatterplots of constituency Leave vote against candidate explanatory 
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:plot-outputs&#34;&gt;7&lt;/a&gt; are regression coefficients (&lt;span class=&#34;math inline&#34;&gt;\(\beta_{k}\)&lt;/span&gt;) from a multiple regression model with &lt;em&gt;degree-educated&lt;/em&gt;, &lt;em&gt;no car&lt;/em&gt;, &lt;em&gt;white&lt;/em&gt;, &lt;em&gt;heavy industry&lt;/em&gt;, &lt;em&gt;EU-born&lt;/em&gt; and &lt;em&gt;not good health&lt;/em&gt; selected as explanatory variables. Coefficients are reported as dots with estimates of uncertainty represented as lines, displaying 95% &lt;a href=&#34;http://www.sumsar.net/blog/2013/12/an-animation-of-the-construction-of-a-confidence-interval/&#34;&gt;confidence intervals&lt;/a&gt;.
 &lt;!-- the range of values the true (*unobservable*) coefficient is likely to take --&gt;&lt;/p&gt;
 &lt;p&gt;Most variables’ coefficients are in the direction that would be expected given the associations in Figure &lt;a href=&#34;#fig:scatters-resids&#34;&gt;6&lt;/a&gt;. Net of variation in the other compositional factors, increased levels of &lt;em&gt;degree education&lt;/em&gt; in a constituency have the effect of reducing the Leave vote. The two exceptions are &lt;em&gt;EU-born&lt;/em&gt; and &lt;em&gt;white&lt;/em&gt;: after controlling for variation in the other demographic variables, increased proportions of residents identifying as &lt;em&gt;white&lt;/em&gt; has the effect of reducing the Leave vote and increased proportions of residents that are &lt;em&gt;EU-born&lt;/em&gt; has the effect of increasing the Leave vote. Since the confidence interval for &lt;em&gt;white&lt;/em&gt; crosses zero, this coefficient is subject to much uncertainty. In the next session we will discuss some approaches to exploring whether these sorts of counter-intuitive effects are genuine or as a result of a poorly-specified model.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:plot-outputs&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-outputs&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/plot-outputs.png&#34; alt=&#34;Output from multiple regression model of Leave vote by demographic composition of constituency.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Output from multiple regression model of Leave vote by demographic composition of constituency.
@@ -1510,7 +1500,7 @@ Figure 7: Output from multiple regression model of Leave vote by demographic com
 &lt;/ul&gt;
 &lt;p&gt;We can test for and characterise &lt;a href=&#34;https://rspatial.org/raster/analysis/3-spauto.html&#34;&gt;spatial autocorrelation&lt;/a&gt; by performing a graphical inference test. a Map LineUp &lt;span class=&#34;citation&#34;&gt;(Beecham et al. &lt;a href=&#34;#ref-beecham_maplineups_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;; Wickham et al. &lt;a href=&#34;#ref-wickham_inference_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;, against a null hypothesis of &lt;em&gt;complete spatial randomness&lt;/em&gt; in residuals. Graphical LineUp tests are visual equivalents of test statistics. A plot of real data is hidden amongst a set of decoys generated under a null hypothesis. If the real can be correctly identified from the decoys, then this lends statistical credibility to the claim that the observed data are not consistent with the specified null &lt;span class=&#34;citation&#34;&gt;(Wickham et al. &lt;a href=&#34;#ref-wickham_inference_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;. Graphical LineUp tests have been used in various domains, also to test regression assumptions &lt;span class=&#34;citation&#34;&gt;(Loy, Hofmann, and Cook &lt;a href=&#34;#ref-loy_model_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The Map LineUp in Figure &lt;a href=&#34;#fig:plot-lineup&#34;&gt;8&lt;/a&gt;, constructed by randomly permuting observed residuals around constituencies, demonstrates that there &lt;em&gt;is&lt;/em&gt; obvious spatial (and &lt;em&gt;regional&lt;/em&gt;) autocorrelation in residuals. In the next session, we will cover approaches to dealing with this – accounting for &lt;em&gt;spatial dependence&lt;/em&gt; in &lt;strong&gt;values&lt;/strong&gt; and exploring &lt;em&gt;spatial nonstationarity&lt;/em&gt; in &lt;strong&gt;processes&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:plot-lineup&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-lineup&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/06-class_files/lineups.png&#34; alt=&#34;Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies.
@@ -1782,8 +1772,6 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  --&gt;
       <guid>/class/05-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;../rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;../rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
@@ -1989,14 +1977,14 @@ Bexley
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:flows-bor&#34;&gt;1&lt;/a&gt;, frequencies of flows into- and out-of London boroughs (the nodes) are represented. Note that job-rich boroughs in central London – Westminster, City of London, Camden, Tower Hamlets – contain many more &lt;em&gt;workers&lt;/em&gt; commuting-in for work than &lt;em&gt;residents&lt;/em&gt; commuting out for work.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:flows-bor&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:flows-bor&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/flows-bor.png&#34; alt=&#34;Barchart of commutes in- and out- of London boroughs.&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Barchart of commutes in- and out- of London boroughs.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;A map below (Figure &lt;a href=&#34;#fig:bor-geos&#34;&gt;2&lt;/a&gt;) to help read the abbreviated labels for London boroughs and the semi-spatial orderings used in this session.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:bor-geos&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:bor-geos&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/geogs.png&#34; alt=&#34;Relaxed geospatial layout of London boroughs.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Relaxed geospatial layout of London boroughs.
@@ -2008,7 +1996,7 @@ Figure 2: Relaxed geospatial layout of London boroughs.
 &lt;!-- Standard data graphics -- bar charts, scatterplots etc. -- are often not sufficient for expressing the types of complex relations implied by network data. --&gt;
 &lt;p&gt;The most common examples of network visualization that we could use to represent the data in Tables &lt;a href=&#34;#tab:nodes-data&#34;&gt;1&lt;/a&gt; and &lt;a href=&#34;#tab:edges-data&#34;&gt;2&lt;/a&gt; are node-link diagrams. These depict graphs in two dimensions as a force-directed layout. Nodes are positioned such that those sharing greater connection – edges with greater weights (frequencies) – are closer than those that are less well-connected – that do not share edges with such large weights. Edges are drawn as lines &lt;em&gt;connecting&lt;/em&gt; nodes.&lt;/p&gt;
 &lt;p&gt;Figure &lt;a href=&#34;#fig:flows-bor&#34;&gt;1&lt;/a&gt; uses a force-directed layout to represent the travel-to-work data as such a network graph. This shows large numbers of flows between job rich boroughs (particularly Westminster) and boroughs containing large resident populations: Wandsworth, Lambeth, Southwark (close to central London), Barnet, Brent, Haringey (further from central London). Note that although no geographic positioning is used, the layout suggests geographic dependency in the relations between nodes, and so the manner by which populations commute between boroughs for work. For example, Hillingdon (HDN), Hounslow (HNS) and Ealing (ELG) in the bottom left; Redbridge (RDB) and Walthamstow (WTH) in the bottom middle/right.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:node-link-bor&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:node-link-bor&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/node-link-bor.png&#34; alt=&#34;Node-link layout of commutes between London boroughs.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Node-link layout of commutes between London boroughs.
@@ -2021,7 +2009,7 @@ Figure 3: Node-link layout of commutes between London boroughs.
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;If the aim is to compare relative frequencies of flows and &lt;em&gt;locate&lt;/em&gt; them in geographic context – to understand both the distribution and geography of travel-to-work in London, then we can make better use of &lt;em&gt;position&lt;/em&gt;. In Figure &lt;a href=&#34;#fig:lines-geog&#34;&gt;4&lt;/a&gt;, nodes (boroughs) are placed in their exact geographic position (geometric centroid of boroughs), and line width and transparency is used to encode flow frequency. In the plot on the bottom row, flow &lt;em&gt;direction&lt;/em&gt; is encoded by making flow lines asymmetric &lt;span class=&#34;citation&#34;&gt;(following Wood, Slingsby, and Dykes &lt;a href=&#34;#ref-wood_visualizing_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;: the straight ends are origins, the curved ends destinations.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:lines-geog&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:lines-geog&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/lines-geog.png&#34; alt=&#34;Straight line showing commutes between London boroughs in spatial position; asymmetric lines encode direction.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Straight line showing commutes between London boroughs in spatial position; asymmetric lines encode direction.
@@ -2039,7 +2027,7 @@ Figure 4: Straight line showing commutes between London boroughs in spatial posi
 &lt;h3&gt;Matrix representations&lt;/h3&gt;
 &lt;p&gt;An alternative way to represent these edge frequencies is origin-destination matrices, as in Figure &lt;a href=&#34;#fig:matrices&#34;&gt;5&lt;/a&gt;. The columns are destinations, London boroughs to which residents commute for work; the rows are origins, London boroughs from which residents commute out for work. Edge frequencies are encoded using colour value – the darker the colour, the larger the number of commutes between those boroughs. Boroughs are ordered left-to-right and top-to-bottom according to the total number of jobs accessed in each borough.&lt;/p&gt;
 &lt;p&gt;Whilst using colour rather than line width to show flow magnitude is a less effective encoding channel &lt;span class=&#34;citation&#34;&gt;(following Munzner &lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, there are obvious advantages. The salience bias of longer flows is removed. Ordering cells of the matrix by destination size (number of jobs accessed in each borough) helps to emphasise patterns in the job-rich boroughs, but also encourages &lt;em&gt;within&lt;/em&gt; and &lt;em&gt;between&lt;/em&gt; borough comparison. For example, the lack of colour outside of the diagonals in the less job-rich boroughs, which also tend to be in outer London, suggests that labour markets there might be more self-contained: that is, people are less likely to commute-in from outside of those boroughs for work. The layout also supports ‘look-up’ type tasks – for example in the top-right plot, where the same OD commutes are removed, we can efficiently identify the boroughs importing the second (WNS) and third (LAM) largest number of workers to Westminster. By applying a local scaling on destination (bottom plot), whereby a separate colour scale is created for each destination borough, we can explore the theme of &lt;em&gt;self-containment&lt;/em&gt; more directly. The vertical blue bars for Hammersmith and Kingston suggest that there are comparatively large numbers commuting into- these boroughs for work, especially given their size in terms of available jobs.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:matrices&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:matrices&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/matrices.png&#34; alt=&#34;OD matrices showing commutes between London boroughs.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: OD matrices showing commutes between London boroughs.
@@ -2050,14 +2038,14 @@ Figure 5: OD matrices showing commutes between London boroughs.
 &lt;h3&gt;OD maps&lt;/h3&gt;
 &lt;p&gt;The OD matrices expose new structure that could not be so easily inferred from the (more flashy) network visualizations. Although their layout is space-efficient, clearly for phenomena such as commuting, &lt;strong&gt;geographic context&lt;/strong&gt; is highly relevant. It is possible to make better use of layout and position to support the spatial dimension of analysis. &lt;a href=&#34;https://xeno.graphics/od-map/&#34;&gt;OD Maps&lt;/a&gt; were proposed by &lt;span class=&#34;citation&#34;&gt;Wood, Dykes, and Slingsby (&lt;a href=&#34;#ref-wood_visualisation_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt; as a means of supporting such an analysis. They take a little to get your head around, but the idea is very elegant.&lt;/p&gt;
 &lt;p&gt;You will recall that we previously used the &lt;a href=&#34;https://github.com/aftertheflood/londonsquared&#34;&gt;LondondSquared&lt;/a&gt; grid layout, also in Figure &lt;a href=&#34;#fig:bor-geos&#34;&gt;2&lt;/a&gt;, for arranging London boroughs of regular size and shape. The cells of each column or row of the matrix could also be &lt;strong&gt;re-ordered&lt;/strong&gt; according to this geographic layout, as in Figure &lt;a href=&#34;#fig:reordered-matrix&#34;&gt;6&lt;/a&gt;. So, for example, we may be interested in focussing on &lt;strong&gt;destination&lt;/strong&gt;, or workplace, boroughs. In the first highlighted example, commutes into Westminster are considered (the left-most column). Cells in the highlighted column are coloured according to the number of workers resident in each borough that travel into Westminster for work. These cells are then &lt;strong&gt;re-ordered&lt;/strong&gt; spatially, as in the inset map for Westminster in the figure. The geographic ordering allows us to see that residents access jobs in Westminster in large numbers from many boroughs in London, but especially so from Wandsworth, Lambeth and Southwark immediately to the south of Westminster (see real geography in Figure &lt;a href=&#34;#fig:bor-geos&#34;&gt;2&lt;/a&gt;). In the second example, we focus on &lt;strong&gt;origins&lt;/strong&gt;: commutes out of Hackney are considered (the middle row). Cells in the highlighted row are coloured according to the number of jobs accessed in each borough by residents travelling out of Hackney for work. Cells are again reordered in the inset map. This demonstrates that patterns of commuting are reasonably localised. The modal destination/workplace borough remains Westminster, but relatively large numbers of jobs are accessed in Camden, Islington, Tower Hamlets and the City of London.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:reordered-matrix&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:reordered-matrix&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/reordered-matrix.png&#34; alt=&#34;Highlighted columns (destinations/workplaces) and rows (origins/homeplaces) of the OD matrix with a spatial arrangement.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: Highlighted columns (destinations/workplaces) and rows (origins/homeplaces) of the OD matrix with a spatial arrangement.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;OD maps extend this idea by displaying &lt;strong&gt;all cells&lt;/strong&gt; of the OD matrix with a geographic arrangement. This is achieved via a “map-within-map” layout. In the destination-focussed example in Figure &lt;a href=&#34;#fig:od-map-layout&#34;&gt;7&lt;/a&gt;, each larger (reference) cell identifies destinations and the smaller cells are coloured according to origins – the number of residents in each borough commuting into the reference cell for work.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:od-map-layout&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:od-map-layout&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/d-od-map.png&#34; alt=&#34;Destination-focussed OD map of commutes between London boroughs&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Destination-focussed OD map of commutes between London boroughs
@@ -2069,7 +2057,7 @@ Figure 7: Destination-focussed OD map of commutes between London boroughs
   &lt;div&gt;
     &lt;p&gt;The analysis above might give the impression that OD maps should be used in preference of spatially arranged node-link diagrams. As always, this depends on dataset and analysis task. In Figure &lt;a href=&#34;#fig:flow-bikes&#34;&gt;8&lt;/a&gt; is a map displaying bikeshare flow data for the London Cycle Hire Scheme (LCHS), collected via the &lt;a href=&#34;https://docs.ropensci.org/bikedata/&#34;&gt;bikedata&lt;/a&gt; package. The LCHS consists of c.700 docking stations in London – so c. 700^2 grid cells if the grid-within-grid layout of an OD map were to be used – challenging, although possible &lt;span class=&#34;citation&#34;&gt;(see Wood, Slingsby, and Dykes &lt;a href=&#34;#ref-wood_visualizing_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;. If a synoptic overview of spatial patterns is necessary, the more intuitive node-line representation is perhaps more successful than the OD map. Additionally, different from the commuter dataset, there &lt;em&gt;is&lt;/em&gt; geographic precision in the spatial coordinates representing origins and destinations in the bikeshare dataset, and distance judgements seem important when exploring cycling trips – an argument against the spatial distortion required by OD maps.&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;In the graphic below, I’ve filtered on trips that take place in the morning peak. The dominant pattern is of flows from London’s main commuter rail terminals – King’s Cross and Waterloo – to central London and City of London respectively. The asymmetric bezier curves efficiently communicate this and the reverse pattern when trips in the evening peak are filtered.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:flow-bikes&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:flow-bikes&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/flow-vis-gds.png&#34; alt=&#34;Flow map of London Cycle Hire Scheme trips in the weakday morning peak. Data by TfL, accessed via [bikedata](https://docs.ropensci.org/bikedata/); parks and river outline via [OSM](https://www.openstreetmap.org/).&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: Flow map of London Cycle Hire Scheme trips in the weakday morning peak. Data by TfL, accessed via &lt;a href=&#34;https://docs.ropensci.org/bikedata/&#34;&gt;bikedata&lt;/a&gt;; parks and river outline via &lt;a href=&#34;https://www.openstreetmap.org/&#34;&gt;OSM&lt;/a&gt;.
@@ -2515,7 +2503,7 @@ count
 &lt;div id=&#34;analyse-over-nodes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Analyse over nodes&lt;/h3&gt;
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:mode-analysis&#34;&gt;9&lt;/a&gt; are a set of plots summarising over the &lt;code&gt;nodes&lt;/code&gt; dataset and using colour to support comparison by travel mode. The first plot is a bar chart ordered left-to-right on commute frequency (by destination borough). Nodes are expressed as destinations on the left panel and origins on the right. This demonstrates a pattern similar to that in Figure &lt;a href=&#34;#fig:flows-bor&#34;&gt;1&lt;/a&gt; where there are many commutes into- job rich boroughs in central London. Note that the amount of red, representing commutes by car, increases left-to-right as we move away from job-rich central London boroughs. This is best expressed by the proportional/filled bar chart in the second plot. Hillingdon (HDN), a borough which contains a relatively large number of jobs, looks distinctive from its other job-rich neighbours in this plot (Lambeth LAM, Hammersmith &amp;amp; Fulham HMS) as it contains a reasonably large block of red (commuting by car). This is, however, consistent with other boroughs that are similarly “outer” London (Havering HVG, Bexley BEX, Enfield ENF). The third plot incorporates this geographic context by ordering the bars again using the &lt;a href=&#34;https://github.com/aftertheflood/londonsquared&#34;&gt;LondonSquared&lt;/a&gt; layout. Destination and origin summary bars are juxtaposed next to each other and heights are scaled locally by borough. This enables visual comparison of whether there is a net in- or out- flow of workers. Job-rich central London boroughs contain longer “destination” bars importing large numbers of workers from other London boroughs, outer-London boroughs generally have longer “origin” bars exporting large numbers of residents to work in other London boroughs.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mode-analysis&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:mode-analysis&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/mode-plots.png&#34; alt=&#34;Destination-focussed OD map of commutes between London boroughs&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: Destination-focussed OD map of commutes between London boroughs
@@ -2583,7 +2571,7 @@ nodes %&amp;gt;%
 &lt;div id=&#34;analyse-over-edges&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Analyse over edges&lt;/h3&gt;
 &lt;p&gt;Figure &lt;a href=&#34;#fig:mode-analysis-od-map&#34;&gt;10&lt;/a&gt; displays OD maps of commuting between boroughs using public transport. In a similar way to Figure &lt;a href=&#34;#fig:mode-analysis&#34;&gt;9&lt;/a&gt; maps are created separately with a destination and origin focus. The reference cells for the maps on the left are &lt;em&gt;destinations&lt;/em&gt; and the small cells are coloured according to number of commutes into- those destinations for work; the references cells for the maps on the right are origins and small cells are coloured according to number of commutes by residents out-of those boroughs for work. I won’t do any interpretation; that is reserved for this session’s &lt;a href=&#34;../homework/05-homework/&#34;&gt;Homework&lt;/a&gt;. A consolation is that there is no additional coding required for the homework.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mode-analysis-od-map&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:mode-analysis-od-map&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/05-class_files/od-maps-mode.png&#34; alt=&#34;OD map of commutes between London boroughs&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 10: OD map of commutes between London boroughs
@@ -2700,8 +2688,6 @@ plot_data_temp %&amp;gt;%
       <guid>/class/04-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;../rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;../rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
@@ -2790,7 +2776,7 @@ Within-variable variation
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Nominal&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -2801,7 +2787,7 @@ bar charts, dot plots …
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Ordinal&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -2812,7 +2798,7 @@ bar charts, dot plots …
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Continuous&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -2828,7 +2814,7 @@ Between-variable variation
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Nominal&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -2839,7 +2825,7 @@ mosaic/spine plots …
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Ordinal&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -2850,7 +2836,7 @@ slope/bump charts …
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Continuous&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -2869,7 +2855,7 @@ scatterplots, parallel coordinate plots …
 &lt;h3&gt;Plots for continuous variables&lt;/h3&gt;
 &lt;div id=&#34;within-variable-variation-histograms-desity-plots-boxplots&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Within-variable variation: histograms, desity plots, boxplots&lt;/h4&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:univariate-continuous&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:univariate-continuous&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/univariate-plots.png&#34; alt=&#34;Univariate plots of dispersion.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Univariate plots of dispersion.
@@ -2883,7 +2869,7 @@ Figure 1: Univariate plots of dispersion.
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;This discussion was a little prosaic – we haven’t made too many observations to advance our knowledge of the dataset. I was surprised at the low average age of road casualties and so quickly explored the distribution of &lt;code&gt;casualty_age&lt;/code&gt; conditioning on another variable and differentiating between variable values using colour. Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;2&lt;/a&gt; displays boxplots of the location and spread in &lt;code&gt;casualty_age&lt;/code&gt; by vehicle type (left) and also by &lt;code&gt;casualty_class&lt;/code&gt; for all crashes involving pedestrians. A noteworthy pattern is that riders of bicycles and motorcycles tend to be younger than the pedestrians they are contacting with, whereas for buses, taxis, HGVs and cars the reverse is true. Pedestrians involved in crashes with cars are especially skewed towards the younger ages.&lt;/p&gt;&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:boxplots-class&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:boxplots-class&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/boxplot-by-class.png&#34; alt=&#34;Boxplots of casualty age by vehicle type and class.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Boxplots of casualty age by vehicle type and class.
@@ -2898,7 +2884,7 @@ Figure 2: Boxplots of casualty age by vehicle type and class.
 &lt;h4&gt;Between-variable covariation: scatterplots&lt;/h4&gt;
 &lt;p&gt;The &lt;a href=&#34;../class/03-class/&#34;&gt;previous session&lt;/a&gt; included several &lt;strong&gt;scatterplots&lt;/strong&gt; for displaying association between two quantitative variables. Scatterplots are used to check whether the association between variables is linear, as in &lt;a href=&#34;https://en.wikipedia.org/wiki/Anscombe%27s_quartet&#34;&gt;Anscombe’s quartet&lt;/a&gt;, but also to make inferences about the direction and intensity of linear correlation between variables – the extent to which &lt;strong&gt;values&lt;/strong&gt; in one variable depend on the values of another – and also around the nature of variation between variables – the extent to which &lt;strong&gt;variation&lt;/strong&gt; in one variable depends on another (&lt;a href=&#34;https://en.wikipedia.org/wiki/Heteroscedasticity&#34;&gt;heteroscedasticity&lt;/a&gt;). Although other &lt;em&gt;chart idioms&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Munzner &lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; for displaying bivariate data exist, empirical studies in Information Visualization have demonstrated that aggregate correlation statistics can be reliably estimated from scatterplots &lt;span class=&#34;citation&#34;&gt;(Rensink and Baldridge &lt;a href=&#34;#ref-rensink_perception_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;; Harrison et al. &lt;a href=&#34;#ref-harrison_ranking_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;; Kay and Heer &lt;a href=&#34;#ref-kay_beyond_2016&#34; role=&#34;doc-biblioref&#34;&gt;2016&lt;/a&gt;; Correll and Heer &lt;a href=&#34;#ref-correll_regression_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;&lt;a href=&#34;#ref-correll_regression_2017&#34; role=&#34;doc-biblioref&#34;&gt;a&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;There are few variables in the STATS19 dataset measured on a continuous scale, but based on the analysis above, we may wish to explore more directly whether an association exists between the age of pedestrians and drivers for pedestrian-vehicle crashes. The scatterplots in Figure &lt;a href=&#34;#fig:scatters-type&#34;&gt;3&lt;/a&gt; show that no obvious linear association exists.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:scatters-type&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:scatters-type&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/scatter-by-type.png&#34; alt=&#34;Scatterplots of pedestrian age by driver age and grouped by vehicle type.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Scatterplots of pedestrian age by driver age and grouped by vehicle type.
@@ -2917,14 +2903,14 @@ Figure 3: Scatterplots of pedestrian age by driver age and grouped by vehicle ty
 &lt;div id=&#34;within-variable-variation-bars-dotplots-heatmaps&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Within-variable variation: bars, dotplots, heatmaps&lt;/h4&gt;
 &lt;p&gt;With categorical variables we are interested in exploring how relative frequencies distribute across the variable’s categories. Bar charts are most commonly used. As established in the previous session, length is an efficient visual channel for encoding quantities, counts in this case. Often it is useful to flip bar charts on their side so that category labels are arranged horizontally for ease of reading and, unless there is a natural ordering to categories, arrange the bars in descending order based on their frequency, as in Figure &lt;a href=&#34;#fig:bars&#34;&gt;4&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:bars&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:bars&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/bars.png&#34; alt=&#34;Bars displaying crash frequencies by vehicle type.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Bars displaying crash frequencies by vehicle type.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Bar charts are effective at conveying frequencies where the number of categories is reasonably small. For summarising frequencies across many categories, alternatives chart types that minimise non-data-ink, such as &lt;a href=&#34;https://en.wikipedia.org/wiki/Dot_plot_(statistics)&#34;&gt;Cleveland dot plots&lt;/a&gt; and heatmaps may be appropriate. The left plot in Figure &lt;a href=&#34;#fig:dots-heatmap&#34;&gt;5&lt;/a&gt; displays crash counts for boroughs in London, ordered by crash frequency and grouped by whether boroughs are in inner- or outer- London. To the right is a heatmap with the same ordering and grouping of boroughs applied to the rows and with columns coloured according to crash frequencies by time period and further grouped by day of week. From scanning the graphic we can make several observations: that reported crashes tend to occur in the midday or evening peak (the middle two columns of a day are typically darker); that in relative terms there are more crashes recorded in outer London boroughs than inner London boroughs during the middle of the day on weekends (salient dark strips corresponding with midday Saturday and Sunday).&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:dots-heatmap&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:dots-heatmap&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/borough-freqs.png&#34; alt=&#34;[Cleveland dot plots](https://en.wikipedia.org/wiki/Dot_plot_(statistics)) and heatmaps summarising crash frequencies by London borough and period of day.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: &lt;a href=&#34;https://en.wikipedia.org/wiki/Dot_plot_(statistics)&#34;&gt;Cleveland dot plots&lt;/a&gt; and heatmaps summarising crash frequencies by London borough and period of day.
@@ -3094,7 +3080,7 @@ NA
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;To display these quantities graphically we could update our earlier bar chart to create &lt;em&gt;stacked&lt;/em&gt; bars that use colour to distinguish injury severity (Figure &lt;a href=&#34;#fig:bars-vehicle-injury&#34;&gt;6&lt;/a&gt;). Injury severity is an &lt;code&gt;ordinal&lt;/code&gt; variable and the choice of colour in Figure &lt;a href=&#34;#fig:bars-vehicle-injury&#34;&gt;6&lt;/a&gt; reflects this order – dark red for &lt;em&gt;KSI&lt;/em&gt;, light red for &lt;em&gt;slight&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:bars-vehicle-injury&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:bars-vehicle-injury&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/bars-assoc.png&#34; alt=&#34;Bars (and Mosaic plot) displaying association between vehicle type and injury severity.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: Bars (and Mosaic plot) displaying association between vehicle type and injury severity.
@@ -3419,7 +3405,7 @@ NA
 &lt;/ol&gt;
 &lt;!-- Remembering Figure \@ref(fig:dots-heatmap), for example, the boroughs in which the largest crash frequencies occur has already been established in the Cleveland dot plot, but this signal dominates somewhat in the heatmap -- for boroughs that contain fewer crashes relative comparison across the columns challenging. --&gt;
 &lt;p&gt;The heatmap in Figure &lt;a href=&#34;#fig:dots-heatmap&#34;&gt;5&lt;/a&gt; is effectively a contingency table, so we could demonstrate this by generating a modelled expectation – signed chi-score residuals for each cell. Figure &lt;a href=&#34;#fig:borough-freqs-resids&#34;&gt;7&lt;/a&gt; does this for days of the week and periods of the day separately. The signed residuals are mapped to a &lt;a href=&#34;https://web.natur.cuni.cz/~langhamr/lectures/vtfg1/mapinfo_2/barvy/colors.html#diverging&#34;&gt;diverging colour scheme&lt;/a&gt; – purple for cells with fewer crash counts than expected, green for cells with more crash counts than expected. To simplify things a little I generated heatmaps separately for day of week and period of day. In each case the assumption, the modelled expectation, is that crash counts by borough distribute independently of day of week or period of day.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:borough-freqs-resids&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:borough-freqs-resids&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/borough-freqs-resids.png&#34; alt=&#34;Heatmaps of crashes by day and time period for London Boroughs.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Heatmaps of crashes by day and time period for London Boroughs.
@@ -3512,21 +3498,21 @@ No strategy specialised to direct encoding. Often variables cross &lt;span class
 &lt;/table&gt;
 &lt;p&gt;As with most visualization design, these strategies require careful implementation. Particularly when juxtaposing views for comparison, it is important to use &lt;em&gt;layout&lt;/em&gt; or &lt;em&gt;arrangement&lt;/em&gt; in a way that best supports comparison. In the practical we will consider some more routine ways in which plots can be composed to support comparison as we analyse pedestrian casualties in the &lt;code&gt;Stats19&lt;/code&gt; dataset. To demonstrate how &lt;em&gt;layout&lt;/em&gt; and &lt;em&gt;colour&lt;/em&gt; can be used for effecting &lt;em&gt;spatial&lt;/em&gt; comparison, we will return to our analysis of pedestrian injuries by vehicle type, and explore variation by London Borough.&lt;/p&gt;
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:mosaic-harrow-westminster&#34;&gt;8&lt;/a&gt; Westminster and Harrow, two very different London Boroughs, are compared. Bar size heights vary according to absolute number of recorded injuries by vehicle type and widths according to relative number of injuries recorded on weekday versus weekends. Whilst the modal vehicle type involved in pedestrian injuries is the same for both boroughs (cars), it is far more dominant for crashes recorded in the outer London borough of Harrow. Where cars are involved in crashes in Westminster these occur more frequently (when compared with Harrow) on weekends. Notice that Taxis, Motorcycles, Vans and Bicycles take up a reasonable share of crashes involving pedestrian injuries and that for Bicycles, Vans and Motorcycles these occur more frequently on weekdays.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mosaic-harrow-westminster&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:mosaic-harrow-westminster&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/mosaic_harrow_westminster.png&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for Westminster and Harrow.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: Mosaic plots of vehicle type and injury severity for Westminster and Harrow.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Given these differences, it may be useful to &lt;em&gt;compare&lt;/em&gt; across all 33 Boroughs in London, &lt;em&gt;juxtaposing&lt;/em&gt; mosaic plots for each borough side-by-side (Figure &lt;a href=&#34;#fig:mosaic-boroughs&#34;&gt;9&lt;/a&gt;). That the mosaic plots are annotated with labels for each vehicle type whose size varies according to frequency helps with interpretation. However, we can use &lt;em&gt;colour hue&lt;/em&gt; to enable selecting and associating of individual vehicle types. This allows very central (City, Westminster, to a lesser extent Camden and Islington) inner (Wandsworth, Southwark, Lambeth) and outer (Croydon, Sutton) London boroughs to be related.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:mosaic-boroughs&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:mosaic-boroughs&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/mosaic_boroughs.png&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for London Boroughs.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: Mosaic plots of vehicle type and injury severity for London Boroughs.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The alphabetical &lt;em&gt;layout&lt;/em&gt; of boroughs helps with look-up-type tasks, but since we have already identified that patterns of pedestrian injuries by vehicle type varies by central-inner-outer London, we could further support this comparison by giving the mosaic plots a spatial arrangement, as in Figure &lt;a href=&#34;#fig:spatial-layout&#34;&gt;10&lt;/a&gt;. This ‘map’ may at first seem alien as you are most likely familiar seeing maps with a precise geographic arrangement. However, when studying spatial patterns in a dataset, such levels of precision are not always needed. Relaxing geography frees up space to introduce richer, more complex designs. In the layout in Figure &lt;a href=&#34;#fig:spatial-layout&#34;&gt;10&lt;/a&gt;, taken from &lt;a href=&#34;https://github.com/aftertheflood/londonsquared&#34;&gt;AfterTheFlood&lt;/a&gt;, each borough is represented as a square of regular size and arranged in its approximate geographic position, allowing the centrsl-inner-outer and London distinctions to be more efficiently made.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:spatial-layout&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:spatial-layout&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/anim_real_grid.gif&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.&#34; width=&#34;90%&#34; /&gt;&lt;img src=&#34;../class/04-class_files/mosaic_boroughs_spatial.png&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 10: Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.
@@ -3562,7 +3548,7 @@ Figure 10: Mosaic plots of vehicle type and injury severity for London Boroughs 
 &lt;div id=&#34;crash-location-geodemographics&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Crash location geodemographics&lt;/h4&gt;
 &lt;p&gt;To start we explore month-on-month frequencies of pedestrian road crashes by IMD of the location in which the crash took place (Figure &lt;a href=&#34;#fig:ped-month-imd&#34;&gt;11&lt;/a&gt;). From this we see that there is some seasonality to pedestrian casualties, that there are more crashes recorded in locations containing higher deprivation – unsurprising as cities tend to contain comparatively high/mid deprivation levels – and that overall recorded pedestrian crash frequencies are reasonably static over the 10-year period.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:ped-month-imd&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:ped-month-imd&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/plot-year-imd.png&#34; alt=&#34;Pedestrian casualties by month and IMD.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 11: Pedestrian casualties by month and IMD.
@@ -3592,14 +3578,14 @@ Figure 11: Pedestrian casualties by month and IMD.
 &lt;li&gt;&lt;strong&gt;Setting&lt;/strong&gt;: A consequence of using very light colours for the low-deprivation quintile is that bar height becomes difficult to discern. We therefore draw thin grey outlines around the bars, specified with &lt;code&gt;colour=&#34;#8d8d8d&#34;&lt;/code&gt; and &lt;code&gt;size=.1&lt;/code&gt;. Additionally rotate the date labels 90 degrees to resolve overlaps: &lt;code&gt;axis.text.x=...&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;With only five data categories (IMD quintiles) and counts that do not differ wildly per category, the stacked bars are reasonably effective. However, to better support trends within category, it is useful to have a common baseline and juxtapose separate charts for crashes in each IMD category (using &lt;code&gt;facet_wrap&lt;/code&gt;). This improves height comparison &lt;em&gt;between&lt;/em&gt; IMD categories, but also &lt;em&gt;within&lt;/em&gt; category temporal trends are easier to detect – for example, that of &lt;em&gt;slightly&lt;/em&gt; increasing seasonality across all quintiles, especially in the second most deprived quintile. By default &lt;code&gt;facet_wrap()&lt;/code&gt; lays out individual charts across rows and columns. We could instead &lt;em&gt;arrange&lt;/em&gt; the bars on top of each other, in rows, by parameterising the call to &lt;code&gt;facet_wrap()&lt;/code&gt;: &lt;code&gt;facet_wrap(~crash_quintile, ncol=1)&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:ped-year-imd-facet&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:ped-year-imd-facet&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/plot-year-imd-facet.png&#34; alt=&#34;Pedestrian casualties by year and IMD.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 12: Pedestrian casualties by year and IMD.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Picking seasonality in these plots is still challenging; so too whether overall crashes are increasing or decreasing. To support seasonal comparison we could consider arranging in two dimensions such that the bars are grouped according to year along the columns and by IMD decile along the rows. This can be achieved with &lt;code&gt;facet_grid()&lt;/code&gt;. To support relative comparison within IMD decile we may choose to give each IMD decile its own (local) y-axis scaling. Rather than comparing absolute heights between IMD deciles we compare instead relative shapes in the month-on-month bars. To further explore whether crash counts are increasing by year, we include the monthly average by year using a horizontal line. This arrangement – Figure &lt;a href=&#34;#fig:ped-monthyear-imd-facet&#34;&gt;13&lt;/a&gt; – better exposes the fact that seasonal variation is greater for crashes that occur in the least deprived quintile. There are many speculative explanations for why this might be the case – many confounding factors, also that this may be a spurious observation due to differences in sample size, that would need to be explored/eliminated as part of an EDA.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:ped-monthyear-imd-facet&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:ped-monthyear-imd-facet&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/plot-monthyear-imd.png&#34; alt=&#34;Pedestrian casualties by year and IMD.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 13: Pedestrian casualties by year and IMD.
@@ -3638,7 +3624,7 @@ Figure 13: Pedestrian casualties by year and IMD.
 &lt;div id=&#34;crash-location-and-driver-purpose&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Crash location and driver purpose&lt;/h4&gt;
 &lt;p&gt;Collected in the STATS19 vehicles table is the reported journey purpose of the driver. Prior to 2011 this field was not available and unfortunately is “not known” for a large proportion (67%) of pedestrian-vehicle crashes. Figure &lt;a href=&#34;#fig:ped-year-imd-facet-purpose&#34;&gt;14&lt;/a&gt; is an updated version of the previous plot, but with bars additionally coloured by journey purpose. Persisting with the analysis of monthly frequencies is useful here as it exposes the fact that an “Other” category has been used inconsistently over time. Further investigation of what this category constitutes is therefore necessary. We would also want to explore in detail the nature of non-reporting – whether there is systematic biases here. Any inferences drawn from Figure &lt;a href=&#34;#fig:ped-year-imd-facet-purpose&#34;&gt;14&lt;/a&gt; are therefore very speculative, but it does appear that the “school run” is reported more frequently in relative terms for crashes occurring in the least deprived quintile – relatively more blue (“school run”) and less green (“commute”). Again, there are speculative explanations for this that could be investigated as part of an EDA and an immediate task might be to update the plot to make the bars &lt;em&gt;standardised&lt;/em&gt; (equal height).&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:ped-year-imd-facet-purpose&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:ped-year-imd-facet-purpose&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/plot-year-imd-facet-purpose.png&#34; alt=&#34;Pedestrian casualties by year, IMD and driver purpose.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 14: Pedestrian casualties by year, IMD and driver purpose.
@@ -3652,7 +3638,7 @@ Figure 14: Pedestrian casualties by year, IMD and driver purpose.
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:imd-driver-cas-overall&#34;&gt;15&lt;/a&gt; a heatmap matrix shows this association. Cells in the matrix are ordered along the x-axis according to the IMD quintile of the casualty (pedestrian) and along the y-axis according to the IMD quintile of the driver. The darker blues in the diagonals demonstrate that, as expected, it is more common for drivers-pedestrians involved in crashes to share the same geodemographic characteristics. That colour concentrates in the bottom left is therefore also to be expected. Previously we established that a greater number of pedestrian-vehicle crashes occur in high deprivation neighbourhoods and given there is an association between driver-casualty geodemographics, the largest cell frequencies will be concentrated in the bottom left of the matrix.&lt;/p&gt;
 &lt;p&gt;This trend can be further investigated through &lt;em&gt;direct encoding&lt;/em&gt; - constructing a modelled expectation and representing deviation from expectation – the right heatmap in the top row of Figure &lt;a href=&#34;#fig:imd-driver-cas-overall&#34;&gt;15&lt;/a&gt;. Expected values are generated based on the assumption that crash frequencies distribute by driver IMD class independently of the IMD class of the pedestrian injured. I have also plotted raw expected values and the column and row marginals from which the residuals are derived. This demonstrates how expected values are spread across cells in the contingency table based on the overall size of each IMD class. Signed chi-scores are mapped to a diverging colour scale – green for residuals that are positive (cell counts are greater than expected), purple for residuals that are negative (cell counts are less than expected).&lt;/p&gt;
 &lt;p&gt;The observed-versus-expected plot highlights that the largest positive residuals are in and around the diagonals and the largest negative residuals are those furthest from the diagonals: we see many more crash frequencies between drivers and pedestrians living in the same or similar IMD quintiles and fewer between those in different quintiles. That the bottom left cell – high-deprivation-driver + high-deprivation-pedestrian – is dark green can be understood when remembering that signed chi-scores emphasise effect sizes that are large in &lt;em&gt;absolute&lt;/em&gt; as well as relative terms. Not only is there an association between the geodemographics of drivers and casualties, but larger crash counts are recorded in locations containing the highest deprivation and so residuals here are large. The largest positive residuals (the darkest green) are nevertheless recorded in the top right of the matrix – and this is more surprising. Against an expectation of no association between the geodemographic characteristics of drivers and pedestrians involved in road crashes, there is a particularly high number of crashes between drivers and pedestrians living in neighbourhoods containing the lowest deprivation. An alternative phrasing: the association between the geodemographics of drivers and pedestrians is greater for those living in the lowest deprivation quintiles.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:imd-driver-cas-overall&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:imd-driver-cas-overall&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/imd-driver-cas-overall.png&#34; alt=&#34;IMD of driver-casualty.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 15: IMD of driver-casualty.
@@ -3725,14 +3711,14 @@ A heavy confounding factor in the plots above is the *location* in which the cra
 
 &lt;!-- Whilst these plots are successful at exposing the association between the geodemographics of the *drivers*, *pedestrians* and *locations* in which they took place, this very obvious association, and the fact that crash counts are concentrated in the most deprived quintile, is the dominant &#34;signal&#34;.  This can be seen in the expected values for the contingency table in Figure \@ref(fig:imd-driver-cas-crash). Updating our heatmaps of observed values with a local scaling is another way of demonstrating the strong association between the IMD of *drivers*, *pedestrians* and  crash *locations*.  In Figure \@ref(fig:imd-driver-cas-crash-rescaled) cell counts are scaled using the maximum value within the containing matrix (so the maximum count within each IMD crash quintile). Eyeballing this graphic, we see that comparatively few pedestrians living outside of the  most deprived quintile are involved in crashes that occur in that quintile, again the graphic exposes heavy association between geodemographics for crashes occurring in the least deprived quintile and elsewhere there is slightly more &#34;mixing&#34;. --&gt;
 &lt;p&gt;Figure &lt;a href=&#34;#fig:imd-driver-cas-crash-rescaled&#34;&gt;16&lt;/a&gt; shows frequencies by driver-pedestrian IMD group faceted on the IMD class of the &lt;em&gt;location&lt;/em&gt; in which the road crash occurred. A local scaling is applied by IMD class of location. It demonstrates an obvious confounding pattern – that pedestrians and drivers are far more likely to be involved in crashes in locations with same geodemographic characteristics as those in which they live. Ideally we want to update our expectations to model explicitly for some of this pattern. We have established that an association between the IMD class of &lt;em&gt;drivers&lt;/em&gt;, &lt;em&gt;pedestrians&lt;/em&gt; and crash &lt;em&gt;locations&lt;/em&gt; exists. The more interesting question is whether this is association is stronger for certain driver-pedestrian-location combinations than others: that is, net of the dominant pattern, in which cells are there greater or fewer crash counts.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:imd-driver-cas-crash-rescaled&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:imd-driver-cas-crash-rescaled&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/imd-driver-cas-crash-local.png&#34; alt=&#34;IMD driver-casualty.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 16: IMD driver-casualty.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;This is not a straightforward task as the dependency is baked-in to our contingency table. Essentially we are interested in how crash counts vary depending on &lt;em&gt;geodemographic distance&lt;/em&gt; – of drivers, pedestrians, crash locations. I calculated a new variable measuring this distance directly – the euclidian distance between the geodemographics of the driver and pedestrian from the location of each crash, treating the &lt;code&gt;ordinal&lt;/code&gt; IMD class variable as a &lt;code&gt;continuous&lt;/code&gt; variable ranging from 1-5. To illustrate this, in Figure &lt;a href=&#34;#fig:imd-driver-cas-crash-distance&#34;&gt;17&lt;/a&gt; I’ve mapped this distance variable to each cell of the heatmap matrix.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:imd-driver-cas-crash-distance&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:imd-driver-cas-crash-distance&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/imd-geodemog-dist.png&#34; alt=&#34;IMD driver-pedestrian-location geodemographic distance.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 17: IMD driver-pedestrian-location geodemographic distance.
@@ -3740,7 +3726,7 @@ Figure 17: IMD driver-pedestrian-location geodemographic distance.
 &lt;/div&gt;
 &lt;!-- I then calculated row and column marginals from a new contingency table constructed on this variable -- the rows are different values of &#34;geodemographic distance&#34; and the columns are the different categories IMD road crash location -- and used this to spared expectation across cells in our original contingency table -- as demonstrated in Figure \@ref(fig:imd-driver-cas-crash-dist-full). The expectation is therefore that: road crash counts by &#34;geodemographic distance&#34; distribute independently of IMD crash location. A key pattern exposed in the residuals map here is that in the left-most plot for the most deprived IMD crash quintile: much higher than expected instances of pedestrians living in the most deprived quintile, being hit in neighbourhoods in the most deprived quintile and by drivers particularly living in the less deprived quintiles. --&gt;
 &lt;p&gt;I then generated counts of pedestrian casualties by demographic distance, and from this, cell probabilities/likelihoods for each unique position in the matrix in Figure &lt;a href=&#34;#fig:imd-driver-cas-crash-distance&#34;&gt;17&lt;/a&gt;. The probabilities assume independence between crash location: that is, the relative likelihood of a crash occurring given a cell’s geodemographic distance does not vary by IMD class of the crash location.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:imd-driver-cas-crash-dist-full&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:imd-driver-cas-crash-dist-full&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/04-class_files/imd-driver-cas-crash-dist-full.png&#34; alt=&#34;IMD driver-pedestrian-location with modelled expectations based on geodemographic distance.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 18: IMD driver-pedestrian-location with modelled expectations based on geodemographic distance.
@@ -3859,8 +3845,6 @@ This graphic exposes interesting *vertical* and *horizontal* blocks. The locatio
       <guid>/class/03-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;../rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;../rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
@@ -3947,7 +3931,7 @@ This graphic exposes interesting *vertical* and *horizontal* blocks. The locatio
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:wp-map&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:wp-map&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/trump_maps.png&#34; alt=&#34;Maps of 2016 US presidential election results. Left - two-colour choropleth in [Medium](https://medium.com/thepensivepost/understanding-rural-america-d9695a6b3516). Right - information-rich data graphic in [The Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/).&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Maps of 2016 US presidential election results. Left - two-colour choropleth in &lt;a href=&#34;https://medium.com/thepensivepost/understanding-rural-america-d9695a6b3516&#34;&gt;Medium&lt;/a&gt;. Right - information-rich data graphic in &lt;a href=&#34;https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/&#34;&gt;The Washington Post&lt;/a&gt;.
@@ -3984,10 +3968,10 @@ county location
 &lt;code&gt;Ratio&lt;/code&gt; (&lt;code&gt;cyclic&lt;/code&gt;)
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3998,10 +3982,10 @@ county result
 &lt;code&gt;Nominal&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -4014,7 +3998,7 @@ state result
 &lt;td style=&#34;text-align:left;&#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -4027,7 +4011,7 @@ county votes cast (~pop size)
 &lt;td style=&#34;text-align:left;&#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -4040,7 +4024,7 @@ county result margin
 &lt;td style=&#34;text-align:left;&#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -4053,7 +4037,7 @@ county result landslide
 &lt;td style=&#34;text-align:left;&#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;a href=&#34;www.google.com&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 512 512&#34; style=&#34;height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -4068,7 +4052,7 @@ county result landslide
 &lt;p&gt;In evidence in the Washington Post graphic is a judicious &lt;strong&gt;mapping&lt;/strong&gt; of data to visuals, underpinned by a secure understanding of analysis context. This act of carefully considering how best to leverage visual systems given the available data and analysis priorities is key to designing effective data graphics.&lt;/p&gt;
 &lt;p&gt;In the late 1990s Leland Wilkinson, a Computer Scientist and Statistician, introduced the &lt;a href=&#34;https://www.springer.com/gp/book/9780387245447&#34;&gt;Grammar of Graphics&lt;/a&gt; as an approach that captures this process of turning data into visuals. &lt;span class=&#34;citation&#34;&gt;Wilkinson (&lt;a href=&#34;#ref-wilkinson_grammar_1999&#34; role=&#34;doc-biblioref&#34;&gt;1999&lt;/a&gt;)&lt;/span&gt;’s thesis is that if graphics can be described in a consistent way according to their structure and composition, then the process of &lt;strong&gt;generating&lt;/strong&gt; graphics of different types can be systematised. This has obvious benefits for building visualization toolkits: it makes it easy to specify chart types and combinations and helps formalise the process of designing data visualizations. &lt;a href=&#34;https://vega.github.io/vega-lite/&#34;&gt;vega-lite&lt;/a&gt;, &lt;a href=&#34;https://www.tableau.com/en-gb&#34;&gt;Tableau&lt;/a&gt; and &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; are all underpinned by &lt;a href=&#34;https://www.springer.com/gp/book/9780387245447&#34;&gt;Grammar of Graphics&lt;/a&gt; thinking.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Wilkinson (&lt;a href=&#34;#ref-wilkinson_grammar_1999&#34; role=&#34;doc-biblioref&#34;&gt;1999&lt;/a&gt;)&lt;/span&gt;’s grammar separates the construction of a data graphic into a series of components. Below are the components of the &lt;em&gt;Layered Grammar of Graphics&lt;/em&gt; on which &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; is based &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_layered_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;, a slight edit on &lt;span class=&#34;citation&#34;&gt;Wilkinson (&lt;a href=&#34;#ref-wilkinson_grammar_1999&#34; role=&#34;doc-biblioref&#34;&gt;1999&lt;/a&gt;)&lt;/span&gt;’s original work.&lt;/p&gt;
-&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span id=&#34;fig:gog&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:gog&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/gog.png&#34; alt=&#34;Components of @wickham_layered_2010&#39;s Layered Grammar of Graphics.&#34; width=&#34;80%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Components of &lt;span class=&#34;citation&#34;&gt;Wickham (&lt;a href=&#34;#ref-wickham_layered_2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;’s Layered Grammar of Graphics.
@@ -4076,7 +4060,7 @@ Figure 2: Components of &lt;span class=&#34;citation&#34;&gt;Wickham (&lt;a href
 &lt;/div&gt;
 &lt;p&gt;The seven components in Figure &lt;a href=&#34;#fig:gog&#34;&gt;2&lt;/a&gt; are together used to create &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; specifications. The aspects to emphasise at this stage are those in &lt;strong&gt;emphasis&lt;/strong&gt;, which are required in any &lt;code&gt;ggplot2&lt;/code&gt; specification: the &lt;span style=&#34;color:#5A91CA;font-weight:bold&#34;&gt;data&lt;/span&gt; containing the variables of interest, the &lt;code&gt;geom&lt;/code&gt; or &lt;span style=&#34;color:#E17637;font-weight:bold&#34;&gt;marks&lt;/span&gt; to be used to represent data and the &lt;strong&gt;aesthetic&lt;/strong&gt; (&lt;code&gt;mapping=aes(...)&lt;/code&gt;) attributes, or visual &lt;span style=&#34;color:#62B743;font-weight:bold&#34;&gt;channels&lt;/span&gt; through which variables are to be encoded.&lt;/p&gt;
 &lt;p&gt;To demonstrate this, let’s generate some scatterplots based on the 2019 General Election data we will be analysing later in the session. Two variables worth exploring for association here are: &lt;code&gt;con_1719&lt;/code&gt;, the change in Conservative vote share by constituency between 2017-2019, and &lt;code&gt;leave_hanretty&lt;/code&gt;, the size of the Leave vote in the 2016 EU referendum, estimated at Parliamentary Constituency level &lt;span class=&#34;citation&#34;&gt;(see Hanretty &lt;a href=&#34;#ref-hanretty_areal_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:gog-demo&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:gog-demo&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/gog-demo.png&#34; alt=&#34;Plots, grammars and associated `ggplot2` specifications for the scatterplot.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Plots, grammars and associated &lt;code&gt;ggplot2&lt;/code&gt; specifications for the scatterplot.
@@ -4105,7 +4089,7 @@ Figure 3: Plots, grammars and associated &lt;code&gt;ggplot2&lt;/code&gt; specif
 &lt;p&gt;You might have noticed that in my descriptions of &lt;code&gt;ggplot2&lt;/code&gt; specifications I introduced &lt;span style=&#34;color:#E17637;font-weight:bold&#34;&gt;marks&lt;/span&gt; as another term for &lt;strong&gt;geometry&lt;/strong&gt; and visual encoding &lt;span style=&#34;color:#62B743;font-weight:bold&#34;&gt;channels&lt;/span&gt; as another term for &lt;strong&gt;aesthetics&lt;/strong&gt;. I also paid special attention to the &lt;span style=&#34;color:#5A91CA;font-weight:bold&#34;&gt;data types&lt;/span&gt; that are being encoded.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Marks&lt;/strong&gt; are graphical elements such as &lt;em&gt;bars&lt;/em&gt;, &lt;em&gt;lines&lt;/em&gt;, &lt;em&gt;points&lt;/em&gt;, &lt;em&gt;ellipses&lt;/em&gt; that can be used to represent data items – in &lt;code&gt;ggplot2&lt;/code&gt;, these are accessed through the functions prefaced with &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/#section-geoms&#34;&gt;&lt;code&gt;geom_*&lt;/code&gt;&lt;/a&gt;. Visual &lt;strong&gt;channels&lt;/strong&gt; are attributes such as &lt;em&gt;colour&lt;/em&gt;, &lt;em&gt;size&lt;/em&gt;, &lt;em&gt;position&lt;/em&gt; that, when mapped to data, control the appearance of marks in response to the values of a dataset. Not all &lt;strong&gt;channels&lt;/strong&gt; are equally effective. In fact we can say confidently that for particular &lt;strong&gt;data types&lt;/strong&gt; and &lt;strong&gt;tasks&lt;/strong&gt;, some &lt;strong&gt;channels&lt;/strong&gt; perform better than others.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Marks&lt;/strong&gt; and &lt;strong&gt;channels&lt;/strong&gt; are terms used in the interface of &lt;a href=&#34;https://www.tableau.com/en-gb&#34;&gt;Tableau&lt;/a&gt; and in &lt;a href=&#34;https://vega.github.io/vega-lite/&#34;&gt;vega-lite&lt;/a&gt; specifications. They are also used widely in Information Visualization, an academic discipline devoted to the study of data graphics, and most notably by Tamara &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; in her textbook &lt;a href=&#34;https://www.routledge.com/Visualization-Analysis-and-Design/Munzner/p/book/9781466508910&#34;&gt;&lt;em&gt;Visualization Analysis and Design&lt;/em&gt;&lt;/a&gt;. &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;’s work is important and widely adopted as it synthesises over foundational research in Information Visualization and Cognitive Science testing how effective different visual channels are at supporting different tasks.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:munzner&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:munzner&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/munzner.png&#34; alt=&#34;Visual channels to which data items can be encoded, as they appear in @munzner_visualization_2014.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Visual channels to which data items can be encoded, as they appear in &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.
@@ -4149,7 +4133,7 @@ Rank
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;html&gt;
 &lt;body&gt;
 &lt;img src=&#34;../class/03-class_files/location.png&#34;&gt;
@@ -4171,7 +4155,7 @@ position in x,y
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;html&gt;
 &lt;body&gt;
 &lt;img src=&#34;../class/03-class_files/height.png&#34;&gt;
@@ -4194,7 +4178,7 @@ length
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;html&gt;
 &lt;body&gt;
 &lt;img src=&#34;../class/03-class_files/width.png&#34;&gt;
@@ -4217,7 +4201,7 @@ length
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;html&gt;
 &lt;body&gt;
 &lt;img src=&#34;../class/03-class_files/landslide.png&#34;&gt;
@@ -4245,7 +4229,7 @@ area
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 7em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;html&gt;
 &lt;body&gt;
 &lt;img src=&#34;../class/03-class_files/winner.png&#34;&gt;
@@ -4310,7 +4294,7 @@ visualization.&lt;/li&gt;
     &lt;p&gt;Encoding: &lt;strong&gt;none&lt;/strong&gt;&lt;/p&gt;
 &lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
   &lt;summary&gt;&lt;/summary&gt;
-  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:no-encoding&#34;&gt;&lt;/span&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:no-encoding&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/no-encoding.png&#34; alt=&#34;Encoding: *none*.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Encoding: &lt;em&gt;none&lt;/em&gt;.
@@ -4329,7 +4313,7 @@ Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its
     &lt;p&gt;Encoding: &lt;strong&gt;area&lt;/strong&gt;&lt;/p&gt;
 &lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
   &lt;summary&gt;&lt;/summary&gt;
-  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:area-encoding&#34;&gt;&lt;/span&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:area-encoding&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/area-encoding.png&#34; alt=&#34;Encoding: *area*.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: Encoding: &lt;em&gt;area&lt;/em&gt;.
@@ -4348,7 +4332,7 @@ Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its
     &lt;p&gt;Encoding: &lt;strong&gt;angle&lt;/strong&gt;&lt;/p&gt;
 &lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
   &lt;summary&gt;&lt;/summary&gt;
-  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:angle-encoding&#34;&gt;&lt;/span&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:angle-encoding&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/angle-encoding.png&#34; alt=&#34;Encoding: *tilt/angle*.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 7: Encoding: &lt;em&gt;tilt/angle&lt;/em&gt;.
@@ -4368,7 +4352,7 @@ Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its
     &lt;p&gt;Encoding: &lt;strong&gt;colour hue&lt;/strong&gt;&lt;/p&gt;
 &lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
   &lt;summary&gt;&lt;/summary&gt;
-  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:hue-encoding&#34;&gt;&lt;/span&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:hue-encoding&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/hue-encoding.png&#34; alt=&#34;Encoding: *colour hue*.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 8: Encoding: &lt;em&gt;colour hue&lt;/em&gt;.
@@ -4387,7 +4371,7 @@ Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its
     &lt;p&gt;Encoding: &lt;strong&gt;spatial region&lt;/strong&gt;&lt;/p&gt;
 &lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
   &lt;summary&gt;&lt;/summary&gt;
-  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:spatial-encoding&#34;&gt;&lt;/span&gt;
+  &lt;p&gt;&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:spatial-encoding&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/spatial-encoding.png&#34; alt=&#34;Encoding: *spatial region*.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 9: Encoding: &lt;em&gt;spatial region&lt;/em&gt;.
@@ -4409,7 +4393,7 @@ Isolate/select &lt;code&gt;3&lt;/code&gt; from the list of numbers and count its
 &lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; is the magnitude of the stimulus, for example, the absolute length of a line or area of a circle, &lt;span class=&#34;math inline&#34;&gt;\(R\)&lt;/span&gt; is the response, the perceived length and area, and &lt;span class=&#34;math inline&#34;&gt;\(_n\)&lt;/span&gt; is the power law exponent that varies with the type of stimulus. If there is a perfect linear mapping between the stimulus and response, &lt;span class=&#34;math inline&#34;&gt;\(_n\)&lt;/span&gt; is 1.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Stevens and Guirao (&lt;a href=&#34;#ref-stevens_subjective_1963&#34; role=&#34;doc-biblioref&#34;&gt;1963&lt;/a&gt;)&lt;/span&gt;’ experimental work involved varying the length of lines and areas of squares and deriving power functions for their perception. For length, an exponent of ~1.0 was estimated; for area an exponent of 0.7. So whilst variation in length is accurately perceived, we &lt;em&gt;underestimate&lt;/em&gt; the size of areas as they increase. &lt;span class=&#34;citation&#34;&gt;Flannery (&lt;a href=&#34;#ref-flannery_subjective_1963&#34; role=&#34;doc-biblioref&#34;&gt;1971&lt;/a&gt;)&lt;/span&gt;’s work, which was concerned with the perception of quantities in graduated point maps, estimated an exponent of 0.87 for the perception of circle size.&lt;/p&gt;
 &lt;p&gt;Experimental findings vary and so these models of human perception are also subject to variation. Nevertheless, corrections can be applied. In cartography a &lt;a href=&#34;https://makingmaps.net/2007/08/28/perceptual-scaling-of-map-symbols/&#34;&gt;Flannery compensation&lt;/a&gt; is used when representing quantities with area.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:perception&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:perception&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/perception.png&#34; alt=&#34;Differences in power law exponents for the perception of variation in length and area.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 10: Differences in power law exponents for the perception of variation in length and area.
@@ -4536,7 +4520,7 @@ data_gb %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;plot-distributions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Plot distributions&lt;/h3&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:histogram&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:histogram&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/hist.png&#34; alt=&#34;Histograms of Swing variable.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 11: Histograms of Swing variable.
@@ -4572,7 +4556,7 @@ Figure 11: Histograms of Swing variable.
 &lt;/p&gt;
 &lt;div id=&#34;faceting-by-region&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Faceting by region&lt;/h4&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:hist-region&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:hist-region&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/hist-region.png&#34; alt=&#34;Histograms of Swing variable, grouped by region.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 12: Histograms of Swing variable, grouped by region.
@@ -4583,7 +4567,7 @@ Figure 12: Histograms of Swing variable, grouped by region.
 &lt;/div&gt;
 &lt;div id=&#34;plot-ranksmagnitudes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Plot ranks/magnitudes&lt;/h3&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:bars&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:bars&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/bars.png&#34; alt=&#34;Plots of vote shares by party.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 13: Plots of vote shares by party.
@@ -4612,7 +4596,7 @@ Figure 13: Plots of vote shares by party.
 &lt;/p&gt;
 &lt;div id=&#34;faceting-by-region-1&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Faceting by region&lt;/h4&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:bars-region&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:bars-region&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/bars-region.png&#34; alt=&#34;Plots of vote shares by party and region.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 14: Plots of vote shares by party and region.
@@ -4671,7 +4655,7 @@ temp_party_shares_region %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;plot-relationships&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Plot relationships&lt;/h3&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:scatters-con&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:scatters-con&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/scatters-con.png&#34; alt=&#34;Plots of 2019 versus 2017 vote shares.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 15: Plots of 2019 versus 2017 vote shares.
@@ -4712,7 +4696,7 @@ Figure 15: Plots of 2019 versus 2017 vote shares.
 &lt;/div&gt;
 &lt;div id=&#34;plot-geography&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Plot geography&lt;/h3&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:map-winners&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:map-winners&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/map-winners.png&#34; alt=&#34;Choropleth of elected parties in 2019 General Election.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 16: Choropleth of elected parties in 2019 General Election.
@@ -4752,7 +4736,7 @@ data_gb %&amp;gt;%
 &lt;li&gt;&lt;strong&gt;Coordinates&lt;/strong&gt;: &lt;code&gt;coord_sf&lt;/code&gt; – we set the coordinate system (CRS) explicitly. In this case &lt;a href=&#34;https://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/&#34;&gt;OS British National Grid&lt;/a&gt;. More on this later in the course.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Setting&lt;/strong&gt;: I’ve subtly introduced light grey (&lt;code&gt;colour=&#34;#eeeeee&#34;&lt;/code&gt;) and thin (&lt;code&gt;size=0.01&lt;/code&gt;) constituency boundaries to the &lt;code&gt;geom_sf&lt;/code&gt; mark. On the map to the right outlines for regions are added as another &lt;code&gt;geom_sf&lt;/code&gt; layer.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:spoke-map&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:spoke-map&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/03-class_files/spoke-map.png&#34; alt=&#34;Map of Butler Con-Lab Swing in 2019 General Election.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 17: Map of Butler Con-Lab Swing in 2019 General Election.
@@ -4898,8 +4882,6 @@ gb &amp;lt;- data_gb %&amp;gt;%
       <guid>/class/02-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;../rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;../rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
@@ -5008,7 +4990,7 @@ Categories
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Nominal&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -5028,7 +5010,7 @@ entropy
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Ordinal&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -5053,7 +5035,7 @@ Measures
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Interval&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -5073,7 +5055,7 @@ Temperatures; years
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left; padding-left:  2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;width: 8em; &#34; indentlevel=&#34;1&#34;&gt;
 &lt;code&gt;Ratio&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
@@ -5770,7 +5752,7 @@ ny_trips &amp;lt;- read_fst(here(&amp;quot;data&amp;quot;, &amp;quot;ny_trips.fs
 ny_stations &amp;lt;- read_csv(here(&amp;quot;data&amp;quot;, &amp;quot;ny_stations.csv&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Notice that we use &lt;strong&gt;assignment&lt;/strong&gt; here (&lt;code&gt;&amp;lt;-&lt;/code&gt;) so that these data are loaded as objects and appear in the Environment pane of your RStudio window. An efficient description of data import with &lt;code&gt;read_csv()&lt;/code&gt; is also in &lt;a href=&#34;https://r4ds.had.co.nz/data-import.html&#34;&gt;Chapter 11&lt;/a&gt; of &lt;span class=&#34;citation&#34;&gt;Wickham and Grolemund (&lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;code&gt;ny_stations&lt;/code&gt; and &lt;code&gt;ny_trips&lt;/code&gt; are data frames, spreadsheet type representations containing observations in rows and variables in columns. Inspecting the layout of the stations data with &lt;code&gt;View(ny_stations)&lt;/code&gt; you will notice that the top line is the header and contains column (variable) names.
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:view-annotate&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:view-annotate&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/02-class_files/view.png&#34; alt=&#34;`ny_trips` and `ny_stations` as they appear when calling `View()`.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: &lt;code&gt;ny_trips&lt;/code&gt; and &lt;code&gt;ny_stations&lt;/code&gt; as they appear when calling &lt;code&gt;View()&lt;/code&gt;.
@@ -6141,7 +6123,7 @@ ny_temporal &amp;lt;- ny_trips %&amp;gt;%  # Take the ny_trips data frame.
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;In Figure &lt;a href=&#34;#fig:plot-temporal&#34;&gt;2&lt;/a&gt; below these derived data are plotted. The template contains &lt;code&gt;ggplot2&lt;/code&gt; code for creating the graphic. Don’t obsess too much on it – more on this next session. The plot demonstrates a familiar weekday-weekend pattern of usage. Trip frequencies peak in the morning and evening rush hours during weekdays and mid/late-morning and afternoon during weekends. This is consistent with typical travel behaviour. Notice though that the weekday afternoon peak is much larger than the morning peak. There are several speculative explanations for this and re-running the plot on &lt;code&gt;Subscriber&lt;/code&gt; users only may be instructive. A secondary observation is that whilst men and women share this overall pattern of usage, the relative number of trips taken by each day of week varies. Men make many more trips at peak times during the start of the week than they do later in the week. The same pattern does not appear for women. This is certainly something to follow up on, for example by collecting data over a longer period of time.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot-temporal&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-temporal&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/02-class_files/hod_dow.png&#34; alt=&#34;Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Line charts generated with &lt;code&gt;ggplot2&lt;/code&gt;. Plot data computed using &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;lubridate&lt;/code&gt;.
@@ -6241,7 +6223,7 @@ return all rows from x where there are not matching values in y, never duplicate
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot-dist&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-dist&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/02-class_files/dist.png&#34; alt=&#34;Histograms generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Histograms generated with &lt;code&gt;ggplot2&lt;/code&gt;. Plot data computed using &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;lubridate&lt;/code&gt;
@@ -6267,20 +6249,24 @@ Figure 3: Histograms generated with &lt;code&gt;ggplot2&lt;/code&gt;. Plot data 
 ##  8 ny3599             829 Franklin Ave &amp;amp; Empire Blvd
 ##  9 ny3521             793 Lenox Ave &amp;amp; W 111 St
 ## 10 ny2006             782 Central Park S &amp;amp; 6 Ave
-## # … with 948 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;All of the top 10 docking stations are either in parks, near parks or located along river promenades. This coupled with the fact that these trips occur in much greater relative number for casual than regular users (&lt;code&gt;Customer&lt;/code&gt; vs &lt;code&gt;Subscriber&lt;/code&gt;) is further evidence that these are valid trips.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;write-functions-of-your-own&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Write functions of your own&lt;/h4&gt;
-&lt;p&gt;Through most of the course we will be making use of functions written by others – mainly those developed for packages that form the &lt;code&gt;tidyverse&lt;/code&gt; and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. &lt;a href=&#34;https://r4ds.had.co.nz/functions.html&#34;&gt;Chapter 19&lt;/a&gt; of &lt;span class=&#34;citation&#34;&gt;Wickham and Grolemund (&lt;a href=&#34;#ref-wickham_r_2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.&lt;/p&gt;
-&lt;p&gt;Functions have three key characteristics:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;They are (usually) &lt;strong&gt;named&lt;/strong&gt; – the name should be expressive and communicate what the function does (we talk about &lt;code&gt;dplyr&lt;/code&gt; &lt;strong&gt;verbs&lt;/strong&gt;).&lt;/li&gt;
-&lt;li&gt;They have brackets &lt;code&gt;&amp;lt;function()&amp;gt;&lt;/code&gt; usually containing &lt;strong&gt;arguments&lt;/strong&gt; – inputs which determine what the function does and returns.&lt;/li&gt;
-&lt;li&gt;Immediately followed by &lt;code&gt;&amp;lt;function()&amp;gt;&lt;/code&gt; are &lt;code&gt;{}&lt;/code&gt; used to contain the &lt;strong&gt;body&lt;/strong&gt; – in this is code that performs a distinct task, described by the function’s &lt;strong&gt;name&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Effective functions are &lt;strong&gt;short&lt;/strong&gt;, perform &lt;strong&gt;single&lt;/strong&gt; discrete operations and are &lt;strong&gt;intuitive&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;You will recall that in the &lt;code&gt;ny_trips&lt;/code&gt; table there is a variable called &lt;code&gt;birth_year&lt;/code&gt;. From this we can derive cyclists’ approximate age. Below I have written a function &lt;code&gt;get_age()&lt;/code&gt; for doing this. The function expects two &lt;strong&gt;arguments&lt;/strong&gt;: &lt;code&gt;yob&lt;/code&gt; – a year of birth as type &lt;code&gt;chr&lt;/code&gt;; &lt;code&gt;yref&lt;/code&gt; – a reference year. In the &lt;strong&gt;body&lt;/strong&gt;, &lt;code&gt;lubridate&lt;/code&gt;’s &lt;code&gt;as.period&lt;/code&gt; function is used to calculate the time in years that elapsed, the value that the function &lt;strong&gt;returns&lt;/strong&gt;. Once defined, and loaded into the session by being executed, it can be used (as below).&lt;/p&gt;
+## # … with 948 more rows
+````
+
+All of the top 10 docking stations are either in parks, near parks or located along river promenades. This coupled with the fact that these trips occur in much greater relative number for casual than regular users (`Customer` vs `Subscriber`) is  further evidence that these are valid trips.
+
+#### Write functions of your own
+
+Through most of the course we will be making use of functions written by others -- mainly those developed for packages that form the `tidyverse` and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. [Chapter 19](https://r4ds.had.co.nz/functions.html) of @wickham_r_2017 presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.
+
+Functions have three key characteristics:
+
+1. They are (usually) **named**  -- the name should be expressive and communicate what the function does (we talk about `dplyr` **verbs**).
+2.  They have brackets `&amp;lt;function()&amp;gt;` usually containing **arguments** -- inputs which determine what the function does and returns.
+3.  Immediately followed by `&amp;lt;function()&amp;gt;` are `{}` used to contain the **body** -- in this is code that performs a distinct task, described by the function&amp;#39;s **name**.
+
+Effective functions are **short**, perform **single** discrete operations and are **intuitive**.
+
+You will recall that in the `ny_trips` table there is a variable called `birth_year`. From this we can derive cyclists&amp;#39; approximate age. Below I have written a function `get_age()` for doing this. The function expects two **arguments**: `yob` -- a year of birth as type `chr`; `yref` -- a reference year. In the **body**, `lubridate`&amp;#39;s `as.period` function is used to calculate the time in years that elapsed, the value that the function **returns**. Once defined, and loaded into the session by being executed, it can be used (as below).&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Function for calculating time elapsed between two dates in years (age).
 get_age &amp;lt;- function(yob, yref) {
     period &amp;lt;- lubridate::as.period(lubridate::interval(yob, yref),unit = &amp;quot;year&amp;quot;)
@@ -6290,10 +6276,13 @@ get_age &amp;lt;- function(yob, yref) {
 ny_trips &amp;lt;- ny_trips %&amp;gt;% # Take the ny_trips data frame.
   mutate(
     age=get_age(as.POSIXct(birth_year, format=&amp;quot;%Y&amp;quot;), as.POSIXct(&amp;quot;2020&amp;quot;, format=&amp;quot;%Y&amp;quot;)) # Calculate age from birth_date.
-    )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can use the two new derived variables – distance travelled and age – in our analysis. In Figure &lt;a href=&#34;#fig:plot-speeds&#34;&gt;4&lt;/a&gt;, we explore how &lt;strong&gt;approximate&lt;/strong&gt; travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average “speed” calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out “utility” from “leisure” trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by &lt;code&gt;Subscriber&lt;/code&gt; cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I’ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea.&lt;/p&gt;
-&lt;p&gt;There are nevertheless some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &amp;gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals. Certainly Figure &lt;a href=&#34;#tab:variable-types&#34;&gt;1&lt;/a&gt; is an interesting data graphic – and the type of exploratory analysis demonstrated here, using &lt;code&gt;dplyr&lt;/code&gt; functions, is most definitely consistent with that identified in the previous session when introducing &lt;em&gt;Social Data Science&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot-speeds&#34;&gt;&lt;/span&gt;
+    )
+````
+
+We can use the two new derived variables -- distance travelled and age --  in our analysis. In Figure \@ref(fig:plot-speeds), we explore how **approximate** travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average &amp;quot;speed&amp;quot; calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out &amp;quot;utility&amp;quot; from &amp;quot;leisure&amp;quot; trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by `Subscriber` cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I&amp;#39;ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea.
+
+There are nevertheless some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &amp;gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals. Certainly Figure \@ref(tab:variable-types) is an interesting data graphic -- and the type of exploratory analysis demonstrated here, using `dplyr` functions, is most definitely consistent with that identified in the previous session when introducing *Social Data Science*.&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:plot-speeds&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/02-class_files/speeds.png&#34; alt=&#34;Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Line charts generated with &lt;code&gt;ggplot2&lt;/code&gt;. Plot data computed using &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;lubridate&lt;/code&gt;
@@ -6421,8 +6410,6 @@ untidy_wide %&amp;gt;%
       <guid>/class/01-class/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
-&lt;link href=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -6511,7 +6498,7 @@ untidy_wide %&amp;gt;%
 &lt;p&gt;Let’s develop this idea by asking &lt;strong&gt;why data visualizations are used in the first place&lt;/strong&gt;. In her book &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;, Tamara &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; considers how humans and computers interface in the decision-making process. She makes the point that data visualization is ultimately about connecting people with data in order to make decisions – or to install humans in a ‘decision-making-loop’. There are occasionally decision-making loops that are entirely computational and where an automated solution exists and is trusted. However, most require some form of human intervention.&lt;/p&gt;
 &lt;p&gt;The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is &lt;a href=&#34;https://en.wikipedia.org/wiki/Anscombe%27s_quartet&#34;&gt;Anscombe’s quartet&lt;/a&gt;. Here, &lt;span class=&#34;citation&#34;&gt;Anscombe (&lt;a href=&#34;#ref-anscombe_graphs_1973&#34; role=&#34;doc-biblioref&#34;&gt;1973&lt;/a&gt;)&lt;/span&gt; presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let’s say that they are the weight and height of independent samples taken from a population of postgraduate students studying Data Science.&lt;/p&gt;
 &lt;p&gt;Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical – they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we’d expect taller students to be heavier. Given these statistical summaries we can be assured that we are drawing samples from the same population of (Data Science) students.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:anscombe-data&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:anscombe-data&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/01-class_files/anscombe_data.png&#34; alt=&#34;Data from Anscombe&#39;s quartet&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Data from Anscombe’s quartet
@@ -6519,7 +6506,7 @@ Figure 1: Data from Anscombe’s quartet
 &lt;/div&gt;
 &lt;p&gt;Laying out the data in a meaningful way, horizontally according to &lt;em&gt;weight&lt;/em&gt; (&lt;em&gt;x&lt;/em&gt;) and vertically according to the &lt;em&gt;height&lt;/em&gt; (&lt;em&gt;y&lt;/em&gt;) to form a scatterplot, we quickly see that whilst these data contain the same statistical properties they are very different. Only &lt;code&gt;dataset #1&lt;/code&gt; now looks plausible if it were truly a measure of weights and heights drawn from a population of students.&lt;/p&gt;
 &lt;p&gt;Anscombe’s is a deliberately contrived example&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;, but there are real cases of important structure being missed, leading to poorly specified models and potentially faulty claims.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:anscombe-plot&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:anscombe-plot&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/01-class_files/anscombe.png&#34; alt=&#34;Plots of Anscombe&#39;s quartet&#34;  /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Plots of Anscombe’s quartet
@@ -6603,7 +6590,7 @@ Figure 2: Plots of Anscombe’s quartet
 &lt;/div&gt;
 &lt;div id=&#34;open-the-rstudio-ide&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Open the RStudio IDE&lt;/h3&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:rstudio-annotate&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:rstudio-annotate&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/01-class_files/rstudio_annotate.png&#34; alt=&#34;The RStudio IDE&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: The RStudio IDE
@@ -6697,7 +6684,7 @@ x_root &amp;lt;- sqrt(x_2)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;TEXT - incorporated throughout to document and comment on your analysis.&lt;/li&gt;
 &lt;li&gt;CODE chunks - containing discrete that are to be run when the .Rmd file is typeset or &lt;em&gt;knit&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:rmarkdown-annotate&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:rmarkdown-annotate&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/01-class_files/rmarkdown_annotate.png&#34; alt=&#34;The anatomy of R Markdown&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: The anatomy of R Markdown
@@ -6778,7 +6765,7 @@ get_radians &amp;lt;- function(degrees) {
 &lt;p&gt;Throughout this course we will use project-oriented workflows. This is where all files pertaining to a data analysis – data, code and outputs – are organised from a single root folder and where &lt;em&gt;file path discipline&lt;/em&gt; is used such that all paths are relative to the project’s root folder (see &lt;a href=&#34;https://rstats.wtf/project-oriented-workflow.html&#34;&gt;Bryan &amp;amp; Hester 2020&lt;/a&gt;). You can imagine that this sort of self-contained project set-up is necessary for achieving reproducibility of your research. It allows anyone to take a project and run it on their own machines without having to make any adjustments.&lt;/p&gt;
 &lt;p&gt;You might have noticed that when you open RStudio it automatically &lt;em&gt;points to&lt;/em&gt; a working directory, likely the home folder for your local machine, denoted with &lt;code&gt;~/&lt;/code&gt; in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the &lt;code&gt;setwd(&amp;lt;path-to-your-project&amp;gt;)&lt;/code&gt; function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.&lt;/p&gt;
 &lt;p&gt;RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:rstudio-project&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:rstudio-project&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;../class/01-class_files/rstudio_project.png&#34; alt=&#34;Creating an RStudio Project&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Creating an RStudio Project

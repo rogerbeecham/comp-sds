@@ -50,6 +50,8 @@ Objectives | Datasets -- Contituency-level Leave voting
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sua0xDCf8MA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+The Science Reform movement argues that data analysis be separated into two discrete phases -- Exploratory Data Analysis (EDA) and Confirmatory Data Analysis (CDA) -- and that it is only through the latter that statistical findings are claimed using out-of-sample hypothesis tests. Whilst this formulation may address issues of data fishing, it may not always lead to strong theory and knowledge development. It is not well-suited -- and rarely seen -- in geographical analysis research settings. The talk proposes and implements a framework for an enlarged EDA that crucially deploys techniques to help guard against false discovery in EDA.
+
 ???
 
 Fundamenrals :
