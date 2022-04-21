@@ -1,8 +1,8 @@
 ---
 title: "Model building 2"
 linktitle: "7: Model building 2"
-date: "2021-08-17"
-class_date: "2021-08-17"
+date: "2022-08-16"
+class_date: "2022-08-16"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl

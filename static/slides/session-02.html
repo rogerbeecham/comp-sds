@@ -16,56 +16,108 @@ class: center, middle, title-slide
 # Data fundamentals: Describe, wrangle, tidy
 ### Roger Beecham
 ### <p>10 Aug 2021</p>
-<a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a>
+<p><a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a></p>
 
 ---
 
 
 
 
-## Conceptual Element
+???
+Review objectives --
+* vocab important -- determines the operations that we can perform.
+* vocab important sds -- new data, work out its structure.
+* tidyverse -- end up coming up with analysis templates
+* bikedata and citibike -- loading data for the first time; exploring usefulness for cycling research -- show data
+* short on conceptual; large on technical
 
-.small-font[
-1. The vocabulary used to describe data
 
-2. Tidy Data (Wickham 2014) -- its characteristics and importance for SDS
+---
+
+
+## Data structure
+
+#### `data frame` | `tibble`
+
+&lt;img src = "img/data-structure.png", width = 70%, style = "position:relative; top: 10%; left: 0%;"&gt;&lt;/img&gt;
+
+???
+
+spreadsheet like representations:
+*  rows are observations (case/record)
+*  columns are variables
+* organising not alwats eady -- Tidy
+*  Each variable (column) in a data frame is a vector that must be of equal length
+* Missing - `NA`
+* `list-col`
+
+
+---
+
+
+## Stevens levels of measurement
+
+--
+
+.xtiny-font[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Measurement &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Example &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Operators &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Midpoint &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Dispersion &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Categories&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Non-orderable categories &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Political parties; street names &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; =  ≠ &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; mode &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; entropy &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Orderable categories &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Terrorism threat levels &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | &amp;lt;&amp;gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | median &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | percentile &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | +  - &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | mean &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | Counts &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Distances; prices &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | × ÷ &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | mean &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 ]
 
 
----
+???
+Stevens's typology  for describing data (Stevens 1946 -- *Science*)
 
-
-## Data Fundamentals
-
-
-&lt;a href="www.rstudio.com/resources/cheatsheets/"&gt;
-&lt;img src = "img/data1.png", width = 45%, style = "position:absolute; top: 25%; left: 8%;"&gt;&lt;/img&gt;
-&lt;img src = "img/data2.png", width = 45%, style = "position:absolute; top: 25%; left: 48%;"&gt;&lt;/img&gt;
-&lt;/a&gt;
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-.small-font[
-[`www.rstudio.com/resources/cheatsheets/`](https://www.rstudio.com/resources/cheatsheets/)
-]
----
-
-## Data Fundamentals
-
-
-
-&lt;img src = "img/data1.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"&gt;&lt;/img&gt;
+Categories and Measures.
 
 ---
 
-
-## Data Fundamentals
-
-
-
-&lt;img src = "img/data2.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"&gt;&lt;/img&gt;
-
----
 
 ## Stevens levels of measurement
 
@@ -73,12 +125,12 @@ class: center, middle, title-slide
 &lt;table&gt;
  &lt;thead&gt;
   &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Measurement &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Example &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Operators &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Midpoint &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Dispersion &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Measurement &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Example &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Operators &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Midpoint &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Dispersion &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
@@ -101,9 +153,67 @@ class: center, middle, title-slide
   &lt;/tr&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | +  - &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | mean &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | Counts &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Distances; prices &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | × ÷ &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | mean &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+
+
+
+---
+
+## Stevens levels of measurement
+
+.xtiny-font[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Measurement &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Example &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Operators &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Midpoint &lt;/th&gt;
+   &lt;th style="text-align:left;color: grey !important;"&gt; Dispersion &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Categories&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Non-orderable categories &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Political parties; street names &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; =  ≠ &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; mode &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; entropy &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Orderable categories &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Terrorism threat levels &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | &amp;lt;&amp;gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | median &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | percentile &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
    &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Numeric measurements &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Temperatures; years &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | +  - &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | mean &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | variance &lt;/td&gt;
@@ -120,6 +230,11 @@ class: center, middle, title-slide
 &lt;/table&gt;
 ]
 
+
+???
+
+Need to describe data in a consistent way.
+
 ---
 
 
@@ -127,50 +242,67 @@ class: center, middle, title-slide
 ## Stevens levels of measurement
 
 .xtiny-font[
-&lt;div class="figure"&gt;
-&lt;img src="../class/02-class_files/dist.png" alt="Histograms generated with ggplot2. Plot data computed using dplyr and lubridate" width="70%" /&gt;
-&lt;p class="caption"&gt;Histograms generated with ggplot2. Plot data computed using dplyr and lubridate&lt;/p&gt;
-&lt;/div&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Measurement &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Example &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Operators &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Midpoint &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Dispersion &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Categories&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Non-orderable categories &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Political parties; street names &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; =  ≠ &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; mode &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; entropy &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Orderable categories &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Terrorism threat levels &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | &amp;lt;&amp;gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | median &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | percentile &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | +  - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | mean &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | variance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; ... | Counts &lt;/td&gt;
+   &lt;td style="text-align:left;color: grey !important;"&gt; Distances; prices &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | × ÷ &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | mean &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ... | variance &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 ]
+
+
 ???
 
-E.g. with data graphics --
-
-
+Constrain operations that can be performed.
 
 ---
 
-## Stevens levels of measurement
-.xtiny-font[
-&lt;div class="figure"&gt;
-&lt;img src="../class/02-class_files/speeds.png" alt="Line charts generated with ggplot`. Plot data computed using dplyr and lubridate" width="70%" /&gt;
-&lt;p class="caption"&gt;Line charts generated with ggplot`. Plot data computed using dplyr and lubridate&lt;/p&gt;
-&lt;/div&gt;
-]
-???
-
-E.g. with data graphics --
-
-
-
----
-
 
 ## Stevens levels of measurement
 
-.xtiny-font[
-&lt;div class="figure"&gt;
-&lt;img src="../class/02-class_files/hod_dow.png" alt="Line charts generated with ggplot2. Plot data computed using dplyr and lubridate." width="70%" /&gt;
-&lt;p class="caption"&gt;Line charts generated with ggplot2. Plot data computed using dplyr and lubridate.&lt;/p&gt;
-&lt;/div&gt;
-]
-???
-
-E.g. with data graphics -- for example in this session. Summarise distribution on quantitative variable (time of day). Though this is a cyclic variable so hour of day necessary
-
----
-
-## Stevens levels of measurement
+.tiny-font[Object types in `R`:]
 
 .xtiny-font[
 &lt;table&gt;
@@ -212,7 +344,97 @@ E.g. with data graphics -- for example in this session. Summarise distribution o
 ---
 
 
+## Stevens levels of measurement
+
+
+.tiny-font[
+* dataset: [Citibike OD trip data](https://www.citibikenyc.com/system-data)
+* variable: `trip_distance` | `user_type`
+* measurement: `ratio` | `nominal`
+]
+
+--
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/02-class_files/dist.png" alt="Histograms generated with ggplot2. Plot data computed using dplyr and lubridate" width="70%" /&gt;
+&lt;p class="caption"&gt;Histograms generated with ggplot2. Plot data computed using dplyr and lubridate&lt;/p&gt;
+&lt;/div&gt;
+]
+???
+
+So we could also calculate the mean and median for each of these, compare them through subtraction and also division -- how many times greater is trip dist for &gt; versus ?. Also variation.
+
+Notice that `subscriber` and `customer` are variables measured at category level.
+
+
+
+
+
+
+---
+
+## Stevens levels of measurement
+
+.tiny-font[
+* dataset: Citibike OD trip data
+* variable: `trip_speed` | `user_age_band` | `user_sex` | `trip_distance`
+* measurement: `ratio` | `ordinal` | `nominal` | `ordinal`
+]
+
+--
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/02-class_files/speeds.png" alt="Line charts generated with ggplot`. Plot data computed using dplyr and lubridate" width="65%" /&gt;
+&lt;p class="caption"&gt;Line charts generated with ggplot`. Plot data computed using dplyr and lubridate&lt;/p&gt;
+&lt;/div&gt;
+]
+???
+
+E.g. with data graphics --
+
+
+
+
+---
+
+
+## Stevens levels of measurement
+
+
+.tiny-font[
+* dataset: Citibike OD trip data
+* variable: `trip_count` | `hod` | `user_sex` | `day_week`
+* measurement: `ratio` | `interval|cyclic ratio` | `nominal` | `ordinal`
+]
+
+--
+
+.xtiny-font[
+&lt;div class="figure"&gt;
+&lt;img src="../class/02-class_files/hod_dow.png" alt="Line charts generated with ggplot2. Plot data computed using dplyr and lubridate." width="65%" /&gt;
+&lt;p class="caption"&gt;Line charts generated with ggplot2. Plot data computed using dplyr and lubridate.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+???
+E.g. with data graphics -- for example in this session. Summarise distribution on quantitative variable (time of day). Though this is a cyclic variable so hour of day necessary
+
+---
+
+
 ## Tidy data
+
+
+???
+So that was *describing data*
+Next: how to represent/organise data.
+
+---
+
+## Tidy data
+
 
 &lt;img src = "img/data3.png", width = 50%, style = "position:absolute; top: 25%; left: 8%;"&gt;&lt;/img&gt;
 
@@ -249,6 +471,13 @@ E.g. with data graphics -- for example in this session. Summarise distribution o
 &lt;/tbody&gt;
 &lt;/table&gt;
 ]
+
+???
+Every cell can be unambiguously identified
+
+But not tidy -- as treatment class is spread across columns.
+
+Transpose: observations spread across columns.
 ---
 ## Tidy data
 
@@ -329,7 +558,7 @@ E.g. with data graphics -- for example in this session. Summarise distribution o
 ]
 
 ???
-dentify the **variables**:
+identify the **variables** and their **values**:
 
 1. `person`:  a categorical nominal variable which takes three values: John Smith, Jane Doe, Mary Johnson.
 2. `treatment`: a categorical nominal variable which takes values: a and b.
@@ -339,7 +568,7 @@ Each **observation** is then a test result returned for each combination of `per
 
 ---
 
-## Tidy data
+&lt;!-- ## Tidy data
 
 .xtiny-font[
 &lt;table&gt;
@@ -398,7 +627,7 @@ Each **observation** is then a test result returned for each combination of `per
 &lt;/tbody&gt;
 &lt;/table&gt;
 ]
----
+--- --&gt;
 
 ## Tidy data
 
@@ -521,33 +750,182 @@ Each **observation** is then a test result returned for each combination of `per
 &lt;/tbody&gt;
 &lt;/table&gt;
 ]
+???
+
+Common in social science use cases -- data entry.
+
+
 ---
 
-## Tidy data
+## Tidy data and `dplyr`
 
 
 
 &lt;img src = "img/transform1.png", width = 45%, style = "position:absolute; top: 25%; left: 8%;"&gt;&lt;/img&gt;
 &lt;img src = "img/transform2.png", width = 45%, style = "position:absolute; top: 25%; left: 48%;"&gt;&lt;/img&gt;
 
+???
+
+Once data are tidied ...
 
 ---
 
-## Tidy data
+## `dplyr`'s grammar of data manipulation
+
+.xtiny-font[
+&lt;table&gt;
+&lt;caption&gt;dplyr funcitions (verbs) for manipulating data frames.&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; function &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; filter() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Picks rows (observations) if their values match a specified criteria &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; arrange() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Reorders rows (observations) based on their values &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; select() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Picks a subset of columns (variables) by name (or name characteristics) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; rename() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Changes the name of columns in the data frame &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; mutate() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Adds new columns (or variables) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; group_by() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Chunks the dataset into groups for grouped operations &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; summarise() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Calculate single-row (non-grouped) or multiple-row (if grouped) summary values &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ..and more &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
 
 
-
-&lt;img src = "img/transform1.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"&gt;&lt;/img&gt;
 
 ---
 
-
-## Tidy data
-
+## `dplyr`'s grammar of data manipulation
 
 
-&lt;img src = "img/transform2.png", width = 53%, style = "position:absolute; top: 20%; left: 8%;"&gt;&lt;/img&gt;
+.pull-left[.small-font[
+1. Start with a data frame.
 
+2. Pass some arguments to the function which control what you do to the data frame.
+
+3. Return the updated data frame.
+]]
+
+.pull-right[
+.tiny-font[
+
+```r
+count(
+  data=ny_trips,
+  gender,
+  sort=TRUE
+  )
+#    gender       n
+# 1    male 1044621
+# 2  female  586361
+# 3 unknown  251291
+```
+]
+]
+
+???
+
+takes the gender variable from ny_trips, organises or groups the rows in the data frame according to its values (female | male | unknown), counts the rows and then orders the summarised output descending on the counts.
+
+
+
+---
+
+## `dplyr`'s grammar of data manipulation
+
+
+
+.tiny-font[
+
+```r
+ny_trips %&gt;% # Take the ny_trips data frame.
+
+  group_by(gender) %&gt;% # Group by gender.
+
+  summarise(count=n()) %&gt;% # Count the number of observations per group.
+
+  arrange(desc(count)) # Arrange the grouped and summarised (collapsed) rows according to count.
+
+
+## # A tibble: 3 x 2
+##  gender    count
+##  &lt;chr&gt;     &lt;int&gt;
+## 1 male    1044621
+## 2 female   586361
+## 3 unknown  251291
+```
+]
+
+
+???
+
+may also want to be more explicit in the way the data frame is grouped for computation.
+
+A common workflow is to combine group_by() and summarise(), and in this case arrange() to replicate the count() example
+
+---
+
+## Use `%&gt;%` for a layered grammar of manipulation
+
+.tiny-font[
+
+```r
+ny_trips %&gt;% # Take the ny_trips data frame.
+
+  filter(gender != "unknown") %&gt;% # Filter out rows with the value "unknown" on gender.
+
+  group_by(gender) %&gt;% # Group by gender.
+
+  summarise(count=n()) %&gt;% # Count the number of observations per group.
+
+  mutate(prop=count/sum(count)) %&gt;% # Add a new column called `prop`, divide the value in the row for the variable count by the sum of the count variable across all rows.
+
+  arrange(desc(count)) # Arrange on the count variable.
+
+
+## # A tibble: 2 x 3
+##  gender   count  prop
+##  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt;
+## 1 male   1044621 0.640
+## 2 female  586361 0.360
+```
+]
+
+
+???
+
+dplyr is most effective when its functions are chained together...see this later and in use of ggplot2
+
+Pipe for passing information in a prgram.
+
+Output of one set becomes input of another
 ---
 
 
@@ -560,8 +938,17 @@ Each **observation** is then a test result returned for each combination of `per
 
 3. Apply high-level functions in `dplyr` and `tidyr` for transforming data
 
-4. Create statistical graphics that expose structure in data fir cleaning purposes
+4. Create statistical graphics that expose structure in data for cleaning purposes
 ]
+
+
+???
+
+Demonstrate how to download and load the `.Rmd`
+Show architecture of file
+Data: `bikedata`, then pre-processed
+Leave to work through and then break-off to discuss.
+
 
 
 ---

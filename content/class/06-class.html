@@ -1,8 +1,8 @@
 ---
 title: "Model building 1: Expose, estimate, evaluate"
 linktitle: "6: Model building 1"
-date: "2021-08-16"
-class_date: "2021-08-16"
+date: "2022-08-15"
+class_date: "2022-08-15"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -21,8 +21,7 @@ editor_options:
 ---
 
 <!-- BLOGDOWN-HEAD -->
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <!-- /BLOGDOWN-HEAD -->
@@ -32,14 +31,16 @@ editor_options:
 <ul>
 <li><a href="#session-outcomes">Session outcomes</a></li>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#concepts">Concepts</a><ul>
+<li><a href="#concepts">Concepts</a>
+<ul>
 <li><a href="#quantifying-and-exploring-variation">Quantifying and exploring variation</a></li>
 <li><a href="#quantifying-and-exploring-co-variation">Quantifying and exploring co-variation</a></li>
 <li><a href="#modelling-for-co-variation">Modelling for co-variation</a></li>
 <li><a href="#extracting-and-representing-model-parameters">Extracting and representing model parameters</a></li>
 <li><a href="#exploring-bias">Exploring bias</a></li>
 </ul></li>
-<li><a href="#techniques">Techniques</a><ul>
+<li><a href="#techniques">Techniques</a>
+<ul>
 <li><a href="#import">Import</a></li>
 <li><a href="#transform">Transform</a></li>
 <li><a href="#model">Model</a></li>
@@ -68,7 +69,7 @@ editor_options:
 </div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>So far the analysis presented in this module has been very data-driven. We have demonstrated how, having <a href="/class/02-class/">described data</a> in a consistent way, heuristics around <a href="/class/03-class/">visual approaches and techniques</a> can be applied to usefully expose structure in datasets. The session on <a href="/class/04-class/">exploratory data analysis</a> involved some model building, but these were largely value-free models derived from contingency tables, based on few prior assumptions.</p>
+<p>So far the analysis presented in this course has been very data-driven. We have demonstrated how, having <a href="/class/02-class/">described data</a> in a consistent way, heuristics around <a href="/class/03-class/">visual approaches and techniques</a> can be applied to usefully expose structure in datasets. The session on <a href="/class/04-class/">exploratory data analysis</a> involved some model building, but these were largely value-free models derived from contingency tables, based on few prior assumptions.</p>
 <p>In the next two sessions we will work on a dataset with a more explicit, and theoretically-informed, motivation. We will explore <em>variation</em> in voting behaviour in the UK’s 2016 referendum on leaving the EU. You might remember that whilst there was a slight majority for Leave (51.9%), the vote varied between different parts of the country. And there were many theories and explanations offered around the time for why particular places voted the way they did – related to the demographic composition of those areas. We will explore whether the sorts of compositional demographic factors discussed – <a href="https://www.theguardian.com/politics/2016/jun/25/left-behind-eu-referendum-vote-ukip-revolt-brexit">left behind places</a> – vary systematically with area-level Leave voting. We will use a regression framework to model the relative effect of each of these compositional factors in structuring variation in the vote and visualization techniques to support estimation of model parameters and evaluation of model bias. Different from the previous sessions, the <a href="/class/06-class/#concepts-1/">Concepts</a> element is structured more as a narrated data analysis and the <a href="/class/06-class/#techniques-1/">Techniques</a> element more of a how-to for working with regression models in R.</p>
 <p>{{% callout note %}}
 This session assumes some basic familiarity with linear regression modelling. There are entire courses on the topic, so it’s not possible to cover the fundamentals in the next two sessions alone. For a clear and detailed overview, with excellent social science examples, I would recommend <span class="citation">Bartholomew et al. (<a href="#ref-bartholomew_analysis_2008" role="doc-biblioref">2008</a>)</span>.
@@ -79,7 +80,7 @@ This session assumes some basic familiarity with linear regression modelling. Th
 <div id="quantifying-and-exploring-variation" class="section level3">
 <h3>Quantifying and exploring variation</h3>
 <p>Variation is central to most data analysis, and certainly regression modelling: quantifying variation, exploring how it is structured and accounting for (or explaining) it using a combination of empirical data and prior theory/knowledge.</p>
-<p>In Figure <a href="#fig:map-uniform">1</a> is a map and bar chart displaying total variation in vote shares for Leave in Great Britain (GB), estimated at Parliamentary Constituency level <span class="citation">(see Hanretty <a href="#ref-hanretty_areal_2017" role="doc-biblioref">2017</a>)</span>. The values themselves are the difference in estimated vote shares from an expectation that the Leave vote for a constituency (<span class="math inline">\(y_{i}\)</span>), our <em>outcome</em> of interest, is the same as the national (GB) average of 51.9% (<span class="math inline">\(\bar{y}\)</span>). Although a slightly contrived formulation, we could express this as an intercept-only linear regression model, where <span class="math inline">\(\beta_{1}\)</span>, the estimated <strong>slope</strong> is ‘turned off’ (takes the value <span class="math inline">\(0\)</span>), and <span class="math inline">\(\beta_{0}\)</span>, the <strong>intercept</strong>, is <span class="math inline">\(\bar{y}\)</span>, the GB average vote share for Leave:</p>
+<p>In Figure <a href="#fig:map-uniform">1</a> is a map and bar chart displaying total variation in vote shares for Leave in Great Britain (GB), estimated at Parliamentary Constituency level <span class="citation">(see <a href="#ref-hanretty_areal_2017" role="doc-biblioref">Hanretty 2017</a>)</span>. The values themselves are the difference in estimated vote shares from an expectation that the Leave vote for a constituency (<span class="math inline">\(y_{i}\)</span>), our <em>outcome</em> of interest, is the same as the national (GB) average of 51.9% (<span class="math inline">\(\bar{y}\)</span>). Although a slightly contrived formulation, we could express this as an intercept-only linear regression model, where <span class="math inline">\(\beta_{1}\)</span>, the estimated <strong>slope</strong> is ‘turned off’ (takes the value <span class="math inline">\(0\)</span>), and <span class="math inline">\(\beta_{0}\)</span>, the <strong>intercept</strong>, is <span class="math inline">\(\bar{y}\)</span>, the GB average vote share for Leave:</p>
 <p><span class="math display">\[\begin{align*}
        y_{i}= \beta_{0} + \beta_{1} + \varepsilon_{i}
 \end{align*}\]</span></p>
@@ -91,14 +92,14 @@ This session assumes some basic familiarity with linear regression modelling. Th
 </ul>
 <p>How does this relate to the idea of characterising variation? The length and colour of each bar in Figure <a href="#fig:map-uniform">1</a> is scaled according to model <strong>residuals</strong>: estimates of the statistical errors (<span class="math inline">\(\hat{\varepsilon}_{i}\)</span>), the difference between <span class="math inline">\(y_{i}\)</span> (the observed value) and the <em>unobservable</em> expected value of the Leave vote in our dataset (<span class="math inline">\(\hat{y}_{i}\)</span>). The sum of these bar lengths (residuals) is therefore the total <strong>variance</strong> <span class="math inline">\((\frac{\sum({y_{i...n}-\bar{y}}^2}{n-1})\)</span> – variance that we later try to reduce, or explain, by updating our regression model to generate new expected values using information on the demographic composition of constituencies.</p>
 <p>Figure <a href="#fig:map-uniform">1</a> is similar to the maps that were <a href="https://www.theguardian.com/politics/2016/jun/24/eu-voting-map-lays-bare-depth-of-division-across-britain">published widely in press reports</a> in the aftermath of the vote, and demonstrates that there is indeed substantial variation in Leave voting between different parts of the country. The uniform model consistently underestimates Leave in Scotland and most of London. Outside of this, constituencies voting in smaller proportions than would be expected for Leave are distributed more in pockets around the country: the dark red dot with surrounding red area in the east of the country is Cambridge and Cambridgeshire, constituencies in Bristol (south west), Manchester and Liverpool (north west), Brighton (south), are also reasonably strong red.</p>
-<div class="figure" style="text-align: left"><span id="fig:map-uniform"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:map-uniform"></span>
 <img src="/class/06-class_files/map-uniform.png" alt="Residuals from uniform model comparing constituency Leave vote to GB average." width="90%" />
 <p class="caption">
 Figure 1: Residuals from uniform model comparing constituency Leave vote to GB average.
 </p>
 </div>
 <p>When <strong>evaluating</strong> the effectiveness of modelled values, there are various checks that can be performed. An obvious one here is wether there is bias in the residuals – whether they have any underlying structure that suggests that they are grouped in a way not captured by the model. Given the motivation behind our analysis, it is no surprise that there is a geographic pattern to the residuals in Figure <a href="#fig:map-uniform">1</a>, but also a histogram of the residuals (Figure <a href="#fig:hist-uniform">2</a>) shows a slight left skew. There are more constituencies with positive values than negative – the Leave vote is underestimated by the uniform model for 57% of constituencies – and certain constituencies with extreme negative values – the strongest vote for Leave was Boston and Skegness (76%) but the strongest for Remain was Hackney North and Stoke Newington (80%).</p>
-<div class="figure" style="text-align: left"><span id="fig:hist-uniform"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:hist-uniform"></span>
 <img src="/class/06-class_files/hist-uniform.png" alt="Histogram of residuals from uniform model comparing constituency Leave vote to GB average." width="90%" />
 <p class="caption">
 Figure 2: Histogram of residuals from uniform model comparing constituency Leave vote to GB average.
@@ -127,22 +128,22 @@ Census variable
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 degree-educated
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 professional occupations
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 younger adults
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 heavy industry
 </td>
 </tr>
@@ -152,22 +153,22 @@ heavy industry
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 not good health
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 white British/Irish
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 Christian
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 EU-born (not UK)
 </td>
 </tr>
@@ -177,25 +178,25 @@ EU-born (not UK)
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 own home
 </td>
 </tr>
 <tr>
-<td style="text-align:left; padding-left:  2em;" indentlevel="1">
+<td style="text-align:left;padding-left: 2em;" indentlevel="1">
 don’t own car
 </td>
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: left"><span id="fig:hist-expl"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:hist-expl"></span>
 <img src="/class/06-class_files/hist-expl.png" alt="Histograms of candidate explanatory variables measuring demographic composition of constituencies." width="100%" />
 <p class="caption">
 Figure 3: Histograms of candidate explanatory variables measuring demographic composition of constituencies.
 </p>
 </div>
 <p>To explore whether these demographics vary systematically with Leave voting in each constituency, Figure <a href="#fig:scatters">4</a> presents scatterplots from which the extent of linear association can be inferred. Each dot is a constituency, arranged on the x-axis according to value of each candidate explanatory variable and the y-axis according to the share of Leave vote. The scatterplots are faceted by explanatory variable and ordered left-to-right and top-to-bottom according to correlation coefficient. The variable most heavily correlated with Leave voting is that measuring levels of <em>degree</em> education: as the share of a constituency’s population educated at least to <em>degree-level</em> increases, the share of Leave vote in that constituency decreases. An association in the same direction, but to a lesser extent, is observed for variables representing similar concepts: <em>professional occupations</em>, <em>younger adults</em>, <em>EU-born</em>, <em>no-car</em> and the reverse for <em>Christian</em>, <em>not-good health</em> and <em>heavy industry</em>.</p>
-<div class="figure" style="text-align: left"><span id="fig:scatters"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:scatters"></span>
 <img src="/class/06-class_files/scatters.png" alt="Scatterplots of constituency Leave vote against candidate explanatory variables." width="100%" />
 <p class="caption">
 Figure 4: Scatterplots of constituency Leave vote against candidate explanatory variables.
@@ -203,7 +204,7 @@ Figure 4: Scatterplots of constituency Leave vote against candidate explanatory 
 </div>
 <p>{{% callout note %}}
 You will remember from introductory stats courses that that the correlation coefficient can be used to summarise the strength of linear association between two variables. It is a quantity that ranges from perfect negative correlation, -1 – as one value increases another decreases in the same proportion – to perfect positive correlation, +1 – as one value increases another increases in the same proportion. A value of 0 indicates no association – the values increase and decrease independently of each other.</p>
-<div class="figure" style="text-align: left"><span id="fig:correlations"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:correlations"></span>
 <img src="/class/06-class_files/correlations.png" alt="Scatterplots of synthetic bivariate data with extent of correlation coefficient systematically varied." width="100%" />
 <p class="caption">
 Figure 5: Scatterplots of synthetic bivariate data with extent of correlation coefficient systematically varied.
@@ -228,7 +229,7 @@ Figure 5: Scatterplots of synthetic bivariate data with extent of correlation co
 <p>There are different algorithms that can be used to estimate these parameters. Most obvious is ordinary least squares (OLS), which aims to minimise <span class="math inline">\(\sum{\hat{\varepsilon}_{i...n}}\)</span>, the sum of the (squared) residuals between the observed Leave vote in a constituency, <span class="math inline">\(y_{i}\)</span>, and that expected, <span class="math inline">\(\hat{y_{i}}\)</span>, given the association with the <em>degree-educated</em> explanatory variable <span class="math inline">\(d_{i1}\)</span>.</p>
 <p>To explore the associations further, we could update the scatterplots with regression lines, fit via OLS, modelling the Leave vote separately as a linear function of each explanatory variable. As well as the regression line, observations are now coloured according to the size and direction of their residuals. The plots are also annotated according to the coefficient of determination (<span class="math inline">\(R^2\)</span>) – the proportion of the total constituency-level variation in the Leave vote explained by each model formulation. This tells us how much better than the uniform model, which captures the total variation (Figure <a href="#fig:map-uniform">1</a>), is each of the single variable explanatory models.</p>
 <p>Colouring dots representing constituencies by residuals is instructive. In most of the scatterplots there seems to be a grouping of large negative residuals (dark red) where, after taking into account the association between Leave voting and demographics across all constituencies in GB, the Leave vote is consistently <em>underrepresented</em>. You might be able to guess at where these are located, certainly generating maps of these residuals may expose whether they are grouped in a particular way.</p>
-<div class="figure" style="text-align: left"><span id="fig:scatters-resids"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:scatters-resids"></span>
 <img src="/class/06-class_files/scatters-resids.png" alt="Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with regression lines." width="100%" />
 <p class="caption">
 Figure 6: Scatterplots of constituency Leave vote against candidate explanatory variables, annotated with regression lines.
@@ -243,11 +244,11 @@ Figure 6: Scatterplots of constituency Leave vote against candidate explanatory 
       y_{i}&amp;= \beta_{0} +\beta_{1}x_{i1} + ... + \beta_{k}x_{ik} + \varepsilon_{i}  \\
 \end{align*}\]</span></p>
 <p>So this results in <em>separate</em> <span class="math inline">\(\beta_{k}\)</span> coefficients for separate explanatory variables. These coefficients can be interpreted as the degree of association between the explanatory variable <span class="math inline">\(k\)</span> and the outcome variable, keeping all the other explanatory variables constant – or the distinct correlation between an explanatory variable <span class="math inline">\(k\)</span> and the outcome variable, net of the other correlated variables.</p>
-<!-- which allows us to isolate the distinct effect that a single variable has on the outcome. -->
+<p><!-- which allows us to isolate the distinct effect that a single variable has on the outcome. --></p>
 <p>In Figure <a href="#fig:plot-outputs">7</a> are regression coefficients (<span class="math inline">\(\beta_{k}\)</span>) from a multiple regression model with <em>degree-educated</em>, <em>no car</em>, <em>white</em>, <em>heavy industry</em>, <em>EU-born</em> and <em>not good health</em> selected as explanatory variables. Coefficients are reported as dots with estimates of uncertainty represented as lines, displaying 95% <a href="http://www.sumsar.net/blog/2013/12/an-animation-of-the-construction-of-a-confidence-interval/">confidence intervals</a>.
 <!-- the range of values the true (*unobservable*) coefficient is likely to take --></p>
 <p>Most variables’ coefficients are in the direction that would be expected given the associations in Figure <a href="#fig:scatters-resids">6</a>. Net of variation in the other compositional factors, increased levels of <em>degree education</em> in a constituency have the effect of reducing the Leave vote. The two exceptions are <em>EU-born</em> and <em>white</em>: after controlling for variation in the other demographic variables, increased proportions of residents identifying as <em>white</em> has the effect of reducing the Leave vote and increased proportions of residents that are <em>EU-born</em> has the effect of increasing the Leave vote. Since the confidence interval for <em>white</em> crosses zero, this coefficient is subject to much uncertainty. In the next session we will discuss some approaches to exploring whether these sorts of counter-intuitive effects are genuine or as a result of a poorly-specified model.</p>
-<div class="figure" style="text-align: left"><span id="fig:plot-outputs"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:plot-outputs"></span>
 <img src="/class/06-class_files/plot-outputs.png" alt="Output from multiple regression model of Leave vote by demographic composition of constituency." width="90%" />
 <p class="caption">
 Figure 7: Output from multiple regression model of Leave vote by demographic composition of constituency.
@@ -257,7 +258,7 @@ Figure 7: Output from multiple regression model of Leave vote by demographic com
 <strong>Assumptions</strong></p>
 <p>Again, you might remember that issues of multicollinearity, amongst other things, mean that variable selection in multiple regression requires a little thought. Ideally you want model specifications that are easy to interpret (without variable redundancy) and that explain variation in the outcome reasonably well but reliably. As explanatory variables are added, model fit can increase slightly or substantially, but will never decrease. A common scenario is that a model specified with many explanatory variables fits the data well, but contains coefficients that are inflated in magnitude and that likely vary between different model realisations. These problems are typically addressed in Social Science applications by judicious variable selection and computing coefficient <a href="https://en.wikipedia.org/wiki/Variance_inflation_factor">Variance Inflation Factors</a> (VIF). The variables here were selected using this <em>de facto</em> approach, but see <span class="citation">Beecham, Williams, and Comber (<a href="#ref-beecham_regionally_2020" role="doc-biblioref">2020</a>)</span> for an application of a common machine learning approach to automatic variable selection applied to (almost) the same dataset, and that could be used to explore the sorts of counter-intuitive directions in the coefficients for <em>EU-born</em> and <em>white</em> above.</p>
 <p><strong>Estimating uncertainty</strong></p>
-<p>Given the spirit of this module, you might have wondered about the reasonably abbreviated discussion of techniques for representing model outputs and their uncertainty estimates (via Confidence Intervals). I am deliberately reserving more involved coverage of this for <a href="">session 08</a>.
+<p>Given the spirit of this course, you might have wondered about the reasonably abbreviated discussion of techniques for representing model outputs and their uncertainty estimates (via Confidence Intervals). I am deliberately reserving more involved coverage of this for <a href="">session 08</a>.
 {{% /callout %}}</p>
 </div>
 <div id="exploring-bias" class="section level3">
@@ -267,9 +268,9 @@ Figure 7: Output from multiple regression model of Leave vote by demographic com
 <li><em>Spatial dependence</em> in <strong>variable values</strong> over space. We know that the geography of GB is quite socially distinctive, so it is reasonable to expect, for example, the range in variables like <em>heavy industry</em> and <em>white</em> to be bounded to economic regions and metropolitan-peripheral regional contexts.</li>
 <li><em>Spatial nonstationarity</em> in <strong>processes</strong> over space. It is possible that associations between variables might be grouped over space – that the associations vary for different parts of the country. For example, high levels of <em>EU-born</em> migration might affect political attitudes, and thus area-level voting, differently in different parts of a country.</li>
 </ul>
-<p>We can test for and characterise <a href="https://rspatial.org/raster/analysis/3-spauto.html">spatial autocorrelation</a> by performing a graphical inference test. a Map LineUp <span class="citation">(Beecham et al. <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">2017</a>; Wickham et al. <a href="#ref-wickham_inference_2010" role="doc-biblioref">2010</a>)</span>, against a null hypothesis of <em>complete spatial randomness</em> in residuals. Graphical LineUp tests are visual equivalents of test statistics. A plot of real data is hidden amongst a set of decoys generated under a null hypothesis. If the real can be correctly identified from the decoys, then this lends statistical credibility to the claim that the observed data are not consistent with the specified null <span class="citation">(Wickham et al. <a href="#ref-wickham_inference_2010" role="doc-biblioref">2010</a>)</span>. Graphical LineUp tests have been used in various domains, also to test regression assumptions <span class="citation">(Loy, Hofmann, and Cook <a href="#ref-loy_model_2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>We can test for and characterise <a href="https://rspatial.org/raster/analysis/3-spauto.html">spatial autocorrelation</a> by performing a graphical inference test. a Map LineUp <span class="citation">(<a href="#ref-beecham_maplineups_2017" role="doc-biblioref">Beecham et al. 2017</a>; <a href="#ref-wickham_inference_2010" role="doc-biblioref">Wickham et al. 2010</a>)</span>, against a null hypothesis of <em>complete spatial randomness</em> in residuals. Graphical LineUp tests are visual equivalents of test statistics. A plot of real data is hidden amongst a set of decoys generated under a null hypothesis. If the real can be correctly identified from the decoys, then this lends statistical credibility to the claim that the observed data are not consistent with the specified null <span class="citation">(<a href="#ref-wickham_inference_2010" role="doc-biblioref">Wickham et al. 2010</a>)</span>. Graphical LineUp tests have been used in various domains, also to test regression assumptions <span class="citation">(<a href="#ref-loy_model_2017" role="doc-biblioref">Loy, Hofmann, and Cook 2017</a>)</span>.</p>
 <p>The Map LineUp in Figure <a href="#fig:plot-lineup">8</a>, constructed by randomly permuting observed residuals around constituencies, demonstrates that there <em>is</em> obvious spatial (and <em>regional</em>) autocorrelation in residuals. In the next session, we will cover approaches to dealing with this – accounting for <em>spatial dependence</em> in <strong>values</strong> and exploring <em>spatial nonstationarity</em> in <strong>processes</strong>.</p>
-<div class="figure" style="text-align: left"><span id="fig:plot-lineup"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:plot-lineup"></span>
 <img src="/class/06-class_files/lineups.png" alt="Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies." width="100%" />
 <p class="caption">
 Figure 8: Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies.
@@ -335,7 +336,7 @@ summary(model)
 </div>
 <div id="tidy-models" class="section level3">
 <h3>Tidy models</h3>
-<p><a href="https://www.tidymodels.org/"><code>tidymodels</code></a>, and specifically the <a href="https://broom.tidymodels.org/"><code>broom</code></a> package, provides a useful set of functions for extracting model outputs in a format that adheres to tidy data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span> – e.g. as a data frame.</p>
+<p><a href="https://www.tidymodels.org/"><code>tidymodels</code></a>, and specifically the <a href="https://broom.tidymodels.org/"><code>broom</code></a> package, provides a useful set of functions for extracting model outputs in a format that adheres to tidy data <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span> – e.g. as a data frame.</p>
 <p>Some examples:</p>
 <pre class="r"><code># tidy() return estimated coefficients as a data frame
 tidy(model)
@@ -431,7 +432,7 @@ outputs %&gt;%
 </div>
 <div id="plot-residuals" class="section level3">
 <h3>Plot residuals</h3>
-<p>In order to explore spatial autocorrelation in residuals, we used a Map LineUp test <span class="citation">(Beecham et al. <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">2017</a>; Wickham et al. <a href="#ref-wickham_inference_2010" role="doc-biblioref">2010</a>)</span>. Using the sorts of functional programming techniques mentioned above, these tests are actually reasonably straightforward to construct.</p>
+<p>In order to explore spatial autocorrelation in residuals, we used a Map LineUp test <span class="citation">(<a href="#ref-beecham_maplineups_2017" role="doc-biblioref">Beecham et al. 2017</a>; <a href="#ref-wickham_inference_2010" role="doc-biblioref">Wickham et al. 2010</a>)</span>. Using the sorts of functional programming techniques mentioned above, these tests are actually reasonably straightforward to construct.</p>
 <p>First generate a model object and extract residuals from it, again making use of <code>nest()</code>, <code>map()</code> and <code>tidy()</code>:</p>
 <pre class="r"><code># Generate model object and extract residuals
 model_values &lt;- data_for_models %&gt;%
@@ -503,27 +504,27 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  -->
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-bartholomew_analysis_2008">
-<p>Bartholomew, David J., Fiona Steele, J Galbraith, and Irini Moustaki. 2008. <em>Analysis of Multivariate Social Science Data</em>. London, UK: CRC Press.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bartholomew_analysis_2008" class="csl-entry">
+Bartholomew, David J., Fiona Steele, J Galbraith, and Irini Moustaki. 2008. <em>Analysis of Multivariate Social Science Data</em>. London, <span>UK</span>: CRC Press.
 </div>
-<div id="ref-beecham_maplineups_2017">
-<p>Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. 2017. “Map Line-Ups: Effects of Spatial Structure on Graphical Inference.” <em>IEEE Transactions on Visualization &amp; Computer Graphics</em> 23 (1): 391–400.</p>
+<div id="ref-beecham_maplineups_2017" class="csl-entry">
+Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. 2017. <span>“Map Line-Ups: Effects of Spatial Structure on Graphical Inference.”</span> <em><span>IEEE</span> Transactions on Visualization &amp; Computer Graphics</em> 23 (1): 391–400.
 </div>
-<div id="ref-beecham_regionally_2020">
-<p>Beecham, R., N. Williams, and L. Comber. 2020. “Regionally-structured explanations behind area-level populism: An update to recent ecological analyses.” <em>PLOS One</em> 15 (3): e0229974.</p>
+<div id="ref-beecham_regionally_2020" class="csl-entry">
+Beecham, R., N. Williams, and L. Comber. 2020. <span>“<span class="nocase">Regionally-structured explanations behind area-level populism: An update to recent ecological analyses</span>.”</span> <em><span>PLOS One</span></em> 15 (3): e0229974.
 </div>
-<div id="ref-hanretty_areal_2017">
-<p>Hanretty, C. 2017. “Areal Interpolation and the Uk’s Referendum on Eu Membership.” <em>Journal of Elections, Public Opinion and Parties</em> 37 (4): 466–83.</p>
+<div id="ref-hanretty_areal_2017" class="csl-entry">
+Hanretty, C. 2017. <span>“Areal Interpolation and the UK’s Referendum on EU Membership.”</span> <em>Journal of Elections, Public Opinion and Parties</em> 37 (4): 466–83.
 </div>
-<div id="ref-loy_model_2017">
-<p>Loy, A., H. Hofmann, and D. Cook. 2017. “Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners.” <em>Journal of Computational and Graphical Statistics</em> 26 (3). Taylor &amp; Francis: 478–92. doi:<a href="https://doi.org/10.1080/10618600.2017.1330207">10.1080/10618600.2017.1330207</a>.</p>
+<div id="ref-loy_model_2017" class="csl-entry">
+Loy, A., H. Hofmann, and D. Cook. 2017. <span>“Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners.”</span> <em>Journal of Computational and Graphical Statistics</em> 26 (3). Taylor &amp; Francis: 478–92. doi:<a href="https://doi.org/10.1080/10618600.2017.1330207">10.1080/10618600.2017.1330207</a>.
 </div>
-<div id="ref-wickham_tidy_2014">
-<p>Wickham, H. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10): 1–23.</p>
+<div id="ref-wickham_tidy_2014" class="csl-entry">
+Wickham, H. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23.
 </div>
-<div id="ref-wickham_inference_2010">
-<p>Wickham, H., D. Cook, H. Hofmann, and A. Buja. 2010. “Graphical Inference for Infovis.” <em>IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis ’10)</em> 16 (6): 973–79.</p>
+<div id="ref-wickham_inference_2010" class="csl-entry">
+Wickham, H., D. Cook, H. Hofmann, and A. Buja. 2010. <span>“Graphical Inference for Infovis.”</span> <em>IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis ’10)</em> 16 (6): 973–79.
 </div>
 </div>
 </div>

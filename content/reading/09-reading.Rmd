@@ -1,8 +1,8 @@
 ---
 title: "Communication and storytelling"
 linktitle: "9: Communication and storytelling"
-date: "2021-08-19"
-class_date: "2021-08-19"
+date: "2022-08-18"
+class_date: "2022-08-18"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

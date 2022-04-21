@@ -1,8 +1,8 @@
 ---
 title: "Communication and storytelling"
 linktitle: "9: Communication and storytelling"
-date: "2021-08-19"
-class_date: "2021-08-19"
+date: "2022-08-18"
+class_date: "2022-08-18"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -45,7 +45,7 @@ By the end of this session you should gain the following **_practical skills_**:
 
 It is now taken-for-granted that we live in an evidence-based society in which data are deeply embedded in most domains and in how we approach most of the world's problems. This recognition has coincided with, amongst other things, the [open source movement](https://en.wikipedia.org/wiki/Open-source-software_movement) which has freed up access to, and technologies for working with, data. The response to Covid-19 is an excellent example. Enter [Covid19 github](https://bit.ly/2xO2Y5S) into a search and you’ll be confronted with hundreds of repositories demonstrating how data related to the pandemic can be collected, processed and analysed.
 
-This is exciting and feels very democratic. But there is responsibility amongst those constructing and sharing evidence-based arguments to do so with integrity; navigating the difficult tension between communicating a clear message -- necessarily reducing some of the complexity -- at the same time as acknowledging uncertainty. Those of you with an interest in these matters might follow [David Spiegelhalter](http://www.statslab.cam.ac.uk/~david/), who's job was created to support public communication of claims made from data, also [Tim Harford](https://timharford.com)'s excellent [More or Less](https://www.bbc.co.uk/programmes/b006qshd) series. In academia there has been a realisation within Information Visualization and Data Journalism of the role of narratives and storytelling in communicating with data [e.g. @henry_data_2018]. Different from the approach to visual data analysis taken in most of this module, this work recognises that there is not a single, optimum solution to any visualization problem that exposes the true picture/story -- no such formulation exists. But that careful design decisions must be made in light of data, audience and intended purpose.
+This is exciting and feels very democratic. But there is responsibility amongst those constructing and sharing evidence-based arguments to do so with integrity; navigating the difficult tension between communicating a clear message -- necessarily reducing some of the complexity -- at the same time as acknowledging uncertainty. Those of you with an interest in these matters might follow [David Spiegelhalter](http://www.statslab.cam.ac.uk/~david/), who's job was created to support public communication of claims made from data, also [Tim Harford](https://timharford.com)'s excellent [More or Less](https://www.bbc.co.uk/programmes/b006qshd) series. In academia there has been a realisation within Information Visualization and Data Journalism of the role of narratives and storytelling in communicating with data [e.g. @henry_data_2018]. Different from the approach to visual data analysis taken in most of this course, this work recognises that there is not a single, optimum solution to any visualization problem that exposes the true picture/story -- no such formulation exists. But that careful design decisions must be made in light of data, audience and intended purpose.
 
 In this session we will review some of this literature with a special focus on approaches to communicating Covid-19 case numbers.
 

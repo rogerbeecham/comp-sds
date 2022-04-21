@@ -23,7 +23,11 @@ library(knitr)
 library(kableExtra)
 ```
 
-## Conceptual Element
+???
+
+Objectives | Datasets -- Contituency-level Leave voting
+
+<!-- ## Conceptual Element
 
 .small-font[
 1. Recognise the **characteristics of effective data graphics**.
@@ -35,7 +39,7 @@ library(kableExtra)
 4. Be able to **select appropriate visual channels** given a data item’s measurement type.
 
 5. Appreciate how visual channels and evidence of their encoding effectiveness can be used to **evaluate data graphics**.
-]
+] -->
 
 
 ---
@@ -46,43 +50,46 @@ library(kableExtra)
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sua0xDCf8MA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+The Science Reform movement argues that data analysis be separated into two discrete phases -- Exploratory Data Analysis (EDA) and Confirmatory Data Analysis (CDA) -- and that it is only through the latter that statistical findings are claimed using out-of-sample hypothesis tests. Whilst this formulation may address issues of data fishing, it may not always lead to strong theory and knowledge development. It is not well-suited -- and rarely seen -- in geographical analysis research settings. The talk proposes and implements a framework for an enlarged EDA that crucially deploys techniques to help guard against false discovery in EDA.
 
+???
+
+Fundamenrals :
+* position on what vis is and should do
+* processes of creating and evaluating data graphics
+* vocabulary for this
+* using 2019 General Election
 ---
 
 ## Characteristics of effective data graphics
 
-.tiny-font[
-> Data graphics visually display measured quantities by means of the combined use of points, lines, a coordinate system, numbers, symbols, words, shading, and color.
->
-> Tufte 1983
-]
+???
 
-<br><br>
-
+Data vis is a varied field but effective data graphics have ...
 --
-.tiny-font[
+.small-font[
 * Represent complex datasets graphically to expose structure, connections and comparisons that could not be achieved easily via other means.
 ]
 
 --
-.tiny-font[
+.small-font[
 * Are data rich: present many numbers in a small space.
 ]
 
 --
 
-.tiny-font[
+.small-font[
 * Reveal patterns at several levels of detail: from broad overview to fine structure.
 ]
 
 --
 
-.tiny-font[
+.small-font[
 * Have elegance – emphasise dimensions of a dataset without extraneous details.
 ]
 
 --
-.tiny-font[
+.small-font[
 * Generate an aesthetic response that encourages people to engage with the data or question.
 ]
 
@@ -95,7 +102,7 @@ library(kableExtra)
 >
 > Tufte 1983
 ]
-
+--
 <br>
 
 .xtiny-font[
@@ -104,15 +111,31 @@ knitr::include_graphics("../class/03-class_files/trump_maps.png", error = FALSE)
 ```
 ]
 
+???
+
+Data vis is a careful thinking through of data you have -- its type -- how it ican be represented using the visual system -- and to support particular analysis tasks.
+
+Data - Visuals -- Tasks
+
 ---
 
 ## Grammar of Graphics
 
+--
 .xtiny-font[
 ```{r gog, echo=FALSE, fig.cap="Components of Wickham 2010's Layered Grammar of Graphics.", fig.align="left", out.width="50%"}
 include_graphics("../class/03-class_files/gog.png", error = FALSE)
 ```
 ]
+
+???
+Already you will notice that I am describing graphics in a consistent way.
+
+There are advantages of doing this.
+
+GoG -- written byWilkinson in late 1990s -- captures process of turning data into visuals.
+
+Graphics have this underlying structure -- levels.
 ---
 
 ## Grammar of Graphics
@@ -125,13 +148,64 @@ include_graphics("../class/03-class_files/gog-demo.png", error = FALSE)
 
 ---
 
+## Grammar of Graphics
+
+.xtiny-font[
+```{r gog-demo-1, echo=FALSE, fig.cap="Plots, grammars and associated ggplot2 specifications for the scatterplot.", out.width="70%"}
+include_graphics("../class/03-class_files/gog-demo-1.png", error = FALSE)
+```
+]
+
+---
+
+## Grammar of Graphics
+
+.xtiny-font[
+```{r gog-demo-2, echo=FALSE, fig.cap="Plots, grammars and associated ggplot2 specifications for the scatterplot.", out.width="70%"}
+include_graphics("../class/03-class_files/gog-demo-2.png", error = FALSE)
+```
+]
+
+---
+
+## Grammar of Graphics
+
+.xtiny-font[
+```{r gog-demo-3, echo=FALSE, fig.cap="Plots, grammars and associated ggplot2 specifications for the scatterplot.", out.width="70%"}
+include_graphics("../class/03-class_files/gog-demo-3.png", error = FALSE)
+```
+]
+
+---
+
+
 ## Marks and visual channels
 
+.small-font[
+> Effective data visualization design is concerned with representing data through **marks** and **visual channels** in a way that best conveys the properties of the data that are to be depicted.
+>
+> via Jo Wood
+]
+
+???
+
+Marks > geom
+Channels > aes
+Tableau and vega-lite
+Munzner
+
+---
+## Marks and visual channels
 .xtiny-font[
 ```{r munzner, echo=FALSE, fig.cap="Visual channels to which data items can be encoded, as they appear in Munzner 2014.", out.width="60%"}
 include_graphics("../class/03-class_files/munzner.png", error = FALSE)
 ```
 ]
+
+???
+
+Two categories > data type
+Some more effective than others
 ---
 
 ## Upstream evaluate
@@ -141,6 +215,11 @@ include_graphics("../class/03-class_files/munzner.png", error = FALSE)
 knitr::include_graphics("../class/03-class_files/trump_maps.png", error = FALSE)
 ```
 ]
+
+???
+We can use this to evaluate designs on their encoding effectiveness
+Table 2 of notes
+Also mention symbilisation
 
 ---
 
@@ -161,6 +240,11 @@ knitr::include_graphics("../class/03-class_files/angle-encoding.png", error = FA
 ```{r hue-encoding, echo=FALSE, out.width="30%"}
 knitr::include_graphics("../class/03-class_files/hue-encoding.png", error = FALSE)
 ```
+????
+Notes -- different tasks
+
+That certain of these take advantage of preattentive processing.
+
 
 ---
 
@@ -190,6 +274,11 @@ knitr::include_graphics("../class/03-class_files/perception.png", error = FALSE)
 .small-font[
 [`http://guessthecorrelation.com/`](http://guessthecorrelation.com/)
 ]
+
+???
+
+Precision with which we can judge correlation as it increases is non-linear.
+
 ---
 
 ## Technical Element

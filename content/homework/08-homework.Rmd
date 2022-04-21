@@ -1,8 +1,8 @@
 ---
 title: "Uncertainty analysis"
 linktitle: "8: Uncertainty analysis"
-date: "2021-08-18"
-class_date: "2021-08-18"
+date: "2022-08-17"
+class_date: "2022-08-17"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl

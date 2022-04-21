@@ -1,8 +1,8 @@
 ---
 title: "Visualization fundamentals"
 linktitle: "3: Visualization fundamentals"
-date: "2021-08-11"
-class_date: "2021-08-11"
+date: "2022-08-10"
+class_date: "2022-08-10"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -21,8 +21,7 @@ editor_options:
 ---
 
 <!-- BLOGDOWN-HEAD -->
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
 <h2>Contents</h2>
@@ -31,7 +30,8 @@ editor_options:
 <li><a href="#session-outcomes">Session Outcomes</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#task-1-describe-and-evaluate">Task 1: Describe and evaluate</a></li>
-<li><a href="#task-2-reproduce">Task 2: Reproduce</a><ul>
+<li><a href="#task-2-reproduce">Task 2: Reproduce</a>
+<ul>
 <li><a href="#histograms-faceted-by-region">Histograms faceted by region</a></li>
 <li><a href="#scatterplots-with-multiple-encodings">Scatterplots with multiple encodings</a></li>
 </ul></li>
@@ -55,14 +55,21 @@ editor_options:
 </div>
 <div id="task-1-describe-and-evaluate" class="section level2">
 <h2>Task 1: Describe and evaluate</h2>
-<div class="figure"><span id="fig:spoke-map"></span>
+<div class="figure"><span style="display:block;" id="fig:spoke-map"></span>
 <img src="/class/03-class_files/spoke-map.png" alt="Map of Butler Con-Lab Swing in 2019 General Election." width="100%" />
 <p class="caption">
 Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 </p>
 </div>
 <p>Complete the description table below identifying each <strong>data item</strong> that is encoded along with its <strong>measurement level</strong>, <strong>visual mark</strong> and <strong>visual channel</strong> and the effectiveness rank, according to <span class="citation">Munzner (<a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span>, of this encoding.</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="21%" />
+<col width="20%" />
+<col width="16%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Data item</th>
@@ -129,7 +136,7 @@ Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 <ul>
 <li><a href="https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots">Save your plot</a> as a <code>.png</code> file and insert the file as a Figure into your <code>.Rmd</code> document (<a href="https://rmd4sci.njtierney.com/figures-tables-captions-.html">guidance here</a>).</li>
 </ul>
-<div class="figure"><span id="fig:hist-region"></span>
+<div class="figure"><span style="display:block;" id="fig:hist-region"></span>
 <img src="/class/03-class_files/hist-region.png" alt="Histograms of Swing variable, grouped by region." width="100%" />
 <p class="caption">
 Figure 2: Histograms of Swing variable, grouped by region.
@@ -145,7 +152,7 @@ Figure 2: Histograms of Swing variable, grouped by region.
 <ul>
 <li><a href="https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots">Save your plot</a> as a <code>.png</code> file and insert the file as a Figure into your <code>.Rmd</code> document (<a href="https://rmd4sci.njtierney.com/figures-tables-captions-.html">guidance here</a>).</li>
 </ul>
-<div class="figure"><span id="fig:scatters-lab"></span>
+<div class="figure"><span style="display:block;" id="fig:scatters-lab"></span>
 <img src="/class/03-class_files/scatters-lab.png" alt="Plots of 2019 versus 2017 vote shares." width="100%" />
 <p class="caption">
 Figure 3: Plots of 2019 versus 2017 vote shares.
@@ -163,7 +170,7 @@ Figure 3: Plots of 2019 versus 2017 vote shares.
 <ul>
 <li><a href="https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots">Save your plot</a> as a <code>.png</code> file and insert the file as a Figure into your <code>.Rmd</code> document (<a href="https://rmd4sci.njtierney.com/figures-tables-captions-.html">guidance here</a>).</li>
 </ul>
-<div class="figure"><span id="fig:referendum-map"></span>
+<div class="figure"><span style="display:block;" id="fig:referendum-map"></span>
 <img src="/class/03-class_files/referendum-map.png" alt="Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB." width="100%" />
 <p class="caption">
 Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.
@@ -172,9 +179,9 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-munzner_visualization_2014">
-<p>Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-munzner_visualization_2014" class="csl-entry">
+Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.
 </div>
 </div>
 </div>

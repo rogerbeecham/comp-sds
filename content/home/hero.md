@@ -20,7 +20,7 @@ design:
     text_color_light: false
 
 cta_note:
-  label: August 2021<br>Essex Summer School
+  label: August 2022<br>Essex Summer School
 ---
 
-**ESS2021 3D**
+**ESS2022 3D**

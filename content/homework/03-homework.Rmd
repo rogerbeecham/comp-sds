@@ -1,8 +1,8 @@
 ---
 title: "Visualization fundamentals"
 linktitle: "3: Visualization fundamentals"
-date: "2021-08-11"
-class_date: "2021-08-11"
+date: "2022-08-10"
+class_date: "2022-08-10"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -36,7 +36,7 @@ By the end of this homework session you should be able to:
 
 ## Introduction
 
-This homework requires you to apply the concepts and skills developed in the class session on [visualization fundamentals](/class/03-class/). 
+This homework requires you to apply the concepts and skills developed in the class session on [visualization fundamentals](/class/03-class/).
 
 ## Task 1: Describe and evaluate
 

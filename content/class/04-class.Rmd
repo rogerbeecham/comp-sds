@@ -1,8 +1,8 @@
 ---
 title: "Exploratory data analysis: using colour and layout for comparison"
 linktitle: "4: Exploratory data analysis"
-date: "2021-08-12"
-class_date: "2021-08-12"
+date: "2022-08-11"
+class_date: "2022-08-11"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -256,7 +256,7 @@ Fundamental to EDA, and to the data graphics above, is the process of *compariso
 * *Direct encoding*: Computing some comparison values and encoding those values explicitly, for example the signed chi-scores in Figure \@ref(fig:borough-freqs-resids).
 
 
-Throughout this module you will generate data graphics that support comparison using each of these strategies. Table \@ref(tab:comparison-strategies) is a useful guide for their implementation in `ggplot2`.
+Throughout this course you will generate data graphics that support comparison using each of these strategies. Table \@ref(tab:comparison-strategies) is a useful guide for their implementation in `ggplot2`.
 
 
 ```{r comparison-strategies, echo=FALSE, out.width="100%"}

@@ -34,12 +34,6 @@ I assume that you have saved the data from the previous session Run the code blo
 url <- "https://www.roger-beecham.com/datasets/cons_outline.geojson"
 cons_outline <- st_read(url, crs=27700)
 
-# Collect outcome variable (from leave_votes_west table in parlitools)
-outcome <- leave_votes_west %>%
-  select(ons_const_id, constituency_name, leave=figure_to_use) %>%
-  inner_join(explanatory %>% select(ons_const_id, region)) %>%
-  mutate(gb_leave=.519, resid_unform=leave-gb_leave)
-
 # Collect explanatory variables (from census_11 table in parlitools)
 explanatory <- census_11 %>%
   transmute(
@@ -52,11 +46,19 @@ explanatory <- census_11 %>%
     not_good_health=health_fair+health_bad+health_very_bad, heavy_industry=industry_manufacturing+industry_transport
     )
 
+
+# Collect outcome variable (from leave_votes_west table in parlitools)
+outcome <- leave_votes_west %>%
+  select(ons_const_id, constituency_name, leave=figure_to_use) %>%
+  inner_join(explanatory %>% select(ons_const_id, region)) %>%
+  mutate(gb_leave=.519, resid_unform=leave-gb_leave)
+
+
 # Z-score transform explanatory variables.
 explanatory_z_scores <- explanatory %>%
   mutate(
     across(
-      .cols=c(younger:heavy_industry), .funs=~(.x-mean(.x))/sd(.x)
+      .cols=c(younger:heavy_industry), ~(.x-mean(.x))/sd(.x)
     )
   )
 

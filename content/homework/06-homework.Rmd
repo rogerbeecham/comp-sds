@@ -1,8 +1,8 @@
 ---
 title: "Model building 1"
 linktitle: "6: Model building 1"
-date: "2021-08-16"
-class_date: "2021-08-16"
+date: "2022-08-15"
+class_date: "2022-08-15"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -36,7 +36,7 @@ By the end of this homework session you should be able to:
 
 ## Introduction
 
-This homework requires you to apply the concepts and skills developed in the class session on [model building 1](/class/06-class/). 
+This homework requires you to apply the concepts and skills developed in the class session on [model building 1](/class/06-class/).
 
 ## Task 1: Calculate and plot
 

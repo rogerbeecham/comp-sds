@@ -102,14 +102,14 @@ instructor:
    Questions to do with the substantive aspects of the course should be directed to the &#35;general channel of the course Slack in the first instance. For matters such as absences, extensions, email me: r.j.beecham@leeds.ac.uk.
 
 course:
-  number: "ESS 2021 | 3D"
-  semester: "August 2021"
+  number: "ESS 2022 | 3D"
+  semester: "August 2022"
   days: "Mon - Fri"
   time: "1000 - 1330 BST"
   location: "ODL"
-  dates: "9th Aug - 21st Aug"
+  dates: "8th Aug - 19th Aug"
   github: "rogerbeecham/comp-sds"
-  copyrightYear: "2021"
+  copyrightYear: "2022"
 
 university:
   name: Essex Summer School

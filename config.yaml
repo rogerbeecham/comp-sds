@@ -1,10 +1,13 @@
 baseurl: "http://www.roger-beecham.com/comp-sds/"
 defaultContentLanguage: "en-uk"
 title: "Computational Methods for Social Data Science"
-theme: hugo-academic/wowchemy
 canonifyURLs: true
 relativeURLs: true
-
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^WC_
 # ------------------
 # Building options
 # ------------------
@@ -75,3 +78,5 @@ ignoreFiles:
   - _cache$
   - \.graffle$
   - \.pdf$
+
+theme: hugo-academic/wowchemy

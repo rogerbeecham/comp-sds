@@ -1,8 +1,8 @@
 ---
 title: "Exploring spatial networks"
 linktitle: "5: Exploring spatial networks"
-date: "2021-08-13"
-class_date: "2021-08-13"
+date: "2022-08-12"
+class_date: "2022-08-12"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -35,7 +35,7 @@ By the end of this homework session you should be able to:
 
 ## Introduction
 
-This homework requires you to apply the concepts and skills developed in the class session on [exploring spatial networks](/class/05-class/). 
+This homework requires you to apply the concepts and skills developed in the class session on [exploring spatial networks](/class/05-class/).
 
 ## Visualization interpretation challenge
 

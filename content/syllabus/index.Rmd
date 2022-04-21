@@ -69,15 +69,10 @@ It is understandable if this feels like a daunting prospect. The barrier to entr
 
 In order reduce the pain, I've tried to include within the course a balance of content between programming fundamentals, theoretical/conceptual learning and more procedural 'grunt-work' with datasets. I have also carefully considered and incorporated ideas from some of the really high quality [Resources](../useful) out there aimed at lowering the barrier to doing Data Science in `R`.
 
-In return, I expect you to:
-
-* **Read** all course materials
-* **Complete** the class session tasks, homework and coursework assignment
-* **Participate** in the discussion forum
 
 ## Slack
 
-A key mechanism through which you can **participate** is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the module that will maximise your learning. I have set up a course [Slack](https://comp-sds.slack.com), which should provide a useful mechanism for sharing information, resources and importantly posting and discussing `code`.
+A key mechanism through which you can **participate** is by contributing to the discussion forum. Engaging fully with this will help to foster a sort of collegiate atmosphere on the course that will maximise your learning. I have set up a course [Slack](https://comp-sds.slack.com), which should provide a useful mechanism for sharing information, resources and importantly posting and discussing `code`.
 
 If you've not used Slack before, then follow these pages on [getting started with Slack](https://slack.com/intl/en-gb/help/articles/218080037-Getting-started-for-new-members). You should post all substantive questions associated with the course to Slack. These will get answered. If you wish to discuss more personal matters around your completing the course, then send those directly to me via e-mail.
 
@@ -87,7 +82,7 @@ Create an account on the [comp-sds Slack](https://comp-sds.slack.com). If you ru
 
 ## Asking questions
 
-As many of you will be learning to program in R for the first time, you should expect to be baffled at times and to routinely encounter scary-looking `ERROR` messages. Counterintuitively, this is actually to be welcomed. You need to be making mistakes and hitting obstacles on a regular basis if you are to progress.
+As some of you will be learning to program in R for the first time, you should expect to be baffled at times and to routinely encounter scary-looking `ERROR` messages. Counterintuitively, this is actually to be welcomed. You need to be making mistakes and hitting obstacles on a regular basis if you are to progress.
 
 *How* you respond to these obstacles is important. In a face-to-face lab, the temptation when hitting a problem is to raise your hand, gesture towards your screen and have a demonstrator 'de-bug' for you. Whilst this may initially seem like an efficient solution, you risk learning very little if this is your only course of action.
 

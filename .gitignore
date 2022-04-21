@@ -4,6 +4,7 @@
 .Ruserdata
 blogdown/
 public/
+themes/
 .DS_Store
 *_cache/
 content/**/*.html

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Introduction: Computational Methods for Social Data Science</title>
+    <title>Computational Methods for Social Data Science</title>
     <meta charset="utf-8" />
     <meta name="author" content="Roger Beecham" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
     <textarea id="source">
 class: center, middle, title-slide
 
-# Introduction: Computational Methods for Social Data Science
+# Computational Methods for Social Data Science
 ### Roger Beecham
 ### <p>9 Aug 2021</p>
 <a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a>
@@ -21,34 +21,73 @@ class: center, middle, title-slide
 
 
 
+???
 
+1. Quick introduction to course -- how it will be configured and working -- split of theoretical and lab activity.
+2. Introduce rationale behind the course, my ambition with it.
+3. "Engagement" / lab acticity -- instead establish understanding  / ambition with course
 
+---
 
 ## Course Overview
 
-.small-font[
-&gt; In modern data analysis, graphics and computational statistics are increasingly used together to explore and identify complex patterns in data and to make and communicate claims under uncertainty. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the **analysis**, **design** and **technical skills** to analyse and communicate with social science datasets.
-
-
-&gt; The course emphasises real-world applications. You will work with both new, **large-scale behavioural datasets**, as well as more traditional, **administrative datasets** located within various social science domains: Political Science, Crime Science, Urban and Transport Planning. As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from data journalism you will learn how to communicate research findings – how to tell stories with data.
+--
+.tiny-font[
+&gt; In modern data analysis, **graphics** and **computational statistics** are increasingly used together to explore and **identify complex patterns** in data and to make and **communicate claims under uncertainty**. This course will go beyond traditional ideas of charts, graphs, maps (and also statistics!) to equip you with the **analysis**, **design** and **technical skills** to analyse and communicate with social science datasets.
 ]
+
+???
+
+So : this course is about demonstrating a "modern" approach to data analysis (with social science datasets)
+--
+.tiny-font[
+&gt; The course emphasises real-world applications. You will work with both new, **large-scale behavioural datasets**, as well as more traditional, **administrative datasets** located within various social science domains: Political Science, Crime Science, Urban and Transport Planning.
+]
+
+???
+
+There are loads of excellent how-to primers...
+--
+.tiny-font[
+&gt; As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from **data journalism** you will learn how to communicate research findings – how to tell stories with data.
+]
+
+???
+**Journalism** Data science is very application oriented. Some of the more substantive analyses I've seen recently haven't necessarily come from academia.
 
 ---
 
 
 ## Course Objectives
 
-.small-font[
+.tiny-font[
 By the end of the course you will:
-
-1.	**Describe, process and combine** social science datasets from a range of sources
-
-2.	**Design statistical graphics** that expose structure in social science data and that are underpinned by established principles in information visualization and cartography
-
-3.	Use modern data science and visualization frameworks to produce **coherent, reproducible data analyses**
-
-4.	Apply modern statistical techniques for analysing, **representing and communicating data and model uncertainty**
 ]
+
+--
+.tiny-font[
+*	**Describe, process and combine** social science datasets from a range of sources.
+]
+
+--
+.tiny-font[
+*	**Design statistical graphics** that expose structure in social science data and that are underpinned by established principles in information visualization and cartography.
+]
+--
+.tiny-font[
+*	Use modern data science and visualization frameworks to produce **coherent, reproducible data analyses**.
+]
+--
+.tiny-font[
+*	Apply modern statistical techniques for analysing, **representing and communicating data and model uncertainty**.
+]
+
+
+???
+
+Want to cover main components of modern data analysis -- they are here.
+
+But to do so by stealth : through real analysis scenarios.
 
 ---
 
@@ -57,6 +96,11 @@ By the end of the course you will:
 
 &lt;img src = "img/home.png", width = 50%&gt;&lt;/img&gt;
 
+
+???
+
+Schedule &gt; Explain and justify each session.
+Session 08 &gt; Identify Conceptual versus Technical.
 
 ---
 
@@ -70,8 +114,13 @@ By the end of the course you will:
 ???
 
 Conceptual and Technical elements
-
 Examples revealing some of the sessions
+
+Flexibility:
+* We can do this/configure these sessions however we want.
+* Material and explanation is down on these web-pages.
+* BUT we have 3 hours of contact time.
+* MY PLAN: Lecture for 40 mins with questions.  Then lab activity where can do one-to-one coding and I interrupt noq and again.
 
 
 ---
@@ -83,7 +132,7 @@ class: center middle
 
 ---
 
-## Conceptual Element
+&lt;!-- ## Conceptual Element
 
 .small-font[
 1. Why computational data analysis?
@@ -92,7 +141,7 @@ class: center middle
 ]
 
 
----
+--- --&gt;
 
 ## Why *comp-sds*?
 
@@ -101,12 +150,15 @@ class: center middle
 .small-font[
 **"big data"** and **"data science"** on Google Trends, Oct 2019
 ]
-&lt;img src = "img/bigdata_trends.png", width = 70%, style = "position:relative; top: 25%; left: 0%;"&gt;&lt;/img&gt;
+&lt;img src = "img/bigdata_trends.png", width = 70%, style = "position:relative; top: 0%; left: 0%;"&gt;&lt;/img&gt;
 
 ???
 
-Know already, but from 2010s -- big data is a big industry -- transforming the way businesses, societies run
-Calling upon new ways of doing science
+Google Trends
+
+From 2010s -- big data
+
+Later : Data Science Calling upon new ways of doing science
 
 ---
 
@@ -132,13 +184,12 @@ Calling upon new ways of doing science
 
 ???
 
-Tony Hey :
+Tony Hey (2009) -- essays on data science -- first to discuss way data is bringing a paradigm shift in scientific process :
 
 * Experimental science :  all we could know about was what we observed directly
 * Theory : abstracting above observations to generate fundamental laws about how things are
 * Sumulation : Test theories by simulating real world
-* Today : Back observation, but deriving new ways in new ways
-
+* Today : Back observation, but derive knowledge in new ways: we don't need to simulate the world to test things.
 ---
 
 
@@ -169,7 +220,6 @@ Donoho, D. 2017. “50 Years of Data Science”, *Journal of Computational and G
 
 ???
 
-But to an extent it is hype.
 ---
 
 
@@ -281,30 +331,6 @@ Donoho 2017's six key facets that a data science discipline might encompass:
 
 3. .grey[computing with data;]
 
-4.  **data visualization and presentation (All sessions)**;
-
-5.  .grey[data modelling;]
-
-6.  .grey[and a more introspective “science about data science”]
-]
-
-&lt;br&gt;
-
-.tiny-font[
-Donoho, D. 2017. “50 Years of Data Science”, *Journal of Computational and Graphical Statistics*, 26 (6): 745–66. doi: [10.1080/10618600.2017.1384734](https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734)
-]
----
-## Why *comp-sds*?
-
-.small-font[
-Donoho 2017's six key facets that a data science discipline might encompass:
-
-1.  .grey[data gathering, preparation, and exploration;]
-
-2.  .grey[data representation and transformation;]
-
-3. .grey[computing with data;]
-
 4.  .red[**data visualization and presentation (All sessions)**;]
 
 5.  .grey[data modelling;]
@@ -317,12 +343,20 @@ Donoho 2017's six key facets that a data science discipline might encompass:
 .tiny-font[
 Donoho, D. 2017. “50 Years of Data Science”, *Journal of Computational and Graphical Statistics*, 26 (6): 745–66. doi: [10.1080/10618600.2017.1384734](https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734)
 ]
+
+???
+
+Want to make a special case for the use for visualization techniques for social data science.
 ---
 
 ## Why *comp-sds*?
 
 
 &lt;img src = "../class/01-class_files/anscombe_data.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+Canonical example
 
 ---
 
@@ -342,31 +376,6 @@ Donoho, D. 2017. “50 Years of Data Science”, *Journal of Computational and G
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 .small-font[
 [`datasaurus`](https://itsalocke.com/datasaurus/) R package
-]
-
----
-
-## Why *comp-sds*?
-
-.small-font[
-In Social Data Science research projects:
-
-* Data are repurposed for social science research often **for the first time**;
-
-* Contain complex structure and geo-spatial relations that **cannot be easily captured by statistical summaries alone**;
-
-* Types of questions that can be asked and the techniques deployed **cannot be easily specified in advance**
-]
----
-
-## Why *comp-sds*?
-
-&lt;img src="img/dsm.png", width = 40%, style = "position:absolute; top: 25%; left: 10%;"&gt; &lt;/img&gt;
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-.tiny-font[
-Sedlmair, M., Meyer, M., and Munzner, T. (2012) "Design Study Methodology: Reflections from the Trenches and the Stacks," *IEEE Transactions on Visualization and Computer Graphics*, 18(12): 2431-2440, doi: [10.1109/TVCG.2012.213](https://ieeexplore.ieee.org/document/6327248)
 ]
 
 ---
@@ -464,6 +473,7 @@ memberID   oTime             dTime              oStation    dStation
 &lt;img src="img/bike5.jpeg", width = 60%, style = "position:absolute; top: 22%; left: 8%;"&gt; &lt;/img&gt;
 
 
+
 ---
 
 ## Why *comp-sds*?
@@ -475,8 +485,36 @@ memberID   oTime             dTime              oStation    dStation
 ---
 
 
-## How *comp-sds*?
+## Why *comp-sds*?
 
+.small-font[
+In Social Data Science research projects:]
+--
+.small-font[
+* Data are repurposed for social science research often **for the first time**;]
+--
+.small-font[
+* Contain complex structure and geo-spatial relations that **cannot be easily captured by statistical summaries alone**;]
+--
+.small-font[
+* Types of questions that can be asked and the techniques deployed **cannot be easily specified in advance**
+]
+---
+
+## Why *comp-sds*?
+
+&lt;img src="img/dsm.png", width = 40%, style = "position:absolute; top: 25%; left: 10%;"&gt; &lt;/img&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.tiny-font[
+Sedlmair, M., Meyer, M., and Munzner, T. (2012) "Design Study Methodology: Reflections from the Trenches and the Stacks," *IEEE Transactions on Visualization and Computer Graphics*, 18(12): 2431-2440, doi: [10.1109/TVCG.2012.213](https://ieeexplore.ieee.org/document/6327248)
+]
+
+---
+
+## How *comp-sds*?
+--
 &lt;img src="img/why_r.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt; &lt;/img&gt;
 
 ---
@@ -488,13 +526,15 @@ memberID   oTime             dTime              oStation    dStation
 &lt;img src="img/science_broken.png", width = 40%, style = "position:absolute; top: 25%; left: 10%;"&gt; &lt;/img&gt;
 &lt;/a&gt;
 
+???
 
+Go to web-page and explain
 ---
 
 ## How *comp-sds*?
 
 .small-font[
-&gt; Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.
+&gt; **Reproducible research** is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.
 &gt;
 &gt; Roger Peng, Jeff Leek and Brian Caffo
 ]
@@ -505,7 +545,7 @@ memberID   oTime             dTime              oStation    dStation
 .small-font[
 A reproducible research project should be accompanied with code and data that:
 
-* allows tables and figures presented in research outputs to be regenerated
+* allow all published tables and figures to be regenerated
 * does what it claims (the code works)
 * can be justified and explained through proper documentation
 ]
@@ -517,6 +557,34 @@ A reproducible research project should be accompanied with code and data that:
 
 ---
 
+## Conclusions
+
+**Why**
+
+.small-font[
+In Social Data Science research projects:]
+
+.small-font[
+* Data are repurposed for social science research often **for the first time**;]
+
+.small-font[
+* Contain complex structure and geo-spatial relations that **cannot be easily captured by statistical summaries alone**;]
+
+.small-font[
+* Types of questions that can be asked and the techniques deployed **cannot be easily specified in advance**
+]
+
+&lt;br&gt;
+
+**How**
+
+.small-font[
+`R`| `RStudio` | `R Markdown` | `tidyverse ++`
+]
+---
+
+
+
 ## Technical Element
 .small-font[
 1. Install the latest versions of `R` and `RStudio`
@@ -527,6 +595,26 @@ A reproducible research project should be accompanied with code and data that:
 
 4. Create an RStudio project
 ]
+
+???
+
+Templates : key thing folder structure -- share computer
+
+---
+
+## DirectPoll
+
+Link to poll:
+```http://etc.ch/z62Q```
+
+---
+
+## Slack
+
+???
+1. Grab a coffee
+2. Post your favourite graphic
+3. We will discuss
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

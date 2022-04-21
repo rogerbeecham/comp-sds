@@ -1,8 +1,8 @@
 ---
 title: "Exploratory data analysis"
 linktitle: "4: Exploratory data analysis"
-date: "2021-08-12"
-class_date: "2021-08-12"
+date: "2022-08-11"
+class_date: "2022-08-11"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -21,8 +21,7 @@ editor_options:
 ---
 
 <!-- BLOGDOWN-HEAD -->
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
 <h2>Contents</h2>
@@ -50,7 +49,7 @@ editor_options:
 </div>
 <div id="visualization-design-challenge" class="section level2">
 <h2>Visualization design challenge</h2>
-<div class="figure" style="text-align: left"><span id="fig:boxplots-class"></span>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:boxplots-class"></span>
 <img src="/class/04-class_files/boxplot-by-class.png" alt="Boxplots of casualty age by vehicle type and class." width="100%" />
 <p class="caption">
 Figure 1: Boxplots of casualty age by vehicle type and class.
@@ -59,7 +58,7 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 <p>This week’s homework is a single visualization design task. Please do not spend too long on this. The aim of this session is to get you to apply some of the technical detail introduced in the session rather than to overly burden you with additional work.</p>
 <p>In the session we discussed visual approaches to summarising within-variable variation in a dataset and later the use of layout and colour for supporting <em>comparison</em> across categories. In Figure <a href="#fig:boxplots-class">1</a> above, boxplots are used to summarise the age distribution of those involved in pedestrian road crashes, comparing the ages of the injured pedestrians, drivers and how this varies by the vehicle types involved.</p>
 <p>Your task is to generate a <em>single</em> data graphic (I would class Figure <a href="#fig:boxplots-class">1</a> as a single graphic) to summarise how casualty age varies by some other interesting combination of categorical variable. For example, you may wish to explore how casualty age varies by injury severity.</p>
-<p>Once you have generated the graphic, save it as a <code>.png</code> file and insert a link to it in the associated code block in the <a href="/homework/04-homework_files/04-template.Rmd"><i class="fab fa-r-project"></i> 04-template.Rmd</a>. Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using <strong>no more than three sentences</strong>, note how your graphic and any computed values support <em>comparison</em> – e.g. via juxtaposition, superposition and/or direct encoding <span class="citation">(Gleicher and Roberts <a href="#ref-gleicher_visual_2011" role="doc-biblioref">2011</a>)</span>.</p>
+<p>Once you have generated the graphic, save it as a <code>.png</code> file and insert a link to it in the associated code block in the <a href="/homework/04-homework_files/04-template.Rmd"><i class="fab fa-r-project"></i> 04-template.Rmd</a>. Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using <strong>no more than three sentences</strong>, note how your graphic and any computed values support <em>comparison</em> – e.g. via juxtaposition, superposition and/or direct encoding <span class="citation">(<a href="#ref-gleicher_visual_2011" role="doc-biblioref">Gleicher and Roberts 2011</a>)</span>.</p>
 <ul>
 <li><a href="https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots">Save your plot</a> as a <code>.png</code> file and insert the file as a Figure into your <code>.Rmd</code> document (<a href="https://rmd4sci.njtierney.com/figures-tables-captions-.html">guidance here</a>).</li>
 </ul>
@@ -67,6 +66,12 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 # Enter your code in the chunk provided.
 ######################</code></pre>
 <table>
+<colgroup>
+<col width="22%" />
+<col width="27%" />
+<col width="25%" />
+<col width="24%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Data item</th>
@@ -120,9 +125,9 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-gleicher_visual_2011">
-<p>Gleicher, Albers, M., and J. Roberts. 2011. “Visual Comparison for Information Visualization. Information Visualization.” <em>Information Visualization</em> 10 (4): 289–309.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-gleicher_visual_2011" class="csl-entry">
+Gleicher, Albers, M., and J. Roberts. 2011. <span>“Visual Comparison for Information Visualization. Information Visualization.”</span> <em>Information Visualization</em> 10 (4): 289–309.
 </div>
 </div>
 </div>

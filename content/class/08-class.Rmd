@@ -1,8 +1,8 @@
 ---
 title: "Uncertainty analysis"
 linktitle: "8: Uncertainty analysis"
-date: "2021-08-18"
-class_date: "2021-08-18"
+date: "2022-08-17"
+class_date: "2022-08-17"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -218,8 +218,14 @@ We need to generate the array data: a data frame of array locations (candidate c
 array_data <- tibble(
   row=rep(1:10, times=1, each=10),
   col=rep(1:10, times=10, each=1),
-  Oxford=sample(c(FALSE,TRUE), size=100, replace=TRUE, prob=c(.83,.17)),
-  Fareham=sample(c(FALSE,TRUE), size=100, replace=TRUE, prob=c(.59,.41))
+  Oxford=
+    sample(
+    c(rep(TRUE, times=1, each=17), rep(FALSE, times=1, each=83)),
+    size=100, replace=FALSE),
+  Fareham=
+    sample(
+    c(rep(TRUE, times=1, each=41), rep(FALSE, times=1, each=59)),
+    size=100, replace=FALSE)
 )
 ```
 
@@ -342,7 +348,8 @@ The Hypothetical Outcome Plot (HOP) can be easily created using the [`gganimate`
 rate_boots_temporal %>%
   filter(id!="Apparent") %>%
   ggplot(aes(x=year, y=ksi_rate)) +
-  geom_line(aes(group=id), colour=site_colours$primary, size=.6) +
+  geom_line(aes(group=id), size=.6) +
+  facet_wrap(~local_authority_district)+
   transition_states(id, 0,1)
 ```
 

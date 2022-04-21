@@ -1,8 +1,8 @@
 ---
 title: "Data fundamentals: Describe, wrangle, tidy"
 linktitle: "2: Data fundamentals"
-date: "2021-08-10"
-class_date: "2021-08-10"
+date: "2022-08-09"
+class_date: "2022-08-09"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -63,7 +63,7 @@ The idea of applying a consistent vocabulary to describing your data applies esp
 
 ### Data structure
 
-In the module we will work with [data frames](http://adv-r.had.co.nz/Data-structures.html#data-frames) in R. These are spreadsheet like representations where rows are **observations** (case/record) and columns are **variables**. Each variable (column) in a data frame is a [vector](http://adv-r.had.co.nz/Data-structures.html#vectors) that must be of equal length. Where observations have missing values for certain variables -- that is, where they may violate this equal-length requirement -- the missing values must be substituted with something, usually with `NA` or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a [`list-column`](https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html), something we'll return to later in the module.
+In the course we will work with [data frames](http://adv-r.had.co.nz/Data-structures.html#data-frames) in R. These are spreadsheet like representations where rows are **observations** (case/record) and columns are **variables**. Each variable (column) in a data frame is a [vector](http://adv-r.had.co.nz/Data-structures.html#vectors) that must be of equal length. Where observations have missing values for certain variables -- that is, where they may violate this equal-length requirement -- the missing values must be substituted with something, usually with `NA` or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a [`list-column`](https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html), something we'll return to later in the course.
 
 Organising data according this simple structure -- rows as observations, columns as variables -- makes working with data more straightforward. A specific set of tools, made available via the `tidyverse`, can be deployed for doing most data **tidy**ing tasks [@wickham_tidy_2014].
 
@@ -381,7 +381,7 @@ data_types <- tibble::tibble(
 kbl(data_types, caption = "A breakdown of data types in R.")
 ```
 
-The object type of a variable in a data frame relates to that variable's *measurement level*. It is often useful to convert to types with greater specificity. For example, we may which to convert the `start_time` and `stop_time` variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the *station identifier* variables as `int` types by removing the redundant "ny" text which prefaces `end_station_id`, `end_station_id`, `stn_id`. The geographic coordinates are currently stored as type `chr`. These could be regarded as quantitative variables, floating points with decimals. So converting to type `dbl` or as a [`POINT`](https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types) geometry type (more on this later in the module) may be sensible.
+The object type of a variable in a data frame relates to that variable's *measurement level*. It is often useful to convert to types with greater specificity. For example, we may which to convert the `start_time` and `stop_time` variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the *station identifier* variables as `int` types by removing the redundant "ny" text which prefaces `end_station_id`, `end_station_id`, `stn_id`. The geographic coordinates are currently stored as type `chr`. These could be regarded as quantitative variables, floating points with decimals. So converting to type `dbl` or as a [`POINT`](https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types) geometry type (more on this later in the course) may be sensible.
 
 In the [<i class="fab fa-r-project"></i> 02-template.Rmd](/homework/02-homework_files/02-template.Rmd) file there are code chunks for doing these conversions. There are some slightly more involved data transform procedures in this code. Don't fixate too much on these, but the upshot can be seen when running `glimpse()` on the converted data frames:
 
@@ -663,7 +663,7 @@ All of the top 10 docking stations are either in parks, near parks or located al
 
 #### Write functions of your own
 
-Through most of the module we will be making use of functions written by others -- mainly those developed for packages that form the `tidyverse` and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. [Chapter 19](https://r4ds.had.co.nz/functions.html) of @wickham_r_2017 presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.
+Through most of the course we will be making use of functions written by others -- mainly those developed for packages that form the `tidyverse` and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. [Chapter 19](https://r4ds.had.co.nz/functions.html) of @wickham_r_2017 presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.
 
 Functions have three key characteristics:
 
@@ -699,7 +699,7 @@ include_graphics("/class/02-class_files/speeds.png", error = FALSE)
 
 ### Tidy
 
-The `ny_trips` and `ny_stations` data already comply with the rules for **tidy** data [@wickham_tidy_2014]. Each row in `ny_trips` is a distinct trip and each row in `ny_stations` a distinct station. However throughout the module we will undoubtedly encounter datasets that need to be reshaped. There are two key functions to learn here, made available via the [`tidyr`](https://tidyr.tidyverse.org/articles/pivot.html) package: [`pivot_longer()`](https://tidyr.tidyverse.org/reference/pivot_longer.html) and [`pivot_wider()`](https://tidyr.tidyverse.org/reference/pivot_wider.html). `pivot_longer()` is used to tidy data in which observations are spread across columns, as in Table \@ref(tab:gapminder-untidy1) (the `gapminder` dataset). `pivot_wider()` is used to tidy data in which observations are spread across rows, as in Table \@ref(tab:gapminder-untidy2) (the `gapminder` dataset). You will find yourself using these functions, particularly `pivot_longer()`, not only for fixing messy data, but for flexibly reshaping data for use in `ggplot2` specifications (more on this in sessions 3 and 4) or joining tables.
+The `ny_trips` and `ny_stations` data already comply with the rules for **tidy** data [@wickham_tidy_2014]. Each row in `ny_trips` is a distinct trip and each row in `ny_stations` a distinct station. However throughout the course we will undoubtedly encounter datasets that need to be reshaped. There are two key functions to learn here, made available via the [`tidyr`](https://tidyr.tidyverse.org/articles/pivot.html) package: [`pivot_longer()`](https://tidyr.tidyverse.org/reference/pivot_longer.html) and [`pivot_wider()`](https://tidyr.tidyverse.org/reference/pivot_wider.html). `pivot_longer()` is used to tidy data in which observations are spread across columns, as in Table \@ref(tab:gapminder-untidy1) (the `gapminder` dataset). `pivot_wider()` is used to tidy data in which observations are spread across rows, as in Table \@ref(tab:gapminder-untidy2) (the `gapminder` dataset). You will find yourself using these functions, particularly `pivot_longer()`, not only for fixing messy data, but for flexibly reshaping data for use in `ggplot2` specifications (more on this in sessions 3 and 4) or joining tables.
 
 A quick breakdown of `pivot_longer`:
 

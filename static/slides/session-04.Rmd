@@ -1,0 +1,350 @@
+---
+title: "Exploratory data analysis"
+author: "Roger Beecham"
+date: "12 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+output:
+  xaringan::moon_reader:
+    css: [default, "slides-theme.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: ''
+      titleSlideClass: [center, middle]
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(comment = "")
+library(tidyverse)
+library(here)
+library(knitr)
+library(kableExtra)
+```
+
+???
+Last session : heavy conceptual content
+
+EDA : more practical
+
+EDA : expose properties and structure of a dataset, and from here suggest directions for analytic inquiry.
+
+In an EDA, relationships are quickly inferred, anomalies labelled, assumptions tested and new hypotheses and ideas are formulated
+
+Do so with Stats19 -- how detailed comparison across many categorical variables can be effected using colour, layout and statistical computation
+
+---
+
+## EDA and statistical graphics
+
+.small-font[
+> The simple graph has brought more information to the data analyst’s mind than any other device.
+>
+> John Tukay
+]
+
+???
+
+Anything on EDA > Tukay > statistical graphics
+---
+## EDA and statistical graphics
+
+.small-font[
+Two (initial) goals that EDA should address:
+
+1. What type of **variation** occurs **within** variables of a dataset?
+2. What type of **covariation** occurs **between** variables of a dataset?
+]
+
+???
+
+Exploring structure and relationships
+
+---
+
+## EDA and statistical graphics
+
+.xtiny-font[
+```{r variable-types, echo=FALSE, fig.cap="Breakdown of variable types", out.width="100%"}
+variable_types <- tibble::tibble(
+  Measurement = c("Nominal", "Ordinal", "Continuous", "Nominal", "Ordinal", "Continuous"),
+    Statistics = c(
+      "mode &#124 entropy",
+      "median &#124 percentile",
+      "mean &#124 variance",
+      "contingency tables",
+      "rank correlation",
+      "correlation"
+      ),
+     "Chart idiom" = c(
+       "bar charts, dot plots ...",
+       "bar charts, dot plots ...",
+       "histograms, box plots, density plots ...",
+       "mosaic/spine plots ...",
+       "slope/bump charts ...",
+       "scatterplots, parallel coordinate plots ..."
+       )
+)
+
+kbl(variable_types,  caption = "", protect_latex = TRUE, escape=FALSE) %>%
+ pack_rows("Within-variable variation", 1, 3, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ pack_rows("Between-variable variation", 4, 6, bold=FALSE, label_row_css = "border-bottom: 0px solid;") %>%
+ column_spec(1, width = "8em")
+```
+]
+
+???
+
+That there are stats and graohics for doing those things
+
+---
+
+## Variation within continuous variables
+
+```{r univariate-continuous, echo=FALSE, fig.cap="", fig.align="left", out.width="60%"}
+include_graphics("../class/04-class_files/univariate-plots.png", error = FALSE)
+```
+
+???
+
+ *strip-plot* :
+ x-position, random vertical perturbation.
+ Scale poorly, but no need to impose an aggregation.
+ Location of the distribution – denser dots towards 20-25 age range – but also degree of spread across the age values.
+
+*Histograms* partition continuous variables into equal-range bins.
+Give distributions a “shape” that is expressive.
+Easy to identify location of a distribution and estimate relative densities between different parts of the distribution.
+
+Despite the heavy spread, the distribution of casualty_age is right-skewed, and we’d expect this given the location of the mean (36 years) relative to the median (33 years).
+
+ artificial edge-effects around the bins. Density plots overcome this -- smoothed histograms. Kernel density estimation (KDE) to show the probability density function of a variable – the relative amount of probability attached to each value of casualty_age.
+
+ Overall “shape” to the distribution can be immediately derived.
+
+ It is also possible to infer statistical properties: the mode of the distribution (the highest density), the mean (by visual averaging) and median (finding the midpoint of the area under the curve).
+
+ Reasonably large number of observations needed due to the smoothing function it is possible to generate a density plot that suggests nonsensical values (e.g. negative ages in this case if I hadn’t censored the plot range).
+
+Boxplots encode the statistical properties directly.
+
+---
+
+## Variation within continuous variables
+
+```{r boxplots-class, echo=FALSE, fig.cap="", fig.align="left", out.width="60%"}
+include_graphics("../class/04-class_files/boxplot-by-class.png", error = FALSE)
+```
+
+???
+
+Pedestrians younger than the drivers hitting them, except for bikes. But notice differences in spread between drivers and pedestrians/
+
+---
+
+## Variation within and between categorical variables
+
+???
+
+Are crashes involving certain vehicle associated with more/less severe injury than others?
+
+show contingency table
+
+--
+<img src = "../class/04-class_files/bars-title.png", width = 25%, style = "position:absolute; top: 25%; left: 10%;"></img>
+
+<img src = "../class/04-class_files/bars-freq.png", width = 25%, style = "position:absolute; top: 33%; left: 10%;"></img>
+
+
+
+---
+
+## Variation within and between categorical variables
+
+<img src = "../class/04-class_files/bars-assoc-title.png", width = 25%, style = "position:absolute; top: 25%; left: 10%;"></img>
+
+<img src = "../class/04-class_files/bars-assoc-stacked.png", width = 25%, style = "position:absolute; top: 32%; left: 10%;"></img>
+
+--
+
+<img src = "../class/04-class_files/bars-assoc-prop.png", width = 22%, style = "position:absolute; top: 32%; left: 35.5%;"></img>
+
+--
+
+<img src = "../class/04-class_files/bars-assoc-mosaic.png", width = 26%, style = "position:absolute; top: 32%; left: 58%;"></img>
+
+
+---
+
+## EDA workflow
+--
+
+.small-font[
+* Expose pattern
+]
+--
+
+.small-font[
+* Model an expectation derived from pattern
+]
+
+--
+.small-font[
+* Show deviation from expectation
+]
+
+
+???
+
+Refer back to plots in previous slides
+
+---
+## EDA workflow
+
+.pull-left[.small-font[
+**Expectation**
+
+*Casualty severity does not vary depending on vehicle type*
+]]
+
+--
+
+.pull-right[.xtiny-font[
+```{r tab-vehicle-severity-resids, echo=FALSE, message=FALSE, out.width="100%"}
+readr::read_csv(here::here("static","csv","vehicle_severity_cross_resids.csv")) %>%
+  kbl(caption = "") %>%
+  row_spec(9, bold=T) %>% column_spec(4,bold = T) %>%
+  add_header_above(c(" ", "Observed" = 3, "Expected" = 2, "Signed chi-scores"=2))
+```
+]]
+
+???
+
+Chi-square residuals
+
+---
+
+## EDA workflow
+
+
+<img src = "../class/04-class_files/borough-freqs-resids-title.png", width = 43%, style = "position:absolute; top: 21.5%; left: 8%;"></img>
+--
+<img src = "../class/04-class_files/borough-freqs-resids-day-obs.png", width = 18%, style = "position:absolute; top: 27%; left: 8%;"></img>
+
+???
+
+Dominant pattern - but difficult to see variation net of this.
+
+--
+ <img src = "../class/04-class_files/borough-freqs-resids-day.png", width = 10.35%, style = "position:absolute; top: 27%; left: 26.5%;"></img>
+
+--
+
+ <img src = "../class/04-class_files/borough-freqs-resids-period-obs.png", width = 7%, style = "position:absolute; top: 27%; left: 37.3%;"></img>
+
+???
+
+Is the daytime pattern always consistent?
+Modelling for expected behaviour helps with pattern identification.
+
+--
+
+ <img src = "../class/04-class_files/borough-freqs-resids-period-resids.png", width = 6.4%, style = "position:absolute; top: 27%; left: 44.7%;"></img>
+
+???
+Emphasise flexibility
+
+---
+
+## Comparison
+
+???
+
+EDA should invite comparison -- we can achieve this with out vis design.
+--
+#### Juxtaposition
+.small-font[
+Laying the data items to be compared side-by-side. [[example](https://www.roger-beecham.com/comp-sds/class/03-class/#faceting-by-region-3)].
+]
+
+---
+
+## Comparison
+
+#### Juxtaposition
+.small-font[
+Laying the data items to be compared side-by-side. [[example](https://www.roger-beecham.com/comp-sds/class/03-class/#faceting-by-region-3)].
+]
+
+#### Superimposition
+.small-font[
+Laying the data items to be compared on top of each other on the same coordinate space. [[example](https://www.roger-beecham.com/comp-sds/class/02-class/#manipulate-dates-with-lubridate-1)].
+]
+
+---
+
+## Comparison
+
+#### Juxtaposition
+.small-font[
+Laying the data items to be compared side-by-side. [[example](https://www.roger-beecham.com/comp-sds/class/03-class/#faceting-by-region-3)].
+]
+
+#### Superimposition
+.small-font[
+Laying the data items to be compared on top of each other on the same coordinate space. [[example](https://www.roger-beecham.com/comp-sds/class/02-class/#manipulate-dates-with-lubridate-1)].
+]
+
+#### Direct encoding
+
+.small-font[
+Computing some comparison values and encoding those values explicitly. [[example](https://www.roger-beecham.com/comp-sds/class/04-class/#fig:borough-freqs-resids)].
+]
+
+???
+
+Back to notes
+
+---
+
+## Comparison: juxtaposition
+
+```{r mosaic-harrow-westminster, echo=FALSE, fig.cap="", fig.align="left", out.width="70%"}
+include_graphics("../class/04-class_files/mosaic_harrow_westminster.png", error = FALSE)
+```
+
+---
+
+
+## Comparison: juxtaposition
+
+<img src = "../class/04-class_files/mosaic_boroughs-title.png", width = 55%, style = "position:absolute; top: 22%; left: 8%;"></img>
+
+<img src = "../class/04-class_files/mosaic_boroughs-1.png", width = 55%, style = "position:absolute; top: 28%; left: 8%;"></img>
+
+---
+
+## Comparison: juxtaposition
+
+<img src = "../class/04-class_files/mosaic_boroughs-title.png", width = 55%, style = "position:absolute; top: 22%; left: 8%;"></img>
+
+<img src = "../class/04-class_files/mosaic_boroughs-2.png", width = 55%, style = "position:absolute; top: 28%; left: 8%;"></img>
+
+???
+
+Preattentive
+---
+
+## Comparison: juxtaposition
+
+<img src = "../class/04-class_files/anim_real_grid.gif", width = 55%, style = "position:absolute; top: 22%; left: 8%;"></img>
+
+???
+
+Layout
+---
+
+## Comparison: juxtaposition
+
+<img src = "../class/04-class_files/mosaic_boroughs_spatial.png", width = 50%, style = "position:absolute; top: 22%; left: 8%;"></img>

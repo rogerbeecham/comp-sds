@@ -1,8 +1,8 @@
 ---
 title: "Exploratory data analysis"
 linktitle: "4: Exploratory data analysis"
-date: "2021-08-12"
-class_date: "2021-08-12"
+date: "2022-08-11"
+class_date: "2022-08-11"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

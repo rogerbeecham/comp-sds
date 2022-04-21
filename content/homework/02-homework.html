@@ -1,8 +1,8 @@
 ---
 title: "Data fundamentals"
 linktitle: "2: Data fundamentals"
-date: "2021-08-10"
-class_date: "2021-08-10"
+date: "2022-08-09"
+class_date: "2022-08-09"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -21,8 +21,7 @@ editor_options:
 ---
 
 <!-- BLOGDOWN-HEAD -->
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
 <h2>Contents</h2>
@@ -30,7 +29,8 @@ editor_options:
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#task-1-describe-data">Task 1: Describe data</a></li>
-<li><a href="#task-2-diagnose-data">Task 2: Diagnose data</a><ul>
+<li><a href="#task-2-diagnose-data">Task 2: Diagnose data</a>
+<ul>
 <li><a href="#uk-general-election-results-2019">UK General Election Results 2019</a></li>
 <li><a href="#uk-general-election-results-2017-and-2019">UK General Election Results 2017 and 2019</a></li>
 </ul></li>
@@ -97,7 +97,7 @@ editor_options:
 </div>
 <div id="task-2-diagnose-data" class="section level2">
 <h2>Task 2: Diagnose data</h2>
-<p>Below are two different tables with results from UK General Elections. We will be working with these data in the next session. Identify whether or not each is in <strong>tidy</strong> format <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>. If they are not, provide a layout for a tidy version. No need to use code here, just edit the markdown table. If you’re struggling to work out how to organise markdown tables, you may wish to use this <a href="https://www.tablesgenerator.com/markdown_tables">tables generator</a>.</p>
+<p>Below are two different tables with results from UK General Elections. We will be working with these data in the next session. Identify whether or not each is in <strong>tidy</strong> format <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span>. If they are not, provide a layout for a tidy version. No need to use code here, just edit the markdown table. If you’re struggling to work out how to organise markdown tables, you may wish to use this <a href="https://www.tablesgenerator.com/markdown_tables">tables generator</a>.</p>
 <div id="uk-general-election-results-2019" class="section level3">
 <h3>UK General Election Results 2019</h3>
 <table>
@@ -140,6 +140,13 @@ editor_options:
 <div id="uk-general-election-results-2017-and-2019" class="section level3">
 <h3>UK General Election Results 2017 and 2019</h3>
 <table>
+<colgroup>
+<col width="27%" />
+<col width="21%" />
+<col width="15%" />
+<col width="20%" />
+<col width="15%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>party</th>
@@ -192,7 +199,7 @@ editor_options:
 <div id="task-3-fix-data" class="section level2">
 <h2>Task 3: Fix data</h2>
 <p>In the <a href="/homework/02-homework_files/02-template.Rmd"><i class="fab fa-r-project"></i> 02-template.Rmd</a> file for this session I have provided links to two derived tables (<code>ny_spread_columns</code> and <code>ny_spread_rows</code>) from the New York bikeshare trip data that are not in a tidy format.</p>
-<p>Using functions from <code>dplyr</code> and <code>tidyr</code> reorganise these data so that they conform to the rules of <strong>tidy</strong> data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>Using functions from <code>dplyr</code> and <code>tidyr</code> reorganise these data so that they conform to the rules of <strong>tidy</strong> data <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span>.</p>
 <p>A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:</p>
 <ul>
 <li><code>o_station</code>: station id of the origin station</li>
@@ -226,9 +233,9 @@ You may wish to start with reorganising <code>ny_spread_rows</code> as I deliber
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-wickham_tidy_2014">
-<p>Wickham, H. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10): 1–23.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-wickham_tidy_2014" class="csl-entry">
+Wickham, H. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23.
 </div>
 </div>
 </div>

@@ -1,8 +1,8 @@
 ---
 title: "Model building 1: Expose, estimate, evaluate"
 linktitle: "6: Model building 1"
-date: "2021-08-16"
-class_date: "2021-08-16"
+date: "2022-08-15"
+class_date: "2022-08-15"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -46,7 +46,7 @@ By the end of this session you should gain the following **_practical skills_**:
 
 ## Introduction
 
-So far the analysis presented in this module has been very data-driven. We have demonstrated how, having [described data](/class/02-class/) in a consistent way, heuristics around [visual approaches and techniques](/class/03-class/) can be applied to usefully expose structure in datasets. The session on [exploratory data analysis](/class/04-class/) involved some model building, but these were largely value-free models derived from contingency tables, based on few prior assumptions.
+So far the analysis presented in this course has been very data-driven. We have demonstrated how, having [described data](/class/02-class/) in a consistent way, heuristics around [visual approaches and techniques](/class/03-class/) can be applied to usefully expose structure in datasets. The session on [exploratory data analysis](/class/04-class/) involved some model building, but these were largely value-free models derived from contingency tables, based on few prior assumptions.
 
 In the next two sessions we will work on a dataset with a more explicit, and theoretically-informed, motivation. We will explore *variation* in voting behaviour in the UK's 2016 referendum on leaving the EU. You might remember that whilst there was a slight majority for Leave (51.9%), the vote varied between different parts of the country. And there were many theories and explanations offered around the time for why particular places voted the way they did -- related to the demographic composition of those areas. We will explore whether the sorts of compositional demographic factors discussed -- [left behind places](https://www.theguardian.com/politics/2016/jun/25/left-behind-eu-referendum-vote-ukip-revolt-brexit) -- vary systematically with area-level Leave voting. We will use a regression framework to model the relative effect of each of these compositional factors in structuring variation in the vote and visualization techniques to support estimation of model parameters and evaluation of model bias. Different from the previous sessions, the [Concepts](/class/06-class/#concepts-1/) element is structured more as a narrated data analysis and the [Techniques](/class/06-class/#techniques-1/) element more of a how-to for working with regression models in R.
 
@@ -184,7 +184,7 @@ Again, you might remember that issues of multicollinearity, amongst other things
 
 **Estimating uncertainty**
 
-Given the spirit of this module, you might have wondered about the reasonably abbreviated discussion of techniques for representing model outputs  and their uncertainty estimates (via Confidence Intervals). I am deliberately reserving more involved coverage of this for [session 08]().
+Given the spirit of this course, you might have wondered about the reasonably abbreviated discussion of techniques for representing model outputs  and their uncertainty estimates (via Confidence Intervals). I am deliberately reserving more involved coverage of this for [session 08]().
 {{% /callout %}}
 
 

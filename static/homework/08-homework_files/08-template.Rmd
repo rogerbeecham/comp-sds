@@ -18,8 +18,10 @@ The code block below points to the packages you need to do the work discussed in
 ```{r setup, echo=TRUE, eval=FALSE, message=FALSE}
 library(tidyverse) # Bundle of packages for doing modern data analysis.
 library(sf) # Spatial operations
+library(here)
 library(fst) # For reading/writing large files.
 library(lubriadate) # For working with dates.
+library(rsample) # For resampling.
 # install.packages("ggdist")
 library(ggdist) # For uncertainty visualization.
 # install.packages("distributional")

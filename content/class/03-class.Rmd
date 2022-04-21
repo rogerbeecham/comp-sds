@@ -1,8 +1,8 @@
 ---
 title: "Visualization fundamentals: Codify, map, evaluate"
 linktitle: "3: Visualization fundamentals"
-date: "2021-08-11"
-class_date: "2021-08-11"
+date: "2022-08-10"
+class_date: "2022-08-10"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
@@ -19,7 +19,6 @@ weight: 1
 editor_options:
   chunk_output_type: console
 ---
-
 
 ```{r setup, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
 library(knitr)
@@ -75,7 +74,7 @@ Considering these characteristics, take a look at the data graphics below, which
 {{% /callout %}}
 
 
-```{r wp-map, echo=FALSE, fig.cap="Maps of 2016 US presidential election results. Left - two-colour choropleth in [Medium](https://pensivepost.com/understanding-rural-america-d9695a6b3516). Right - information-rich data graphic in [The Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/).", out.width="100%"}
+```{r wp-map, echo=FALSE, fig.cap="Maps of 2016 US presidential election results. Left - two-colour choropleth in [Medium](https://medium.com/thepensivepost/understanding-rural-america-d9695a6b3516). Right - information-rich data graphic in [The Washington Post](https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/).", out.width="100%"}
 knitr::include_graphics("/class/03-class_files/trump_maps.png", error = FALSE)
 ```
 
@@ -134,7 +133,7 @@ In Figure \@ref(fig:gog-demo) are three plots and associated `ggplot2` specifica
 In the middle plot, the grammar is updated such that the points are coloured according to `winning_party`, a variable of type categorical `nominal`. In the bottom plot constituencies that flipped from Labour-to-Conservative between 2017-19 are emphasised by varying the transparency (`alpha`) of points. I have described `flipped` as an `ordinal` variable, but strictly it is a `nominal` (binary) variable. Due to the way it is encoded in the plot -- constituencies that flipped (`flipped=TRUE`) are given greater visual emphasis -- I think it is more appropriate to call it an ordinal variable.
 
 {{% callout note %}}
-It is understandable if at this stage the specifications in Figure \@ref(fig:gog-demo) still seem alien to you. We will be updating, expanding and refining `ggplot2` specifications throughout this module to support all aspects of modern data analysis -- from data cleaning and exploratory analysis through to model evaluation and communication.
+It is understandable if at this stage the specifications in Figure \@ref(fig:gog-demo) still seem alien to you. We will be updating, expanding and refining `ggplot2` specifications throughout this course to support all aspects of modern data analysis -- from data cleaning and exploratory analysis through to model evaluation and communication.
 {{% /callout %}}
 
 
@@ -301,7 +300,7 @@ knitr::include_graphics("/class/03-class_files/perception.png", error = FALSE)
 ```
 
 {{% callout note %}}
-This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the **inferences** made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities -- location and dispersion [@correll_error_2014], correlation [@rensink_perception_2010; @harrison_ranking_2014; @kay_beyond_2016] and spatial autocorrelation [@klippel_interpreting_2011; @beecham_maplineups_2017] -- in commonly used chart types. More on this later in the module.
+This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the **inferences** made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities -- location and dispersion [@correll_error_2014], correlation [@rensink_perception_2010; @harrison_ranking_2014; @kay_beyond_2016] and spatial autocorrelation [@klippel_interpreting_2011; @beecham_maplineups_2017] -- in commonly used chart types. More on this later in the course.
 {{% /callout %}}
 
 
@@ -318,7 +317,7 @@ The underlying rule when using colour in data graphics is to use properties of c
 As we will discover shortly, these principles are applied by default in `ggplot2`, along with access to perceptually uniform schemes. Its [`brewer`](https://ggplot2.tidyverse.org/reference/scale_brewer.html) scales, for example.
 
 {{% callout instruction %}}
-There are many considerations when using colour to support visual data analysis and communication -- and we will return to these at various points in the module. Read Lisa Charotte-Rost's [Guide to Colours in Data Visualization](https://blog.datawrapper.de/colorguide/) before proceeding to the [Techniques](#techniques-1) section.
+There are many considerations when using colour to support visual data analysis and communication -- and we will return to these at various points in the course. Read Lisa Charotte-Rost's [Guide to Colours in Data Visualization](https://blog.datawrapper.de/colorguide/) before proceeding to the [Techniques](#techniques-1) section.
 {{% /callout %}}
 
 
@@ -345,7 +344,7 @@ Although initially intuitive, the measure takes a little interpretation. A Swing
 
 Different from the US where "third parties" play a negligible role, scenarios 2 and 3 do occur in the UK. You will notice that `swing_con_lab` is a signed value: positive indicates a Swing to Conservative, negative a Swing to Labour.
 
-The only other dataset to load is a `.geojson` file containing the geometries of constituencies, collected originally from [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) and simplified using [mapshaper](https://github.com/mbloch/mapshaper). This is a special class of data frame containing a [Simple Features](https://r-spatial.github.io/sf/articles/sf1.html) `geometry` column -- more on this later in the module.
+The only other dataset to load is a `.geojson` file containing the geometries of constituencies, collected originally from [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) and simplified using [mapshaper](https://github.com/mbloch/mapshaper). This is a special class of data frame containing a [Simple Features](https://r-spatial.github.io/sf/articles/sf1.html) `geometry` column -- more on this later in the course.
 
 ### Summarise
 
@@ -574,9 +573,9 @@ temp_party_shares_region %>%
 
 
 {{% callout note %}}
-The idea behind visualization toolkits such as [vega-lite](https://vega.github.io/vega-lite/), [Tableau](https://www.tableau.com/en-gb) and [`ggplot2`](https://ggplot2.tidyverse.org/) is to insert visual data analysis approaches into the Data Scientist's workflow. Rather than being overly concerned with low-level aspects of drawing, mapping to screen coordinates and scaling factors, the analyst instead focuses on aspects crucial to analysis -- exposing patterns in the data by carefully specifying an encoding of data to visuals. Hadley Wickham talks about the type of workflow you will see used throughout this module -- bits of `dplyr`  to prepare data for charting before being piped (`%>%`) to a `ggplot2` specification -- as equivalent to a [grammar of interactive graphics](https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Towards-a-grammar-of-interactive-graphics).
+The idea behind visualization toolkits such as [vega-lite](https://vega.github.io/vega-lite/), [Tableau](https://www.tableau.com/en-gb) and [`ggplot2`](https://ggplot2.tidyverse.org/) is to insert visual data analysis approaches into the Data Scientist's workflow. Rather than being overly concerned with low-level aspects of drawing, mapping to screen coordinates and scaling factors, the analyst instead focuses on aspects crucial to analysis -- exposing patterns in the data by carefully specifying an encoding of data to visuals. Hadley Wickham talks about the type of workflow you will see used throughout this course -- bits of `dplyr`  to prepare data for charting before being piped (`%>%`) to a `ggplot2` specification -- as equivalent to a [grammar of interactive graphics](https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Towards-a-grammar-of-interactive-graphics).
 
-The process of searching for, defining and inserting manual colour schemes for creating Figure \@ref(fig:bars-region) might seem inimical to this. Indeed I was reluctant to include this code so early in the module -- there is some reasonably advanced `dplyr` and a little [regular expression](https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html) in the data preparation code that I don't want you to be overly concerned with. However, having control of these slightly more low-level properties is sometimes necessary even for supporting exploratory analysis, in this case for enabling a **symbolisation** that is clear and easily interpretable.  Try relating the bars without our manual setting of colours by political party -- it certainly requires some mental gymnastics.
+The process of searching for, defining and inserting manual colour schemes for creating Figure \@ref(fig:bars-region) might seem inimical to this. Indeed I was reluctant to include this code so early in the course -- there is some reasonably advanced `dplyr` and a little [regular expression](https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html) in the data preparation code that I don't want you to be overly concerned with. However, having control of these slightly more low-level properties is sometimes necessary even for supporting exploratory analysis, in this case for enabling a **symbolisation** that is clear and easily interpretable.  Try relating the bars without our manual setting of colours by political party -- it certainly requires some mental gymnastics.
 {{% /callout %}}
 
 #### Faceting by region
@@ -627,7 +626,7 @@ data_gb %>%
   )
 ```
 
-A general point from the code blocks in this session is of the importance of proficiency in `dplyr`. Throughout the module you will find yourself needing to calculate new variables, recode variables, and reorganise data frames before passing through to `ggplot2`.
+A general point from the code blocks in this session is of the importance of proficiency in `dplyr`. Throughout the course you will find yourself needing to calculate new variables, recode variables, and reorganise data frames before passing through to `ggplot2`.
 {{% /callout %}}
 
 
@@ -677,14 +676,14 @@ A breakdown of the `ggplot2` spec:
 1. **Data**: The `dplyr` code updates `data_gb` by recoding `winner_19` as a factor and defining a named vector of colours to supply to `scale_fill_manual()`.
 2. **Encoding**: No surprises here -- `fill` according to `winner_19`.
 3. **Marks**: `geom_sf()` is a special class of geometry. It draws objects depending on the contents of the `geometry` column. In this case `MULTIPOLYGON`, so read this as a *polygon* geometric primitive.
-4. **Coordinates**: `coord_sf` -- we set the coordinate system (CRS) explicitly. In this case [OS British National Grid](https://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/). More on this later in the module.
+4. **Coordinates**: `coord_sf` -- we set the coordinate system (CRS) explicitly. In this case [OS British National Grid](https://spatialreference.org/ref/epsg/osgb-1936-british-national-grid/). More on this later in the course.
 5. **Setting**: I've subtly introduced light grey (`colour="#eeeeee"`) and thin (`size=0.01`)  constituency boundaries to the `geom_sf` mark. On the map to the right outlines for regions are added as another `geom_sf` layer.
 
 
 ```{r spoke-map, echo=FALSE, fig.cap="Map of Butler Con-Lab Swing in 2019 General Election.", out.width="100%"}
 include_graphics("/class/03-class_files/spoke-map.png", error = FALSE)
 ```
-This has been a packed session. I'm providing a very abbreviated introduction to map design with `ggplot2` and want to reserve the details of how `ggplot2` can be used in more involved visualization design for later in the module. Since the graphic has been discussed at length, it would be strange not to demonstrate how the encoding in the Washington Post piece can be applied here to analyse our Butler two-party swing variable [e.g. @beecham_using_2020].
+This has been a packed session. I'm providing a very abbreviated introduction to map design with `ggplot2` and want to reserve the details of how `ggplot2` can be used in more involved visualization design for later in the course. Since the graphic has been discussed at length, it would be strange not to demonstrate how the encoding in the Washington Post piece can be applied here to analyse our Butler two-party swing variable [e.g. @beecham_using_2020].
 
 First, some helper functions -- converting degrees to radians and centring `geom_spoke()` geometries. Don't bother yourself with these details, just run the code.
 

@@ -1,8 +1,8 @@
 ---
 title: "Exploring spatial networks: Containment and connection"
 linktitle: "5: Exploring spatial networks"
-date: "2021-08-13"
-class_date: "2021-08-13"
+date: "2022-08-12"
+class_date: "2022-08-12"
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-author-date.csl
