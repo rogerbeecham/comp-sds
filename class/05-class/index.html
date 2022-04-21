@@ -37,8 +37,8 @@
   
     
   
-  <meta name="description" content="Contents  Introduction Concepts Network data: nodes and edges Node-link representations Matrix representations OD maps  Techniques Import Analyse over nodes Analyse over edges  Conclusions References   By the end of this session you should gain the following knowledge:
-  The special structure and vocabulary used to represent network data. The strengths, weaknesses and trade-offs of network visualizations and of incorporating geographic context.    By the end of this session you should gain the following practical skills:">
+  <meta name="description" content="Contents  Introduction Concepts  Network data: nodes and edges Node-link representations Matrix representations OD maps  Techniques  Import Analyse over nodes Analyse over edges  Conclusions References   By the end of this session you should gain the following knowledge:
+  The special structure and vocabulary used to represent network data. The strengths, weaknesses and trade-offs of network visualizations and of incorporating geographic context.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/05-class/">
@@ -266,8 +266,8 @@
   <link rel="manifest" href="../../index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="../../class/05-class/">
 
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Computational Methods for Social Data Science">
   <meta property="og:url" content="/class/05-class/">
   <meta property="og:title" content="Exploring spatial networks: Containment and connection | Computational Methods for Social Data Science">
-  <meta property="og:description" content="Contents  Introduction Concepts Network data: nodes and edges Node-link representations Matrix representations OD maps  Techniques Import Analyse over nodes Analyse over edges  Conclusions References   By the end of this session you should gain the following knowledge:
-  The special structure and vocabulary used to represent network data. The strengths, weaknesses and trade-offs of network visualizations and of incorporating geographic context.    By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Contents  Introduction Concepts  Network data: nodes and edges Node-link representations Matrix representations OD maps  Techniques  Import Analyse over nodes Analyse over edges  Conclusions References   By the end of this session you should gain the following knowledge:
+  The special structure and vocabulary used to represent network data. The strengths, weaknesses and trade-offs of network visualizations and of incorporating geographic context."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-08-13T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-08-12T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-06-25T12:30:57&#43;01:00">
+    <meta property="article:modified_time" content="2022-04-21T11:16:40&#43;01:00">
   
 
   
@@ -318,7 +318,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../img/apple-touch-icon-152x152.png" />
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16" />
-  <meta name="application-name" content="ESS 2021 | 3D: Computational Methods for Social Data Science" />
+  <meta name="application-name" content="ESS 2022 | 3D: Computational Methods for Social Data Science" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
@@ -628,6 +628,10 @@
 
 
 
+  
+    
+  
+
 
 
 
@@ -677,6 +681,41 @@
       </li>
 
       
+      <li >
+        <a href="../../class/03-class/">3: Visualization fundamentals</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/04-class/">4: Exploratory data analysis</a>
+      </li>
+
+      
+      <li class="active">
+        <a href="../../class/05-class/">5: Exploring spatial networks</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/06-class/">6: Model building 1</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/07-class/">7: Model building 2</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/08-class/">8: Uncertainty analysis</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/09-class/">9: Communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -702,13 +741,14 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Friday, August 13, 2021
+                        Materials from class on Friday, August 12, 2022
                     </div>
                     
 
                     <div class="article-style">
                         
 <!-- BLOGDOWN-HEAD -->
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="../../rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="../../rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <!-- /BLOGDOWN-HEAD -->
@@ -717,13 +757,15 @@
 <div id="TOC">
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#concepts">Concepts</a><ul>
+<li><a href="#concepts">Concepts</a>
+<ul>
 <li><a href="#network-data-nodes-and-edges">Network data: nodes and edges</a></li>
 <li><a href="#node-link-representations">Node-link representations</a></li>
 <li><a href="#matrix-representations">Matrix representations</a></li>
 <li><a href="#od-maps">OD maps</a></li>
 </ul></li>
-<li><a href="#techniques">Techniques</a><ul>
+<li><a href="#techniques">Techniques</a>
+<ul>
 <li><a href="#import">Import</a></li>
 <li><a href="#analyse-over-nodes">Analyse over nodes</a></li>
 <li><a href="#analyse-over-edges">Analyse over edges</a></li>
@@ -756,8 +798,8 @@
 </p>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>Networks are a special class of data used to represent things (entities) and how they relate to one another. Network data consist of two types of element: <strong>nodes</strong>, the entities themselves, and <strong>edges</strong>, the connections between nodes. Both nodes and edges can have additional information attached to them – counts, categories and directions. Network data are cumbersome to work with in R as they are not represented well by flat data frames. This is being improved by packages like <a href="https://github.com/thomasp85/tidygraph">tidygraph</a>, but a common workflow is to split the data across two tables – one representing nodes and one representing edges <span class="citation">(Wickham, Navarro, and Lin Pedersen <a href="#ref-wickham_ggplot2_2020" role="doc-biblioref">2020</a>)</span>.</p>
-<p>A category of network data used heavily in geospatial analysis is origin-destination (OD) data describing, for example, flows of bikes <span class="citation">(Beecham and Wood <a href="#ref-beecham_exploring_2014" role="doc-biblioref">2014</a>)</span> and commuters <span class="citation">(Beecham and Slingsby <a href="#ref-beecham_characterising_2019" role="doc-biblioref">2019</a>)</span> around a city, or <a href="https://public.tableau.com/profile/robradburn#!/vizhome/LiquidCapital/VirtualWater">water</a> around a country. These data consist of <strong>nodes</strong>, origin and destination locations, and <strong>edges</strong>, flows linking those origins and destinations. Whilst statistics common to <a href="https://en.wikipedia.org/wiki/Network_science">Network Science</a> can and have been deployed in the analysis of geospatial OD data, visualization techniques provide much assistance in exposing the types of complex structural patterns and relations that result from locating OD flow data within geographic context.</p>
+<p>Networks are a special class of data used to represent things (entities) and how they relate to one another. Network data consist of two types of element: <strong>nodes</strong>, the entities themselves, and <strong>edges</strong>, the connections between nodes. Both nodes and edges can have additional information attached to them – counts, categories and directions. Network data are cumbersome to work with in R as they are not represented well by flat data frames. This is being improved by packages like <a href="https://github.com/thomasp85/tidygraph">tidygraph</a>, but a common workflow is to split the data across two tables – one representing nodes and one representing edges <span class="citation">(<a href="#ref-wickham_ggplot2_2020" role="doc-biblioref">Wickham, Navarro, and Lin Pedersen 2020</a>)</span>.</p>
+<p>A category of network data used heavily in geospatial analysis is origin-destination (OD) data describing, for example, flows of bikes <span class="citation">(<a href="#ref-beecham_exploring_2014" role="doc-biblioref">Beecham and Wood 2014</a>)</span> and commuters <span class="citation">(<a href="#ref-beecham_characterising_2019" role="doc-biblioref">Beecham and Slingsby 2019</a>)</span> around a city, or <a href="https://public.tableau.com/profile/robradburn#!/vizhome/LiquidCapital/VirtualWater">water</a> around a country. These data consist of <strong>nodes</strong>, origin and destination locations, and <strong>edges</strong>, flows linking those origins and destinations. Whilst statistics common to <a href="https://en.wikipedia.org/wiki/Network_science">Network Science</a> can and have been deployed in the analysis of geospatial OD data, visualization techniques provide much assistance in exposing the types of complex structural patterns and relations that result from locating OD flow data within geographic context.</p>
 <p>In this session we will work with an accessible and widely used origin-destination network dataset: 2011 Census travel-to-work data. This records counts of individuals commuting between locations (<a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography#census-geography">census geographies</a>) of the UK by travel mode, occupation, sex and age.</p>
 <p><div class="alert alert-instruction">
   <div>
@@ -945,7 +987,7 @@ Figure 3: Node-link layout of commutes between London boroughs.
   </div>
 </div>
 </p>
-<p>If the aim is to compare relative frequencies of flows and <em>locate</em> them in geographic context – to understand both the distribution and geography of travel-to-work in London, then we can make better use of <em>position</em>. In Figure <a href="#fig:lines-geog">4</a>, nodes (boroughs) are placed in their exact geographic position (geometric centroid of boroughs), and line width and transparency is used to encode flow frequency. In the plot on the bottom row, flow <em>direction</em> is encoded by making flow lines asymmetric <span class="citation">(following Wood, Slingsby, and Dykes <a href="#ref-wood_visualizing_2011" role="doc-biblioref">2011</a>)</span>: the straight ends are origins, the curved ends destinations.</p>
+<p>If the aim is to compare relative frequencies of flows and <em>locate</em> them in geographic context – to understand both the distribution and geography of travel-to-work in London, then we can make better use of <em>position</em>. In Figure <a href="#fig:lines-geog">4</a>, nodes (boroughs) are placed in their exact geographic position (geometric centroid of boroughs), and line width and transparency is used to encode flow frequency. In the plot on the bottom row, flow <em>direction</em> is encoded by making flow lines asymmetric <span class="citation">(following <a href="#ref-wood_visualizing_2011" role="doc-biblioref">Wood, Slingsby, and Dykes 2011</a>)</span>: the straight ends are origins, the curved ends destinations.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:lines-geog"></span>
 <img src="../../class/05-class_files/lines-geog.png" alt="Straight line showing commutes between London boroughs in spatial position; asymmetric lines encode direction." width="90%" />
 <p class="caption">
@@ -963,7 +1005,7 @@ Figure 4: Straight line showing commutes between London boroughs in spatial posi
 <div id="matrix-representations" class="section level3">
 <h3>Matrix representations</h3>
 <p>An alternative way to represent these edge frequencies is origin-destination matrices, as in Figure <a href="#fig:matrices">5</a>. The columns are destinations, London boroughs to which residents commute for work; the rows are origins, London boroughs from which residents commute out for work. Edge frequencies are encoded using colour value – the darker the colour, the larger the number of commutes between those boroughs. Boroughs are ordered left-to-right and top-to-bottom according to the total number of jobs accessed in each borough.</p>
-<p>Whilst using colour rather than line width to show flow magnitude is a less effective encoding channel <span class="citation">(following Munzner <a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span>, there are obvious advantages. The salience bias of longer flows is removed. Ordering cells of the matrix by destination size (number of jobs accessed in each borough) helps to emphasise patterns in the job-rich boroughs, but also encourages <em>within</em> and <em>between</em> borough comparison. For example, the lack of colour outside of the diagonals in the less job-rich boroughs, which also tend to be in outer London, suggests that labour markets there might be more self-contained: that is, people are less likely to commute-in from outside of those boroughs for work. The layout also supports ‘look-up’ type tasks – for example in the top-right plot, where the same OD commutes are removed, we can efficiently identify the boroughs importing the second (WNS) and third (LAM) largest number of workers to Westminster. By applying a local scaling on destination (bottom plot), whereby a separate colour scale is created for each destination borough, we can explore the theme of <em>self-containment</em> more directly. The vertical blue bars for Hammersmith and Kingston suggest that there are comparatively large numbers commuting into- these boroughs for work, especially given their size in terms of available jobs.</p>
+<p>Whilst using colour rather than line width to show flow magnitude is a less effective encoding channel <span class="citation">(following <a href="#ref-munzner_visualization_2014" role="doc-biblioref">Munzner 2014</a>)</span>, there are obvious advantages. The salience bias of longer flows is removed. Ordering cells of the matrix by destination size (number of jobs accessed in each borough) helps to emphasise patterns in the job-rich boroughs, but also encourages <em>within</em> and <em>between</em> borough comparison. For example, the lack of colour outside of the diagonals in the less job-rich boroughs, which also tend to be in outer London, suggests that labour markets there might be more self-contained: that is, people are less likely to commute-in from outside of those boroughs for work. The layout also supports ‘look-up’ type tasks – for example in the top-right plot, where the same OD commutes are removed, we can efficiently identify the boroughs importing the second (WNS) and third (LAM) largest number of workers to Westminster. By applying a local scaling on destination (bottom plot), whereby a separate colour scale is created for each destination borough, we can explore the theme of <em>self-containment</em> more directly. The vertical blue bars for Hammersmith and Kingston suggest that there are comparatively large numbers commuting into- these boroughs for work, especially given their size in terms of available jobs.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:matrices"></span>
 <img src="../../class/05-class_files/matrices.png" alt="OD matrices showing commutes between London boroughs." width="100%" />
 <p class="caption">
@@ -992,7 +1034,7 @@ Figure 7: Destination-focussed OD map of commutes between London boroughs
 <p>The local scaling allows us to characterise the geography of commuting into boroughs in reasonable detail. The two job-rich boroughs – Westminster and City of London – clearly draw workers in large proportions across London boroughs and to a lesser extent this is the case for other central/inner boroughs such as Islington (ISL), Camden (CMD), Kingston (KNS). For many outer London boroughs, commuting patterns are very localised – large numbers of available jobs are filled by workers living in those boroughs or immediately neighbouring boroughs. Notice that for inner London boroughs south of the river – Lambeth (LAM), Wandsworth (WNS), Southwark (SWR) – they tend to draw workers in greater number from neighbouring boroughs that are also south of the river. There is more to unpack here. In the <a href="#techniques-1">Technical</a> element to the class and <a href="../../homework/05-homework/">Homework</a> you will consider how this geography of travel-to-work varies by travel mode.</p>
 <p><div class="alert alert-note">
   <div>
-    <p>The analysis above might give the impression that OD maps should be used in preference of spatially arranged node-link diagrams. As always, this depends on dataset and analysis task. In Figure <a href="#fig:flow-bikes">8</a> is a map displaying bikeshare flow data for the London Cycle Hire Scheme (LCHS), collected via the <a href="https://docs.ropensci.org/bikedata/">bikedata</a> package. The LCHS consists of c.700 docking stations in London – so c. 700^2 grid cells if the grid-within-grid layout of an OD map were to be used – challenging, although possible <span class="citation">(see Wood, Slingsby, and Dykes <a href="#ref-wood_visualizing_2011" role="doc-biblioref">2011</a>)</span>. If a synoptic overview of spatial patterns is necessary, the more intuitive node-line representation is perhaps more successful than the OD map. Additionally, different from the commuter dataset, there <em>is</em> geographic precision in the spatial coordinates representing origins and destinations in the bikeshare dataset, and distance judgements seem important when exploring cycling trips – an argument against the spatial distortion required by OD maps.</p></p>
+    <p>The analysis above might give the impression that OD maps should be used in preference of spatially arranged node-link diagrams. As always, this depends on dataset and analysis task. In Figure <a href="#fig:flow-bikes">8</a> is a map displaying bikeshare flow data for the London Cycle Hire Scheme (LCHS), collected via the <a href="https://docs.ropensci.org/bikedata/">bikedata</a> package. The LCHS consists of c.700 docking stations in London – so c. 700^2 grid cells if the grid-within-grid layout of an OD map were to be used – challenging, although possible <span class="citation">(see <a href="#ref-wood_visualizing_2011" role="doc-biblioref">Wood, Slingsby, and Dykes 2011</a>)</span>. If a synoptic overview of spatial patterns is necessary, the more intuitive node-line representation is perhaps more successful than the OD map. Additionally, different from the commuter dataset, there <em>is</em> geographic precision in the spatial coordinates representing origins and destinations in the bikeshare dataset, and distance judgements seem important when exploring cycling trips – an argument against the spatial distortion required by OD maps.</p></p>
 <p>In the graphic below, I’ve filtered on trips that take place in the morning peak. The dominant pattern is of flows from London’s main commuter rail terminals – King’s Cross and Waterloo – to central London and City of London respectively. The asymmetric bezier curves efficiently communicate this and the reverse pattern when trips in the evening peak are filtered.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:flow-bikes"></span>
 <img src="../../class/05-class_files/flow-vis-gds.png" alt="Flow map of London Cycle Hire Scheme trips in the weakday morning peak. Data by TfL, accessed via [bikedata](https://docs.ropensci.org/bikedata/); parks and river outline via [OSM](https://www.openstreetmap.org/)." width="100%" />
@@ -1564,7 +1606,7 @@ plot_data_temp %&gt;%
 <li><strong>1. Data</strong>:
 <ul>
 <li>We create a temporary staging data frame for this plot (<code>plot_data_temp</code>). This is our edges dataset, joined twice on <code>london_grid_real</code>.</li>
-<li>The first join. The code above is for generating a D-OD map, where the large cells are destinations and the small cells are origins. In the plot spec you will see, as in the spatially arranged bars, that for D-OD maps we facet on destination using the LondonSquared layout. This means that we want to bring in <code>geometry</code> data for the origin borough in each OD pair and make this explicit in the join – <code>by=c("authority"="o_bor")</code>. We also <code>rename()</code> the joined variables accordingly – <code>o_fx, o_fy</code> refers to the LondonSquared grid cell references of the origins. If we wanted to use the LondonSquared layout only for faceting, and represent origin boroughs using their real geography <span class="citation">(as in Beecham and Slingsby <a href="#ref-beecham_characterising_2019" role="doc-biblioref">2019</a>; Slingsby, Kelly, and Dykes <a href="#ref-slingsby_od_2014" role="doc-biblioref">2014</a>)</span> we could join on the real and not grid geometries – with <code>filter(type=="real")</code>.</li>
+<li>The first join. The code above is for generating a D-OD map, where the large cells are destinations and the small cells are origins. In the plot spec you will see, as in the spatially arranged bars, that for D-OD maps we facet on destination using the LondonSquared layout. This means that we want to bring in <code>geometry</code> data for the origin borough in each OD pair and make this explicit in the join – <code>by=c("authority"="o_bor")</code>. We also <code>rename()</code> the joined variables accordingly – <code>o_fx, o_fy</code> refers to the LondonSquared grid cell references of the origins. If we wanted to use the LondonSquared layout only for faceting, and represent origin boroughs using their real geography <span class="citation">(as in <a href="#ref-beecham_characterising_2019" role="doc-biblioref">Beecham and Slingsby 2019</a>; <a href="#ref-slingsby_od_2014" role="doc-biblioref">Slingsby, Kelly, and Dykes 2014</a>)</span> we could join on the real and not grid geometries – with <code>filter(type=="real")</code>.</li>
 <li>The second join is on destination (origin in the case of an O-OD map). We drop the geometry data from the joining London boundaries object, but keep the LondonSquared layout grid references and rename accordingly – e.g. <code>rename(d_fx=x, d_fy=y)</code>.</li>
 <li>Finally in the <code>mutate()</code> we generate a new variable identifying the borough in focus (<code>bor_focus</code>), destination in this case, and a text label variable for annotating plots on this (<code>bor_label</code>).</li>
 <li>An additional derived object contains coordinate pairs describing the geographic extent of our geometries data – see <a href="https://r-spatial.github.io/sf/reference/st_bbox.html">st_bbox()</a>.</li>
@@ -1591,27 +1633,27 @@ plot_data_temp %&gt;%
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-beecham_characterising_2019">
-<p>Beecham, R., and A. Slingsby. 2019. “Characterising labour market self-containment in London with geographically arranged small multiples.” <em>Environment and Planning A: Economy and Space</em> 51 (6): 1217–24.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-beecham_characterising_2019" class="csl-entry">
+Beecham, R., and A. Slingsby. 2019. <span>“<span class="nocase">Characterising labour market self-containment in London with geographically arranged small multiples</span>.”</span> <em><span>Environment and Planning A: Economy and Space</span></em> 51 (6): 1217–24.
 </div>
-<div id="ref-beecham_exploring_2014">
-<p>Beecham, R., and J. Wood. 2014. “Exploring Gendered Cycling Behaviours Within a Large-Scale Behavioural Data-Set.” <em>Transportation Planning and Technology</em> 37 (1). Taylor &amp; Francis: 83–97.</p>
+<div id="ref-beecham_exploring_2014" class="csl-entry">
+Beecham, R., and J. Wood. 2014. <span>“Exploring Gendered Cycling Behaviours Within a Large-Scale Behavioural Data-Set.”</span> <em>Transportation Planning and Technology</em> 37 (1). Taylor &amp; Francis: 83–97.
 </div>
-<div id="ref-munzner_visualization_2014">
-<p>Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.</p>
+<div id="ref-munzner_visualization_2014" class="csl-entry">
+Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.
 </div>
-<div id="ref-slingsby_od_2014">
-<p>Slingsby, A., M. Kelly, and J. Dykes. 2014. “OD maps for showing changes inIrish female migration between 1851 and 1911.” <em>Environment and Planning A: Economy and Space</em> 46 (12): 2795–7.</p>
+<div id="ref-slingsby_od_2014" class="csl-entry">
+Slingsby, A., M. Kelly, and J. Dykes. 2014. <span>“<span class="nocase">OD maps for showing changes inIrish female migration between 1851 and 1911</span>.”</span> <em><span>Environment and Planning A: Economy and Space</span></em> 46 (12): 2795--2797.
 </div>
-<div id="ref-wickham_ggplot2_2020">
-<p>Wickham, H., D. Navarro, and T. Lin Pedersen. 2020. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer.</p>
+<div id="ref-wickham_ggplot2_2020" class="csl-entry">
+Wickham, H., D. Navarro, and T. Lin Pedersen. 2020. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer.
 </div>
-<div id="ref-wood_visualisation_2010">
-<p>Wood, J., J. Dykes, and A. Slingsby. 2010. “Visualisation of Origins, Destinations and Flows with Od Maps.” <em>The Cartographic Journal</em> 47 (2): 117–29.</p>
+<div id="ref-wood_visualisation_2010" class="csl-entry">
+Wood, J., J. Dykes, and A. Slingsby. 2010. <span>“Visualisation of Origins, Destinations and Flows with OD Maps.”</span> <em>The Cartographic Journal</em> 47 (2): 117–29.
 </div>
-<div id="ref-wood_visualizing_2011">
-<p>Wood, J., A. Slingsby, and J. Dykes. 2011. “Visualizing the Dynamics of London’s Bicycle-Hire Scheme.” <em>Cartographica: The International Journal for Geographic Information and Geovisualization</em>, no. 4: 239–51.</p>
+<div id="ref-wood_visualizing_2011" class="csl-entry">
+Wood, J., A. Slingsby, and J. Dykes. 2011. <span>“Visualizing the Dynamics of London’s Bicycle-Hire Scheme.”</span> <em>Cartographica: The International Journal for Geographic Information and Geovisualization</em>, no. 4: 239–51.
 </div>
 </div>
 </div>
@@ -1626,7 +1668,7 @@ plot_data_temp %&gt;%
                 </div>
 
                 <div class="body-footer">
-                    <p> Fri, 25 Jun 2021</p>
+                    <p> Thu, 21 Apr 2022</p>
 
                     
 
@@ -1648,7 +1690,7 @@ plot_data_temp %&gt;%
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>ESS 2021 | 3D: Computational Methods for Social Data Science (August 2021)</strong><br>
+                <strong>ESS 2022 | 3D: Computational Methods for Social Data Science (August 2022)</strong><br>
 
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a> &emsp;&emsp;
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a>
@@ -1671,7 +1713,7 @@ plot_data_temp %&gt;%
         <div class="col-md-5 credits">
             <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
             
-            <p>Content <i class="fab fa-creative-commons"></i> 2021 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
+            <p>Content <i class="fab fa-creative-commons"></i> 2022 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
             
             <p><a href="https://github.com/rogerbeecham/comp-sds" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
         </div>
@@ -1755,7 +1797,7 @@ plot_data_temp %&gt;%
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.dd01fef442e09a86aae6adb7b6cc358b.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
 
     
 

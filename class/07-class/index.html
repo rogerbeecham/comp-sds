@@ -37,7 +37,7 @@
   
     
   
-  <meta name="description" content="Contents  Introduction Concepts Geographic dependency and non-stationarity Representing geographic context Geographic context as grouped nuisance term Geographic context as grouped effects Addressing estimate volatility Geographic context as continuous effects  Techniques Import Model FE Model Interaction Plot tidy models  Conclusions References   By the end of this session you should gain the following knowledge:
+  <meta name="description" content="Contents  Introduction Concepts  Geographic dependency and non-stationarity Representing geographic context Geographic context as grouped nuisance term Geographic context as grouped effects Addressing estimate volatility Geographic context as continuous effects  Techniques  Import Model FE Model Interaction Plot tidy models  Conclusions References   By the end of this session you should gain the following knowledge:
   Understand two categories of geographic effect in regression modelling: geographical dependence in values and non-stationarity in processes.">
 
   
@@ -266,8 +266,8 @@
   <link rel="manifest" href="../../index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="../../class/07-class/">
 
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Computational Methods for Social Data Science">
   <meta property="og:url" content="/class/07-class/">
   <meta property="og:title" content="Model building 2: Expose, estimate, evaluate | Computational Methods for Social Data Science">
-  <meta property="og:description" content="Contents  Introduction Concepts Geographic dependency and non-stationarity Representing geographic context Geographic context as grouped nuisance term Geographic context as grouped effects Addressing estimate volatility Geographic context as continuous effects  Techniques Import Model FE Model Interaction Plot tidy models  Conclusions References   By the end of this session you should gain the following knowledge:
+  <meta property="og:description" content="Contents  Introduction Concepts  Geographic dependency and non-stationarity Representing geographic context Geographic context as grouped nuisance term Geographic context as grouped effects Addressing estimate volatility Geographic context as continuous effects  Techniques  Import Model FE Model Interaction Plot tidy models  Conclusions References   By the end of this session you should gain the following knowledge:
   Understand two categories of geographic effect in regression modelling: geographical dependence in values and non-stationarity in processes."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-08-17T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-08-16T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-06-25T12:30:57&#43;01:00">
+    <meta property="article:modified_time" content="2022-04-21T11:16:40&#43;01:00">
   
 
   
@@ -318,7 +318,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../img/apple-touch-icon-152x152.png" />
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16" />
-  <meta name="application-name" content="ESS 2021 | 3D: Computational Methods for Social Data Science" />
+  <meta name="application-name" content="ESS 2022 | 3D: Computational Methods for Social Data Science" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
@@ -628,6 +628,10 @@
 
 
 
+  
+    
+  
+
 
 
 
@@ -677,6 +681,41 @@
       </li>
 
       
+      <li >
+        <a href="../../class/03-class/">3: Visualization fundamentals</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/04-class/">4: Exploratory data analysis</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/05-class/">5: Exploring spatial networks</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/06-class/">6: Model building 1</a>
+      </li>
+
+      
+      <li class="active">
+        <a href="../../class/07-class/">7: Model building 2</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/08-class/">8: Uncertainty analysis</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/09-class/">9: Communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -702,20 +741,22 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Tuesday, August 17, 2021
+                        Materials from class on Tuesday, August 16, 2022
                     </div>
                     
 
                     <div class="article-style">
                         
 <!-- BLOGDOWN-HEAD -->
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <!-- /BLOGDOWN-HEAD -->
 
 <h2>Contents</h2>
 <div id="TOC">
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#concepts">Concepts</a><ul>
+<li><a href="#concepts">Concepts</a>
+<ul>
 <li><a href="#geographic-dependency-and-non-stationarity">Geographic dependency and non-stationarity</a></li>
 <li><a href="#representing-geographic-context">Representing geographic context</a></li>
 <li><a href="#geographic-context-as-grouped-nuisance-term">Geographic context as grouped nuisance term</a></li>
@@ -723,7 +764,8 @@
 <li><a href="#addressing-estimate-volatility">Addressing estimate volatility</a></li>
 <li><a href="#geographic-context-as-continuous-effects">Geographic context as continuous effects</a></li>
 </ul></li>
-<li><a href="#techniques">Techniques</a><ul>
+<li><a href="#techniques">Techniques</a>
+<ul>
 <li><a href="#import">Import</a></li>
 <li><a href="#model-fe">Model FE</a></li>
 <li><a href="#model-interaction">Model Interaction</a></li>
@@ -869,12 +911,12 @@ Figure 5: Output from multiple regression model of Leave vote by demographic com
 <h3>Addressing estimate volatility</h3>
 <p>Given the reasonably large standard errors, it is difficult to make strong claims about regional nonstationarity in <em>process</em> form the models presented above. This might be due to overfitting, caused by the fact that we introduce additional terms to the regression model (region as an interaction) without adding data – our coefficients may begin to fit noise rather than true effects.</p>
 <p>Given the fact that our data are hierarchically structured (constituencies sit within regions) hierarchical <a href="https://en.wikipedia.org/wiki/Multilevel_model">multi-level modelling</a> may be more appropriate to modelling this sort of regional grouping. Multi-level modelling uses <a href="https://solomonkurz.netlify.app/post/stein-s-paradox-and-what-partial-pooling-can-do-for-you/">partial pooling</a> to make estimated coefficients more conservative where there are comparatively few observations in particular groupings. There are numerous resources on multi-level modelling in R (see <a href="https://bookdown.org/roback/bookdown-BeyondMLR/">Roback &amp; Legler 2021</a> for an in-progress example). The reason for the FE approach here is a prosaic one: I wanted to use model-building functions in R that worked well with <a href="https://www.tidymodels.org/"><code>tidymodels</code></a>, although annoyingly I’ve recently noticed that a <code>package</code> for combining multi-level modelling with <code>tidymodels</code> is <a href="https://github.com/tidymodels/multilevelmod">under development here</a>.</p>
-<p>Alternatively, it may be useful to generate different model formulations for different regions – e.g. particular combinations of explanatory variable. <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)">Penalised regression</a> provides a principled means of automatic variable selection and has been applied to generate regional and state area-level model specifications for the Brexit <span class="citation">(Beecham, Slingsby, and Brunsdon <a href="#ref-beecham_locally_2018" role="doc-biblioref">2018</a>)</span> and Trump <span class="citation">(Beecham, Williams, and Comber <a href="#ref-beecham_regionally_2020" role="doc-biblioref">2020</a>)</span> votes, again with more reliably coefficient estimates.</p>
+<p>Alternatively, it may be useful to generate different model formulations for different regions – e.g. particular combinations of explanatory variable. <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)">Penalised regression</a> provides a principled means of automatic variable selection and has been applied to generate regional and state area-level model specifications for the Brexit <span class="citation">(<a href="#ref-beecham_locally_2018" role="doc-biblioref">Beecham, Slingsby, and Brunsdon 2018</a>)</span> and Trump <span class="citation">(<a href="#ref-beecham_regionally_2020" role="doc-biblioref">Beecham, Williams, and Comber 2020</a>)</span> votes, again with more reliably coefficient estimates.</p>
 </div>
 <div id="geographic-context-as-continuous-effects" class="section level3">
 <h3>Geographic context as continuous effects</h3>
 <!-- Previously, we identified two ways in which geographic context might be represented: geography as categorical variable (region) and geography as continuous variable (location in *x,y*).  -->
-<p>Geographically-weighted (GW) statistics provides a mechanism for exploring the extent to which values and associations vary <em>continuously</em> over space <span class="citation">(Brunsdon, Fortheringham, and Charlton <a href="#ref-brunsdon_geographically_2002" role="doc-biblioref">2002</a>)</span>. This involves generating local statistics, and in the case of <a href="https://journals.sagepub.com/doi/10.1068/a301905">Geographically Weighted Regression</a> (GWR) local regression coefficients, for each spatial unit. If applied to our dataset, separate regression coefficients for each constituency are estimated that take into account observed values for Leave and the demographic variables in nearby constituencies. GW-statistics enables spatial non-stationarity in process to be flexibly explored and characterised. As GWR involves generating many hundreds of parameter estimates, visual analysis are often used in its interpretation <span class="citation">(e.g. Dykes and Brunsdon <a href="#ref-dykes_geographically_2007" role="doc-biblioref">2007</a>)</span>. I don’t want to burden you with yet another modelling paradigm, but <a href="https://www.roger-beecham.com/data-science-practicals/">this repo</a> contains some (rather dated) materials I previously prepared on GWR with the Brexit dataset.</p>
+<p>Geographically-weighted (GW) statistics provides a mechanism for exploring the extent to which values and associations vary <em>continuously</em> over space <span class="citation">(<a href="#ref-brunsdon_geographically_2002" role="doc-biblioref">Brunsdon, Fortheringham, and Charlton 2002</a>)</span>. This involves generating local statistics, and in the case of <a href="https://journals.sagepub.com/doi/10.1068/a301905">Geographically Weighted Regression</a> (GWR) local regression coefficients, for each spatial unit. If applied to our dataset, separate regression coefficients for each constituency are estimated that take into account observed values for Leave and the demographic variables in nearby constituencies. GW-statistics enables spatial non-stationarity in process to be flexibly explored and characterised. As GWR involves generating many hundreds of parameter estimates, visual analysis are often used in its interpretation <span class="citation">(e.g. <a href="#ref-dykes_geographically_2007" role="doc-biblioref">Dykes and Brunsdon 2007</a>)</span>. I don’t want to burden you with yet another modelling paradigm, but <a href="https://www.roger-beecham.com/data-science-practicals/">this repo</a> contains some (rather dated) materials I previously prepared on GWR with the Brexit dataset.</p>
 </div>
 </div>
 <div id="techniques" class="section level2">
@@ -1050,18 +1092,18 @@ We can control for these unobserved factors by modelling Region as a fixed effec
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-beecham_locally_2018">
-<p>Beecham, R., A. Slingsby, and C. Brunsdon. 2018. “Locally-varying explanations behind the United Kingdom’s vote to leave the European Union.” <em>Journal of Spatial Information Science</em> 16: 117–36.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-beecham_locally_2018" class="csl-entry">
+Beecham, R., A. Slingsby, and C. Brunsdon. 2018. <span>“<span class="nocase">Locally-varying explanations behind the United Kingdom’s vote to leave the European Union </span>.”</span> <em><span>Journal of Spatial Information Science</span></em> 16: 117–36.
 </div>
-<div id="ref-beecham_regionally_2020">
-<p>Beecham, R., N. Williams, and L. Comber. 2020. “Regionally-structured explanations behind area-level populism: An update to recent ecological analyses.” <em>PLOS One</em> 15 (3): e0229974.</p>
+<div id="ref-beecham_regionally_2020" class="csl-entry">
+Beecham, R., N. Williams, and L. Comber. 2020. <span>“<span class="nocase">Regionally-structured explanations behind area-level populism: An update to recent ecological analyses</span>.”</span> <em><span>PLOS One</span></em> 15 (3): e0229974.
 </div>
-<div id="ref-brunsdon_geographically_2002">
-<p>Brunsdon, C., M. Fortheringham, and M. Charlton. 2002. “Geographically Weighted Summary Statistics: A Framework for Localised Exploratory Data Analysis.” <em>Computers, Environment and Urban Systems</em> 26: 501–24.</p>
+<div id="ref-brunsdon_geographically_2002" class="csl-entry">
+Brunsdon, C., M. Fortheringham, and M. Charlton. 2002. <span>“Geographically Weighted Summary Statistics: A Framework for Localised Exploratory Data Analysis.”</span> <em>Computers, Environment and Urban Systems</em> 26: 501–24.
 </div>
-<div id="ref-dykes_geographically_2007">
-<p>Dykes, J., and C. Brunsdon. 2007. “Geographically Weighted Visualization: Interactive Graphics for Scale-Varying Exploratory Analysis.” <em>IEEE Transactions on Visualization and Computer Graphics</em> 13 (6): 1161–8.</p>
+<div id="ref-dykes_geographically_2007" class="csl-entry">
+Dykes, J., and C. Brunsdon. 2007. <span>“Geographically Weighted Visualization: Interactive Graphics for Scale-Varying Exploratory Analysis.”</span> <em>IEEE Transactions on Visualization and Computer Graphics</em> 13 (6): 1161–68.
 </div>
 </div>
 </div>
@@ -1076,7 +1118,7 @@ We can control for these unobserved factors by modelling Region as a fixed effec
                 </div>
 
                 <div class="body-footer">
-                    <p> Fri, 25 Jun 2021</p>
+                    <p> Thu, 21 Apr 2022</p>
 
                     
 
@@ -1098,7 +1140,7 @@ We can control for these unobserved factors by modelling Region as a fixed effec
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>ESS 2021 | 3D: Computational Methods for Social Data Science (August 2021)</strong><br>
+                <strong>ESS 2022 | 3D: Computational Methods for Social Data Science (August 2022)</strong><br>
 
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a> &emsp;&emsp;
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a>
@@ -1121,7 +1163,7 @@ We can control for these unobserved factors by modelling Region as a fixed effec
         <div class="col-md-5 credits">
             <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
             
-            <p>Content <i class="fab fa-creative-commons"></i> 2021 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
+            <p>Content <i class="fab fa-creative-commons"></i> 2022 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
             
             <p><a href="https://github.com/rogerbeecham/comp-sds" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
         </div>
@@ -1205,7 +1247,7 @@ We can control for these unobserved factors by modelling Region as a fixed effec
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.dd01fef442e09a86aae6adb7b6cc358b.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
 
     
 

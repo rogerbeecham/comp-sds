@@ -37,8 +37,8 @@
   
     
   
-  <meta name="description" content="Contents  Session outcomes Introduction Concepts Quantifying and exploring variation Quantifying and exploring co-variation Modelling for co-variation Extracting and representing model parameters Exploring bias  Techniques Import Transform Model Tidy models Plot tidy models Plot residuals  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  Be reminded of the basics of linear regression modelling. Appreciate problems of model bias.">
+  <meta name="description" content="Contents  Session outcomes Introduction Concepts  Quantifying and exploring variation Quantifying and exploring co-variation Modelling for co-variation Extracting and representing model parameters Exploring bias  Techniques  Import Transform Model Tidy models Plot tidy models Plot residuals  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
+  Be reminded of the basics of linear regression modelling.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/06-class/">
@@ -266,8 +266,8 @@
   <link rel="manifest" href="../../index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="../../class/06-class/">
 
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Computational Methods for Social Data Science">
   <meta property="og:url" content="/class/06-class/">
   <meta property="og:title" content="Model building 1: Expose, estimate, evaluate | Computational Methods for Social Data Science">
-  <meta property="og:description" content="Contents  Session outcomes Introduction Concepts Quantifying and exploring variation Quantifying and exploring co-variation Modelling for co-variation Extracting and representing model parameters Exploring bias  Techniques Import Transform Model Tidy models Plot tidy models Plot residuals  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  Be reminded of the basics of linear regression modelling. Appreciate problems of model bias."><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Contents  Session outcomes Introduction Concepts  Quantifying and exploring variation Quantifying and exploring co-variation Modelling for co-variation Extracting and representing model parameters Exploring bias  Techniques  Import Transform Model Tidy models Plot tidy models Plot residuals  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
+  Be reminded of the basics of linear regression modelling."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-08-16T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-08-15T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-06-25T12:30:57&#43;01:00">
+    <meta property="article:modified_time" content="2022-04-21T11:16:40&#43;01:00">
   
 
   
@@ -318,7 +318,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../img/apple-touch-icon-152x152.png" />
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16" />
-  <meta name="application-name" content="ESS 2021 | 3D: Computational Methods for Social Data Science" />
+  <meta name="application-name" content="ESS 2022 | 3D: Computational Methods for Social Data Science" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
@@ -628,6 +628,10 @@
 
 
 
+  
+    
+  
+
 
 
 
@@ -677,6 +681,41 @@
       </li>
 
       
+      <li >
+        <a href="../../class/03-class/">3: Visualization fundamentals</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/04-class/">4: Exploratory data analysis</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/05-class/">5: Exploring spatial networks</a>
+      </li>
+
+      
+      <li class="active">
+        <a href="../../class/06-class/">6: Model building 1</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/07-class/">7: Model building 2</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/08-class/">8: Uncertainty analysis</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/09-class/">9: Communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -702,13 +741,14 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Monday, August 16, 2021
+                        Materials from class on Monday, August 15, 2022
                     </div>
                     
 
                     <div class="article-style">
                         
 <!-- BLOGDOWN-HEAD -->
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="../../rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="../../rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <!-- /BLOGDOWN-HEAD -->
@@ -718,14 +758,16 @@
 <ul>
 <li><a href="#session-outcomes">Session outcomes</a></li>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#concepts">Concepts</a><ul>
+<li><a href="#concepts">Concepts</a>
+<ul>
 <li><a href="#quantifying-and-exploring-variation">Quantifying and exploring variation</a></li>
 <li><a href="#quantifying-and-exploring-co-variation">Quantifying and exploring co-variation</a></li>
 <li><a href="#modelling-for-co-variation">Modelling for co-variation</a></li>
 <li><a href="#extracting-and-representing-model-parameters">Extracting and representing model parameters</a></li>
 <li><a href="#exploring-bias">Exploring bias</a></li>
 </ul></li>
-<li><a href="#techniques">Techniques</a><ul>
+<li><a href="#techniques">Techniques</a>
+<ul>
 <li><a href="#import">Import</a></li>
 <li><a href="#transform">Transform</a></li>
 <li><a href="#model">Model</a></li>
@@ -780,7 +822,7 @@
 <div id="quantifying-and-exploring-variation" class="section level3">
 <h3>Quantifying and exploring variation</h3>
 <p>Variation is central to most data analysis, and certainly regression modelling: quantifying variation, exploring how it is structured and accounting for (or explaining) it using a combination of empirical data and prior theory/knowledge.</p>
-<p>In Figure <a href="#fig:map-uniform">1</a> is a map and bar chart displaying total variation in vote shares for Leave in Great Britain (GB), estimated at Parliamentary Constituency level <span class="citation">(see Hanretty <a href="#ref-hanretty_areal_2017" role="doc-biblioref">2017</a>)</span>. The values themselves are the difference in estimated vote shares from an expectation that the Leave vote for a constituency (<span class="math inline">\(y_{i}\)</span>), our <em>outcome</em> of interest, is the same as the national (GB) average of 51.9% (<span class="math inline">\(\bar{y}\)</span>). Although a slightly contrived formulation, we could express this as an intercept-only linear regression model, where <span class="math inline">\(\beta_{1}\)</span>, the estimated <strong>slope</strong> is ‘turned off’ (takes the value <span class="math inline">\(0\)</span>), and <span class="math inline">\(\beta_{0}\)</span>, the <strong>intercept</strong>, is <span class="math inline">\(\bar{y}\)</span>, the GB average vote share for Leave:</p>
+<p>In Figure <a href="#fig:map-uniform">1</a> is a map and bar chart displaying total variation in vote shares for Leave in Great Britain (GB), estimated at Parliamentary Constituency level <span class="citation">(see <a href="#ref-hanretty_areal_2017" role="doc-biblioref">Hanretty 2017</a>)</span>. The values themselves are the difference in estimated vote shares from an expectation that the Leave vote for a constituency (<span class="math inline">\(y_{i}\)</span>), our <em>outcome</em> of interest, is the same as the national (GB) average of 51.9% (<span class="math inline">\(\bar{y}\)</span>). Although a slightly contrived formulation, we could express this as an intercept-only linear regression model, where <span class="math inline">\(\beta_{1}\)</span>, the estimated <strong>slope</strong> is ‘turned off’ (takes the value <span class="math inline">\(0\)</span>), and <span class="math inline">\(\beta_{0}\)</span>, the <strong>intercept</strong>, is <span class="math inline">\(\bar{y}\)</span>, the GB average vote share for Leave:</p>
 <p><span class="math display">\[\begin{align*}
        y_{i}= \beta_{0} + \beta_{1} + \varepsilon_{i}
 \end{align*}\]</span></p>
@@ -948,7 +990,7 @@ Figure 6: Scatterplots of constituency Leave vote against candidate explanatory 
       y_{i}&amp;= \beta_{0} +\beta_{1}x_{i1} + ... + \beta_{k}x_{ik} + \varepsilon_{i}  \\
 \end{align*}\]</span></p>
 <p>So this results in <em>separate</em> <span class="math inline">\(\beta_{k}\)</span> coefficients for separate explanatory variables. These coefficients can be interpreted as the degree of association between the explanatory variable <span class="math inline">\(k\)</span> and the outcome variable, keeping all the other explanatory variables constant – or the distinct correlation between an explanatory variable <span class="math inline">\(k\)</span> and the outcome variable, net of the other correlated variables.</p>
-<!-- which allows us to isolate the distinct effect that a single variable has on the outcome. -->
+<p><!-- which allows us to isolate the distinct effect that a single variable has on the outcome. --></p>
 <p>In Figure <a href="#fig:plot-outputs">7</a> are regression coefficients (<span class="math inline">\(\beta_{k}\)</span>) from a multiple regression model with <em>degree-educated</em>, <em>no car</em>, <em>white</em>, <em>heavy industry</em>, <em>EU-born</em> and <em>not good health</em> selected as explanatory variables. Coefficients are reported as dots with estimates of uncertainty represented as lines, displaying 95% <a href="http://www.sumsar.net/blog/2013/12/an-animation-of-the-construction-of-a-confidence-interval/">confidence intervals</a>.
 <!-- the range of values the true (*unobservable*) coefficient is likely to take --></p>
 <p>Most variables’ coefficients are in the direction that would be expected given the associations in Figure <a href="#fig:scatters-resids">6</a>. Net of variation in the other compositional factors, increased levels of <em>degree education</em> in a constituency have the effect of reducing the Leave vote. The two exceptions are <em>EU-born</em> and <em>white</em>: after controlling for variation in the other demographic variables, increased proportions of residents identifying as <em>white</em> has the effect of reducing the Leave vote and increased proportions of residents that are <em>EU-born</em> has the effect of increasing the Leave vote. Since the confidence interval for <em>white</em> crosses zero, this coefficient is subject to much uncertainty. In the next session we will discuss some approaches to exploring whether these sorts of counter-intuitive effects are genuine or as a result of a poorly-specified model.</p>
@@ -976,7 +1018,7 @@ Figure 7: Output from multiple regression model of Leave vote by demographic com
 <li><em>Spatial dependence</em> in <strong>variable values</strong> over space. We know that the geography of GB is quite socially distinctive, so it is reasonable to expect, for example, the range in variables like <em>heavy industry</em> and <em>white</em> to be bounded to economic regions and metropolitan-peripheral regional contexts.</li>
 <li><em>Spatial nonstationarity</em> in <strong>processes</strong> over space. It is possible that associations between variables might be grouped over space – that the associations vary for different parts of the country. For example, high levels of <em>EU-born</em> migration might affect political attitudes, and thus area-level voting, differently in different parts of a country.</li>
 </ul>
-<p>We can test for and characterise <a href="https://rspatial.org/raster/analysis/3-spauto.html">spatial autocorrelation</a> by performing a graphical inference test. a Map LineUp <span class="citation">(Beecham et al. <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">2017</a>; Wickham et al. <a href="#ref-wickham_inference_2010" role="doc-biblioref">2010</a>)</span>, against a null hypothesis of <em>complete spatial randomness</em> in residuals. Graphical LineUp tests are visual equivalents of test statistics. A plot of real data is hidden amongst a set of decoys generated under a null hypothesis. If the real can be correctly identified from the decoys, then this lends statistical credibility to the claim that the observed data are not consistent with the specified null <span class="citation">(Wickham et al. <a href="#ref-wickham_inference_2010" role="doc-biblioref">2010</a>)</span>. Graphical LineUp tests have been used in various domains, also to test regression assumptions <span class="citation">(Loy, Hofmann, and Cook <a href="#ref-loy_model_2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>We can test for and characterise <a href="https://rspatial.org/raster/analysis/3-spauto.html">spatial autocorrelation</a> by performing a graphical inference test. a Map LineUp <span class="citation">(<a href="#ref-beecham_maplineups_2017" role="doc-biblioref">Beecham et al. 2017</a>; <a href="#ref-wickham_inference_2010" role="doc-biblioref">Wickham et al. 2010</a>)</span>, against a null hypothesis of <em>complete spatial randomness</em> in residuals. Graphical LineUp tests are visual equivalents of test statistics. A plot of real data is hidden amongst a set of decoys generated under a null hypothesis. If the real can be correctly identified from the decoys, then this lends statistical credibility to the claim that the observed data are not consistent with the specified null <span class="citation">(<a href="#ref-wickham_inference_2010" role="doc-biblioref">Wickham et al. 2010</a>)</span>. Graphical LineUp tests have been used in various domains, also to test regression assumptions <span class="citation">(<a href="#ref-loy_model_2017" role="doc-biblioref">Loy, Hofmann, and Cook 2017</a>)</span>.</p>
 <p>The Map LineUp in Figure <a href="#fig:plot-lineup">8</a>, constructed by randomly permuting observed residuals around constituencies, demonstrates that there <em>is</em> obvious spatial (and <em>regional</em>) autocorrelation in residuals. In the next session, we will cover approaches to dealing with this – accounting for <em>spatial dependence</em> in <strong>values</strong> and exploring <em>spatial nonstationarity</em> in <strong>processes</strong>.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:plot-lineup"></span>
 <img src="../../class/06-class_files/lineups.png" alt="Map LineUp of residuals in which the ‘real’ dataset is presented alongside 8 decoy plots generated by randomly permuting the observed residuals around constituencies." width="100%" />
@@ -1048,7 +1090,7 @@ summary(model)
 </div>
 <div id="tidy-models" class="section level3">
 <h3>Tidy models</h3>
-<p><a href="https://www.tidymodels.org/"><code>tidymodels</code></a>, and specifically the <a href="https://broom.tidymodels.org/"><code>broom</code></a> package, provides a useful set of functions for extracting model outputs in a format that adheres to tidy data <span class="citation">(Wickham <a href="#ref-wickham_tidy_2014" role="doc-biblioref">2014</a>)</span> – e.g. as a data frame.</p>
+<p><a href="https://www.tidymodels.org/"><code>tidymodels</code></a>, and specifically the <a href="https://broom.tidymodels.org/"><code>broom</code></a> package, provides a useful set of functions for extracting model outputs in a format that adheres to tidy data <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span> – e.g. as a data frame.</p>
 <p>Some examples:</p>
 <pre class="r"><code># tidy() return estimated coefficients as a data frame
 tidy(model)
@@ -1144,7 +1186,7 @@ outputs %&gt;%
 </div>
 <div id="plot-residuals" class="section level3">
 <h3>Plot residuals</h3>
-<p>In order to explore spatial autocorrelation in residuals, we used a Map LineUp test <span class="citation">(Beecham et al. <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">2017</a>; Wickham et al. <a href="#ref-wickham_inference_2010" role="doc-biblioref">2010</a>)</span>. Using the sorts of functional programming techniques mentioned above, these tests are actually reasonably straightforward to construct.</p>
+<p>In order to explore spatial autocorrelation in residuals, we used a Map LineUp test <span class="citation">(<a href="#ref-beecham_maplineups_2017" role="doc-biblioref">Beecham et al. 2017</a>; <a href="#ref-wickham_inference_2010" role="doc-biblioref">Wickham et al. 2010</a>)</span>. Using the sorts of functional programming techniques mentioned above, these tests are actually reasonably straightforward to construct.</p>
 <p>First generate a model object and extract residuals from it, again making use of <code>nest()</code>, <code>map()</code> and <code>tidy()</code>:</p>
 <pre class="r"><code># Generate model object and extract residuals
 model_values &lt;- data_for_models %&gt;%
@@ -1216,27 +1258,27 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  -->
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-bartholomew_analysis_2008">
-<p>Bartholomew, David J., Fiona Steele, J Galbraith, and Irini Moustaki. 2008. <em>Analysis of Multivariate Social Science Data</em>. London, UK: CRC Press.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bartholomew_analysis_2008" class="csl-entry">
+Bartholomew, David J., Fiona Steele, J Galbraith, and Irini Moustaki. 2008. <em>Analysis of Multivariate Social Science Data</em>. London, <span>UK</span>: CRC Press.
 </div>
-<div id="ref-beecham_maplineups_2017">
-<p>Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. 2017. “Map Line-Ups: Effects of Spatial Structure on Graphical Inference.” <em>IEEE Transactions on Visualization &amp; Computer Graphics</em> 23 (1): 391–400.</p>
+<div id="ref-beecham_maplineups_2017" class="csl-entry">
+Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. 2017. <span>“Map Line-Ups: Effects of Spatial Structure on Graphical Inference.”</span> <em><span>IEEE</span> Transactions on Visualization &amp; Computer Graphics</em> 23 (1): 391–400.
 </div>
-<div id="ref-beecham_regionally_2020">
-<p>Beecham, R., N. Williams, and L. Comber. 2020. “Regionally-structured explanations behind area-level populism: An update to recent ecological analyses.” <em>PLOS One</em> 15 (3): e0229974.</p>
+<div id="ref-beecham_regionally_2020" class="csl-entry">
+Beecham, R., N. Williams, and L. Comber. 2020. <span>“<span class="nocase">Regionally-structured explanations behind area-level populism: An update to recent ecological analyses</span>.”</span> <em><span>PLOS One</span></em> 15 (3): e0229974.
 </div>
-<div id="ref-hanretty_areal_2017">
-<p>Hanretty, C. 2017. “Areal Interpolation and the Uk’s Referendum on Eu Membership.” <em>Journal of Elections, Public Opinion and Parties</em> 37 (4): 466–83.</p>
+<div id="ref-hanretty_areal_2017" class="csl-entry">
+Hanretty, C. 2017. <span>“Areal Interpolation and the UK’s Referendum on EU Membership.”</span> <em>Journal of Elections, Public Opinion and Parties</em> 37 (4): 466–83.
 </div>
-<div id="ref-loy_model_2017">
-<p>Loy, A., H. Hofmann, and D. Cook. 2017. “Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners.” <em>Journal of Computational and Graphical Statistics</em> 26 (3). Taylor &amp; Francis: 478–92. doi:<a href="https://doi.org/10.1080/10618600.2017.1330207">10.1080/10618600.2017.1330207</a>.</p>
+<div id="ref-loy_model_2017" class="csl-entry">
+Loy, A., H. Hofmann, and D. Cook. 2017. <span>“Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners.”</span> <em>Journal of Computational and Graphical Statistics</em> 26 (3). Taylor &amp; Francis: 478–92. doi:<a href="https://doi.org/10.1080/10618600.2017.1330207">10.1080/10618600.2017.1330207</a>.
 </div>
-<div id="ref-wickham_tidy_2014">
-<p>Wickham, H. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10): 1–23.</p>
+<div id="ref-wickham_tidy_2014" class="csl-entry">
+Wickham, H. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23.
 </div>
-<div id="ref-wickham_inference_2010">
-<p>Wickham, H., D. Cook, H. Hofmann, and A. Buja. 2010. “Graphical Inference for Infovis.” <em>IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis ’10)</em> 16 (6): 973–79.</p>
+<div id="ref-wickham_inference_2010" class="csl-entry">
+Wickham, H., D. Cook, H. Hofmann, and A. Buja. 2010. <span>“Graphical Inference for Infovis.”</span> <em>IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis ’10)</em> 16 (6): 973–79.
 </div>
 </div>
 </div>
@@ -1251,7 +1293,7 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  -->
                 </div>
 
                 <div class="body-footer">
-                    <p> Fri, 25 Jun 2021</p>
+                    <p> Thu, 21 Apr 2022</p>
 
                     
 
@@ -1273,7 +1315,7 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  -->
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>ESS 2021 | 3D: Computational Methods for Social Data Science (August 2021)</strong><br>
+                <strong>ESS 2022 | 3D: Computational Methods for Social Data Science (August 2022)</strong><br>
 
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a> &emsp;&emsp;
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a>
@@ -1296,7 +1338,7 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  -->
         <div class="col-md-5 credits">
             <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
             
-            <p>Content <i class="fab fa-creative-commons"></i> 2021 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
+            <p>Content <i class="fab fa-creative-commons"></i> 2022 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
             
             <p><a href="https://github.com/rogerbeecham/comp-sds" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
         </div>
@@ -1380,7 +1422,7 @@ Use tidymodels : https://cfss.uchicago.edu/notes/start-with-models/  -->
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.dd01fef442e09a86aae6adb7b6cc358b.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
 
     
 

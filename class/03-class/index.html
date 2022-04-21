@@ -37,7 +37,7 @@
   
     
   
-  <meta name="description" content="Contents  Introduction Concepts Characteristics of effective data graphics Grammar of Graphics Marks and visual channels Evaluating designs Symbolisation Checking perceptual rankings Colour  Techniques Import Summarise Plot distributions Plot ranks/magnitudes Plot relationships Plot geography  Conclusions References   By the end of this session you should gain the following knowledge:
+  <meta name="description" content="Contents  Introduction Concepts  Characteristics of effective data graphics Grammar of Graphics Marks and visual channels Evaluating designs Symbolisation Checking perceptual rankings Colour  Techniques  Import Summarise Plot distributions Plot ranks/magnitudes Plot relationships Plot geography  Conclusions References   By the end of this session you should gain the following knowledge:
   Recognise the characteristics of effective data graphics. Understand that there is a grammar of graphics, and that this grammar underpins modern visualization toolkits (ggplot, vega-lite and Tableau).">
 
   
@@ -266,8 +266,8 @@
   <link rel="manifest" href="../../index.webmanifest">
   
 
-  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../images/icon_huc37306104a4011cad6e5f9118ea6dd2c_187381_180x180_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="../../class/03-class/">
 
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Computational Methods for Social Data Science">
   <meta property="og:url" content="/class/03-class/">
   <meta property="og:title" content="Visualization fundamentals: Codify, map, evaluate | Computational Methods for Social Data Science">
-  <meta property="og:description" content="Contents  Introduction Concepts Characteristics of effective data graphics Grammar of Graphics Marks and visual channels Evaluating designs Symbolisation Checking perceptual rankings Colour  Techniques Import Summarise Plot distributions Plot ranks/magnitudes Plot relationships Plot geography  Conclusions References   By the end of this session you should gain the following knowledge:
+  <meta property="og:description" content="Contents  Introduction Concepts  Characteristics of effective data graphics Grammar of Graphics Marks and visual channels Evaluating designs Symbolisation Checking perceptual rankings Colour  Techniques  Import Summarise Plot distributions Plot ranks/magnitudes Plot relationships Plot geography  Conclusions References   By the end of this session you should gain the following knowledge:
   Recognise the characteristics of effective data graphics. Understand that there is a grammar of graphics, and that this grammar underpins modern visualization toolkits (ggplot, vega-lite and Tableau)."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-08-11T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2022-08-10T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-06-25T12:30:57&#43;01:00">
+    <meta property="article:modified_time" content="2022-04-21T11:16:40&#43;01:00">
   
 
   
@@ -318,7 +318,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../img/apple-touch-icon-152x152.png" />
   <link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16" />
-  <meta name="application-name" content="ESS 2021 | 3D: Computational Methods for Social Data Science" />
+  <meta name="application-name" content="ESS 2022 | 3D: Computational Methods for Social Data Science" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
@@ -628,6 +628,10 @@
 
 
 
+  
+    
+  
+
 
 
 
@@ -677,6 +681,41 @@
       </li>
 
       
+      <li class="active">
+        <a href="../../class/03-class/">3: Visualization fundamentals</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/04-class/">4: Exploratory data analysis</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/05-class/">5: Exploring spatial networks</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/06-class/">6: Model building 1</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/07-class/">7: Model building 2</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/08-class/">8: Uncertainty analysis</a>
+      </li>
+
+      
+      <li >
+        <a href="../../class/09-class/">9: Communication and storytelling</a>
+      </li>
+
+      
     </ul>
     
 
@@ -702,13 +741,14 @@
 
                     
                     <div class="due-date p-2 mb-3 bg-secondary text-white">
-                        Materials from class on Wednesday, August 11, 2021
+                        Materials from class on Wednesday, August 10, 2022
                     </div>
                     
 
                     <div class="article-style">
                         
 <!-- BLOGDOWN-HEAD -->
+<script src="../../rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="../../rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="../../rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <!-- /BLOGDOWN-HEAD -->
@@ -717,7 +757,8 @@
 <div id="TOC">
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#concepts">Concepts</a><ul>
+<li><a href="#concepts">Concepts</a>
+<ul>
 <li><a href="#characteristics-of-effective-data-graphics">Characteristics of effective data graphics</a></li>
 <li><a href="#grammar-of-graphics">Grammar of Graphics</a></li>
 <li><a href="#marks-and-visual-channels">Marks and visual channels</a></li>
@@ -726,7 +767,8 @@
 <li><a href="#checking-perceptual-rankings">Checking perceptual rankings</a></li>
 <li><a href="#colour">Colour</a></li>
 </ul></li>
-<li><a href="#techniques">Techniques</a><ul>
+<li><a href="#techniques">Techniques</a>
+<ul>
 <li><a href="#import">Import</a></li>
 <li><a href="#summarise">Summarise</a></li>
 <li><a href="#plot-distributions">Plot distributions</a></li>
@@ -915,7 +957,7 @@ county result landslide
 </blockquote>
 <p>In evidence in the Washington Post graphic is a judicious <strong>mapping</strong> of data to visuals, underpinned by a secure understanding of analysis context. This act of carefully considering how best to leverage visual systems given the available data and analysis priorities is key to designing effective data graphics.</p>
 <p>In the late 1990s Leland Wilkinson, a Computer Scientist and Statistician, introduced the <a href="https://www.springer.com/gp/book/9780387245447">Grammar of Graphics</a> as an approach that captures this process of turning data into visuals. <span class="citation">Wilkinson (<a href="#ref-wilkinson_grammar_1999" role="doc-biblioref">1999</a>)</span>’s thesis is that if graphics can be described in a consistent way according to their structure and composition, then the process of <strong>generating</strong> graphics of different types can be systematised. This has obvious benefits for building visualization toolkits: it makes it easy to specify chart types and combinations and helps formalise the process of designing data visualizations. <a href="https://vega.github.io/vega-lite/">vega-lite</a>, <a href="https://www.tableau.com/en-gb">Tableau</a> and <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a> are all underpinned by <a href="https://www.springer.com/gp/book/9780387245447">Grammar of Graphics</a> thinking.</p>
-<p><span class="citation">Wilkinson (<a href="#ref-wilkinson_grammar_1999" role="doc-biblioref">1999</a>)</span>’s grammar separates the construction of a data graphic into a series of components. Below are the components of the <em>Layered Grammar of Graphics</em> on which <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a> is based <span class="citation">(Wickham <a href="#ref-wickham_layered_2010" role="doc-biblioref">2010</a>)</span>, a slight edit on <span class="citation">Wilkinson (<a href="#ref-wilkinson_grammar_1999" role="doc-biblioref">1999</a>)</span>’s original work.</p>
+<p><span class="citation">Wilkinson (<a href="#ref-wilkinson_grammar_1999" role="doc-biblioref">1999</a>)</span>’s grammar separates the construction of a data graphic into a series of components. Below are the components of the <em>Layered Grammar of Graphics</em> on which <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a> is based <span class="citation">(<a href="#ref-wickham_layered_2010" role="doc-biblioref">Wickham 2010</a>)</span>, a slight edit on <span class="citation">Wilkinson (<a href="#ref-wilkinson_grammar_1999" role="doc-biblioref">1999</a>)</span>’s original work.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:gog"></span>
 <img src="../../class/03-class_files/gog.png" alt="Components of @wickham_layered_2010's Layered Grammar of Graphics." width="80%" />
 <p class="caption">
@@ -923,7 +965,7 @@ Figure 2: Components of <span class="citation">Wickham (<a href="#ref-wickham_la
 </p>
 </div>
 <p>The seven components in Figure <a href="#fig:gog">2</a> are together used to create <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a> specifications. The aspects to emphasise at this stage are those in <strong>emphasis</strong>, which are required in any <code>ggplot2</code> specification: the <span style="color:#5A91CA;font-weight:bold">data</span> containing the variables of interest, the <code>geom</code> or <span style="color:#E17637;font-weight:bold">marks</span> to be used to represent data and the <strong>aesthetic</strong> (<code>mapping=aes(...)</code>) attributes, or visual <span style="color:#62B743;font-weight:bold">channels</span> through which variables are to be encoded.</p>
-<p>To demonstrate this, let’s generate some scatterplots based on the 2019 General Election data we will be analysing later in the session. Two variables worth exploring for association here are: <code>con_1719</code>, the change in Conservative vote share by constituency between 2017-2019, and <code>leave_hanretty</code>, the size of the Leave vote in the 2016 EU referendum, estimated at Parliamentary Constituency level <span class="citation">(see Hanretty <a href="#ref-hanretty_areal_2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>To demonstrate this, let’s generate some scatterplots based on the 2019 General Election data we will be analysing later in the session. Two variables worth exploring for association here are: <code>con_1719</code>, the change in Conservative vote share by constituency between 2017-2019, and <code>leave_hanretty</code>, the size of the Leave vote in the 2016 EU referendum, estimated at Parliamentary Constituency level <span class="citation">(see <a href="#ref-hanretty_areal_2017" role="doc-biblioref">Hanretty 2017</a>)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:gog-demo"></span>
 <img src="../../class/03-class_files/gog-demo.png" alt="Plots, grammars and associated `ggplot2` specifications for the scatterplot." width="100%" />
 <p class="caption">
@@ -964,7 +1006,7 @@ Figure 4: Visual channels to which data items can be encoded, as they appear in 
 </div>
 <div id="evaluating-designs" class="section level3">
 <h3>Evaluating designs</h3>
-<p>The effectiveness rankings of visual channels in Figure <a href="#fig:munzner">4</a> are not simply based on Munzner’s preference. They are informed by detailed experimental work – <span class="citation">Cleveland and McGill (<a href="#ref-cleveland_graphical_1984" role="doc-biblioref">1984</a>)</span>, later replicated by <span class="citation">Heer and Bostock (<a href="#ref-heer_crowdsourcing_2010" role="doc-biblioref">2010</a>)</span> – which involved conducting controlled experiments testing people’s ability to make judgements from graphical elements. We can use Figure <a href="#fig:munzner">4</a> to help make decisions around which data item to encode with which
+<p>The effectiveness rankings of visual channels in Figure <a href="#fig:munzner">4</a> are not simply based on Munzner’s preference. They are informed by detailed experimental work – <span class="citation">W. Cleveland and McGill (<a href="#ref-cleveland_graphical_1984" role="doc-biblioref">1984</a>)</span>, later replicated by <span class="citation">Heer and Bostock (<a href="#ref-heer_crowdsourcing_2010" role="doc-biblioref">2010</a>)</span> – which involved conducting controlled experiments testing people’s ability to make judgements from graphical elements. We can use Figure <a href="#fig:munzner">4</a> to help make decisions around which data item to encode with which
 visual channel. This is particularly useful when designing data-rich graphics, where several data items are to be encoded
 simultaneously. The figure also offers a low cost way of <strong>evaluating</strong> different designs against their encoding effectiveness. To illustrate this, we can use Munzner’s ranking of channels to evaluate the Washington Post graphic discussed in Figure <a href="#fig:wp-map">1</a>.</p>
 <table>
@@ -1139,7 +1181,7 @@ colour hue
 <div id="checking-perceptual-rankings" class="section level3">
 <h3>Checking perceptual rankings</h3>
 <p>I mentioned that Munzner’s effectiveness ordering of visual channels is informed by empirical evidence – controlled experiments that examine perceptual abilities at making judgements from graphical primitives. It is worth elaborating a little on this experimental work, and on how established knowledge in Cognitive Science can be used to inform design choices.</p>
-<p><span class="citation">Cleveland (<a href="#ref-cleveland_elements_1993" role="doc-biblioref">1993</a>)</span> emphasises three perceptual activities that take place when we make sense of data graphics:</p>
+<p><span class="citation">W. S. Cleveland (<a href="#ref-cleveland_elements_1993" role="doc-biblioref">1993</a>)</span> emphasises three perceptual activities that take place when we make sense of data graphics:</p>
 <ul>
 <li><strong>Detection</strong> : the element of the graphic must be easily discernible.</li>
 <li><strong>Assembly</strong> : the process of identifying patterns and structure within the graphical elements of the
@@ -1149,7 +1191,7 @@ visualization.</li>
 <p>These activities can be related to the categories of task outlined earlier. <strong>Detection</strong> is especially important for <strong>selective</strong> and <strong>associative</strong> tasks that involve isolating and grouping data items, whilst <strong>estimation</strong> is necessary for tasks that are <strong>orderable</strong> and <strong>quantitative</strong>, involving the ranking and reading-off of quantities.</p>
 <div id="detection-and-preattentive-processing" class="section level4">
 <h4>Detection and preattentive processing</h4>
-<p>A useful distinction when considering graphical cognition is between processes that are attentive and pre-attentive <span class="citation">(Ware <a href="#ref-ware_visual_2008" role="doc-biblioref">2008</a>)</span>. Attentive processing describes the conscious processing that happens when we attempt to make sense of a visual field. Preattentive processing happens unconsciously and is the type of cognitive processing that allows something to be understood ‘at a glance’. Visual items that immediately pop-out to us induce preattentive processing.</p>
+<p>A useful distinction when considering graphical cognition is between processes that are attentive and pre-attentive <span class="citation">(<a href="#ref-ware_visual_2008" role="doc-biblioref">Ware 2008</a>)</span>. Attentive processing describes the conscious processing that happens when we attempt to make sense of a visual field. Preattentive processing happens unconsciously and is the type of cognitive processing that allows something to be understood ‘at a glance’. Visual items that immediately pop-out to us induce preattentive processing.</p>
 <p>The ability to provoke pop-out – making some things on a data graphic more easily detectible than others – relates to <strong>detection</strong>. It can be useful for supporting <strong>selective</strong> and <strong>associative</strong> tasks, and so is often used in a data graphic to encode categorical variables. For example, in the Washington Post graphic the use of colour hue to differentiate and group together counties that voted Republican or Democrat. Preattentive processes can also apply to <strong>assembly</strong>. We naturally construct and assemble patterns that are smooth and continuous when perceiving a graphic and so deviations from this continuity are often attended to unconsciously. An example here would be those urbanising counties in the deep South, which were locally exceptional in swinging to Democrat (to the left).</p>
 <p>We can test this preattentive processing by using visual encoding channels to assist a task that requires us to <strong>select</strong> and <strong>associate</strong> visual items. Below are a set of data graphics containing 200 numbers. The graphics are currently hidden, but can be revealed by clicking the <i class="fa fa-xs fa-play" aria-hidden="true"></i> icon. For each graphic I want you to scan across the number, isolate or select the number <code>3</code>, then group or associate the <code>3</code>s together and count the number of instances that they occur. Speed is important here – so work as quickly as you can.</p>
 <p>First, a set of numbers without applying any special encoding to the number <code>3</code>.</p>
@@ -1265,7 +1307,7 @@ Figure 10: Differences in power law exponents for the perception of variation in
 </div>
 <p><div class="alert alert-note">
   <div>
-    This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the <strong>inferences</strong> made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities – location and dispersion <span class="citation">(Correll and Gleicher <a href="#ref-correll_error_2014" role="doc-biblioref">2014</a>)</span>, correlation <span class="citation">(Rensink and Baldridge <a href="#ref-rensink_perception_2010" role="doc-biblioref">2010</a>; Harrison et al. <a href="#ref-harrison_ranking_2014" role="doc-biblioref">2014</a>; Kay and Heer <a href="#ref-kay_beyond_2016" role="doc-biblioref">2016</a>)</span> and spatial autocorrelation <span class="citation">(Klippel, Hardisty, and Li <a href="#ref-klippel_interpreting_2011" role="doc-biblioref">2011</a>; Beecham et al. <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">2017</a>)</span> – in commonly used chart types. More on this later in the course.
+    This early experimental work that tries to understand how encoded quantities are perceived is clearly important. But we use data graphics to do much more than estimate single quantities. If data graphics are to serve as tools for analysis, we also need some confidence that the <strong>inferences</strong> made when studying data using graphics are accurate and reliable. In the Information Visualization domain, experimental work has recently been published exploring the perception of statistical quantities – location and dispersion <span class="citation">(<a href="#ref-correll_error_2014" role="doc-biblioref">Correll and Gleicher 2014</a>)</span>, correlation <span class="citation">(<a href="#ref-rensink_perception_2010" role="doc-biblioref">Rensink and Baldridge 2010</a>; <a href="#ref-harrison_ranking_2014" role="doc-biblioref">Harrison et al. 2014</a>; <a href="#ref-kay_beyond_2016" role="doc-biblioref">Kay and Heer 2016</a>)</span> and spatial autocorrelation <span class="citation">(<a href="#ref-klippel_interpreting_2011" role="doc-biblioref">Klippel, Hardisty, and Li 2011</a>; <a href="#ref-beecham_maplineups_2017" role="doc-biblioref">Beecham et al. 2017</a>)</span> – in commonly used chart types. More on this later in the course.
   </div>
 </div>
 </p>
@@ -1300,7 +1342,7 @@ Figure 10: Differences in power law exponents for the perception of variation in
 <h3>Import</h3>
 <p>The template file lists the required packages – <code>tidyverse</code>, <code>sf</code> and also <a href="https://cran.r-project.org/web/packages/parlitools/index.html"><code>parlitools</code></a>. Installing <code>parlitools</code> brings down the 2019 UK General Election dataset, along with other constituency-level datasets. Loading it with <code>library(parlitools)</code> makes these data available to your R session.</p>
 <p>The dataset containing 2019 UK General Election data is called <code>bes_2019</code>. This contains results data released by <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8749/">House of Commons Library</a>. We can get a quick overview in the usual way – with a call to <code>glimpse(&lt;dataset-name&gt;)</code>. The dataset’s variables are also described on the <code>parlitools</code> <a href="https://docs.evanodell.com/parlitools/articles/bes-2019.html">web pages</a>. You will notice that <code>bes_2019</code> contains 650 rows, one for each Parliamentary Constituency, and 118 columns. Contained in the columns are variables reporting vote numbers and shares for the main political parties for 2019 and 2017 General Elections, as well as names and codes (<code>ID</code>s) for each Parliamentary Constituency and the county, region and country in which they are contained. You might want to count the number of counties and regions in the UK, and the number of constituencies contained by counties and regions, using some of the <code>dplyr</code> functions introduced in the last session – for example with calls to <code>group_by()</code> and <code>count()</code>.</p>
-<p>The aim of this analysis session is to get you familiar with <code>ggplot2</code> specifications. We will be replicating some of the visual data analysis of the 2019 UK General Election in <span class="citation">Beecham (<a href="#ref-beecham_using_2020" role="doc-biblioref">2020</a>)</span>, inspired by the <a href="https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/">Washington Post</a> graphic. For this we need to calculate an additional variable – Butler Swing <span class="citation">(Butler and Van Beek <a href="#ref-butler_why_1990" role="doc-biblioref">1990</a>)</span> – which represents the average change in share of the vote won by two parties contesting successive elections. Code for calculating this variable (named <code>swing_con_lab</code>) is in the <a href="../../homework/03-homework_files/03-template.Rmd"><i class="fab fa-r-project"></i> 03-template.Rmd</a>.</p>
+<p>The aim of this analysis session is to get you familiar with <code>ggplot2</code> specifications. We will be replicating some of the visual data analysis of the 2019 UK General Election in <span class="citation">Beecham (<a href="#ref-beecham_using_2020" role="doc-biblioref">2020</a>)</span>, inspired by the <a href="https://www.washingtonpost.com/graphics/politics/2016-election/election-results-from-coast-to-coast/">Washington Post</a> graphic. For this we need to calculate an additional variable – Butler Swing <span class="citation">(<a href="#ref-butler_why_1990" role="doc-biblioref">Butler and Van Beek 1990</a>)</span> – which represents the average change in share of the vote won by two parties contesting successive elections. Code for calculating this variable (named <code>swing_con_lab</code>) is in the <a href="../../homework/03-homework_files/03-template.Rmd"><i class="fab fa-r-project"></i> 03-template.Rmd</a>.</p>
 <p>Although initially intuitive, the measure takes a little interpretation. A Swing to the Conservatives, which we observe most often in this dataset, could happen in three ways:</p>
 <ol style="list-style-type: decimal">
 <li>An increase in Conservative vote share and a decrease in Labour vote share.</li>
@@ -1606,7 +1648,7 @@ data_gb %&gt;%
 Figure 17: Map of Butler Con-Lab Swing in 2019 General Election.
 </p>
 </div>
-<p>This has been a packed session. I’m providing a very abbreviated introduction to map design with <code>ggplot2</code> and want to reserve the details of how <code>ggplot2</code> can be used in more involved visualization design for later in the course. Since the graphic has been discussed at length, it would be strange not to demonstrate how the encoding in the Washington Post piece can be applied here to analyse our Butler two-party swing variable <span class="citation">(e.g. Beecham <a href="#ref-beecham_using_2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p>This has been a packed session. I’m providing a very abbreviated introduction to map design with <code>ggplot2</code> and want to reserve the details of how <code>ggplot2</code> can be used in more involved visualization design for later in the course. Since the graphic has been discussed at length, it would be strange not to demonstrate how the encoding in the Washington Post piece can be applied here to analyse our Butler two-party swing variable <span class="citation">(e.g. <a href="#ref-beecham_using_2020" role="doc-biblioref">Beecham 2020</a>)</span>.</p>
 <p>First, some helper functions – converting degrees to radians and centring <code>geom_spoke()</code> geometries. Don’t bother yourself with these details, just run the code.</p>
 <pre class="r"><code># Convert degrees to radians.
 get_radians &lt;- function(degrees) {
@@ -1666,70 +1708,70 @@ gb &lt;- data_gb %&gt;%
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-beecham_using_2020">
-<p>Beecham, R. 2020. “Using position, angle and thickness to expose the shifting geographies of the 2019 UK General Election.” <em>Environment and Planning A: Economy and Space</em> 52 (5): 833–36.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-beecham_using_2020" class="csl-entry">
+Beecham, R. 2020. <span>“<span class="nocase">Using position, angle and thickness to expose the shifting geographies of the 2019 UK General Election</span>.”</span> <em><span>Environment and Planning A: Economy and Space</span></em> 52 (5): 833–36.
 </div>
-<div id="ref-beecham_maplineups_2017">
-<p>Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. 2017. “Map Line-Ups: Effects of Spatial Structure on Graphical Inference.” <em>IEEE Transactions on Visualization &amp; Computer Graphics</em> 23 (1): 391–400.</p>
+<div id="ref-beecham_maplineups_2017" class="csl-entry">
+Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. 2017. <span>“Map Line-Ups: Effects of Spatial Structure on Graphical Inference.”</span> <em><span>IEEE</span> Transactions on Visualization &amp; Computer Graphics</em> 23 (1): 391–400.
 </div>
-<div id="ref-butler_why_1990">
-<p>Butler, D., and S. Van Beek. 1990. “Why not swing? Measuring electoral change.” <em>Political Science &amp; politics</em> 23 (2): 178–84.</p>
+<div id="ref-butler_why_1990" class="csl-entry">
+Butler, D., and S. Van Beek. 1990. <span>“<span class="nocase">Why not swing? Measuring electoral change</span>.”</span> <em><span>Political Science &amp; Politics</span></em> 23 (2): 178–84.
 </div>
-<div id="ref-cleveland_elements_1993">
-<p>Cleveland, William S. 1993. <em>The Elements of Graphing Data</em>. Hobart Press.</p>
+<div id="ref-cleveland_elements_1993" class="csl-entry">
+Cleveland, William S. 1993. <em>The Elements of Graphing Data</em>. Hobart Press.
 </div>
-<div id="ref-cleveland_graphical_1984">
-<p>Cleveland, W., and R. McGill. 1984. “Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods.” <em>Journal of the American Statistical Association</em> 79 (387): 531–54.</p>
+<div id="ref-cleveland_graphical_1984" class="csl-entry">
+Cleveland, W., and R. McGill. 1984. <span>“<span class="nocase">Graphical <span>Perception</span>: <span>Theory</span>, <span>Experimentation</span>, and <span>Application</span> to the <span>Development</span> of <span>Graphical</span> <span>Methods</span></span>.”</span> <em>Journal of the American Statistical Association</em> 79 (387): 531–54.
 </div>
-<div id="ref-correll_error_2014">
-<p>Correll, M., and M. Gleicher. 2014. “Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error.” <em>IEEE Transactions on Visualization &amp; Computer Graphics</em> 20 (12): 2141–51.</p>
+<div id="ref-correll_error_2014" class="csl-entry">
+Correll, M., and M. Gleicher. 2014. <span>“Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error.”</span> <em><span>IEEE</span> Transactions on Visualization &amp; Computer Graphics</em> 20 (12): 2141–51.
 </div>
-<div id="ref-flannery_subjective_1963">
-<p>Flannery, J. J. 1971. “The Relative Effectiveness of Some Common Graduated Point Symbols in the Presentation of Quantitative Data.” <em>Cartographica</em> 8 (2): 96–109.</p>
+<div id="ref-flannery_subjective_1963" class="csl-entry">
+Flannery, J. J. 1971. <span>“The Relative Effectiveness of Some Common Graduated Point Symbols in the Presentation of Quantitative Data.”</span> <em>Cartographica</em> 8 (2): 96–109.
 </div>
-<div id="ref-hanretty_areal_2017">
-<p>Hanretty, C. 2017. “Areal Interpolation and the Uk’s Referendum on Eu Membership.” <em>Journal of Elections, Public Opinion and Parties</em> 37 (4): 466–83.</p>
+<div id="ref-hanretty_areal_2017" class="csl-entry">
+Hanretty, C. 2017. <span>“Areal Interpolation and the UK’s Referendum on EU Membership.”</span> <em>Journal of Elections, Public Opinion and Parties</em> 37 (4): 466–83.
 </div>
-<div id="ref-harrison_ranking_2014">
-<p>Harrison, L., F. Yang, S. Franconeri, and R. Chang. 2014. “Ranking Visualizations of Correlation Using Weber’s Law.” <em>IEEE Conference on Information Visualization (InfoVis)</em> 20 (12): 1943–52.</p>
+<div id="ref-harrison_ranking_2014" class="csl-entry">
+Harrison, L., F. Yang, S. Franconeri, and R. Chang. 2014. <span>“Ranking Visualizations of Correlation Using <span>W</span>eber’s <span>L</span>aw.”</span> <em>IEEE Conference on Information Visualization (InfoVis)</em> 20: 1943–52.
 </div>
-<div id="ref-heer_crowdsourcing_2010">
-<p>Heer, J., and M. Bostock. 2010. “Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design.” In <em>ACM Human Factors in Computing Systems</em>, 203–12. doi:<a href="https://doi.org/10.1145/1753326.1753357">10.1145/1753326.1753357</a>.</p>
+<div id="ref-heer_crowdsourcing_2010" class="csl-entry">
+Heer, J., and M. Bostock. 2010. <span>“Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design.”</span> In <em>ACM Human Factors in Computing Systems</em>, 203–12. doi:<a href="https://doi.org/10.1145/1753326.1753357">10.1145/1753326.1753357</a>.
 </div>
-<div id="ref-kay_beyond_2016">
-<p>Kay, M., and J. Heer. 2016. “Beyond Weber’s Law: A Second Look at Ranking Visualizations of Correlation.” <em>IEEE Trans. Visualization &amp; Comp. Graphics (InfoVis)</em> 22 (1): 469–78.</p>
+<div id="ref-kay_beyond_2016" class="csl-entry">
+Kay, M., and J. Heer. 2016. <span>“Beyond <span>W</span>eber’s <span>L</span>aw: A Second Look at Ranking Visualizations of Correlation.”</span> <em>IEEE Trans. Visualization &amp; Comp. Graphics (InfoVis)</em> 22: 469–78.
 </div>
-<div id="ref-klippel_interpreting_2011">
-<p>Klippel, A., F. Hardisty, and Rui. Li. 2011. “Interpreting Spatial Patterns: An Inquiry into Formal and Cognitive Aspects of Tobler’s First Law of Geography.” <em>Annals of the Association of American Geographers</em> 101 (5): 1011–31.</p>
+<div id="ref-klippel_interpreting_2011" class="csl-entry">
+Klippel, A., F. Hardisty, and Rui. Li. 2011. <span>“Interpreting Spatial Patterns: <span>A</span>n Inquiry into Formal and Cognitive Aspects of <span>T</span>obler’s <span>F</span>irst <span>L</span>aw of <span>G</span>eography.”</span> <em>Annals of the Association of American Geographers</em> 101 (5): 1011–31.
 </div>
-<div id="ref-munzner_visualization_2014">
-<p>Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.</p>
+<div id="ref-munzner_visualization_2014" class="csl-entry">
+Munzner, T. 2014. <em>Visualization Analysis and Design</em>. AK Peters Visualization Series. Boca Raton, FL: CRC Press.
 </div>
-<div id="ref-rensink_perception_2010">
-<p>Rensink, R., and G. Baldridge. 2010. “The Perception of Correlation in Scatterplots.” <em>Computer Graphics Forum</em> 29 (3): 1203–10.</p>
+<div id="ref-rensink_perception_2010" class="csl-entry">
+Rensink, R., and G. Baldridge. 2010. <span>“The Perception of Correlation in Scatterplots.”</span> <em>Computer Graphics Forum</em> 29: 1203–10.
 </div>
-<div id="ref-stevens_subjective_1963">
-<p>Stevens, S, and M. Guirao. 1963. “Subjective Scaling of Length and Area and the Matching of Length to Loudness and Brightness.” <em>Journal of Experimental Psychology</em> 66 (2): 177–86.</p>
+<div id="ref-stevens_subjective_1963" class="csl-entry">
+Stevens, S, and M. Guirao. 1963. <span>“Subjective Scaling of Length and Area and the Matching of Length to Loudness and Brightness.”</span> <em>Journal of Experimental Psychology</em> 66 (2): 177–86.
 </div>
-<div id="ref-tufte_visual_1983">
-<p>Tufte, E. 1983. <em>The Visual Display of Quantitative Information</em>. Cheshire, CT: Graphics Press.</p>
+<div id="ref-tufte_visual_1983" class="csl-entry">
+Tufte, E. 1983. <em>The Visual Display of Quantitative Information</em>. Cheshire, CT: Graphics Press.
 </div>
-<div id="ref-ware_visual_2008">
-<p>Ware, C. 2008. <em>Visual Thinking for Design</em>. Waltham, MA: Morgan Kaufman.</p>
+<div id="ref-ware_visual_2008" class="csl-entry">
+Ware, C. 2008. <em>Visual Thinking for Design</em>. Waltham, MA: Morgan Kaufman.
 </div>
-<div id="ref-white_symbolization_2017">
-<p>White, T. 2017. “Symbolization and the Visual Variables.” In <em>He Geographic Information Science &amp; Technology Body of Knowledge</em>, edited by John P. Wilson.</p>
+<div id="ref-white_symbolization_2017" class="csl-entry">
+White, T. 2017. <span>“Symbolization and the Visual Variables.”</span> In <em>He Geographic Information Science &amp; Technology Body of Knowledge</em>, edited by John P. Wilson.
 </div>
-<div id="ref-wickham_layered_2010">
-<p>Wickham, H. 2010. “A Layered Grammar of Graphics.” <em>Journal of Computational and Graphical Statistics</em> 19 (1): 3–28.</p>
+<div id="ref-wickham_layered_2010" class="csl-entry">
+Wickham, H. 2010. <span>“A Layered Grammar of Graphics.”</span> <em>Journal of Computational and Graphical Statistics</em> 19 (1): 3–28.
 </div>
-<div id="ref-wilkinson_grammar_1999">
-<p>Wilkinson, L. 1999. <em>The Grammar of Graphics</em>. New York: Springer.</p>
+<div id="ref-wilkinson_grammar_1999" class="csl-entry">
+Wilkinson, L. 1999. <em>The Grammar of Graphics</em>. New York: Springer.
 </div>
 </div>
 </div>
-<div class="footnotes">
+<div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
 <li id="fn1"><p>I’m suggesting that you reuse the code to calculate party vote share in the <a href="../../class/03-class/#summarise-1">summarise</a> code block before piping (<code>%&gt;%</code>) to the <code>ggplot2</code> specification.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
@@ -1747,7 +1789,7 @@ gb &lt;- data_gb %&gt;%
                 </div>
 
                 <div class="body-footer">
-                    <p> Fri, 25 Jun 2021</p>
+                    <p> Thu, 21 Apr 2022</p>
 
                     
 
@@ -1769,7 +1811,7 @@ gb &lt;- data_gb %&gt;%
     <div class="row course-info">
         <div class="col-md-7">
             <p>
-                <strong>ESS 2021 | 3D: Computational Methods for Social Data Science (August 2021)</strong><br>
+                <strong>ESS 2022 | 3D: Computational Methods for Social Data Science (August 2022)</strong><br>
 
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a> &emsp;&emsp;
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a>
@@ -1792,7 +1834,7 @@ gb &lt;- data_gb %&gt;%
         <div class="col-md-5 credits">
             <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
             
-            <p>Content <i class="fab fa-creative-commons"></i> 2021 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
+            <p>Content <i class="fab fa-creative-commons"></i> 2022 <a href="http://www.roger-beecham.com/" target="_blank" rel="noopener">Roger Beecham</a></p>                    
             
             <p><a href="https://github.com/rogerbeecham/comp-sds" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
         </div>
@@ -1876,7 +1918,7 @@ gb &lt;- data_gb %&gt;%
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.dd01fef442e09a86aae6adb7b6cc358b.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
 
     
 

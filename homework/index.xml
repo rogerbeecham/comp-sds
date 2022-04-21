@@ -15,10 +15,11 @@
     <item>
       <title>Communication and storytelling</title>
       <link>/homework/09-homework/</link>
-      <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/09-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
@@ -32,10 +33,11 @@
     <item>
       <title>Uncertainty analysis</title>
       <link>/homework/08-homework/</link>
-      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/08-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
@@ -49,10 +51,11 @@
     <item>
       <title>Model building 2</title>
       <link>/homework/07-homework/</link>
-      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/07-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 
@@ -66,10 +69,11 @@
     <item>
       <title>Model building 1</title>
       <link>/homework/06-homework/</link>
-      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/06-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -180,10 +184,11 @@ expl_cors_order
     <item>
       <title>Exploring spatial networks</title>
       <link>/homework/05-homework/</link>
-      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/05-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -191,7 +196,8 @@ expl_cors_order
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#task-1-read&#34;&gt;Task 1: Read&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-2-interpret&#34;&gt;Task 2: Interpret&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -272,9 +278,9 @@ Figure 1: OD map of commutes between London boroughs
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
-&lt;div id=&#34;ref-slingsby_od_2014&#34;&gt;
-&lt;p&gt;Slingsby, A., M. Kelly, and J. Dykes. 2014. “OD maps for showing changes inIrish female migration between 1851 and 1911.” &lt;em&gt;Environment and Planning A: Economy and Space&lt;/em&gt; 46 (12): 2795–7.&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-slingsby_od_2014&#34; class=&#34;csl-entry&#34;&gt;
+Slingsby, A., M. Kelly, and J. Dykes. 2014. &lt;span&gt;“&lt;span class=&#34;nocase&#34;&gt;OD maps for showing changes inIrish female migration between 1851 and 1911&lt;/span&gt;.”&lt;/span&gt; &lt;em&gt;&lt;span&gt;Environment and Planning A: Economy and Space&lt;/span&gt;&lt;/em&gt; 46 (12): 2795--2797.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -284,10 +290,11 @@ Figure 1: OD map of commutes between London boroughs
     <item>
       <title>Exploratory data analysis</title>
       <link>/homework/04-homework/</link>
-      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/04-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -330,7 +337,7 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;p&gt;This week’s homework is a single visualization design task. Please do not spend too long on this. The aim of this session is to get you to apply some of the technical detail introduced in the session rather than to overly burden you with additional work.&lt;/p&gt;
 &lt;p&gt;In the session we discussed visual approaches to summarising within-variable variation in a dataset and later the use of layout and colour for supporting &lt;em&gt;comparison&lt;/em&gt; across categories. In Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; above, boxplots are used to summarise the age distribution of those involved in pedestrian road crashes, comparing the ages of the injured pedestrians, drivers and how this varies by the vehicle types involved.&lt;/p&gt;
 &lt;p&gt;Your task is to generate a &lt;em&gt;single&lt;/em&gt; data graphic (I would class Figure &lt;a href=&#34;#fig:boxplots-class&#34;&gt;1&lt;/a&gt; as a single graphic) to summarise how casualty age varies by some other interesting combination of categorical variable. For example, you may wish to explore how casualty age varies by injury severity.&lt;/p&gt;
-&lt;p&gt;Once you have generated the graphic, save it as a &lt;code&gt;.png&lt;/code&gt; file and insert a link to it in the associated code block in the &lt;a href=&#34;../homework/04-homework_files/04-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 04-template.Rmd&lt;/a&gt;. Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using &lt;strong&gt;no more than three sentences&lt;/strong&gt;, note how your graphic and any computed values support &lt;em&gt;comparison&lt;/em&gt; – e.g. via juxtaposition, superposition and/or direct encoding &lt;span class=&#34;citation&#34;&gt;(Gleicher and Roberts &lt;a href=&#34;#ref-gleicher_visual_2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Once you have generated the graphic, save it as a &lt;code&gt;.png&lt;/code&gt; file and insert a link to it in the associated code block in the &lt;a href=&#34;../homework/04-homework_files/04-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 04-template.Rmd&lt;/a&gt;. Next, complete the table that asks you to describe your graphic according to its visual encoding. After the table, and using &lt;strong&gt;no more than three sentences&lt;/strong&gt;, note how your graphic and any computed values support &lt;em&gt;comparison&lt;/em&gt; – e.g. via juxtaposition, superposition and/or direct encoding &lt;span class=&#34;citation&#34;&gt;(&lt;a href=&#34;#ref-gleicher_visual_2011&#34; role=&#34;doc-biblioref&#34;&gt;Gleicher and Roberts 2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots&#34;&gt;Save your plot&lt;/a&gt; as a &lt;code&gt;.png&lt;/code&gt; file and insert the file as a Figure into your &lt;code&gt;.Rmd&lt;/code&gt; document (&lt;a href=&#34;https://rmd4sci.njtierney.com/figures-tables-captions-.html&#34;&gt;guidance here&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
@@ -338,6 +345,12 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 # Enter your code in the chunk provided.
 ######################&lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;22%&#34; /&gt;
+&lt;col width=&#34;27%&#34; /&gt;
+&lt;col width=&#34;25%&#34; /&gt;
+&lt;col width=&#34;24%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
 &lt;th&gt;Data item&lt;/th&gt;
@@ -391,9 +404,9 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
-&lt;div id=&#34;ref-gleicher_visual_2011&#34;&gt;
-&lt;p&gt;Gleicher, Albers, M., and J. Roberts. 2011. “Visual Comparison for Information Visualization. Information Visualization.” &lt;em&gt;Information Visualization&lt;/em&gt; 10 (4): 289–309.&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-gleicher_visual_2011&#34; class=&#34;csl-entry&#34;&gt;
+Gleicher, Albers, M., and J. Roberts. 2011. &lt;span&gt;“Visual Comparison for Information Visualization. Information Visualization.”&lt;/span&gt; &lt;em&gt;Information Visualization&lt;/em&gt; 10 (4): 289–309.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -403,10 +416,11 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
     <item>
       <title>Visualization fundamentals</title>
       <link>/homework/03-homework/</link>
-      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/03-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -415,7 +429,8 @@ Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-1-describe-and-evaluate&#34;&gt;Task 1: Describe and evaluate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-reproduce&#34;&gt;Task 2: Reproduce&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-reproduce&#34;&gt;Task 2: Reproduce&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#histograms-faceted-by-region&#34;&gt;Histograms faceted by region&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -452,7 +467,14 @@ Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Complete the description table below identifying each &lt;strong&gt;data item&lt;/strong&gt; that is encoded along with its &lt;strong&gt;measurement level&lt;/strong&gt;, &lt;strong&gt;visual mark&lt;/strong&gt; and &lt;strong&gt;visual channel&lt;/strong&gt; and the effectiveness rank, according to &lt;span class=&#34;citation&#34;&gt;Munzner (&lt;a href=&#34;#ref-munzner_visualization_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, of this encoding.&lt;/p&gt;
-&lt;table&gt;
+&lt;table style=&#34;width:100%;&#34;&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;19%&#34; /&gt;
+&lt;col width=&#34;22%&#34; /&gt;
+&lt;col width=&#34;21%&#34; /&gt;
+&lt;col width=&#34;20%&#34; /&gt;
+&lt;col width=&#34;16%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
 &lt;th&gt;Data item&lt;/th&gt;
@@ -562,9 +584,9 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
-&lt;div id=&#34;ref-munzner_visualization_2014&#34;&gt;
-&lt;p&gt;Munzner, T. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-munzner_visualization_2014&#34; class=&#34;csl-entry&#34;&gt;
+Munzner, T. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Peters Visualization Series. Boca Raton, FL: CRC Press.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -574,10 +596,11 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
     <item>
       <title>Data fundamentals</title>
       <link>/homework/02-homework/</link>
-      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/02-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
@@ -585,7 +608,8 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task-1-describe-data&#34;&gt;Task 1: Describe data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2019&#34;&gt;UK General Election Results 2019&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2017-and-2019&#34;&gt;UK General Election Results 2017 and 2019&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -658,7 +682,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;task-2-diagnose-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 2: Diagnose data&lt;/h2&gt;
-&lt;p&gt;Below are two different tables with results from UK General Elections. We will be working with these data in the next session. Identify whether or not each is in &lt;strong&gt;tidy&lt;/strong&gt; format &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. If they are not, provide a layout for a tidy version. No need to use code here, just edit the markdown table. If you’re struggling to work out how to organise markdown tables, you may wish to use this &lt;a href=&#34;https://www.tablesgenerator.com/markdown_tables&#34;&gt;tables generator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Below are two different tables with results from UK General Elections. We will be working with these data in the next session. Identify whether or not each is in &lt;strong&gt;tidy&lt;/strong&gt; format &lt;span class=&#34;citation&#34;&gt;(&lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;Wickham 2014&lt;/a&gt;)&lt;/span&gt;. If they are not, provide a layout for a tidy version. No need to use code here, just edit the markdown table. If you’re struggling to work out how to organise markdown tables, you may wish to use this &lt;a href=&#34;https://www.tablesgenerator.com/markdown_tables&#34;&gt;tables generator&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;uk-general-election-results-2019&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;UK General Election Results 2019&lt;/h3&gt;
 &lt;table&gt;
@@ -701,6 +725,13 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;uk-general-election-results-2017-and-2019&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;UK General Election Results 2017 and 2019&lt;/h3&gt;
 &lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;27%&#34; /&gt;
+&lt;col width=&#34;21%&#34; /&gt;
+&lt;col width=&#34;15%&#34; /&gt;
+&lt;col width=&#34;20%&#34; /&gt;
+&lt;col width=&#34;15%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
 &lt;th&gt;party&lt;/th&gt;
@@ -753,7 +784,7 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;div id=&#34;task-3-fix-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 3: Fix data&lt;/h2&gt;
 &lt;p&gt;In the &lt;a href=&#34;../homework/02-homework_files/02-template.Rmd&#34;&gt;&lt;i class=&#34;fab fa-r-project&#34;&gt;&lt;/i&gt; 02-template.Rmd&lt;/a&gt; file for this session I have provided links to two derived tables (&lt;code&gt;ny_spread_columns&lt;/code&gt; and &lt;code&gt;ny_spread_rows&lt;/code&gt;) from the New York bikeshare trip data that are not in a tidy format.&lt;/p&gt;
-&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(Wickham &lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Using functions from &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;tidyr&lt;/code&gt; reorganise these data so that they conform to the rules of &lt;strong&gt;tidy&lt;/strong&gt; data &lt;span class=&#34;citation&#34;&gt;(&lt;a href=&#34;#ref-wickham_tidy_2014&#34; role=&#34;doc-biblioref&#34;&gt;Wickham 2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;A candidate tidy organisation of the data is below. Each row is an origin-destination pair for a weekday or weekend, and each variable describes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;o_station&lt;/code&gt;: station id of the origin station&lt;/li&gt;
@@ -790,9 +821,9 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
-&lt;div id=&#34;ref-wickham_tidy_2014&#34;&gt;
-&lt;p&gt;Wickham, H. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-wickham_tidy_2014&#34; class=&#34;csl-entry&#34;&gt;
+Wickham, H. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -802,10 +833,11 @@ Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituenc
     <item>
       <title>Introduction</title>
       <link>/homework/01-homework/</link>
-      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
       <guid>/homework/01-homework/</guid>
       <description>
 &lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;script src=&#34;../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;!-- /BLOGDOWN-HEAD --&gt;
 
 &lt;h2&gt;Contents&lt;/h2&gt;
