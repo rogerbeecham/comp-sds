@@ -29,8 +29,8 @@ The course emphasises real-world applications. You will work with both new, larg
 
 By the end of the course you will:
 
-1.	Describe, process and combine geographic datasets from a range of sources
-2.	Design statistical graphics that expose structure in geographic data and that are underpinned by established principles in information visualization and cartography
+1.	Describe, process and combine social science datasets from a range of sources
+2.	Design statistical graphics that expose structure in social science data and that are underpinned by established principles in information visualization and cartography
 3.	Use modern data science and visualization frameworks to produce coherent, reproducible data analyses
 4.	Apply modern statistical techniques for analysing, representing and communicating data and model uncertainty
 
@@ -38,8 +38,8 @@ By the end of the course you will:
 
 For those taking the course for credits, there are two forms of assessment:
 
-1. *In-class exam*. A set of questions on core concepts with short written answers to be completed within a single 1-hour sitting. There are no software/coding elements to the *in-class* exam. This will take place during the afternoon of **Thursday 19th August**.
-2. *Take-home exam*. A computational notebook to complete containing a set of applied exercises relevant to the course but that are constrained and specific. There will be specific data to work with, outputs to produce and interpretations to be made  in the context of the methods applied.  The notebook should be submitted within 2-weeks of the course finishing, by **Friday 3rd September**. Expect to spend no more than a few hours on this element.
+1. *In-class exam*. A set of questions on core concepts with short written answers to be completed within a single 1-hour sitting. There are no software/coding elements to the *in-class* exam. This will take place during the afternoon of **Thursday 18th August 2022**.
+2. *Take-home exam*. A computational notebook to complete containing a set of applied exercises relevant to the course but that are constrained and specific. There will be specific data to work with, outputs to produce and interpretations to be made  in the context of the methods applied.  The notebook should be submitted within 2-weeks of the course finishing, by **Friday 2nd September 2022**. Expect to spend no more than a few hours on this element.
 
 
 ## Software
@@ -59,7 +59,7 @@ As you work through the course materials you will notice special icons are used 
 
 ## Self-guided learning
 
-> The bad news is whenever you’re learning a new tool, for a long time you’re going to suck. It's going to be very frustrating. But, the good news is that that is typical, it’s something that happens to everyone, and it’s only temporary ... [T]here is no way to go from knowing nothing about a subject to knowing something about a subject and being an expert in it without going through a period of great frustration."
+> *The bad news is whenever you’re learning a new tool, for a long time you’re going to suck. It's going to be very frustrating. But, the good news is that that is typical, it’s something that happens to everyone, and it’s only temporary ... [T]here is no way to go from knowing nothing about a subject to knowing something about a subject and being an expert in it without going through a period of great frustration.*
 >
 > Hadley Wickham
 
@@ -82,8 +82,8 @@ Create an account on the [comp-sds Slack](https://comp-sds.slack.com). If you ru
 
 ## Asking questions
 
-As some of you will be learning to program in R for the first time, you should expect to be baffled at times and to routinely encounter scary-looking `ERROR` messages. Counterintuitively, this is actually to be welcomed. You need to be making mistakes and hitting obstacles on a regular basis if you are to progress.
+As some of you will be learning to program in R for the first time, you should expect to be baffled at times and to routinely encounter scary-looking `ERROR` messages. This is actually to be welcomed. You need to be making mistakes and hitting obstacles on a regular basis if you are to progress.
 
 *How* you respond to these obstacles is important. In a face-to-face lab, the temptation when hitting a problem is to raise your hand, gesture towards your screen and have a demonstrator 'de-bug' for you. Whilst this may initially seem like an efficient solution, you risk learning very little if this is your only course of action.
 
-When you encounter problems working through the material in this course, try to force yourself to spend 15-20 minutes troubleshooting the problem individually. [Google](https://www.google.com/) your problem or try [StackOverflow](https://stackoverflow.com/). If you are not able to resolve the problem on your own, then post your question to the course [Slack](https://vis-for-gds.slack.com), which I will monitor regularly. When doing this, make an effort to be specific and unambiguous about your problem. You might wish to consult StackOverflow's guidance on [how to ask a good question](https://stackoverflow.com/help/how-to-ask).
+If you are studying online-only, when you encounter problems working through the material in this course, try to force yourself to spend some time  troubleshooting the problem individually. [Google](https://www.google.com/) your problem or try [StackOverflow](https://stackoverflow.com/). If you are not able to resolve the problem on your own, then post your question to the course [Slack](https://vis-for-gds.slack.com), which I will monitor regularly. When doing this, make an effort to be specific and unambiguous about your problem. You might wish to consult StackOverflow's guidance on [how to ask a good question](https://stackoverflow.com/help/how-to-ask).

@@ -528,7 +528,7 @@ The plot specification:
 
 {{% callout note %}}
 I had intended to finish the session here. However, there is an obvious confounding factor that the analysis above does not consider. I got a little carried away with investigating this and the pedestrian-driver demographics theme and, using *layout* and *direct encoding*, generated data-driven hypotheses/expectations to be explored in more detail. I do not provide code for the analysis below -- it extends beyond what I anticipated for this session on EDA.
- It is ***optional*** for the interested reader.
+ It is ***optional*** for the interested reader. EDIT: This in fact led to quite an involved paper on the theme of visualization and exploratory approaches in data science [@beecham_vis_2022].
 {{% /callout %}}
 
 <!-- This theme can be further explored by *juxtaposing* separate plots based on the IMD quintile of the crash location. The plot in the top row shows observed values and the residuals are based on a restructured contingency table where the rows are IMD driver-pedestrian pairs -- 25 x rows -- and the columns are the IMD class of the crash location --  5 x columns. The assumption is that crashes by IMD casualty-driver pair distribute independently of crash location. This takes a little to get your head around, but is demonstrated in the plots of expected values and row and column marginals (Figure \@ref(fig:imd-driver-cas-overall)).

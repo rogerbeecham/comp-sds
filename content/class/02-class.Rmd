@@ -63,9 +63,9 @@ The idea of applying a consistent vocabulary to describing your data applies esp
 
 ### Data structure
 
-In the course we will work with [data frames](http://adv-r.had.co.nz/Data-structures.html#data-frames) in R. These are spreadsheet like representations where rows are **observations** (case/record) and columns are **variables**. Each variable (column) in a data frame is a [vector](http://adv-r.had.co.nz/Data-structures.html#vectors) that must be of equal length. Where observations have missing values for certain variables -- that is, where they may violate this equal-length requirement -- the missing values must be substituted with something, usually with `NA` or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a [`list-column`](https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html), something we'll return to later in the course.
+In the course we will work with [data frames](http://adv-r.had.co.nz/Data-structures.html#data-frames) in R. These are spreadsheet like representations where rows are **observations** (case/record) and columns are **variables**. Each variable (column) in a data frame is a [vector](http://adv-r.had.co.nz/Data-structures.html#vectors) that must be of equal length. Where observations have missing values for certain variables -- that is, where they may violate this equal-length requirement -- the missing values must be substituted with something, usually with `NA` or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a [`list-column`](https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html), to which we'll return later in the course.
 
-Organising data according this simple structure -- rows as observations, columns as variables -- makes working with data more straightforward. A specific set of tools, made available via the `tidyverse`, can be deployed for doing most data **tidy**ing tasks [@wickham_tidy_2014].
+Organising data according to this simple structure -- rows as observations, columns as variables -- makes working with data more straightforward. A specific set of tools, made available via the `tidyverse`, can be deployed for doing most data **tidy**ing tasks [@wickham_tidy_2014].
 
 
 ### Types of variable
@@ -132,7 +132,7 @@ kbl(variable_types,  caption = "A breakdown of @stevens_on_1946 variable types, 
  column_spec(1, width = "8em")
 ```
 
-A classification you may have encountered for describing  variables is that developed by @stevens_on_1946, which considers the _level of measurement_ of a variable. @stevens_on_1946 classed variables into two groups: variables that describe *categories* of things and variables that describe *measurements* of things. Categories include attributes like gender, titles, `Subscribers` or `Casual` users of a bikeshare scheme and ranked orders (1st, 2nd, 3rd largest etc.). Measurements include quantities like distance, age, travel time, number of journeys made on a bikeshare scheme.
+A classification you may have encountered for describing  variables is that developed by @stevens_on_1946, which considers the _level of measurement_ of a variable. @stevens_on_1946 classed variables into two groups: variables that describe *categories* of things and variables that describe *measurements* of things. Categories include attributes like gender, title, `Subscribers` or `Casual` users of a bikeshare scheme and ranked orders (1st, 2nd, 3rd largest etc.). Measurements include quantities like distance, age, travel time, number of journeys made via a bikeshare scheme.
 
 Categories can be further subdivided into those that are unordered (**nominal**) from those that are ordered (**ordinal**). Measurements can also be subdivided. **Interval** measurements are quantities that can be ordered and where the difference between two values is meaningful. **Ratio** measurements have both these properties, but also have a meaningful `0` -- where `0` means the absence of something -- and where the ratio of two values can be computed. The most common cited example of an interval measurement is temperature (in degrees C). Temperatures can be ordered and compared additively, but `0` degrees C does not mean the absence of temperature and 20 degrees C is not twice as "hot" as 10 degrees C.
 
@@ -149,7 +149,7 @@ If the latter, then there are problems as the level of detail we have on our sam
 
 ### Tidy data
 
-I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called **tidy** [@wickham_tidy_2014],  has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and re-use tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values,  means that we can take advantage of `R`'s vectorised functions for transforming data -- we will demonstrate this in the technical element of this session.
+I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called **tidy** [@wickham_tidy_2014],  has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and reuse tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values,  means that we can take advantage of `R`'s vectorised functions for transforming data -- we will demonstrate this in the technical element of this session.
 
 The three rules for tidy data:
 
@@ -192,7 +192,7 @@ Much better would be to organise the table into a **tidy** form. To do this we n
 
 1. `person`:  a categorical nominal variable which takes three values: John Smith, Jane Doe, Mary Johnson.
 2. `treatment`: a categorical nominal variable which takes values: a and b.
-3. `result`: a measurement ratio (I think) variable which six recorded values (including the missing value): -, 16, 3, 2, 11,
+3. `result`: a measurement ratio (I think) variable with six recorded values (including the missing value): -, 16, 3, 2, 11,
 
 Each **observation** is then a test result returned for each combination of `person` and `treatment`.
 
@@ -208,7 +208,7 @@ kbl(drugs,  caption = "Tidy version of Table 1 of @wickham_tidy_2014.")
 ```
 #### Gapminder population dataset
 
-In [chapter 12](https://r4ds.had.co.nz/tidy-data.html#tidy-data-1) of @wickham_r_2017, the benefits of this layout, particularly for working with R, are demonstrated with the [`gapminder`](https://www.gapminder.org/data/) dataset. I recommend reading this short chapter in full.  We will be applying similar approaches in the technique part of this class (which follows shortly) and also the [homework](). To consolidate our conceptual understanding of **tidy** data let's quickly look at the `gapminder` data, as it is a dataset we're probably more likely to encounter.
+In [chapter 12](https://r4ds.had.co.nz/tidy-data.html#tidy-data-1) of @wickham_r_2017, the benefits of this layout, particularly for working with R, are demonstrated using the [`gapminder`](https://www.gapminder.org/data/) dataset. I recommend reading this short chapter in full.  We will be applying similar approaches in the technique part of this class (which follows shortly) and also the [homework](). To consolidate our conceptual understanding of **tidy** data let's quickly look at the `gapminder` data, as it is a dataset we're probably more likely to encounter.
 
 First, a **tidy** version of the data:
 
@@ -242,7 +242,7 @@ gapminder_untidy1 <- tibble::tibble(
 kbl(gapminder_untidy1,  caption = "Untidy excerpt of [`gapminder`](https://www.gapminder.org/data/) dataset: observations spread across rows")
 ```
 
-This actually doesn't appear in @wickham_r_2017, but imagine that the `gapminder` dataset instead reported values of `cases` separately by gender. A type of representation I've often seen in social science domains, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in [`ggplot2`](https://ggplot2.tidyverse.org/)) as we will discover in the next session.
+Imagine that the `gapminder` dataset instead reported values of `cases` separately by gender. A type of representation I've often seen in social science domains, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in [`ggplot2`](https://ggplot2.tidyverse.org/)) as we will discover in the next session.
 
 ```{r gapminder-untidy2, echo=FALSE, fig.cap="Untidy excerpt of [`gapminder`](https://www.gapminder.org/data/) dataset.", out.width="100%"}
 gapminder_untidy2 <- tibble::tibble(
@@ -381,7 +381,7 @@ data_types <- tibble::tibble(
 kbl(data_types, caption = "A breakdown of data types in R.")
 ```
 
-The object type of a variable in a data frame relates to that variable's *measurement level*. It is often useful to convert to types with greater specificity. For example, we may which to convert the `start_time` and `stop_time` variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the *station identifier* variables as `int` types by removing the redundant "ny" text which prefaces `end_station_id`, `end_station_id`, `stn_id`. The geographic coordinates are currently stored as type `chr`. These could be regarded as quantitative variables, floating points with decimals. So converting to type `dbl` or as a [`POINT`](https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types) geometry type (more on this later in the course) may be sensible.
+The object type of a variable in a data frame relates to that variable's *measurement level*. It is often useful to convert to types with greater specificity. For example, we may wish to convert the `start_time` and `stop_time` variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the *station identifier* variables as `int` types by removing the redundant "ny" text which prefaces `end_station_id`, `end_station_id`, `stn_id`. The geographic coordinates are currently stored as type `chr`. These could be regarded as quantitative variables, floating points with decimals. So converting to type `dbl` or as a [`POINT`](https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types) geometry type (more on this later in the course) may be sensible.
 
 In the [<i class="fab fa-r-project"></i> 02-template.Rmd](/homework/02-homework_files/02-template.Rmd) file there are code chunks for doing these conversions. There are some slightly more involved data transform procedures in this code. Don't fixate too much on these, but the upshot can be seen when running `glimpse()` on the converted data frames:
 
@@ -528,7 +528,7 @@ ny_trips %>% # Take the ny_trips data frame.
 ## 2 Customer    575585         43.6            23.2        393.         1.02         46982
 ```
 
-Clearly there are some outlier trips that may need to be examined. Bikeshare schemes are built to incentivise short journeys of <30 minutes, but the maximum trip duration recorded above is clearly erroneous -- 32 days. Ignoring these sorts of outliers by calculating the trip durations at the 95th percentiles is instructive.  The max trip duration at the 95th percentile  for `Subscribers` was almost 27 minutes and for  `Customers` was 1 hours 26 mins. It makes sense that more casual users may have longer trip durations, as they are more likely to be tourists or occasional cyclists using the scheme for non-utility trips. However, they do skew the mean travel time.
+Clearly there are some outlier trips that may need to be examined. Bikeshare schemes are built to incentivise short journeys of <30 minutes, but the maximum trip duration recorded above is clearly erroneous -- 32 days. Ignoring these sorts of outliers by calculating the trip durations at the 95th percentiles is instructive.  The max trip duration at the 95th percentile  for `Subscribers` was almost 27 minutes and for  `Customers` was 1 hours 26 mins. It makes sense that more casual users may have longer trip durations, as they are more likely to be tourists or occasional cyclists using the scheme for non-utility trips.
 
 Returning to the breakdown of usage by gender, an interesting question is whether or not the male-female split in bikehare is similar to that of the cycling population of New York City as a whole. This might tell us something about whether the bikeshare scheme could be *representative* of wider cycling. This could be achieved with the code below.  A couple of new additions: we use `filter()`, to remove observations where the gender of the cyclist is `unknown`. We also use `mutate()` for the first time, which allows us to modify or create new variables.
 
@@ -546,7 +546,7 @@ ny_trips %>% # Take the ny_trips data frame.
 ## 1 male   1044621 0.640
 ## 2 female  586361 0.360
 ```
-As I've commented each line you hopefully get a sense of what is happening in the code above. I mentioned that `dplyr` functions read like **verbs**. This is a very deliberate design decision. With the code laid out as above -- each `dplyr` verb occupying a single line, separated by a pipe (`%>%`) -- you can generally understand the code with a cursory glance. There are obvious benefits to this. Once you become familiar with `dplyr` it becomes very easy to read, write and share code.
+As I've commented each line you hopefully get a sense of what is happening in the code above. I mentioned that `dplyr` functions read like **verbs**. This is a very deliberate design decision. With the code laid out as above -- each `dplyr` verb occupying a single line, separated by a pipe (`%>%`) -- you can generally understand the code with a cursory glance. There are obvious benefits to this. Once you are familiar with `dplyr` it becomes very easy to read, write and share code.
 
 
 {{% callout note %}}
@@ -574,13 +574,13 @@ ny_temporal <- ny_trips %>%  # Take the ny_trips data frame.
 Whether or not to store derived data tables, like the newly assigned `ny_temporal`, in a session is not an easy decision. You want to try to avoid cluttering your Environment pane with many data objects. Often when generating charts it is necessary to create these sorts of derived tables as input data (to `ggplot2`) -- and so when doing visual data analysis you may end up with an unhelpfully large number of these derived tables. The general rule I apply: if the derived table is to be used >3 times in a data analysis or is computationally intensive, assign it (`<-`) to an object.
 {{% /callout %}}
 
-In Figure \@ref(fig:plot-temporal) below these derived data are plotted. The template contains `ggplot2` code for creating the graphic. Don't obsess too much on it -- more on this next session. The plot demonstrates a familiar weekday-weekend pattern of usage. Trip frequencies peak in the morning and evening rush hours during weekdays and mid/late-morning and afternoon during weekends. This is consistent with typical travel behaviour. Notice though that the weekday afternoon peak is much larger than the morning peak. There are several speculative explanations for this and re-running the plot on `Subscriber` users only may be instructive. A secondary observation is that whilst men and women share this overall pattern of usage, the relative number of trips taken by each day of week varies. Men make many more trips at peak times during the start of the week than they do later in the week. The same pattern does not appear for women. This is certainly something to follow up on, for example by collecting data over a longer period of time.
+In Figure \@ref(fig:plot-temporal) below these derived data are plotted. The template contains `ggplot2` code for creating the graphic. Don't obsess too much on it -- more on this next session. The plot demonstrates a familiar weekday-weekend pattern of usage. Trip frequencies peak in the morning and evening rush hours during weekdays and mid/late-morning and afternoon during weekends. This is consistent with typical travel behaviour. Notice though that the weekday afternoon peak is much larger than the morning peak. There are several speculative explanations for this and re-running the plot on `Subscriber` users only may be instructive. A secondary observation is that whilst men and women share this overall pattern of usage, the relative number of trips taken each day of week varies. Men make many more trips at peak times during the start of the week than they do later in the week. The same pattern does not appear for women. This is certainly something to follow up on, for example by collecting data over a longer period of time.
 
 ```{r plot-temporal, echo=FALSE, fig.cap="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`.", out.width="100%"}
 include_graphics("/class/02-class_files/hod_dow.png", error = FALSE)
 ```
 {{% callout note %}}
- Our analysis is based on data from June 2020, a time when New York residents were emerging from lockdown. It would be instructive to compare with data from a non-Covid year. If there is a very clear contrast in usage between this data and a control (non-Covid) year, this suggests bikeshare data may be used for monitoring *behavioural change*. The fact that bikeshare is collected continuously makes this possible. Check out [Jo Wood's current work](https://github.com/jwoLondon/mobv) analysing Covid-related change in movement behaviours across a range of cities.
+ Our analysis is based on data from June 2020, a time when New York residents were emerging from lockdown. It would be instructive to compare with data from a non-Covid year. If there is a very clear contrast in usage between this data and a control (non-Covid) year, this suggests bikeshare data may be used for monitoring *behavioural change*. The fact that bikeshare is collected continuously makes this possible. Check out [Jo Wood's  work](https://github.com/jwoLondon/mobv) analysing Covid-related change in movement behaviours across a range of cities.
 {{% /callout %}}
 
 

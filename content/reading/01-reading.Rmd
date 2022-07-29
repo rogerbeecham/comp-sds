@@ -27,6 +27,10 @@ editor_options:
 
 - [@singleton_geographic_2019]
 
+### Social (Geographic) Data science and Visualization
+
+- [@beecham_vis_2022]
+
 ### Reproducibility agenda
 
 - [@brunsdon_opening_2020]

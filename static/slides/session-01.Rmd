@@ -1,7 +1,7 @@
 ---
-title: "  Computational Methods for Social Data Science"
+title: "Computational Methods for Social Data Science"
 author: "Roger Beecham"
-date: "9 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+date: "8 Aug 2022  \n\n `roger-beecham.com/comp-sds`"
 output:
   xaringan::moon_reader:
     css: [default, "slides-theme.css"]
@@ -25,13 +25,17 @@ library(kableExtra)
 
 ???
 
-1. Quick introduction to course -- how it will be configured and working -- split of theoretical and lab activity.
+1. Today: introduction to course. How it will be configured and working; split of theoretical and lab activity.
 2. Introduce rationale behind the course, my ambition with it.
-3. "Engagement" / lab acticity -- instead establish understanding  / ambition with course
+
 
 ---
 
 ## Course Overview
+
+???
+
+Hopefully looked at some of the introductory stuff on the course website.
 
 --
 .tiny-font[
@@ -51,7 +55,7 @@ So : this course is about demonstrating a "modern" approach to data analysis (wi
 There are loads of excellent how-to primers...
 --
 .tiny-font[
-> As well as learning how to use graphics and statistics to explore patterns in these data, implementing recent ideas from **data journalism** you will learn how to communicate research findings – how to tell stories with data.
+> As well as learning how to **use graphics and statistics to explore patterns in these data**, implementing recent ideas from **data journalism** you will learn how to **communicate research findings** – how to **tell stories with data**.
 ]
 
 ???
@@ -96,7 +100,7 @@ But to do so by stealth : through real analysis scenarios.
 ## Course Website
 
 
-<img src = "img/home.png", width = 50%></img>
+<img src = "img/home.png", width = 60%></img>
 
 
 ???
@@ -110,7 +114,7 @@ Session 08 > Identify Conceptual versus Technical.
 ## Course Schedule
 
 
-<img src = "img/schedule.png", width = 50%></img>
+<img src = "img/breakdown.png", width = 60%></img>
 
 
 ???
@@ -167,16 +171,16 @@ Later : Data Science Calling upon new ways of doing science
 ## Why *comp-sds*?
 
 .small-font[
-* 1000 years ago -- **experimental science**
+* 1000 years ago : **experimental science**
 	+ Description of natural phenomena
 
-* 100s years ago -- **theoretical science**
+* 100s years ago : **theoretical science**
 	+ Newton’s laws, Maxwell’s Equations
 
-* <50 years ago -- **computational science**
+* <50 years ago : **computational science**
 	+ Simulate complex phenomena
 
-* Today -- **data-intensive science**
+* Today : **data-intensive science**
   + Generate knowledge through 	observation
 ]
 
@@ -199,7 +203,7 @@ Tony Hey (2009) -- essays on data science -- first to discuss way data is bringi
 ## Why *comp-sds*?
 
 .small-font[
-Donoho 2017's six key facets that a data science discipline might encompass:
+Donoho 2017's **six key facets** that a **data science discipline* might encompass:
 
 1.  data gathering, preparation, and exploration;
 
@@ -534,21 +538,21 @@ Go to web-page and explain
 
 ## How *comp-sds*?
 
-.small-font[
-> **Reproducible research** is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.
+.tiny-font[
+> **Reproducible research** is the idea that **data analyses**, and more generally, **scientific claims**, are published with their **data and software code** so that others may **verify** the **findings** and **build upon them**.
 >
 > Roger Peng, Jeff Leek and Brian Caffo
 ]
 
 --
 
-<br>
+<br><br>
 .small-font[
 A reproducible research project should be accompanied with code and data that:
 
-* allow all published tables and figures to be regenerated
-* does what it claims (the code works)
-* can be justified and explained through proper documentation
+* Allow all published tables and figures to be regenerated <br>
+* Does what it claims (the code works) <br>
+* Can be justified and explained through proper documentation
 ]
 ---
 
@@ -560,41 +564,33 @@ A reproducible research project should be accompanied with code and data that:
 
 ## Conclusions
 
-**Why**
+.small-font[**Concepts : why and how**]
 
-.small-font[
-In Social Data Science research projects:]
+.tiny-font[
 
-.small-font[
+In Social Data Science research projects:
+
 * Data are repurposed for social science research often **for the first time**;]
 
-.small-font[
+.tiny-font[
 * Contain complex structure and geo-spatial relations that **cannot be easily captured by statistical summaries alone**;]
 
-.small-font[
+.tiny-font[
 * Types of questions that can be asked and the techniques deployed **cannot be easily specified in advance**
 ]
 
-<br>
+.tiny-font[
+* Tools for reproducible research: `R`| `RStudio` | `R Markdown` | `tidyverse ++` ]
 
-**How**
+.small-font[**Techniques**]
+.tiny-font[
+* Install the latest versions of `R` and `RStudio`
 
-.small-font[
-`R`| `RStudio` | `R Markdown` | `tidyverse ++`
-]
----
+* Install and load some packages
 
+* Experiment with `Rmd`
 
-
-## Technical Element
-.small-font[
-1. Install the latest versions of `R` and `RStudio`
-
-2. Install and load some packages
-
-3. Experiment with `Rmd`
-
-4. Create an RStudio project
+* Create an RStudio project
 ]
 
 ???
@@ -606,7 +602,7 @@ Templates : key thing folder structure -- share computer
 ## DirectPoll
 
 Link to poll:
-```http://etc.ch/z62Q```
+```http://etc.ch/Y6N4```
 
 ---
 

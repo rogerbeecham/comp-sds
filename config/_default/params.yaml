@@ -106,13 +106,13 @@ course:
   semester: "August 2022"
   days: "Mon - Fri"
   time: "1000 - 1330 BST"
-  location: "ODL"
+  location: "Colchester Campus"
   dates: "8th Aug - 19th Aug"
   github: "rogerbeecham/comp-sds"
   copyrightYear: "2022"
 
 university:
-  name: Essex Summer School
+  name: University of Essex
   url: "https://essexsummerschool.com/"
 
 school:
