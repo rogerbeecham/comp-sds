@@ -37,8 +37,8 @@
   
     
   
-  <meta name="description" content="Contents  Session outcomes Introduction Concepts  Data structure Types of variable Types of observation Tidy data  Techniques  Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  Learn the vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis.">
+  <meta name="description" content="Contents Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data Techniques Import Describe Transform Tidy Conclusions References Session outcomes By the end of this session you should gain the following knowledge:
+Learn the vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis. By the end of this session you should gain the following practical skills:">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/02-class/">
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Computational Methods for Social Data Science">
   <meta property="og:url" content="/class/02-class/">
   <meta property="og:title" content="Data fundamentals: Describe, wrangle, tidy | Computational Methods for Social Data Science">
-  <meta property="og:description" content="Contents  Session outcomes Introduction Concepts  Data structure Types of variable Types of observation Tidy data  Techniques  Import Describe Transform Tidy  Conclusions References   Session outcomes By the end of this session you should gain the following knowledge:
-  Learn the vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis."><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Contents Session outcomes Introduction Concepts Data structure Types of variable Types of observation Tidy data Techniques Import Describe Transform Tidy Conclusions References Session outcomes By the end of this session you should gain the following knowledge:
+Learn the vocabulary and concepts used to describe data. Appreciate the characteristics and importance of tidy data (Wickham 2014) for data processing and analysis. By the end of this session you should gain the following practical skills:"><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2022-08-09T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2022-04-21T11:16:40&#43;01:00">
+    <meta property="article:modified_time" content="2022-07-29T21:20:26&#43;01:00">
   
 
   
@@ -821,8 +821,8 @@ Paying attention to   --></p>
 <h2>Concepts</h2>
 <div id="data-structure" class="section level3">
 <h3>Data structure</h3>
-<p>In the course we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables – that is, where they may violate this equal-length requirement – the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, something we’ll return to later in the course.</p>
-<p>Organising data according this simple structure – rows as observations, columns as variables – makes working with data more straightforward. A specific set of tools, made available via the <code>tidyverse</code>, can be deployed for doing most data <strong>tidy</strong>ing tasks <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span>.</p>
+<p>In the course we will work with <a href="http://adv-r.had.co.nz/Data-structures.html#data-frames">data frames</a> in R. These are spreadsheet like representations where rows are <strong>observations</strong> (case/record) and columns are <strong>variables</strong>. Each variable (column) in a data frame is a <a href="http://adv-r.had.co.nz/Data-structures.html#vectors">vector</a> that must be of equal length. Where observations have missing values for certain variables – that is, where they may violate this equal-length requirement – the missing values must be substituted with something, usually with <code>NA</code> or similar. This constraint occasionally causes difficulties, for example when working with variables that contain values of different length for an observation. In these cases we create a special class of column, a <a href="https://jennybc.github.io/purrr-tutorial/ls13_list-columns.html"><code>list-column</code></a>, to which we’ll return later in the course.</p>
+<p>Organising data according to this simple structure – rows as observations, columns as variables – makes working with data more straightforward. A specific set of tools, made available via the <code>tidyverse</code>, can be deployed for doing most data <strong>tidy</strong>ing tasks <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span>.</p>
 </div>
 <div id="types-of-variable" class="section level3">
 <h3>Types of variable</h3>
@@ -945,7 +945,7 @@ Distances; prices
 </tr>
 </tbody>
 </table>
-<p>A classification you may have encountered for describing variables is that developed by <span class="citation">Stevens (<a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span>, which considers the <em>level of measurement</em> of a variable. <span class="citation">Stevens (<a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span> classed variables into two groups: variables that describe <em>categories</em> of things and variables that describe <em>measurements</em> of things. Categories include attributes like gender, titles, <code>Subscribers</code> or <code>Casual</code> users of a bikeshare scheme and ranked orders (1st, 2nd, 3rd largest etc.). Measurements include quantities like distance, age, travel time, number of journeys made on a bikeshare scheme.</p>
+<p>A classification you may have encountered for describing variables is that developed by <span class="citation">Stevens (<a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span>, which considers the <em>level of measurement</em> of a variable. <span class="citation">Stevens (<a href="#ref-stevens_on_1946" role="doc-biblioref">1946</a>)</span> classed variables into two groups: variables that describe <em>categories</em> of things and variables that describe <em>measurements</em> of things. Categories include attributes like gender, title, <code>Subscribers</code> or <code>Casual</code> users of a bikeshare scheme and ranked orders (1st, 2nd, 3rd largest etc.). Measurements include quantities like distance, age, travel time, number of journeys made via a bikeshare scheme.</p>
 <p>Categories can be further subdivided into those that are unordered (<strong>nominal</strong>) from those that are ordered (<strong>ordinal</strong>). Measurements can also be subdivided. <strong>Interval</strong> measurements are quantities that can be ordered and where the difference between two values is meaningful. <strong>Ratio</strong> measurements have both these properties, but also have a meaningful <code>0</code> – where <code>0</code> means the absence of something – and where the ratio of two values can be computed. The most common cited example of an interval measurement is temperature (in degrees C). Temperatures can be ordered and compared additively, but <code>0</code> degrees C does not mean the absence of temperature and 20 degrees C is not twice as “hot” as 10 degrees C.</p>
 <p>Why is this important? The measurement level of a variable determines the types of data analysis procedures that can be performed and therefore allows us to efficiently make decisions when working with a dataset for the first time (Table <a href="#tab:variable-types">1</a>).</p>
 </div>
@@ -957,7 +957,7 @@ Distances; prices
 </div>
 <div id="tidy-data" class="section level3">
 <h3>Tidy data</h3>
-<p>I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called <strong>tidy</strong> <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span>, has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and re-use tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values, means that we can take advantage of <code>R</code>’s vectorised functions for transforming data – we will demonstrate this in the technical element of this session.</p>
+<p>I mentioned that we would be working with data frames organised such that columns always and only refer to variables and rows always and only refer to observations. This arrangement, called <strong>tidy</strong> <span class="citation">(<a href="#ref-wickham_tidy_2014" role="doc-biblioref">Wickham 2014</a>)</span>, has two key advantages. First, if data are arranged in a consistent way, then it is easier to apply and reuse tools for wrangling them due to data having the same underlying structure. Second, placing variables into columns, with each column containing a vector of values, means that we can take advantage of <code>R</code>’s vectorised functions for transforming data – we will demonstrate this in the technical element of this session.</p>
 <p>The three rules for tidy data:</p>
 <ol style="list-style-type: decimal">
 <li>Each variable forms a column.</li>
@@ -1078,7 +1078,7 @@ treatment_b
 <ol style="list-style-type: decimal">
 <li><code>person</code>: a categorical nominal variable which takes three values: John Smith, Jane Doe, Mary Johnson.</li>
 <li><code>treatment</code>: a categorical nominal variable which takes values: a and b.</li>
-<li><code>result</code>: a measurement ratio (I think) variable which six recorded values (including the missing value): -, 16, 3, 2, 11,</li>
+<li><code>result</code>: a measurement ratio (I think) variable with six recorded values (including the missing value): -, 16, 3, 2, 11,</li>
 </ol>
 <p>Each <strong>observation</strong> is then a test result returned for each combination of <code>person</code> and <code>treatment</code>.</p>
 <p>So, a <strong>tidy</strong> organisation for this dataset would be:</p>
@@ -1171,7 +1171,7 @@ b
 </div>
 <div id="gapminder-population-dataset" class="section level4">
 <h4>Gapminder population dataset</h4>
-<p>In <a href="https://r4ds.had.co.nz/tidy-data.html#tidy-data-1">chapter 12</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>, the benefits of this layout, particularly for working with R, are demonstrated with the <a href="https://www.gapminder.org/data/"><code>gapminder</code></a> dataset. I recommend reading this short chapter in full. We will be applying similar approaches in the technique part of this class (which follows shortly) and also the <a href="">homework</a>. To consolidate our conceptual understanding of <strong>tidy</strong> data let’s quickly look at the <code>gapminder</code> data, as it is a dataset we’re probably more likely to encounter.</p>
+<p>In <a href="https://r4ds.had.co.nz/tidy-data.html#tidy-data-1">chapter 12</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>, the benefits of this layout, particularly for working with R, are demonstrated using the <a href="https://www.gapminder.org/data/"><code>gapminder</code></a> dataset. I recommend reading this short chapter in full. We will be applying similar approaches in the technique part of this class (which follows shortly) and also the <a href="">homework</a>. To consolidate our conceptual understanding of <strong>tidy</strong> data let’s quickly look at the <code>gapminder</code> data, as it is a dataset we’re probably more likely to encounter.</p>
 <p>First, a <strong>tidy</strong> version of the data:</p>
 <table>
 <caption>
@@ -1410,7 +1410,7 @@ population
 </tr>
 </tbody>
 </table>
-<p>This actually doesn’t appear in <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>, but imagine that the <code>gapminder</code> dataset instead reported values of <code>cases</code> separately by gender. A type of representation I’ve often seen in social science domains, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a>) as we will discover in the next session.</p>
+<p>Imagine that the <code>gapminder</code> dataset instead reported values of <code>cases</code> separately by gender. A type of representation I’ve often seen in social science domains, probably as it is helpful for data entry, is where observations are spread across the columns. This too creates problems for performing aggregate functions, but also for specifying visualization designs (in <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a>) as we will discover in the next session.</p>
 <table>
 <caption>
 <span id="tab:gapminder-untidy2">Table 7: </span>Untidy possible excerpt of <a href="https://www.gapminder.org/data/"><code>gapminder</code></a> dataset: observations spread across columns
@@ -1622,7 +1622,7 @@ ny_stations &lt;- read_csv(here(&quot;data&quot;, &quot;ny_stations.csv&quot;))<
 <p>Notice that we use <strong>assignment</strong> here (<code>&lt;-</code>) so that these data are loaded as objects and appear in the Environment pane of your RStudio window. An efficient description of data import with <code>read_csv()</code> is also in <a href="https://r4ds.had.co.nz/data-import.html">Chapter 11</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>.</p>
 <code>ny_stations</code> and <code>ny_trips</code> are data frames, spreadsheet type representations containing observations in rows and variables in columns. Inspecting the layout of the stations data with <code>View(ny_stations)</code> you will notice that the top line is the header and contains column (variable) names.
 <div class="figure"><span style="display:block;" id="fig:view-annotate"></span>
-<img src="../../class/02-class_files/view.png" alt="`ny_trips` and `ny_stations` as they appear when calling `View()`." width="100%" />
+<img src="../../../../../../../../class/02-class_files/view.png" alt="`ny_trips` and `ny_stations` as they appear when calling `View()`." width="100%" />
 <p class="caption">
 Figure 1: <code>ny_trips</code> and <code>ny_stations</code> as they appear when calling <code>View()</code>.
 </p>
@@ -1719,7 +1719,7 @@ Factors – represent categorical variables of fixed and potentially orderable v
 </tr>
 </tbody>
 </table>
-<p>The object type of a variable in a data frame relates to that variable’s <em>measurement level</em>. It is often useful to convert to types with greater specificity. For example, we may which to convert the <code>start_time</code> and <code>stop_time</code> variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the <em>station identifier</em> variables as <code>int</code> types by removing the redundant “ny” text which prefaces <code>end_station_id</code>, <code>end_station_id</code>, <code>stn_id</code>. The geographic coordinates are currently stored as type <code>chr</code>. These could be regarded as quantitative variables, floating points with decimals. So converting to type <code>dbl</code> or as a <a href="https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types"><code>POINT</code></a> geometry type (more on this later in the course) may be sensible.</p>
+<p>The object type of a variable in a data frame relates to that variable’s <em>measurement level</em>. It is often useful to convert to types with greater specificity. For example, we may wish to convert the <code>start_time</code> and <code>stop_time</code> variables to a date-time format so that various time-related functions could be used. For efficient storage, we may wish to convert the <em>station identifier</em> variables as <code>int</code> types by removing the redundant “ny” text which prefaces <code>end_station_id</code>, <code>end_station_id</code>, <code>stn_id</code>. The geographic coordinates are currently stored as type <code>chr</code>. These could be regarded as quantitative variables, floating points with decimals. So converting to type <code>dbl</code> or as a <a href="https://r-spatial.github.io/sf/articles/sf1.html#simple-feature-geometry-types"><code>POINT</code></a> geometry type (more on this later in the course) may be sensible.</p>
 <p>In the <a href="../../homework/02-homework_files/02-template.Rmd"><i class="fab fa-r-project"></i> 02-template.Rmd</a> file there are code chunks for doing these conversions. There are some slightly more involved data transform procedures in this code. Don’t fixate too much on these, but the upshot can be seen when running <code>glimpse()</code> on the converted data frames:</p>
 <pre class="r"><code>glimpse(ny_trips)
 ## Rows: 1,882,273
@@ -1951,7 +1951,7 @@ Many more
 ##  &lt;chr&gt;        &lt;int&gt;        &lt;dbl&gt;           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;
 ## 1 Subscriber 1306688         20.2            14.4        110.         1.02         33090
 ## 2 Customer    575585         43.6            23.2        393.         1.02         46982</code></pre>
-<p>Clearly there are some outlier trips that may need to be examined. Bikeshare schemes are built to incentivise short journeys of &lt;30 minutes, but the maximum trip duration recorded above is clearly erroneous – 32 days. Ignoring these sorts of outliers by calculating the trip durations at the 95th percentiles is instructive. The max trip duration at the 95th percentile for <code>Subscribers</code> was almost 27 minutes and for <code>Customers</code> was 1 hours 26 mins. It makes sense that more casual users may have longer trip durations, as they are more likely to be tourists or occasional cyclists using the scheme for non-utility trips. However, they do skew the mean travel time.</p>
+<p>Clearly there are some outlier trips that may need to be examined. Bikeshare schemes are built to incentivise short journeys of &lt;30 minutes, but the maximum trip duration recorded above is clearly erroneous – 32 days. Ignoring these sorts of outliers by calculating the trip durations at the 95th percentiles is instructive. The max trip duration at the 95th percentile for <code>Subscribers</code> was almost 27 minutes and for <code>Customers</code> was 1 hours 26 mins. It makes sense that more casual users may have longer trip durations, as they are more likely to be tourists or occasional cyclists using the scheme for non-utility trips.</p>
 <p>Returning to the breakdown of usage by gender, an interesting question is whether or not the male-female split in bikehare is similar to that of the cycling population of New York City as a whole. This might tell us something about whether the bikeshare scheme could be <em>representative</em> of wider cycling. This could be achieved with the code below. A couple of new additions: we use <code>filter()</code>, to remove observations where the gender of the cyclist is <code>unknown</code>. We also use <code>mutate()</code> for the first time, which allows us to modify or create new variables.</p>
 <pre class="r"><code>ny_trips %&gt;% # Take the ny_trips data frame.
   filter(gender != &quot;unknown&quot;) %&gt;% # Filter out rows with the value &quot;unknown&quot; on gender.
@@ -1965,7 +1965,7 @@ Many more
 ##  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt;
 ## 1 male   1044621 0.640
 ## 2 female  586361 0.360</code></pre>
-<p>As I’ve commented each line you hopefully get a sense of what is happening in the code above. I mentioned that <code>dplyr</code> functions read like <strong>verbs</strong>. This is a very deliberate design decision. With the code laid out as above – each <code>dplyr</code> verb occupying a single line, separated by a pipe (<code>%&gt;%</code>) – you can generally understand the code with a cursory glance. There are obvious benefits to this. Once you become familiar with <code>dplyr</code> it becomes very easy to read, write and share code.</p>
+<p>As I’ve commented each line you hopefully get a sense of what is happening in the code above. I mentioned that <code>dplyr</code> functions read like <strong>verbs</strong>. This is a very deliberate design decision. With the code laid out as above – each <code>dplyr</code> verb occupying a single line, separated by a pipe (<code>%&gt;%</code>) – you can generally understand the code with a cursory glance. There are obvious benefits to this. Once you are familiar with <code>dplyr</code> it becomes very easy to read, write and share code.</p>
 <p><div class="alert alert-note">
   <div>
     Remembering that <strong>pipes</strong> (<code>%&gt;%</code>) take the output of a set of code and make it the input of the next set, what do you think would happen if you were to comment out the call to <code>arrange()</code> in the code block above? Try it for yourself. You will notice that I use separate lines for each call to the <strong>pipe</strong> operator. This is good practice for supporting readibility of your code.
@@ -1991,16 +1991,16 @@ ny_temporal &lt;- ny_trips %&gt;%  # Take the ny_trips data frame.
   </div>
 </div>
 </p>
-<p>In Figure <a href="#fig:plot-temporal">2</a> below these derived data are plotted. The template contains <code>ggplot2</code> code for creating the graphic. Don’t obsess too much on it – more on this next session. The plot demonstrates a familiar weekday-weekend pattern of usage. Trip frequencies peak in the morning and evening rush hours during weekdays and mid/late-morning and afternoon during weekends. This is consistent with typical travel behaviour. Notice though that the weekday afternoon peak is much larger than the morning peak. There are several speculative explanations for this and re-running the plot on <code>Subscriber</code> users only may be instructive. A secondary observation is that whilst men and women share this overall pattern of usage, the relative number of trips taken by each day of week varies. Men make many more trips at peak times during the start of the week than they do later in the week. The same pattern does not appear for women. This is certainly something to follow up on, for example by collecting data over a longer period of time.</p>
+<p>In Figure <a href="#fig:plot-temporal">2</a> below these derived data are plotted. The template contains <code>ggplot2</code> code for creating the graphic. Don’t obsess too much on it – more on this next session. The plot demonstrates a familiar weekday-weekend pattern of usage. Trip frequencies peak in the morning and evening rush hours during weekdays and mid/late-morning and afternoon during weekends. This is consistent with typical travel behaviour. Notice though that the weekday afternoon peak is much larger than the morning peak. There are several speculative explanations for this and re-running the plot on <code>Subscriber</code> users only may be instructive. A secondary observation is that whilst men and women share this overall pattern of usage, the relative number of trips taken each day of week varies. Men make many more trips at peak times during the start of the week than they do later in the week. The same pattern does not appear for women. This is certainly something to follow up on, for example by collecting data over a longer period of time.</p>
 <div class="figure"><span style="display:block;" id="fig:plot-temporal"></span>
-<img src="../../class/02-class_files/hod_dow.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`." width="100%" />
+<img src="../../../../../../../../class/02-class_files/hod_dow.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`." width="100%" />
 <p class="caption">
 Figure 2: Line charts generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>.
 </p>
 </div>
 <p><div class="alert alert-note">
   <div>
-    Our analysis is based on data from June 2020, a time when New York residents were emerging from lockdown. It would be instructive to compare with data from a non-Covid year. If there is a very clear contrast in usage between this data and a control (non-Covid) year, this suggests bikeshare data may be used for monitoring <em>behavioural change</em>. The fact that bikeshare is collected continuously makes this possible. Check out <a href="https://github.com/jwoLondon/mobv">Jo Wood’s current work</a> analysing Covid-related change in movement behaviours across a range of cities.
+    Our analysis is based on data from June 2020, a time when New York residents were emerging from lockdown. It would be instructive to compare with data from a non-Covid year. If there is a very clear contrast in usage between this data and a control (non-Covid) year, this suggests bikeshare data may be used for monitoring <em>behavioural change</em>. The fact that bikeshare is collected continuously makes this possible. Check out <a href="https://github.com/jwoLondon/mobv">Jo Wood’s work</a> analysing Covid-related change in movement behaviours across a range of cities.
   </div>
 </div>
 </p>
@@ -2093,7 +2093,7 @@ return all rows from x where there are not matching values in y, never duplicate
 </tbody>
 </table>
 <div class="figure"><span style="display:block;" id="fig:plot-dist"></span>
-<img src="../../class/02-class_files/dist.png" alt="Histograms generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
+<img src="../../../../../../../../class/02-class_files/dist.png" alt="Histograms generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
 <p class="caption">
 Figure 3: Histograms generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>
 </p>
@@ -2145,7 +2145,7 @@ ny_trips &lt;- ny_trips %&gt;% # Take the ny_trips data frame.
 <p>We can use the two new derived variables – distance travelled and age – in our analysis. In Figure <a href="#fig:plot-speeds">4</a>, we explore how <strong>approximate</strong> travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average “speed” calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out “utility” from “leisure” trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by <code>Subscriber</code> cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I’ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea.</p>
 <p>There are nevertheless some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals. Certainly Figure <a href="#tab:variable-types">1</a> is an interesting data graphic – and the type of exploratory analysis demonstrated here, using <code>dplyr</code> functions, is most definitely consistent with that identified in the previous session when introducing <em>Social Data Science</em>.</p>
 <div class="figure"><span style="display:block;" id="fig:plot-speeds"></span>
-<img src="../../class/02-class_files/speeds.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
+<img src="../../../../../../../../class/02-class_files/speeds.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
 <p class="caption">
 Figure 4: Line charts generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>
 </p>
@@ -2273,7 +2273,7 @@ Wickham, H., and G. Grolemund. 2017. <em><span>R</span> for Data Science: Import
                 </div>
 
                 <div class="body-footer">
-                    <p> Thu, 21 Apr 2022</p>
+                    <p> Fri, 29 Jul 2022</p>
 
                     
 
@@ -2297,7 +2297,7 @@ Wickham, H., and G. Grolemund. 2017. <em><span>R</span> for Data Science: Import
             <p>
                 <strong>ESS 2022 | 3D: Computational Methods for Social Data Science (August 2022)</strong><br>
 
-                <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a> &emsp;&emsp;
+                <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">University of Essex</a> &emsp;&emsp;
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a>
             </p>
 
@@ -2311,7 +2311,7 @@ Wickham, H., and G. Grolemund. 2017. <em><span>R</span> for Data Science: Import
             <p>
                 <i class="far fa-calendar-alt"></i> Mon - Fri &emsp;&emsp;
                 <i class="far fa-clock"></i> 1000 - 1330 BST <br>
-                <i class="fas fa-university"></i> ODL
+                <i class="fas fa-university"></i> Colchester Campus
             </p>
         </div>
 
@@ -2402,7 +2402,7 @@ Wickham, H., and G. Grolemund. 2017. <em><span>R</span> for Data Science: Import
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.bb463fbd4cd7a1f3c4b4504053ef5758.js"></script>
 
     
 

@@ -1,7 +1,7 @@
 ---
 title: "Data fundamentals: Describe, wrangle, tidy"
 author: "Roger Beecham"
-date: "10 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+date: "9 Aug 2022  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
 output:
   xaringan::moon_reader:
     css: [default, "slides-theme.css"]
@@ -13,6 +13,9 @@ output:
       slideNumberFormat: ''
       titleSlideClass: [center, middle]
 ---
+
+
+
 
 ```{r setup, include=FALSE, echo=FALSE}
 options(htmltools.dir.version = FALSE)

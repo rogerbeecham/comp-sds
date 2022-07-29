@@ -37,8 +37,8 @@
   
     
   
-  <meta name="description" content="Contents  Introduction Concepts  Uncertainty visualization Frequency framing Quantifying uncertainty in frequencies Visualizing uncertainty in frequencies Multiple comparisons  Techniques  Import Plot icon arrays Generate bootstrap estimates of parameter uncertainty Plot parameter estimates with uncertainty information Ensemble plots and hypothetical outcome plots  Conclusions References   By the end of this session you should gain the following knowledge:
-  Appreciate the main challenges and objectives of uncertainty representation.">
+  <meta name="description" content="Contents Introduction Concepts Uncertainty visualization Frequency framing Quantifying uncertainty in frequencies Visualizing uncertainty in frequencies Multiple comparisons Techniques Import Plot icon arrays Generate bootstrap estimates of parameter uncertainty Plot parameter estimates with uncertainty information Ensemble plots and hypothetical outcome plots Conclusions References By the end of this session you should gain the following knowledge:
+Appreciate the main challenges and objectives of uncertainty representation. Learn how visualization techniques can be used to support ‘frequency framing’ – the perception of probability and risk.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../class/08-class/">
@@ -289,14 +289,14 @@
   <meta property="og:site_name" content="Computational Methods for Social Data Science">
   <meta property="og:url" content="/class/08-class/">
   <meta property="og:title" content="Uncertainty analysis | Computational Methods for Social Data Science">
-  <meta property="og:description" content="Contents  Introduction Concepts  Uncertainty visualization Frequency framing Quantifying uncertainty in frequencies Visualizing uncertainty in frequencies Multiple comparisons  Techniques  Import Plot icon arrays Generate bootstrap estimates of parameter uncertainty Plot parameter estimates with uncertainty information Ensemble plots and hypothetical outcome plots  Conclusions References   By the end of this session you should gain the following knowledge:
-  Appreciate the main challenges and objectives of uncertainty representation."><meta property="og:image" content="/media/vis-for-gds.png">
+  <meta property="og:description" content="Contents Introduction Concepts Uncertainty visualization Frequency framing Quantifying uncertainty in frequencies Visualizing uncertainty in frequencies Multiple comparisons Techniques Import Plot icon arrays Generate bootstrap estimates of parameter uncertainty Plot parameter estimates with uncertainty information Ensemble plots and hypothetical outcome plots Conclusions References By the end of this session you should gain the following knowledge:
+Appreciate the main challenges and objectives of uncertainty representation. Learn how visualization techniques can be used to support ‘frequency framing’ – the perception of probability and risk."><meta property="og:image" content="/media/vis-for-gds.png">
   <meta property="twitter:image" content="/media/vis-for-gds.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2022-08-17T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2022-04-21T11:16:40&#43;01:00">
+    <meta property="article:modified_time" content="2022-07-29T21:20:26&#43;01:00">
   
 
   
@@ -821,7 +821,7 @@
 <p>Cartographers, and more recently those working in Information Visualization, have been concerned for some time with <em>visual variables</em>, or adopting <span class="citation">Munzner (<a href="#ref-munzner_visualization_2014" role="doc-biblioref">2014</a>)</span>’s vocabulary <em>visual channels</em>, that might be used to represent uncertainty information. Figure <a href="#fig:uncertainty-variables">1</a> is adapted from <span class="citation">Kinkeldey, MacEachren, and Schiewe (<a href="#ref-kinkeldey_how_2014" role="doc-biblioref">2014</a>)</span> and displays visual variables that could be used to encode uncertainty information. Ideally, visual variables for representing uncertainty should be intuitive, logically related to notions of precision and accuracy, whilst also allowing sufficient discriminative power when deployed in data dense visualizations.</p>
 <p><span class="citation">Kinkeldey, MacEachren, and Schiewe (<a href="#ref-kinkeldey_how_2014" role="doc-biblioref">2014</a>)</span> provides an overview of empirical research (controlled experiments) that explore the effectiveness of proposed visual variables against these criteria. As intuitive signifiers of uncertainty, or lack of precision, <em>fuzziness</em> and <em>location</em> have been shown to work well. Slightly less intuitive, but nevertheless successful in terms of discrimination are <em>size</em>, <em>transparency</em> and <em>colour value</em>. <em>Sketchiness</em> is another intuitive signifier, proposed in <span class="citation">Boukhelifa et al. (<a href="#ref-boukhelifa_evaluating_2012" role="doc-biblioref">2012</a>)</span> and <span class="citation">Wood et al. (<a href="#ref-wood_sketchy_2012" role="doc-biblioref">2012</a>)</span>. As with many visual variables, sketchiness is probably best considered as an ordinal visual variable to the extent that there is a limited range of sketchiness levels that can be discriminated. An additional feature of sketchiness is that, different from the other visual variables, it is related to informality – this may be desirable in certain contexts, less so in others <span class="citation">(see <a href="#ref-wood_sketchy_2012" role="doc-biblioref">Wood et al. 2012</a>)</span>.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:uncertainty-variables"></span>
-<img src="../../class/08-class_files/uncertainty_variables.png" alt="Visual variables that can be used to represent levels of uncertainty information." width="90%" />
+<img src="../../../../../../../../class/08-class_files/uncertainty_variables.png" alt="Visual variables that can be used to represent levels of uncertainty information." width="90%" />
 <p class="caption">
 Figure 1: Visual variables that can be used to represent levels of uncertainty information.
 </p>
@@ -838,7 +838,7 @@ Figure 1: Visual variables that can be used to represent levels of uncertainty i
 Kinkeldey et al. (2014) provide a survey of studies that have variously evaluated these visual variables for uncertainty representation.
  -->
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:hurricane-vis"></span>
-<img src="../../class/08-class_files/hurricane_vis.png" alt="*Cone of Uncertainty* produced by [National Hurricane Center](https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/030119.shtml?cone#contents) and example re-design by [Jo Wood](https://www.gicentre.net/jwo/index)." width="100%" />
+<img src="../../../../../../../../class/08-class_files/hurricane_vis.png" alt="*Cone of Uncertainty* produced by [National Hurricane Center](https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/030119.shtml?cone#contents) and example re-design by [Jo Wood](https://www.gicentre.net/jwo/index)." width="100%" />
 <p class="caption">
 Figure 2: <em>Cone of Uncertainty</em> produced by <a href="https://www.nhc.noaa.gov/refresh/graphics_at1+shtml/030119.shtml?cone#contents">National Hurricane Center</a> and example re-design by <a href="https://www.gicentre.net/jwo/index">Jo Wood</a>.
 </p>
@@ -857,7 +857,7 @@ Figure 2: <em>Cone of Uncertainty</em> produced by <a href="https://www.nhc.noaa
 <p>Often parameters are represented as probabilities, or <em>relative frequencies</em> – ratios or percentages describing the probability of some event happening. It is notoriously difficult to develop intuition around these sorts of relative frequencies. In the STATS19 dataset, we might wish to compare the injury severity rate of pedestrain-vehicle road crashes – the proportion of all crashes that resulted in a serious injury or fatality (KSI) – taking place between two local authority areas, say Bristol and Sheffield. There is in fact quite a difference in the injury severity rate between these two local authority areas in 2019: 15% for Bristol (35 out of 228 reported crashes were KSI) versus 50% for Sheffield (124 out of 248 reported crashes were KSI).</p>
 <p>This feels like quite a large difference, but it is difficult to imagine or experience these differences in probabilities when written down or encoded visually using say bar length. <a href="https://mucollective.github.io/visualization/icon-array/">Icon arrays</a> are used extensively in health communication and have been demonstrated to be effective at communicating probabilities of event outcomes. They offload the thinking that happens when comparing ratios – the internal weighing up of numerators and denominators. In the example in Figure <a href="#fig:icon-arrays-injury">3</a>, icon arrays are used to compare the two injury severity rates for Bristol and Sheffield. Each crash is a square and crashes are coloured according to whether they resulted in a serious injury or fatality (KSI, dark red) or slight injury (light red).</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:icon-arrays-injury"></span>
-<img src="../../class/08-class_files/icon-arrays.png" alt="Icon array displaying injury severity rates for Pedestrian-Vehicle crashes." width="90%" />
+<img src="../../../../../../../../class/08-class_files/icon-arrays.png" alt="Icon array displaying injury severity rates for Pedestrian-Vehicle crashes." width="90%" />
 <p class="caption">
 Figure 3: Icon array displaying injury severity rates for Pedestrian-Vehicle crashes.
 </p>
@@ -865,7 +865,7 @@ Figure 3: Icon array displaying injury severity rates for Pedestrian-Vehicle cra
 <p>There are compelling examples of icon arrays being used in data journalism, most obviously to support communication of probabilities in political polling. You might remember that at the time of 2016 US Presidential Election, there was much criticism levelled at pollsters, even the excellent <a href="https://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/">FiveThirtyEight</a>, for not correctly calling the result. Huffpost gave Trump a 2% chance of winning the election, The New York Times 15% and FiveThirtyEight 28%. Clearly, the Huffpost estimate was really quite off, but thinking about FiveThirtyEight’s prediction, how surprised should we be if an outcome does in fact occur, which is predicted to happen with a probability of almost a third?</p>
 <p>The <a href="https://mucollective.github.io/visualization/risk-theatre/">risk theatre</a> (Figure <a href="#fig:risk-theatre">4</a>) is a variant of an icon array. In this case it represents polling probabilities as seats of a theatre – a dark seat represents a Trump victory. If you imagine buying a theatre ticket and being randomly allocated to a seat, how confident would you be about not sitting in a “Trump” seat in the FiveThirtyEight image? The distribution of dark seats suggests that the 28% risk of a Trump victory according to the model is not negligible.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:risk-theatre"></span>
-<img src="../../class/08-class_files/risk-theatre.jpg" alt="Risk theatre of different election eve forecasts by Justin Gross as it appears in [Washington Post](https://mucollective.github.io/visualization/risk-theatre/)" width="100%" />
+<img src="../../../../../../../../class/08-class_files/risk-theatre.jpg" alt="Risk theatre of different election eve forecasts by Justin Gross as it appears in [Washington Post](https://mucollective.github.io/visualization/risk-theatre/)" width="100%" />
 <p class="caption">
 Figure 4: Risk theatre of different election eve forecasts by Justin Gross as it appears in <a href="https://mucollective.github.io/visualization/risk-theatre/">Washington Post</a>
 </p>
@@ -892,7 +892,7 @@ Figure 4: Risk theatre of different election eve forecasts by Justin Gross as it
 <p>In <a href="../../class/06-class/">session 6</a> and <a href="../../class/07-class/">session 7</a>, we used Confidence Intervals to estimate uncertainty around regression coefficients. These described the range of the sampling distribution – the range of values that coefficients estimated from a large number of resamples could take. From early stats courses, you might have learnt how these can be calculated using statistical theory. Better still, we can derive these empirically via <a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">bootstrapping</a>. A bootstrap resample involves taking a random sample with replacement from the original sample and of the same size as the original sample. From this resample, a parameter estimate can be derived, in this case the KSI rate. And this process can be repeated many times to generate an empirical <em>sampling distribution</em> for the parameter. The standard error can be calculated from the standard deviation of the sampling distribution. There are several reasons why bootstrapping is a really useful procedure: it can be applied to almost any sample statistic, makes no distributional assumptions and can work on quite complicated sampling designs.</p>
 <p>Presented in Figure <a href="#fig:bootstrap-selected">5</a> are KSI rates with error bars used to display 95% Confidence Intervals generated from a bootstrap procedure in which 1000 resamples were taken with replacement. Upper and lower limits were lifted from .025 and .975 percentile positions of the bootstrap sampling distribution. Assuming that the observed data are drawn from a wider (unobtainable) population, the 95% Confidence Intervals demonstrate that whilst Cotswold recorded a very large KSI rate, sampling variation means that this figure could be much lower (or higher), whereas for Bristol and Sheffield, where our KSI rate is derived from more data, the range of plausible values that the KSI rate might take due to sampling variation is much smaller – there is less uncertainty associated with their KSI rates.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:bootstrap-selected"></span>
-<img src="../../class/08-class_files/bootstrap-selected.png" alt="KSI rates for pedestrian-vehicle crashes in selected local authorities with 95% CIs (derived from 1000 resample bootstraps)." width="90%" />
+<img src="../../../../../../../../class/08-class_files/bootstrap-selected.png" alt="KSI rates for pedestrian-vehicle crashes in selected local authorities with 95% CIs (derived from 1000 resample bootstraps)." width="90%" />
 <p class="caption">
 Figure 5: KSI rates for pedestrian-vehicle crashes in selected local authorities with 95% CIs (derived from 1000 resample bootstraps).
 </p>
@@ -902,21 +902,21 @@ Figure 5: KSI rates for pedestrian-vehicle crashes in selected local authorities
 <h3>Visualizing uncertainty in frequencies</h3>
 <p>Error bars are a space-efficient way of conveying parameter uncertainty. However, remembering our maxim for uncertainty visualization – that <em>things that are not precise should not be encoded with symbols that look precise</em> – they do have problems. The hard borders can lead to a binary/categorical thinking <span class="citation">(see <a href="#ref-correl_error_2014" role="doc-biblioref">Correll and Gleicher 2014</a>)</span>. Certain values within a Confidence Interval are more probable than others and so we should endeavour to use a visual encoding that reflects this. Matt Kay’s excellent <a href="https://mjskay.github.io/ggdist/"><code>ggdist</code></a> package extends <code>ggplot2</code> with a range of chart idioms for representing these sorts of intervals. In Figure <a href="#fig:selected-uncertainty">6</a> I have replaced the error bars with <em>half eye plots</em> and <em>interval bars</em>, which give greater visual saliency to parameter estimates that are more likely.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:selected-uncertainty"></span>
-<img src="../../class/08-class_files/selected-uncertainty.png" alt="KSI rates for pedestrian-vehicle crashes in selected local authorities with uncertainty estimates." width="90%" />
+<img src="../../../../../../../../class/08-class_files/selected-uncertainty.png" alt="KSI rates for pedestrian-vehicle crashes in selected local authorities with uncertainty estimates." width="90%" />
 <p class="caption">
 Figure 6: KSI rates for pedestrian-vehicle crashes in selected local authorities with uncertainty estimates.
 </p>
 </div>
 <p>The STATS19 dataset is released annually, and given the wide uncertainty bands for certain local authorities, it might be instructive to explore the stability of local authority KSI rates year-on-year. In Figure <a href="#fig:bootstrap-selected">5</a> these KSI rates are represented with the bold line and the faint lines are superimposed bootstrap resamples. The overall line probably most clearly demonstrates volatility in the KSI rates for Cotswold and Bromsgrove due to small sample sizes. The observed increase in KSI rates for Sheffield since 2015 does appear to be a genuine one, although may also be affected by uncertainty around data collection – <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/904698/rrcgb-provisional-results-2019.pdf">changes to how police record injury severity</a>.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:temporal-uncertainty"></span>
-<img src="../../class/08-class_files/temporal-uncertainty.png" alt="Year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities with bootstrap resamples superimposed." width="90%" />
+<img src="../../../../../../../../class/08-class_files/temporal-uncertainty.png" alt="Year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities with bootstrap resamples superimposed." width="90%" />
 <p class="caption">
 Figure 7: Year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities with bootstrap resamples superimposed.
 </p>
 </div>
 <p>The superimposed lines in the figure above are a form of ensemble visualization. An alternative approach might have been to animate over the bootstrap resamples to generate a Hypoethetical Outcome Plot (HOP) <span class="citation">(<a href="#ref-hullman_hypothetical_2015" role="doc-biblioref">Hullman, Resnick, and Adar 2015</a>)</span>. HOPs convey a sense of uncertainty by animating over random draws of a distribution. As there is no single outcome to anchor to (although I have actually included one below), HOPs force viewers to account for uncertainty, recognising that less probable outcomes may be possible – essentially to think distributionally (e.g. Figure <a href="#fig:hop-uncertainty">8</a>).</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:hop-uncertainty"></span>
-<img src="../../class/08-class_files/temporal-uncertainty.gif" alt="HOP of year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities." width="90%" />
+<img src="../../../../../../../../class/08-class_files/temporal-uncertainty.gif" alt="HOP of year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities." width="90%" />
 <p class="caption">
 Figure 8: HOP of year-on-yar KSI rates for pedestrian-vehicle crashes in selected local authorities.
 </p>
@@ -933,7 +933,7 @@ Figure 8: HOP of year-on-yar KSI rates for pedestrian-vehicle crashes in selecte
 <p>In road safety monitoring, a common ambition is to compare crash rates across local authorities on a map. We might represent injury severity rates as Risk Ratios (RR) comparing the observed injury severity in each local authority to a benchmark, say the injury severity rate we would expect to see nationally. RRs are an intuitive measure of effect size: <span class="math inline">\(RRs &gt;1\)</span> indicate that the injury severity rate is greater than the national average; <span class="math inline">\(RRs &lt;1\)</span> that it is less than the national average. As they are a ratio of ratios, and therefore agnostic to sample size, RRs can nevertheless be unreliable. Two ratios might be compared that have very different sample sizes and no compensation is made for the one that contains more data. We know this to be a problem in our dataset and so we will want to generate confidence intervals for our RRs.</p>
 <p>In Figure <a href="#fig:rrs">9</a>, RRs for each local authority is represented with a <span style="font-weight:bolder">|</span> icon, which is then encoded according RR values by continuously varying icon angles: <span class="math inline">\(RRs &gt;1\)</span> are angled to the right <span style="font-weight:bold">/</span>, <span class="math inline">\(RRs &lt;1\)</span> to the left <span style="font-weight:bolder">\</span>. You might remember this approach being used to represent electoral Swing in <a href="../../class/03-class/">session 3</a>.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:rrs"></span>
-<img src="../../class/08-class_files/rrs.png" alt="Risk Ratios comparing local authority KSI rates to the GB average in 2019. Significance based on 90% bootstrap CI." width="90%" />
+<img src="../../../../../../../../class/08-class_files/rrs.png" alt="Risk Ratios comparing local authority KSI rates to the GB average in 2019. Significance based on 90% bootstrap CI." width="90%" />
 <p class="caption">
 Figure 9: Risk Ratios comparing local authority KSI rates to the GB average in 2019. Significance based on 90% bootstrap CI.
 </p>
@@ -963,7 +963,7 @@ Figure 9: Risk Ratios comparing local authority KSI rates to the GB average in 2
 <div id="plot-icon-arrays" class="section level3">
 <h3>Plot icon arrays</h3>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:icon-arrays-technical"></span>
-<img src="../../class/08-class_files/icon-arrays-technical.png" alt="Icon array displaying injury severity rates for Pedestrian-Vehicle crashes." width="70%" />
+<img src="../../../../../../../../class/08-class_files/icon-arrays-technical.png" alt="Icon array displaying injury severity rates for Pedestrian-Vehicle crashes." width="70%" />
 <p class="caption">
 Figure 10: Icon array displaying injury severity rates for Pedestrian-Vehicle crashes.
 </p>
@@ -1128,7 +1128,7 @@ Wood, J., P. Isenberg, T. Isenberg, J. Dykes, N. Boukhelifa, and A. Slingsby. 20
                 </div>
 
                 <div class="body-footer">
-                    <p> Thu, 21 Apr 2022</p>
+                    <p> Fri, 29 Jul 2022</p>
 
                     
 
@@ -1152,7 +1152,7 @@ Wood, J., P. Isenberg, T. Isenberg, J. Dykes, N. Boukhelifa, and A. Slingsby. 20
             <p>
                 <strong>ESS 2022 | 3D: Computational Methods for Social Data Science (August 2022)</strong><br>
 
-                <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a> &emsp;&emsp;
+                <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">University of Essex</a> &emsp;&emsp;
                 <a href="https://essexsummerschool.com/" target="_blank" rel="noopener">Essex Summer School</a>
             </p>
 
@@ -1166,7 +1166,7 @@ Wood, J., P. Isenberg, T. Isenberg, J. Dykes, N. Boukhelifa, and A. Slingsby. 20
             <p>
                 <i class="far fa-calendar-alt"></i> Mon - Fri &emsp;&emsp;
                 <i class="far fa-clock"></i> 1000 - 1330 BST <br>
-                <i class="fas fa-university"></i> ODL
+                <i class="fas fa-university"></i> Colchester Campus
             </p>
         </div>
 
@@ -1257,7 +1257,7 @@ Wood, J., P. Isenberg, T. Isenberg, J. Dykes, N. Boukhelifa, and A. Slingsby. 20
     
     
     
-    <script src="../../en-uk/js/wowchemy.min.abf0df1802927998e37dcf3cf6aa05de.js"></script>
+    <script src="../../en-uk/js/wowchemy.min.bb463fbd4cd7a1f3c4b4504053ef5758.js"></script>
 
     
 

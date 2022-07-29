@@ -4,6 +4,7 @@
     <title>Data fundamentals: Describe, wrangle, tidy</title>
     <meta charset="utf-8" />
     <meta name="author" content="Roger Beecham" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
@@ -15,10 +16,14 @@ class: center, middle, title-slide
 
 # Data fundamentals: Describe, wrangle, tidy
 ### Roger Beecham
-### <p>10 Aug 2021</p>
-<p><a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a></p>
+### <p>9 Aug 2022</p>
+<a
+href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a>
 
 ---
+
+
+
 
 
 
@@ -74,7 +79,7 @@ spreadsheet like representations:
 &lt;tbody&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Categories&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Non-orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Political parties; street names &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; =  ≠ &lt;/td&gt;
@@ -82,7 +87,7 @@ spreadsheet like representations:
    &lt;td style="text-align:left;color: grey !important;"&gt; entropy &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Terrorism threat levels &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | &amp;lt;&amp;gt; &lt;/td&gt;
@@ -91,7 +96,7 @@ spreadsheet like representations:
   &lt;/tr&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | +  - &lt;/td&gt;
@@ -99,7 +104,7 @@ spreadsheet like representations:
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | Counts &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Distances; prices &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | × ÷ &lt;/td&gt;
@@ -136,7 +141,7 @@ Categories and Measures.
 &lt;tbody&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Categories&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Non-orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Political parties; street names &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; =  ≠ &lt;/td&gt;
@@ -144,7 +149,7 @@ Categories and Measures.
    &lt;td style="text-align:left;"&gt; entropy &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Terrorism threat levels &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | &amp;lt;&amp;gt; &lt;/td&gt;
@@ -153,7 +158,7 @@ Categories and Measures.
   &lt;/tr&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | +  - &lt;/td&gt;
@@ -161,7 +166,7 @@ Categories and Measures.
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | variance &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | Counts &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Distances; prices &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | × ÷ &lt;/td&gt;
@@ -194,7 +199,7 @@ Categories and Measures.
 &lt;tbody&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Categories&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Non-orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Political parties; street names &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; =  ≠ &lt;/td&gt;
@@ -202,7 +207,7 @@ Categories and Measures.
    &lt;td style="text-align:left;color: grey !important;"&gt; entropy &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Terrorism threat levels &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | &amp;lt;&amp;gt; &lt;/td&gt;
@@ -211,7 +216,7 @@ Categories and Measures.
   &lt;/tr&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Interval &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Numeric measurements &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | +  - &lt;/td&gt;
@@ -219,7 +224,7 @@ Categories and Measures.
    &lt;td style="text-align:left;"&gt; ... | variance &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Ratio &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Ratio &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | Counts &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Distances; prices &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | × ÷ &lt;/td&gt;
@@ -256,7 +261,7 @@ Need to describe data in a consistent way.
 &lt;tbody&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Categories&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;color: grey !important;" indentlevel="1"&gt; Nominal &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Non-orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Political parties; street names &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; =  ≠ &lt;/td&gt;
@@ -264,7 +269,7 @@ Need to describe data in a consistent way.
    &lt;td style="text-align:left;"&gt; entropy &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;color: grey !important;" indentlevel="1"&gt; Ordinal &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Orderable categories &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Terrorism threat levels &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | &amp;lt;&amp;gt; &lt;/td&gt;
@@ -273,7 +278,7 @@ Need to describe data in a consistent way.
   &lt;/tr&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="6" style="border-bottom: 0px solid;"&gt;Measures&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;color: grey !important;" indentlevel="1"&gt; Interval &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Numeric measurements &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Temperatures; calendar years &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | +  - &lt;/td&gt;
@@ -281,7 +286,7 @@ Need to describe data in a consistent way.
    &lt;td style="text-align:left;"&gt; ... | variance &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;color: grey !important;" indentlevel="1"&gt; Ratio &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; ... | Counts &lt;/td&gt;
    &lt;td style="text-align:left;color: grey !important;"&gt; Distances; prices &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; ... | × ÷ &lt;/td&gt;
