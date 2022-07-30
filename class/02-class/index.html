@@ -756,24 +756,24 @@ Learn the vocabulary and concepts used to describe data. Appreciate the characte
 <h2>Contents</h2>
 <div id="TOC">
 <ul>
-<li><a href="#session-outcomes">Session outcomes</a></li>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#concepts">Concepts</a>
+<li><a href="#session-outcomes" id="toc-session-outcomes">Session outcomes</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#concepts" id="toc-concepts">Concepts</a>
 <ul>
-<li><a href="#data-structure">Data structure</a></li>
-<li><a href="#types-of-variable">Types of variable</a></li>
-<li><a href="#types-of-observation">Types of observation</a></li>
-<li><a href="#tidy-data">Tidy data</a></li>
+<li><a href="#data-structure" id="toc-data-structure">Data structure</a></li>
+<li><a href="#types-of-variable" id="toc-types-of-variable">Types of variable</a></li>
+<li><a href="#types-of-observation" id="toc-types-of-observation">Types of observation</a></li>
+<li><a href="#tidy-data" id="toc-tidy-data">Tidy data</a></li>
 </ul></li>
-<li><a href="#techniques">Techniques</a>
+<li><a href="#techniques" id="toc-techniques">Techniques</a>
 <ul>
-<li><a href="#import">Import</a></li>
-<li><a href="#describe">Describe</a></li>
-<li><a href="#transform">Transform</a></li>
-<li><a href="#tidy">Tidy</a></li>
+<li><a href="#import" id="toc-import">Import</a></li>
+<li><a href="#describe" id="toc-describe">Describe</a></li>
+<li><a href="#transform" id="toc-transform">Transform</a></li>
+<li><a href="#tidy" id="toc-tidy">Tidy</a></li>
 </ul></li>
-<li><a href="#conclusions">Conclusions</a></li>
-<li><a href="#references">References</a></li>
+<li><a href="#conclusions" id="toc-conclusions">Conclusions</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
 </ul>
 </div>
 
@@ -2024,7 +2024,7 @@ select(start_station_id, end_station_id) %&gt;% unique() %&gt;% # Select trip or
   rowwise() %&gt;% # For computing distance calculation one row-at-a-time.
   mutate(dist=geosphere::distHaversine(c(o_lat, o_lon), c(d_lat, d_lon))/1000) %&gt;% # Calculate distance and express in kms.
   ungroup()</code></pre>
-<p>The code block above introduces some new functions: <code>select()</code> to pick or drop variables, <code>rename()</code> to rename variables and a convenience function for calculating straight line distance from polar coordinates (<code>distHaversine()</code>). The key function to emphasise is the <code>left_join()</code>. If you’ve worked with relational databases and <code>SQL</code>, <code>dplyr</code>’s join functions will be familiar to you. In a <code>left_join</code>, all the values from the main table are retained, the one on the left – <code>ny_trips</code>, and variables from the table on the right (<code>ny_stations</code>) are added. We specify explicitly the variable on which the tables should be joined with the <code>by=</code> parameter, <code>station_id</code> in this case. If there is a <code>station_id</code> in <code>ny_trips</code> that doesn’t exist in <code>ny_stations</code> then <code>NA</code> is returned.</p>
+<p>The code block above introduces some new functions: <code>select()</code> to pick or drop variables, <code>rename()</code> to rename variables and a convenience function for calculating straight line distance from polar coordinates (<code>distHaversine()</code>). The key function to emphasise is the <code>left_join()</code>. If you’ve worked with relational databases and <code>SQL</code>, <code>dplyr</code>’s join functions will be familiar. In a <code>left_join</code>, all the values from the main table are retained, the one on the left – <code>ny_trips</code>, and variables from the table on the right (<code>ny_stations</code>) are added. We specify explicitly the variable on which the tables should be joined with the <code>by=</code> parameter, <code>station_id</code> in this case. If there is a <code>station_id</code> in <code>ny_trips</code> that doesn’t exist in <code>ny_stations</code> then <code>NA</code> is returned.</p>
 <p>Other <strong>join</strong> functions provided by <code>dplyr</code> are in the table below. Rather than discussing each, I recommend consulting <a href="https://r4ds.had.co.nz/relational-data.html">Chapter 13</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>.</p>
 <table>
 <thead>
@@ -2123,7 +2123,7 @@ Figure 3: Histograms generated with <code>ggplot2</code>. Plot data computed usi
 </div>
 <div id="write-functions-of-your-own" class="section level4">
 <h4>Write functions of your own</h4>
-<p>Through most of the course we will be making use of functions written by others – mainly those developed for packages that form the <code>tidyverse</code> and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. <a href="https://r4ds.had.co.nz/functions.html">Chapter 19</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span> presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy and pasting the same chunks of code with minimal adaptation.</p>
+<p>Through most of the course we will be making use of functions written by others – mainly those developed for packages that form the <code>tidyverse</code> and therefore that follow a consistent syntax. However, there may be times where you need to abstract over some of your code to make functions of your own. <a href="https://r4ds.had.co.nz/functions.html">Chapter 19</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span> presents some helpful guidelines around the circumstances under which the data scientist typically tends to write functions. Most often this is when you find yourself copy-pasting the same chunks of code with minimal adaptation.</p>
 <p>Functions have three key characteristics:</p>
 <ol style="list-style-type: decimal">
 <li>They are (usually) <strong>named</strong> – the name should be expressive and communicate what the function does (we talk about <code>dplyr</code> <strong>verbs</strong>).</li>

@@ -79,11 +79,11 @@
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-calculate-and-plot&#34;&gt;Task 1: Calculate and plot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-explore-model-and-evaluate&#34;&gt;Task 2: Explore, model and evaluate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-calculate-and-plot&#34; id=&#34;toc-task-1-calculate-and-plot&#34;&gt;Task 1: Calculate and plot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-explore-model-and-evaluate&#34; id=&#34;toc-task-2-explore-model-and-evaluate&#34;&gt;Task 2: Explore, model and evaluate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -194,14 +194,14 @@ expl_cors_order
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34; id=&#34;toc-visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-read&#34;&gt;Task 1: Read&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-interpret&#34;&gt;Task 2: Interpret&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-read&#34; id=&#34;toc-task-1-read&#34;&gt;Task 1: Read&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-interpret&#34; id=&#34;toc-task-2-interpret&#34;&gt;Task 2: Interpret&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -300,10 +300,10 @@ Slingsby, A., M. Kelly, and J. Dykes. 2014. &lt;span&gt;“&lt;span class=&#34;n
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualization-design-challenge&#34;&gt;Visualization design challenge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-design-challenge&#34; id=&#34;toc-visualization-design-challenge&#34;&gt;Visualization design challenge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -426,16 +426,16 @@ Gleicher, Albers, M., and J. Roberts. 2011. &lt;span&gt;“Visual Comparison for
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-describe-and-evaluate&#34;&gt;Task 1: Describe and evaluate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-reproduce&#34;&gt;Task 2: Reproduce&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-describe-and-evaluate&#34; id=&#34;toc-task-1-describe-and-evaluate&#34;&gt;Task 1: Describe and evaluate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-reproduce&#34; id=&#34;toc-task-2-reproduce&#34;&gt;Task 2: Reproduce&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#histograms-faceted-by-region&#34;&gt;Histograms faceted by region&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#histograms-faceted-by-region&#34; id=&#34;toc-histograms-faceted-by-region&#34;&gt;Histograms faceted by region&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34; id=&#34;toc-scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-3-create-a-map&#34;&gt;Task 3: Create a map&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-3-create-a-map&#34; id=&#34;toc-task-3-create-a-map&#34;&gt;Task 3: Create a map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -606,16 +606,16 @@ Munzner, T. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Pet
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-describe-data&#34;&gt;Task 1: Describe data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-describe-data&#34; id=&#34;toc-task-1-describe-data&#34;&gt;Task 1: Describe data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34; id=&#34;toc-task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2019&#34;&gt;UK General Election Results 2019&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2017-and-2019&#34;&gt;UK General Election Results 2017 and 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2019&#34; id=&#34;toc-uk-general-election-results-2019&#34;&gt;UK General Election Results 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2017-and-2019&#34; id=&#34;toc-uk-general-election-results-2017-and-2019&#34;&gt;UK General Election Results 2017 and 2019&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-3-fix-data&#34;&gt;Task 3: Fix data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-4-compute-from-data&#34;&gt;Task 4: Compute from data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-3-fix-data&#34; id=&#34;toc-task-3-fix-data&#34;&gt;Task 3: Fix data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-4-compute-from-data&#34; id=&#34;toc-task-4-compute-from-data&#34;&gt;Task 4: Compute from data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -843,10 +843,10 @@ Wickham, H. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-read-and-complete-basicbasics&#34;&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34;&gt;Task 2: &lt;strong&gt;Watch&lt;/strong&gt; Thomas Mock’s Introduction to Tidy Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-read-and-complete-basicbasics&#34; id=&#34;toc-task-1-read-and-complete-basicbasics&#34;&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34; id=&#34;toc-task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34;&gt;Task 2: &lt;strong&gt;Watch&lt;/strong&gt; Thomas Mock’s Introduction to Tidy Statistics&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
