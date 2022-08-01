@@ -756,24 +756,24 @@ Learn the vocabulary and concepts used to describe data. Appreciate the characte
 <h2>Contents</h2>
 <div id="TOC">
 <ul>
-<li><a href="#session-outcomes" id="toc-session-outcomes">Session outcomes</a></li>
-<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-<li><a href="#concepts" id="toc-concepts">Concepts</a>
+<li><a href="#session-outcomes">Session outcomes</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#concepts">Concepts</a>
 <ul>
-<li><a href="#data-structure" id="toc-data-structure">Data structure</a></li>
-<li><a href="#types-of-variable" id="toc-types-of-variable">Types of variable</a></li>
-<li><a href="#types-of-observation" id="toc-types-of-observation">Types of observation</a></li>
-<li><a href="#tidy-data" id="toc-tidy-data">Tidy data</a></li>
+<li><a href="#data-structure">Data structure</a></li>
+<li><a href="#types-of-variable">Types of variable</a></li>
+<li><a href="#types-of-observation">Types of observation</a></li>
+<li><a href="#tidy-data">Tidy data</a></li>
 </ul></li>
-<li><a href="#techniques" id="toc-techniques">Techniques</a>
+<li><a href="#techniques">Techniques</a>
 <ul>
-<li><a href="#import" id="toc-import">Import</a></li>
-<li><a href="#describe" id="toc-describe">Describe</a></li>
-<li><a href="#transform" id="toc-transform">Transform</a></li>
-<li><a href="#tidy" id="toc-tidy">Tidy</a></li>
+<li><a href="#import">Import</a></li>
+<li><a href="#describe">Describe</a></li>
+<li><a href="#transform">Transform</a></li>
+<li><a href="#tidy">Tidy</a></li>
 </ul></li>
-<li><a href="#conclusions" id="toc-conclusions">Conclusions</a></li>
-<li><a href="#references" id="toc-references">References</a></li>
+<li><a href="#conclusions">Conclusions</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </div>
 
@@ -1622,7 +1622,7 @@ ny_stations &lt;- read_csv(here(&quot;data&quot;, &quot;ny_stations.csv&quot;))<
 <p>Notice that we use <strong>assignment</strong> here (<code>&lt;-</code>) so that these data are loaded as objects and appear in the Environment pane of your RStudio window. An efficient description of data import with <code>read_csv()</code> is also in <a href="https://r4ds.had.co.nz/data-import.html">Chapter 11</a> of <span class="citation">Wickham and Grolemund (<a href="#ref-wickham_r_2017" role="doc-biblioref">2017</a>)</span>.</p>
 <code>ny_stations</code> and <code>ny_trips</code> are data frames, spreadsheet type representations containing observations in rows and variables in columns. Inspecting the layout of the stations data with <code>View(ny_stations)</code> you will notice that the top line is the header and contains column (variable) names.
 <div class="figure"><span style="display:block;" id="fig:view-annotate"></span>
-<img src="../../../../../../../../class/02-class_files/view.png" alt="`ny_trips` and `ny_stations` as they appear when calling `View()`." width="100%" />
+<img src="../../class/02-class_files/view.png" alt="`ny_trips` and `ny_stations` as they appear when calling `View()`." width="100%" />
 <p class="caption">
 Figure 1: <code>ny_trips</code> and <code>ny_stations</code> as they appear when calling <code>View()</code>.
 </p>
@@ -1993,7 +1993,7 @@ ny_temporal &lt;- ny_trips %&gt;%  # Take the ny_trips data frame.
 </p>
 <p>In Figure <a href="#fig:plot-temporal">2</a> below these derived data are plotted. The template contains <code>ggplot2</code> code for creating the graphic. Don’t obsess too much on it – more on this next session. The plot demonstrates a familiar weekday-weekend pattern of usage. Trip frequencies peak in the morning and evening rush hours during weekdays and mid/late-morning and afternoon during weekends. This is consistent with typical travel behaviour. Notice though that the weekday afternoon peak is much larger than the morning peak. There are several speculative explanations for this and re-running the plot on <code>Subscriber</code> users only may be instructive. A secondary observation is that whilst men and women share this overall pattern of usage, the relative number of trips taken each day of week varies. Men make many more trips at peak times during the start of the week than they do later in the week. The same pattern does not appear for women. This is certainly something to follow up on, for example by collecting data over a longer period of time.</p>
 <div class="figure"><span style="display:block;" id="fig:plot-temporal"></span>
-<img src="../../../../../../../../class/02-class_files/hod_dow.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`." width="100%" />
+<img src="../../class/02-class_files/hod_dow.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`." width="100%" />
 <p class="caption">
 Figure 2: Line charts generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>.
 </p>
@@ -2093,7 +2093,7 @@ return all rows from x where there are not matching values in y, never duplicate
 </tbody>
 </table>
 <div class="figure"><span style="display:block;" id="fig:plot-dist"></span>
-<img src="../../../../../../../../class/02-class_files/dist.png" alt="Histograms generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
+<img src="../../class/02-class_files/dist.png" alt="Histograms generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
 <p class="caption">
 Figure 3: Histograms generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>
 </p>
@@ -2145,7 +2145,7 @@ ny_trips &lt;- ny_trips %&gt;% # Take the ny_trips data frame.
 <p>We can use the two new derived variables – distance travelled and age – in our analysis. In Figure <a href="#fig:plot-speeds">4</a>, we explore how <strong>approximate</strong> travel speeds vary by age, gender and trip distance. The code used to generate the summary data and plot is in the template file. Again the average “speed” calculation should be treated very cautiously as it is based on straight line distances and it is very difficult to select out “utility” from “leisure” trips. I have tried to do the latter by selecting trips that occur only on weekdays and that are made by <code>Subscriber</code> cyclists. Additionally, due to the heavy subsetting data become a little volatile for certain age groups and so I’ve aggregated the age variable into 5-year bands. Collecting more data is probably a good idea.</p>
 <p>There are nevertheless some interesting patterns. Men tend to cycle at faster speeds than do women, although this gap narrows with the older age groups. The effect of age on speed cycled is more apparent for the longer trips. This trend is reasonably strong, although the volatility in the older age groups for trips &gt;4.5km suggests we probably need more data and a more involved analysis to establish this. For example, it may be that the comparatively rare occurrence of trips in the 65-70 age group is made by only a small subset of cyclists. A larger dataset would result in a regression to the mean effect and negate any noise caused by outlier individuals. Certainly Figure <a href="#tab:variable-types">1</a> is an interesting data graphic – and the type of exploratory analysis demonstrated here, using <code>dplyr</code> functions, is most definitely consistent with that identified in the previous session when introducing <em>Social Data Science</em>.</p>
 <div class="figure"><span style="display:block;" id="fig:plot-speeds"></span>
-<img src="../../../../../../../../class/02-class_files/speeds.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
+<img src="../../class/02-class_files/speeds.png" alt="Line charts generated with `ggplot2`. Plot data computed using `dplyr` and `lubridate`" width="100%" />
 <p class="caption">
 Figure 4: Line charts generated with <code>ggplot2</code>. Plot data computed using <code>dplyr</code> and <code>lubridate</code>
 </p>

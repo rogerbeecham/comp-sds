@@ -79,11 +79,11 @@
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-calculate-and-plot&#34; id=&#34;toc-task-1-calculate-and-plot&#34;&gt;Task 1: Calculate and plot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-explore-model-and-evaluate&#34; id=&#34;toc-task-2-explore-model-and-evaluate&#34;&gt;Task 2: Explore, model and evaluate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-calculate-and-plot&#34;&gt;Task 1: Calculate and plot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-explore-model-and-evaluate&#34;&gt;Task 2: Explore, model and evaluate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -194,14 +194,14 @@ expl_cors_order
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34; id=&#34;toc-visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-interpretation-challenge&#34;&gt;Visualization interpretation challenge&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-read&#34; id=&#34;toc-task-1-read&#34;&gt;Task 1: Read&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-interpret&#34; id=&#34;toc-task-2-interpret&#34;&gt;Task 2: Interpret&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-read&#34;&gt;Task 1: Read&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-interpret&#34;&gt;Task 2: Interpret&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -227,7 +227,7 @@ expl_cors_order
 &lt;h2&gt;Visualization interpretation challenge&lt;/h2&gt;
 &lt;p&gt;You may be pleased to know that this week’s homework does not require you to write a single line of code. Instead, it is designed to get you reading and interpreting data graphics. &lt;a href=&#34;https://xeno.graphics/od-map/&#34;&gt;OD Maps&lt;/a&gt; are a good candidate here as they have been catalogued by &lt;a href=&#34;https://www.maartenlambrechts.com&#34;&gt;Marteen Lambrechts&lt;/a&gt; as a Xenographic – &lt;em&gt;Weird but (sometimes) useful&lt;/em&gt;. I’d add that within the list of other &lt;a href=&#34;https://xeno.graphics&#34;&gt;Xenographics&lt;/a&gt;, OD Maps are &lt;em&gt;Not that weird and often useful&lt;/em&gt;. Nevertheless, they do take some interpretation.&lt;/p&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:mode-analysis-od-map&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;../../../../../../../../class/05-class_files/od-maps-mode-homework.png&#34; alt=&#34;OD map of commutes between London boroughs&#34; width=&#34;90%&#34; /&gt;
+&lt;img src=&#34;../../class/05-class_files/od-maps-mode-homework.png&#34; alt=&#34;OD map of commutes between London boroughs&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: OD map of commutes between London boroughs
 &lt;/p&gt;
@@ -300,10 +300,10 @@ Slingsby, A., M. Kelly, and J. Dykes. 2014. &lt;span&gt;“&lt;span class=&#34;n
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualization-design-challenge&#34; id=&#34;toc-visualization-design-challenge&#34;&gt;Visualization design challenge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualization-design-challenge&#34;&gt;Visualization design challenge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -329,7 +329,7 @@ Slingsby, A., M. Kelly, and J. Dykes. 2014. &lt;span&gt;“&lt;span class=&#34;n
 &lt;div id=&#34;visualization-design-challenge&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Visualization design challenge&lt;/h2&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: left&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:boxplots-class&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;../../../../../../../../class/04-class_files/boxplot-by-class.png&#34; alt=&#34;Boxplots of casualty age by vehicle type and class.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;../../class/04-class_files/boxplot-by-class.png&#34; alt=&#34;Boxplots of casualty age by vehicle type and class.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Boxplots of casualty age by vehicle type and class.
 &lt;/p&gt;
@@ -426,16 +426,16 @@ Gleicher, Albers, M., and J. Roberts. 2011. &lt;span&gt;“Visual Comparison for
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-describe-and-evaluate&#34; id=&#34;toc-task-1-describe-and-evaluate&#34;&gt;Task 1: Describe and evaluate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-reproduce&#34; id=&#34;toc-task-2-reproduce&#34;&gt;Task 2: Reproduce&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-describe-and-evaluate&#34;&gt;Task 1: Describe and evaluate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-reproduce&#34;&gt;Task 2: Reproduce&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#histograms-faceted-by-region&#34; id=&#34;toc-histograms-faceted-by-region&#34;&gt;Histograms faceted by region&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34; id=&#34;toc-scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#histograms-faceted-by-region&#34;&gt;Histograms faceted by region&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scatterplots-with-multiple-encodings&#34;&gt;Scatterplots with multiple encodings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-3-create-a-map&#34; id=&#34;toc-task-3-create-a-map&#34;&gt;Task 3: Create a map&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-3-create-a-map&#34;&gt;Task 3: Create a map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -461,7 +461,7 @@ Gleicher, Albers, M., and J. Roberts. 2011. &lt;span&gt;“Visual Comparison for
 &lt;div id=&#34;task-1-describe-and-evaluate&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task 1: Describe and evaluate&lt;/h2&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:spoke-map&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;../../../../../../../../class/03-class_files/spoke-map.png&#34; alt=&#34;Map of Butler Con-Lab Swing in 2019 General Election.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;../../class/03-class_files/spoke-map.png&#34; alt=&#34;Map of Butler Con-Lab Swing in 2019 General Election.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 &lt;/p&gt;
@@ -542,7 +542,7 @@ Figure 1: Map of Butler Con-Lab Swing in 2019 General Election.
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots&#34;&gt;Save your plot&lt;/a&gt; as a &lt;code&gt;.png&lt;/code&gt; file and insert the file as a Figure into your &lt;code&gt;.Rmd&lt;/code&gt; document (&lt;a href=&#34;https://rmd4sci.njtierney.com/figures-tables-captions-.html&#34;&gt;guidance here&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:hist-region&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;../../../../../../../../class/03-class_files/hist-region.png&#34; alt=&#34;Histograms of Swing variable, grouped by region.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;../../class/03-class_files/hist-region.png&#34; alt=&#34;Histograms of Swing variable, grouped by region.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Histograms of Swing variable, grouped by region.
 &lt;/p&gt;
@@ -558,7 +558,7 @@ Figure 2: Histograms of Swing variable, grouped by region.
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots&#34;&gt;Save your plot&lt;/a&gt; as a &lt;code&gt;.png&lt;/code&gt; file and insert the file as a Figure into your &lt;code&gt;.Rmd&lt;/code&gt; document (&lt;a href=&#34;https://rmd4sci.njtierney.com/figures-tables-captions-.html&#34;&gt;guidance here&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:scatters-lab&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;../../../../../../../../class/03-class_files/scatters-lab.png&#34; alt=&#34;Plots of 2019 versus 2017 vote shares.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;../../class/03-class_files/scatters-lab.png&#34; alt=&#34;Plots of 2019 versus 2017 vote shares.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 3: Plots of 2019 versus 2017 vote shares.
 &lt;/p&gt;
@@ -576,7 +576,7 @@ Figure 3: Plots of 2019 versus 2017 vote shares.
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots&#34;&gt;Save your plot&lt;/a&gt; as a &lt;code&gt;.png&lt;/code&gt; file and insert the file as a Figure into your &lt;code&gt;.Rmd&lt;/code&gt; document (&lt;a href=&#34;https://rmd4sci.njtierney.com/figures-tables-captions-.html&#34;&gt;guidance here&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:referendum-map&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;../../../../../../../../class/03-class_files/referendum-map.png&#34; alt=&#34;Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;../../class/03-class_files/referendum-map.png&#34; alt=&#34;Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.&#34; width=&#34;100%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 4: Map of 2016 EU Referendum vote, estimated by Parliamentary Constituency in GB.
 &lt;/p&gt;
@@ -606,16 +606,16 @@ Munzner, T. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Pet
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-describe-data&#34; id=&#34;toc-task-1-describe-data&#34;&gt;Task 1: Describe data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34; id=&#34;toc-task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-describe-data&#34;&gt;Task 1: Describe data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-diagnose-data&#34;&gt;Task 2: Diagnose data&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2019&#34; id=&#34;toc-uk-general-election-results-2019&#34;&gt;UK General Election Results 2019&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2017-and-2019&#34; id=&#34;toc-uk-general-election-results-2017-and-2019&#34;&gt;UK General Election Results 2017 and 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2019&#34;&gt;UK General Election Results 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uk-general-election-results-2017-and-2019&#34;&gt;UK General Election Results 2017 and 2019&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-3-fix-data&#34; id=&#34;toc-task-3-fix-data&#34;&gt;Task 3: Fix data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-4-compute-from-data&#34; id=&#34;toc-task-4-compute-from-data&#34;&gt;Task 4: Compute from data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-3-fix-data&#34;&gt;Task 3: Fix data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-4-compute-from-data&#34;&gt;Task 4: Compute from data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -843,10 +843,10 @@ Wickham, H. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of
 &lt;h2&gt;Contents&lt;/h2&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34; id=&#34;toc-session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-1-read-and-complete-basicbasics&#34; id=&#34;toc-task-1-read-and-complete-basicbasics&#34;&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34; id=&#34;toc-task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34;&gt;Task 2: &lt;strong&gt;Watch&lt;/strong&gt; Thomas Mock’s Introduction to Tidy Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#session-outcomes&#34;&gt;Session Outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-1-read-and-complete-basicbasics&#34;&gt;Task 1: &lt;strong&gt;Read&lt;/strong&gt; and complete BasicBasics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task-2-watch-thomas-mocks-introduction-to-tidy-statistics&#34;&gt;Task 2: &lt;strong&gt;Watch&lt;/strong&gt; Thomas Mock’s Introduction to Tidy Statistics&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 

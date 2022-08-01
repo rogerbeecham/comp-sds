@@ -756,21 +756,21 @@ An appreciation of the exploratory data analysis (EDA) worklow. The main chart t
 <h2>Contents</h2>
 <div id="TOC">
 <ul>
-<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-<li><a href="#concepts" id="toc-concepts">Concepts</a>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#concepts">Concepts</a>
 <ul>
-<li><a href="#exploratory-data-analysis-and-statistical-graphics" id="toc-exploratory-data-analysis-and-statistical-graphics">Exploratory data analysis and statistical graphics</a></li>
-<li><a href="#plots-for-continuous-variables" id="toc-plots-for-continuous-variables">Plots for continuous variables</a></li>
-<li><a href="#plots-for-categorical-variables" id="toc-plots-for-categorical-variables">Plots for categorical variables</a></li>
-<li><a href="#supporting-comparison-with-layout-and-colour" id="toc-supporting-comparison-with-layout-and-colour">Supporting comparison with layout and colour</a></li>
+<li><a href="#exploratory-data-analysis-and-statistical-graphics">Exploratory data analysis and statistical graphics</a></li>
+<li><a href="#plots-for-continuous-variables">Plots for continuous variables</a></li>
+<li><a href="#plots-for-categorical-variables">Plots for categorical variables</a></li>
+<li><a href="#supporting-comparison-with-layout-and-colour">Supporting comparison with layout and colour</a></li>
 </ul></li>
-<li><a href="#techniques" id="toc-techniques">Techniques</a>
+<li><a href="#techniques">Techniques</a>
 <ul>
-<li><a href="#import" id="toc-import">Import</a></li>
-<li><a href="#explore" id="toc-explore">Explore</a></li>
+<li><a href="#import">Import</a></li>
+<li><a href="#explore">Explore</a></li>
 </ul></li>
-<li><a href="#conclusions" id="toc-conclusions">Conclusions</a></li>
-<li><a href="#references" id="toc-references">References</a></li>
+<li><a href="#conclusions">Conclusions</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </div>
 
@@ -919,7 +919,7 @@ scatterplots, parallel coordinate plots …
 <div id="within-variable-variation-histograms-desity-plots-boxplots" class="section level4">
 <h4>Within-variable variation: histograms, desity plots, boxplots</h4>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:univariate-continuous"></span>
-<img src="../../../../../../../../class/04-class_files/univariate-plots.png" alt="Univariate plots of dispersion." width="90%" />
+<img src="../../class/04-class_files/univariate-plots.png" alt="Univariate plots of dispersion." width="90%" />
 <p class="caption">
 Figure 1: Univariate plots of dispersion.
 </p>
@@ -933,7 +933,7 @@ Figure 1: Univariate plots of dispersion.
   <div>
     <p>This discussion was a little prosaic – we haven’t made too many observations to advance our knowledge of the dataset. I was surprised at the low average age of road casualties and so quickly explored the distribution of <code>casualty_age</code> conditioning on another variable and differentiating between variable values using colour. Figure <a href="#fig:boxplots-class">2</a> displays boxplots of the location and spread in <code>casualty_age</code> by vehicle type (left) and also by <code>casualty_class</code> for all crashes involving pedestrians. A noteworthy pattern is that riders of bicycles and motorcycles tend to be younger than the pedestrians they are contacting with, whereas for buses, taxis, HGVs and cars the reverse is true. Pedestrians involved in crashes with cars are especially skewed towards the younger ages.</p></p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:boxplots-class"></span>
-<img src="../../../../../../../../class/04-class_files/boxplot-by-class.png" alt="Boxplots of casualty age by vehicle type and class." width="100%" />
+<img src="../../class/04-class_files/boxplot-by-class.png" alt="Boxplots of casualty age by vehicle type and class." width="100%" />
 <p class="caption">
 Figure 2: Boxplots of casualty age by vehicle type and class.
 </p>
@@ -948,7 +948,7 @@ Figure 2: Boxplots of casualty age by vehicle type and class.
 <p>The <a href="../../class/03-class/">previous session</a> included several <strong>scatterplots</strong> for displaying association between two quantitative variables. Scatterplots are used to check whether the association between variables is linear, as in <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe’s quartet</a>, but also to make inferences about the direction and intensity of linear correlation between variables – the extent to which <strong>values</strong> in one variable depend on the values of another – and also around the nature of variation between variables – the extent to which <strong>variation</strong> in one variable depends on another (<a href="https://en.wikipedia.org/wiki/Heteroscedasticity">heteroscedasticity</a>). Although other <em>chart idioms</em> <span class="citation">(<a href="#ref-munzner_visualization_2014" role="doc-biblioref">Munzner 2014</a>)</span> for displaying bivariate data exist, empirical studies in Information Visualization have demonstrated that aggregate correlation statistics can be reliably estimated from scatterplots <span class="citation">(<a href="#ref-rensink_perception_2010" role="doc-biblioref">Rensink and Baldridge 2010</a>; <a href="#ref-harrison_ranking_2014" role="doc-biblioref">Harrison et al. 2014</a>; <a href="#ref-kay_beyond_2016" role="doc-biblioref">Kay and Heer 2016</a>; <a href="#ref-correll_regression_2017" role="doc-biblioref">Correll and Heer 2017a</a>)</span>.</p>
 <p>There are few variables in the STATS19 dataset measured on a continuous scale, but based on the analysis above, we may wish to explore more directly whether an association exists between the age of pedestrians and drivers for pedestrian-vehicle crashes. The scatterplots in Figure <a href="#fig:scatters-type">3</a> show that no obvious linear association exists.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:scatters-type"></span>
-<img src="../../../../../../../../class/04-class_files/scatter-by-type.png" alt="Scatterplots of pedestrian age by driver age and grouped by vehicle type." width="100%" />
+<img src="../../class/04-class_files/scatter-by-type.png" alt="Scatterplots of pedestrian age by driver age and grouped by vehicle type." width="100%" />
 <p class="caption">
 Figure 3: Scatterplots of pedestrian age by driver age and grouped by vehicle type.
 </p>
@@ -967,14 +967,14 @@ Figure 3: Scatterplots of pedestrian age by driver age and grouped by vehicle ty
 <h4>Within-variable variation: bars, dotplots, heatmaps</h4>
 <p>With categorical variables we are interested in exploring how relative frequencies distribute across the variable’s categories. Bar charts are most commonly used. As established in the previous session, length is an efficient visual channel for encoding quantities, counts in this case. Often it is useful to flip bar charts on their side so that category labels are arranged horizontally for ease of reading and, unless there is a natural ordering to categories, arrange the bars in descending order based on their frequency, as in Figure <a href="#fig:bars">4</a>.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:bars"></span>
-<img src="../../../../../../../../class/04-class_files/bars.png" alt="Bars displaying crash frequencies by vehicle type." width="100%" />
+<img src="../../class/04-class_files/bars.png" alt="Bars displaying crash frequencies by vehicle type." width="100%" />
 <p class="caption">
 Figure 4: Bars displaying crash frequencies by vehicle type.
 </p>
 </div>
 <p>Bar charts are effective at conveying frequencies where the number of categories is reasonably small. For summarising frequencies across many categories, alternatives chart types that minimise non-data-ink, such as <a href="https://en.wikipedia.org/wiki/Dot_plot_(statistics)">Cleveland dot plots</a> and heatmaps may be appropriate. The left plot in Figure <a href="#fig:dots-heatmap">5</a> displays crash counts for boroughs in London, ordered by crash frequency and grouped by whether boroughs are in inner- or outer- London. To the right is a heatmap with the same ordering and grouping of boroughs applied to the rows and with columns coloured according to crash frequencies by time period and further grouped by day of week. From scanning the graphic we can make several observations: that reported crashes tend to occur in the midday or evening peak (the middle two columns of a day are typically darker); that in relative terms there are more crashes recorded in outer London boroughs than inner London boroughs during the middle of the day on weekends (salient dark strips corresponding with midday Saturday and Sunday).</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:dots-heatmap"></span>
-<img src="../../../../../../../../class/04-class_files/borough-freqs.png" alt="[Cleveland dot plots](https://en.wikipedia.org/wiki/Dot_plot_(statistics)) and heatmaps summarising crash frequencies by London borough and period of day." width="100%" />
+<img src="../../class/04-class_files/borough-freqs.png" alt="[Cleveland dot plots](https://en.wikipedia.org/wiki/Dot_plot_(statistics)) and heatmaps summarising crash frequencies by London borough and period of day." width="100%" />
 <p class="caption">
 Figure 5: <a href="https://en.wikipedia.org/wiki/Dot_plot_(statistics)">Cleveland dot plots</a> and heatmaps summarising crash frequencies by London borough and period of day.
 </p>
@@ -1144,7 +1144,7 @@ NA
 </table>
 <p>To display these quantities graphically we could update our earlier bar chart to create <em>stacked</em> bars that use colour to distinguish injury severity (Figure <a href="#fig:bars-vehicle-injury">6</a>). Injury severity is an <code>ordinal</code> variable and the choice of colour in Figure <a href="#fig:bars-vehicle-injury">6</a> reflects this order – dark red for <em>KSI</em>, light red for <em>slight</em>.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:bars-vehicle-injury"></span>
-<img src="../../../../../../../../class/04-class_files/bars-assoc.png" alt="Bars (and Mosaic plot) displaying association between vehicle type and injury severity." width="100%" />
+<img src="../../class/04-class_files/bars-assoc.png" alt="Bars (and Mosaic plot) displaying association between vehicle type and injury severity." width="100%" />
 <p class="caption">
 Figure 6: Bars (and Mosaic plot) displaying association between vehicle type and injury severity.
 </p>
@@ -1469,7 +1469,7 @@ NA
 <!-- Remembering Figure \@ref(fig:dots-heatmap), for example, the boroughs in which the largest crash frequencies occur has already been established in the Cleveland dot plot, but this signal dominates somewhat in the heatmap -- for boroughs that contain fewer crashes relative comparison across the columns challenging. -->
 <p>The heatmap in Figure <a href="#fig:dots-heatmap">5</a> is effectively a contingency table, so we could demonstrate this by generating a modelled expectation – signed chi-score residuals for each cell. Figure <a href="#fig:borough-freqs-resids">7</a> does this for days of the week and periods of the day separately. The signed residuals are mapped to a <a href="https://web.natur.cuni.cz/~langhamr/lectures/vtfg1/mapinfo_2/barvy/colors.html#diverging">diverging colour scheme</a> – purple for cells with fewer crash counts than expected, green for cells with more crash counts than expected. To simplify things a little I generated heatmaps separately for day of week and period of day. In each case the assumption, the modelled expectation, is that crash counts by borough distribute independently of day of week or period of day.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:borough-freqs-resids"></span>
-<img src="../../../../../../../../class/04-class_files/borough-freqs-resids.png" alt="Heatmaps of crashes by day and time period for London Boroughs." width="100%" />
+<img src="../../class/04-class_files/borough-freqs-resids.png" alt="Heatmaps of crashes by day and time period for London Boroughs." width="100%" />
 <p class="caption">
 Figure 7: Heatmaps of crashes by day and time period for London Boroughs.
 </p>
@@ -1562,21 +1562,21 @@ No strategy specialised to direct encoding. Often variables cross <span class="m
 <p>As with most visualization design, these strategies require careful implementation. Particularly when juxtaposing views for comparison, it is important to use <em>layout</em> or <em>arrangement</em> in a way that best supports comparison. In the practical we will consider some more routine ways in which plots can be composed to support comparison as we analyse pedestrian casualties in the <code>Stats19</code> dataset. To demonstrate how <em>layout</em> and <em>colour</em> can be used for effecting <em>spatial</em> comparison, we will return to our analysis of pedestrian injuries by vehicle type, and explore variation by London Borough.</p>
 <p>In Figure <a href="#fig:mosaic-harrow-westminster">8</a> Westminster and Harrow, two very different London Boroughs, are compared. Bar size heights vary according to absolute number of recorded injuries by vehicle type and widths according to relative number of injuries recorded on weekday versus weekends. Whilst the modal vehicle type involved in pedestrian injuries is the same for both boroughs (cars), it is far more dominant for crashes recorded in the outer London borough of Harrow. Where cars are involved in crashes in Westminster these occur more frequently (when compared with Harrow) on weekends. Notice that Taxis, Motorcycles, Vans and Bicycles take up a reasonable share of crashes involving pedestrian injuries and that for Bicycles, Vans and Motorcycles these occur more frequently on weekdays.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:mosaic-harrow-westminster"></span>
-<img src="../../../../../../../../class/04-class_files/mosaic_harrow_westminster.png" alt="Mosaic plots of vehicle type and injury severity for Westminster and Harrow." width="90%" />
+<img src="../../class/04-class_files/mosaic_harrow_westminster.png" alt="Mosaic plots of vehicle type and injury severity for Westminster and Harrow." width="90%" />
 <p class="caption">
 Figure 8: Mosaic plots of vehicle type and injury severity for Westminster and Harrow.
 </p>
 </div>
 <p>Given these differences, it may be useful to <em>compare</em> across all 33 Boroughs in London, <em>juxtaposing</em> mosaic plots for each borough side-by-side (Figure <a href="#fig:mosaic-boroughs">9</a>). That the mosaic plots are annotated with labels for each vehicle type whose size varies according to frequency helps with interpretation. However, we can use <em>colour hue</em> to enable selecting and associating of individual vehicle types. This allows very central (City, Westminster, to a lesser extent Camden and Islington) inner (Wandsworth, Southwark, Lambeth) and outer (Croydon, Sutton) London boroughs to be related.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:mosaic-boroughs"></span>
-<img src="../../../../../../../../class/04-class_files/mosaic_boroughs.png" alt="Mosaic plots of vehicle type and injury severity for London Boroughs." width="90%" />
+<img src="../../class/04-class_files/mosaic_boroughs.png" alt="Mosaic plots of vehicle type and injury severity for London Boroughs." width="90%" />
 <p class="caption">
 Figure 9: Mosaic plots of vehicle type and injury severity for London Boroughs.
 </p>
 </div>
 <p>The alphabetical <em>layout</em> of boroughs helps with look-up-type tasks, but since we have already identified that patterns of pedestrian injuries by vehicle type varies by central-inner-outer London, we could further support this comparison by giving the mosaic plots a spatial arrangement, as in Figure <a href="#fig:spatial-layout">10</a>. This ‘map’ may at first seem alien as you are most likely familiar seeing maps with a precise geographic arrangement. However, when studying spatial patterns in a dataset, such levels of precision are not always needed. Relaxing geography frees up space to introduce richer, more complex designs. In the layout in Figure <a href="#fig:spatial-layout">10</a>, taken from <a href="https://github.com/aftertheflood/londonsquared">AfterTheFlood</a>, each borough is represented as a square of regular size and arranged in its approximate geographic position, allowing the centrsl-inner-outer and London distinctions to be more efficiently made.</p>
 <div class="figure"><span style="display:block;" id="fig:spatial-layout"></span>
-<img src="../../../../../../../../class/04-class_files/anim_real_grid.gif" alt="Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement." width="90%" /><img src="../../../../../../../../class/04-class_files/mosaic_boroughs_spatial.png" alt="Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement." width="90%" />
+<img src="../../class/04-class_files/anim_real_grid.gif" alt="Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement." width="90%" /><img src="../../../../../../../../class/04-class_files/mosaic_boroughs_spatial.png" alt="Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement." width="90%" />
 <p class="caption">
 Figure 10: Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.
 </p>
@@ -1612,7 +1612,7 @@ Figure 10: Mosaic plots of vehicle type and injury severity for London Boroughs 
 <h4>Crash location geodemographics</h4>
 <p>To start we explore month-on-month frequencies of pedestrian road crashes by IMD of the location in which the crash took place (Figure <a href="#fig:ped-month-imd">11</a>). From this we see that there is some seasonality to pedestrian casualties, that there are more crashes recorded in locations containing higher deprivation – unsurprising as cities tend to contain comparatively high/mid deprivation levels – and that overall recorded pedestrian crash frequencies are reasonably static over the 10-year period.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:ped-month-imd"></span>
-<img src="../../../../../../../../class/04-class_files/plot-year-imd.png" alt="Pedestrian casualties by month and IMD." width="100%" />
+<img src="../../class/04-class_files/plot-year-imd.png" alt="Pedestrian casualties by month and IMD." width="100%" />
 <p class="caption">
 Figure 11: Pedestrian casualties by month and IMD.
 </p>
@@ -1642,14 +1642,14 @@ Figure 11: Pedestrian casualties by month and IMD.
 </ol>
 <p>With only five data categories (IMD quintiles) and counts that do not differ wildly per category, the stacked bars are reasonably effective. However, to better support trends within category, it is useful to have a common baseline and juxtapose separate charts for crashes in each IMD category (using <code>facet_wrap</code>). This improves height comparison <em>between</em> IMD categories, but also <em>within</em> category temporal trends are easier to detect – for example, that of <em>slightly</em> increasing seasonality across all quintiles, especially in the second most deprived quintile. By default <code>facet_wrap()</code> lays out individual charts across rows and columns. We could instead <em>arrange</em> the bars on top of each other, in rows, by parameterising the call to <code>facet_wrap()</code>: <code>facet_wrap(~crash_quintile, ncol=1)</code>.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:ped-year-imd-facet"></span>
-<img src="../../../../../../../../class/04-class_files/plot-year-imd-facet.png" alt="Pedestrian casualties by year and IMD." width="100%" />
+<img src="../../class/04-class_files/plot-year-imd-facet.png" alt="Pedestrian casualties by year and IMD." width="100%" />
 <p class="caption">
 Figure 12: Pedestrian casualties by year and IMD.
 </p>
 </div>
 <p>Picking seasonality in these plots is still challenging; so too whether overall crashes are increasing or decreasing. To support seasonal comparison we could consider arranging in two dimensions such that the bars are grouped according to year along the columns and by IMD decile along the rows. This can be achieved with <code>facet_grid()</code>. To support relative comparison within IMD decile we may choose to give each IMD decile its own (local) y-axis scaling. Rather than comparing absolute heights between IMD deciles we compare instead relative shapes in the month-on-month bars. To further explore whether crash counts are increasing by year, we include the monthly average by year using a horizontal line. This arrangement – Figure <a href="#fig:ped-monthyear-imd-facet">13</a> – better exposes the fact that seasonal variation is greater for crashes that occur in the least deprived quintile. There are many speculative explanations for why this might be the case – many confounding factors, also that this may be a spurious observation due to differences in sample size, that would need to be explored/eliminated as part of an EDA.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:ped-monthyear-imd-facet"></span>
-<img src="../../../../../../../../class/04-class_files/plot-monthyear-imd.png" alt="Pedestrian casualties by year and IMD." width="100%" />
+<img src="../../class/04-class_files/plot-monthyear-imd.png" alt="Pedestrian casualties by year and IMD." width="100%" />
 <p class="caption">
 Figure 13: Pedestrian casualties by year and IMD.
 </p>
@@ -1688,7 +1688,7 @@ Figure 13: Pedestrian casualties by year and IMD.
 <h4>Crash location and driver purpose</h4>
 <p>Collected in the STATS19 vehicles table is the reported journey purpose of the driver. Prior to 2011 this field was not available and unfortunately is “not known” for a large proportion (67%) of pedestrian-vehicle crashes. Figure <a href="#fig:ped-year-imd-facet-purpose">14</a> is an updated version of the previous plot, but with bars additionally coloured by journey purpose. Persisting with the analysis of monthly frequencies is useful here as it exposes the fact that an “Other” category has been used inconsistently over time. Further investigation of what this category constitutes is therefore necessary. We would also want to explore in detail the nature of non-reporting – whether there is systematic biases here. Any inferences drawn from Figure <a href="#fig:ped-year-imd-facet-purpose">14</a> are therefore very speculative, but it does appear that the “school run” is reported more frequently in relative terms for crashes occurring in the least deprived quintile – relatively more blue (“school run”) and less green (“commute”). Again, there are speculative explanations for this that could be investigated as part of an EDA and an immediate task might be to update the plot to make the bars <em>standardised</em> (equal height).</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:ped-year-imd-facet-purpose"></span>
-<img src="../../../../../../../../class/04-class_files/plot-year-imd-facet-purpose.png" alt="Pedestrian casualties by year, IMD and driver purpose." width="100%" />
+<img src="../../class/04-class_files/plot-year-imd-facet-purpose.png" alt="Pedestrian casualties by year, IMD and driver purpose." width="100%" />
 <p class="caption">
 Figure 14: Pedestrian casualties by year, IMD and driver purpose.
 </p>
@@ -1702,7 +1702,7 @@ Figure 14: Pedestrian casualties by year, IMD and driver purpose.
 <p>This trend can be further investigated through <em>direct encoding</em> - constructing a modelled expectation and representing deviation from expectation – the right heatmap in the top row of Figure <a href="#fig:imd-driver-cas-overall">15</a>. Expected values are generated based on the assumption that crash frequencies distribute by driver IMD class independently of the IMD class of the pedestrian injured. I have also plotted raw expected values and the column and row marginals from which the residuals are derived. This demonstrates how expected values are spread across cells in the contingency table based on the overall size of each IMD class. Signed chi-scores are mapped to a diverging colour scale – green for residuals that are positive (cell counts are greater than expected), purple for residuals that are negative (cell counts are less than expected).</p>
 <p>The observed-versus-expected plot highlights that the largest positive residuals are in and around the diagonals and the largest negative residuals are those furthest from the diagonals: we see many more crash frequencies between drivers and pedestrians living in the same or similar IMD quintiles and fewer between those in different quintiles. That the bottom left cell – high-deprivation-driver + high-deprivation-pedestrian – is dark green can be understood when remembering that signed chi-scores emphasise effect sizes that are large in <em>absolute</em> as well as relative terms. Not only is there an association between the geodemographics of drivers and casualties, but larger crash counts are recorded in locations containing the highest deprivation and so residuals here are large. The largest positive residuals (the darkest green) are nevertheless recorded in the top right of the matrix – and this is more surprising. Against an expectation of no association between the geodemographic characteristics of drivers and pedestrians involved in road crashes, there is a particularly high number of crashes between drivers and pedestrians living in neighbourhoods containing the lowest deprivation. An alternative phrasing: the association between the geodemographics of drivers and pedestrians is greater for those living in the lowest deprivation quintiles.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:imd-driver-cas-overall"></span>
-<img src="../../../../../../../../class/04-class_files/imd-driver-cas-overall.png" alt="IMD of driver-casualty." width="100%" />
+<img src="../../class/04-class_files/imd-driver-cas-overall.png" alt="IMD of driver-casualty." width="100%" />
 <p class="caption">
 Figure 15: IMD of driver-casualty.
 </p>
@@ -1775,14 +1775,14 @@ A heavy confounding factor in the plots above is the *location* in which the cra
 <!-- Whilst these plots are successful at exposing the association between the geodemographics of the *drivers*, *pedestrians* and *locations* in which they took place, this very obvious association, and the fact that crash counts are concentrated in the most deprived quintile, is the dominant "signal".  This can be seen in the expected values for the contingency table in Figure \@ref(fig:imd-driver-cas-crash). Updating our heatmaps of observed values with a local scaling is another way of demonstrating the strong association between the IMD of *drivers*, *pedestrians* and  crash *locations*.  In Figure \@ref(fig:imd-driver-cas-crash-rescaled) cell counts are scaled using the maximum value within the containing matrix (so the maximum count within each IMD crash quintile). Eyeballing this graphic, we see that comparatively few pedestrians living outside of the  most deprived quintile are involved in crashes that occur in that quintile, again the graphic exposes heavy association between geodemographics for crashes occurring in the least deprived quintile and elsewhere there is slightly more "mixing". -->
 <p>Figure <a href="#fig:imd-driver-cas-crash-rescaled">16</a> shows frequencies by driver-pedestrian IMD group faceted on the IMD class of the <em>location</em> in which the road crash occurred. A local scaling is applied by IMD class of location. It demonstrates an obvious confounding pattern – that pedestrians and drivers are far more likely to be involved in crashes in locations with same geodemographic characteristics as those in which they live. Ideally we want to update our expectations to model explicitly for some of this pattern. We have established that an association between the IMD class of <em>drivers</em>, <em>pedestrians</em> and crash <em>locations</em> exists. The more interesting question is whether this is association is stronger for certain driver-pedestrian-location combinations than others: that is, net of the dominant pattern, in which cells are there greater or fewer crash counts.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:imd-driver-cas-crash-rescaled"></span>
-<img src="../../../../../../../../class/04-class_files/imd-driver-cas-crash-local.png" alt="IMD driver-casualty." width="100%" />
+<img src="../../class/04-class_files/imd-driver-cas-crash-local.png" alt="IMD driver-casualty." width="100%" />
 <p class="caption">
 Figure 16: IMD driver-casualty.
 </p>
 </div>
 <p>This is not a straightforward task as the dependency is baked-in to our contingency table. Essentially we are interested in how crash counts vary depending on <em>geodemographic distance</em> – of drivers, pedestrians, crash locations. I calculated a new variable measuring this distance directly – the euclidian distance between the geodemographics of the driver and pedestrian from the location of each crash, treating the <code>ordinal</code> IMD class variable as a <code>continuous</code> variable ranging from 1-5. To illustrate this, in Figure <a href="#fig:imd-driver-cas-crash-distance">17</a> I’ve mapped this distance variable to each cell of the heatmap matrix.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:imd-driver-cas-crash-distance"></span>
-<img src="../../../../../../../../class/04-class_files/imd-geodemog-dist.png" alt="IMD driver-pedestrian-location geodemographic distance." width="100%" />
+<img src="../../class/04-class_files/imd-geodemog-dist.png" alt="IMD driver-pedestrian-location geodemographic distance." width="100%" />
 <p class="caption">
 Figure 17: IMD driver-pedestrian-location geodemographic distance.
 </p>
@@ -1790,7 +1790,7 @@ Figure 17: IMD driver-pedestrian-location geodemographic distance.
 <!-- I then calculated row and column marginals from a new contingency table constructed on this variable -- the rows are different values of "geodemographic distance" and the columns are the different categories IMD road crash location -- and used this to spared expectation across cells in our original contingency table -- as demonstrated in Figure \@ref(fig:imd-driver-cas-crash-dist-full). The expectation is therefore that: road crash counts by "geodemographic distance" distribute independently of IMD crash location. A key pattern exposed in the residuals map here is that in the left-most plot for the most deprived IMD crash quintile: much higher than expected instances of pedestrians living in the most deprived quintile, being hit in neighbourhoods in the most deprived quintile and by drivers particularly living in the less deprived quintiles. -->
 <p>I then generated counts of pedestrian casualties by demographic distance, and from this, cell probabilities/likelihoods for each unique position in the matrix in Figure <a href="#fig:imd-driver-cas-crash-distance">17</a>. The probabilities assume independence between crash location: that is, the relative likelihood of a crash occurring given a cell’s geodemographic distance does not vary by IMD class of the crash location.</p>
 <div class="figure" style="text-align: left"><span style="display:block;" id="fig:imd-driver-cas-crash-dist-full"></span>
-<img src="../../../../../../../../class/04-class_files/imd-driver-cas-crash-dist-full.png" alt="IMD driver-pedestrian-location with modelled expectations based on geodemographic distance." width="100%" />
+<img src="../../class/04-class_files/imd-driver-cas-crash-dist-full.png" alt="IMD driver-pedestrian-location with modelled expectations based on geodemographic distance." width="100%" />
 <p class="caption">
 Figure 18: IMD driver-pedestrian-location with modelled expectations based on geodemographic distance.
 </p>

@@ -752,30 +752,30 @@
 <h2>Contents</h2>
 <div id="TOC">
 <ul>
-<li><a href="#welcome-to-computational-methods-for-social-data-science" id="toc-welcome-to-computational-methods-for-social-data-science">Welcome to <em>Computational Methods for Social Data Science</em></a></li>
-<li><a href="#why-comp-sds" id="toc-why-comp-sds">Why <em>comp-sds</em>?</a>
+<li><a href="#welcome-to-computational-methods-for-social-data-science">Welcome to <em>Computational Methods for Social Data Science</em></a></li>
+<li><a href="#why-comp-sds">Why <em>comp-sds</em>?</a>
 <ul>
-<li><a href="#social-data-science" id="toc-social-data-science">Social Data Science</a></li>
-<li><a href="#social-data-science-and-visualization" id="toc-social-data-science-and-visualization">Social Data Science and <em>Visualization</em></a></li>
+<li><a href="#social-data-science">Social Data Science</a></li>
+<li><a href="#social-data-science-and-visualization">Social Data Science and <em>Visualization</em></a></li>
 </ul></li>
-<li><a href="#what-comp-sds" id="toc-what-comp-sds">What <em>comp-sds</em>?</a></li>
-<li><a href="#how-comp-sds" id="toc-how-comp-sds">How <em>comp-sds</em>?</a>
+<li><a href="#what-comp-sds">What <em>comp-sds</em>?</a></li>
+<li><a href="#how-comp-sds">How <em>comp-sds</em>?</a>
 <ul>
-<li><a href="#r-for-modern-data-analysis" id="toc-r-for-modern-data-analysis">R for modern data analysis</a></li>
-<li><a href="#rmarkdown-for-reproducible-research" id="toc-rmarkdown-for-reproducible-research">Rmarkdown for reproducible research</a></li>
+<li><a href="#r-for-modern-data-analysis">R for modern data analysis</a></li>
+<li><a href="#rmarkdown-for-reproducible-research">Rmarkdown for reproducible research</a></li>
 </ul></li>
-<li><a href="#getting-started-with-r-and-rstudio" id="toc-getting-started-with-r-and-rstudio">Getting started with R and RStudio</a>
+<li><a href="#getting-started-with-r-and-rstudio">Getting started with R and RStudio</a>
 <ul>
-<li><a href="#install-r-and-rstudio" id="toc-install-r-and-rstudio">Install R and RStudio</a></li>
-<li><a href="#open-the-rstudio-ide" id="toc-open-the-rstudio-ide">Open the RStudio IDE</a></li>
-<li><a href="#compute-in-the-console" id="toc-compute-in-the-console">Compute in the console</a></li>
-<li><a href="#install-some-packages" id="toc-install-some-packages">Install some packages</a></li>
-<li><a href="#experiment-with-r-markdown" id="toc-experiment-with-r-markdown">Experiment with R Markdown</a></li>
-<li><a href="#r-scripts" id="toc-r-scripts">R Scripts</a></li>
-<li><a href="#create-an-rstudio-project" id="toc-create-an-rstudio-project">Create an RStudio Project</a></li>
+<li><a href="#install-r-and-rstudio">Install R and RStudio</a></li>
+<li><a href="#open-the-rstudio-ide">Open the RStudio IDE</a></li>
+<li><a href="#compute-in-the-console">Compute in the console</a></li>
+<li><a href="#install-some-packages">Install some packages</a></li>
+<li><a href="#experiment-with-r-markdown">Experiment with R Markdown</a></li>
+<li><a href="#r-scripts">R Scripts</a></li>
+<li><a href="#create-an-rstudio-project">Create an RStudio Project</a></li>
 </ul></li>
-<li><a href="#conclusions" id="toc-conclusions">Conclusions</a></li>
-<li><a href="#references" id="toc-references">References</a></li>
+<li><a href="#conclusions">Conclusions</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </div>
 
@@ -840,7 +840,7 @@
 <p>The canonical example demonstrating how relying on computation alone can be problematic, and so for the use of visualization, is <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe’s quartet</a>. Here, <span class="citation">Anscombe (<a href="#ref-anscombe_graphs_1973" role="doc-biblioref">1973</a>)</span> presents four datasets, each containing eleven observations and two variables for each observation. The data are synthetic, but let’s say that they are the weight and height of independent samples taken from a population of postgraduate students studying Data Science.</p>
 <p>Presented with a new dataset it makes sense to compute some summaries and doing so, we observe that the data appear identical – they contain the same means, variances and strong positive correlation coefficient. This seems appropriate since the data are measuring weight and height. Although there may be some variation, we’d expect taller students to be heavier. Given these statistical summaries we can be assured that we are drawing samples from the same population of (Data Science) students.</p>
 <div class="figure"><span style="display:block;" id="fig:anscombe-data"></span>
-<img src="../../../../../../../../class/01-class_files/anscombe_data.png" alt="Data from Anscombe's quartet" width="90%" />
+<img src="../../class/01-class_files/anscombe_data.png" alt="Data from Anscombe's quartet" width="90%" />
 <p class="caption">
 Figure 1: Data from Anscombe’s quartet
 </p>
@@ -931,7 +931,7 @@ Figure 2: Plots of Anscombe’s quartet
 <div id="open-the-rstudio-ide" class="section level3">
 <h3>Open the RStudio IDE</h3>
 <div class="figure"><span style="display:block;" id="fig:rstudio-annotate"></span>
-<img src="../../../../../../../../class/01-class_files/rstudio_annotate.png" alt="The RStudio IDE" width="100%" />
+<img src="../../class/01-class_files/rstudio_annotate.png" alt="The RStudio IDE" width="100%" />
 <p class="caption">
 Figure 3: The RStudio IDE
 </p>
@@ -1025,7 +1025,7 @@ x_root &lt;- sqrt(x_2)</code></pre>
 <li>CODE chunks - containing discrete that are to be run when the .Rmd file is typeset or <em>knit</em>.</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:rmarkdown-annotate"></span>
-<img src="../../../../../../../../class/01-class_files/rmarkdown_annotate.png" alt="The anatomy of R Markdown" width="100%" />
+<img src="../../class/01-class_files/rmarkdown_annotate.png" alt="The anatomy of R Markdown" width="100%" />
 <p class="caption">
 Figure 4: The anatomy of R Markdown
 </p>
@@ -1106,7 +1106,7 @@ get_radians &lt;- function(degrees) {
 <p>You might have noticed that when you open RStudio it automatically <em>points to</em> a working directory, likely the home folder for your local machine, denoted with <code>~/</code> in the Console. RStudio will by default save any outputs to this folder and will also expect any data you use to be saved there. Clearly if you want to incorporate neat, self-contained project workflows then you will want to organise your work from a dedicated project folder rather than the default home folder for your machine. This can be achieved with the <code>setwd(&lt;path-to-your-project&gt;)</code> function. The problem with doing this is that you insert a path which cannot be understood outside of your local machine at the time it was created. This is a real pain. It makes simple things like moving projects around on your machine an arduous task and most importantly it hinders reproducibility if others are to reuse your work.</p>
 <p>RStudio Projects are a really excellent feature of the RStudio IDE that resolve these problems. Whenever you load up an RStudio Project, R starts up and the working directory is automatically set to the project’s root folder. If you were to move the project elsewhere on your machine, or to another machine, a new root is automatically generated – so RStudio projects ensure that relative paths work.</p>
 <div class="figure"><span style="display:block;" id="fig:rstudio-project"></span>
-<img src="../../../../../../../../class/01-class_files/rstudio_project.png" alt="Creating an RStudio Project" width="100%" />
+<img src="../../class/01-class_files/rstudio_project.png" alt="Creating an RStudio Project" width="100%" />
 <p class="caption">
 Figure 5: Creating an RStudio Project
 </p>
