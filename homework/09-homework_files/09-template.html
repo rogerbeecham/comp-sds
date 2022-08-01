@@ -12,7 +12,7 @@
 <meta name="author" content />
 
 
-<title>Session 06</title>
+<title>Session 09</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -359,7 +359,7 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Session 06</h1>
+<h1 class="title toc-ignore">Session 09</h1>
 <h4 class="author"><your-name></h4>
 <h4 class="date"><the-date></h4>
 
@@ -374,94 +374,26 @@ through the materials from this session run each code chunk separately
 by clicking the small green arrow beside each code chunk. By default I
 have set <code>eval=FALSE</code> on most code chunks, so when you knit
 the code chunk will not execute.</p>
-<p>The technical element to this session involves analysing estimated
-vote shares for Leave in the UK’s 2016 Referendum on EU membership.</p>
+<p>The technical element demonstrates how to recreate in
+<code>ggplot2</code> the <em>glyphmap</em> appearing in <a href="https://www.washingtonpost.com/nation/2020/05/24/coronavirus-rural-america-outbreaks/?arc404=true">The
+Washington Post</a> to tell a story of growth in Covid-19 cases by US
+county.</p>
 <div id="setup" class="section level3">
 <h3>Setup</h3>
 <p>The code block below points to the packages you need to do the work
-discussed in the session. Uncomment the <code>intall_packages()</code>
-lines if you have not already downloaded <code>tidymodels</code>.</p>
+discussed in the session. U</p>
 <pre class="r"><code>library(tidyverse) # Bundle of packages for doing modern data analysis.
-library(sf) # Spatial operations
-library(here) # For navigating project directory
-
-library(parlitools) # Contains required data.
-# install.packages(&quot;tidymodels&quot;) # Uncomment for download.
-library(tidymodels) # For working with model outputs.</code></pre>
+library(sf) # Spatial operations</code></pre>
 </div>
 <div id="import" class="section level3">
 <h3>Import</h3>
-<p>Run the code block below to download and process the data required
-for this session.</p>
-<pre class="r"><code># Load constituency boundaries, simplified using mapshapr
-url &lt;- &quot;https://www.roger-beecham.com/datasets/cons_outline.geojson&quot;
-cons_outline &lt;- st_read(url, crs=27700)
-
-# Collect explanatory variables (from census_11 table in parlitools)
-explanatory &lt;- census_11 %&gt;%
-  transmute(
-    ons_const_id=ons_const_id, constituency_name=constituency_name, region=region,
-    population=population, population_density=population_density,
-    younger=age_20_to_24+age_25_to_29+age_30_to_44,
-    own_home=house_owned,
-    no_car=cars_none, white=ethnicity_white_british+ethnicity_white_irish,eu_born=born_other_eu, christian,
-    professional=nssechigher_manager+nssechigher_professional, degree=qual_level_4,
-    not_good_health=health_fair+health_bad+health_very_bad, heavy_industry=industry_manufacturing+industry_transport
-    )
-
-
-# Collect outcome variable (from leave_votes_west table in parlitools)
-outcome &lt;- leave_votes_west %&gt;%
-  select(ons_const_id, constituency_name, leave=figure_to_use) %&gt;%
-  inner_join(explanatory %&gt;% select(ons_const_id, region)) %&gt;%
-  mutate(gb_leave=.519, resid_unform=leave-gb_leave)
-
-
-# Z-score transform explanatory variables.
-explanatory_z_scores &lt;- explanatory %&gt;%
-  mutate(
-    across(
-      .cols=c(younger:heavy_industry), ~(.x-mean(.x))/sd(.x)
-    )
-  )
-
-# Generate data frame containing data for models.
-data_for_models &lt;- explanatory_z_scores %&gt;%
-  inner_join(outcome %&gt;% select(ons_const_id, leave, region))</code></pre>
-</div>
-</div>
-<div id="homework" class="section level2">
-<h2>Homework</h2>
-<div id="task-1-calculate-and-plot" class="section level3">
-<h3>Task 1: Calculate and plot</h3>
-<pre class="r"><code># Place your code for calculating correlation coefficients by explanatory
-# variable here. Note that you will then want to extract a vector of ordered
-# variable names as an object.</code></pre>
-<pre class="r"><code># Place your code for generating scatterplots here.</code></pre>
-</div>
-<div id="task-2-explore-model-and-evaluate" class="section level3">
-<h3>Task 2: Explore, model and evaluate</h3>
-<pre class="r"><code>#######################
-# Enter your code in the chunk provided.
-######################</code></pre>
-<div id="insight-1" class="section level4">
-<h4>Insight 1</h4>
-<blockquote>
-<p><em>Enter your answer here</em></p>
-</blockquote>
-</div>
-<div id="insight-2" class="section level4">
-<h4>Insight 2</h4>
-<blockquote>
-<p><em>Enter your answer here</em></p>
-</blockquote>
-</div>
-<div id="insight-3" class="section level4">
-<h4>Insight 3</h4>
-<blockquote>
-<p><em>Enter your answer here</em></p>
-</blockquote>
-</div>
+<p>Run the code block below to download the staged Covid-19 case data by
+US county.</p>
+<pre class="r"><code># Dataset of US county Covid data -- derived fields already incorporated.
+county_data &lt;- read_csv(&quot;https://www.roger-beecham.com/datasets/county_data_covid.csv&quot;) %&gt;%
+  # Cast binned_growth_rate to factor.
+  mutate(binned_growth_rate=factor(binned_growth_rate))
+state_boundaries &lt;- st_read(&quot;https://www.roger-beecham.com/datasets/state_boundaries.geojson&quot;)</code></pre>
 </div>
 </div>
 
