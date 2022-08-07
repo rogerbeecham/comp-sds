@@ -4,6 +4,7 @@
     <title>Exploratory data analysis</title>
     <meta charset="utf-8" />
     <meta name="author" content="Roger Beecham" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
@@ -15,8 +16,8 @@ class: center, middle, title-slide
 
 # Exploratory data analysis
 ### Roger Beecham
-### <p>12 Aug 2021</p>
-<a href="https://www.roger-beecham.com/comp-sds/"><code>roger-beecham.com/comp-sds</code></a>
+### <p>11 Aug 2022</p>
+<code>roger-beecham.com/comp-sds</code>
 
 ---
 
@@ -48,11 +49,41 @@ Do so with Stats19 -- how detailed comparison across many categorical variables 
 
 Anything on EDA &gt; Tukay &gt; statistical graphics
 ---
+
+## EDA and statistical graphics
+
+.small-font[doi: `10.1111/gean.12338`
+]
+
+&lt;img src="img/ga_twitter.png", width = 40%, style = "position:absolute; top: 32%; left: 10%;"&gt; &lt;/img&gt;
+???
+
+---
+
+## EDA and statistical graphics
+
+&lt;br&gt;
+.small-font[doi: `10.1162/99608f92.3ab8a587`]
+
+
+.tiny-font[
+&gt; EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual systems.
+
+
+&gt; We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+
+&gt; Hullman and Gelman 2021
+]
+
+---
+
+---
 ## EDA and statistical graphics
 
 .small-font[
-Two (initial) goals that EDA should address:
-
+Two (initial) goals that EDA should address:]
+--
+.small-font[
 1. What type of **variation** occurs **within** variables of a dataset?
 2. What type of **covariation** occurs **between** variables of a dataset?
 ]
@@ -78,33 +109,33 @@ Exploring structure and relationships
 &lt;tbody&gt;
   &lt;tr grouplength="3"&gt;&lt;td colspan="3" style="border-bottom: 0px solid;"&gt;Within-variable variation&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; mode | entropy &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; bar charts, dot plots ... &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; median | percentile &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; bar charts, dot plots ... &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Continuous &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Continuous &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; mean | variance &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; histograms, box plots, density plots ... &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr grouplength="3"&gt;&lt;td colspan="3" style="border-bottom: 0px solid;"&gt;Between-variable variation&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; contingency tables &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; mosaic/spine plots ... &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; rank correlation &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; slope/bump charts ... &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left:  2em;width: 8em; " indentlevel="1"&gt; Continuous &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Continuous &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; correlation &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; scatterplots, parallel coordinate plots ... &lt;/td&gt;
   &lt;/tr&gt;

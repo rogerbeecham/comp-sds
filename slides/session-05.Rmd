@@ -1,7 +1,7 @@
 ---
 title: "Exploring spatial networks"
 author: "Roger Beecham"
-date: "13 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+date: "12 Aug 2022  \n\n `roger-beecham.com/comp-sds`"
 output:
   xaringan::moon_reader:
     css: [default, "slides-theme.css"]

@@ -1,7 +1,7 @@
 ---
 title: "Exploratory data analysis"
 author: "Roger Beecham"
-date: "12 Aug 2021  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+date: "11 Aug 2022  \n\n `roger-beecham.com/comp-sds`"
 output:
   xaringan::moon_reader:
     css: [default, "slides-theme.css"]
@@ -48,11 +48,41 @@ Do so with Stats19 -- how detailed comparison across many categorical variables 
 
 Anything on EDA > Tukay > statistical graphics
 ---
+
+## EDA and statistical graphics
+
+.small-font[doi: `10.1111/gean.12338`
+]
+
+<img src="img/ga_twitter.png", width = 40%, style = "position:absolute; top: 32%; left: 10%;"> </img>
+???
+
+---
+
+## EDA and statistical graphics
+
+<br>
+.small-font[doi: `10.1162/99608f92.3ab8a587`]
+
+
+.tiny-font[
+> EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual systems.
+
+
+> We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+
+> Hullman and Gelman 2021
+]
+
+---
+
+---
 ## EDA and statistical graphics
 
 .small-font[
-Two (initial) goals that EDA should address:
-
+Two (initial) goals that EDA should address:]
+--
+.small-font[
 1. What type of **variation** occurs **within** variables of a dataset?
 2. What type of **covariation** occurs **between** variables of a dataset?
 ]

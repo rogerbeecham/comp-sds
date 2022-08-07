@@ -1,7 +1,7 @@
 ---
 title: "Data fundamentals: Describe, wrangle, tidy"
 author: "Roger Beecham"
-date: "9 Aug 2022  \n\n [`roger-beecham.com/comp-sds`](https://www.roger-beecham.com/comp-sds/)"
+date: "9 Aug 2022  \n\n `roger-beecham.com/comp-sds`"
 output:
   xaringan::moon_reader:
     css: [default, "slides-theme.css"]
@@ -40,7 +40,7 @@ Review objectives --
 
 ## Data structure
 
-#### `data frame` | `tibble`
+.small-font[`data frame` | `tibble`]
 
 <img src = "img/data-structure.png", width = 70%, style = "position:relative; top: 10%; left: 0%;"></img>
 
@@ -365,12 +365,12 @@ Constrain operations that can be performed.
 data_types <- tibble::tibble(
   Type = c("lgl", "int", "dbl", "chr", "dttm", "fctr" ),
   Description = c(
-    "Logical -- vectors that can contain only `TRUE` or `FALSE` values",
-    "Integers -- whole numbers",
-    "Double --  real numbers with decimals",
-    "Character -- text strings",
-    "Date-times -- a date + a time",
-    "Factors -- represent categorical variables of fixed and potentially orderable values"
+    "Logical : Vectors that can contain only `TRUE` or `FALSE` values",
+    "Integers : Whole numbers",
+    "Double :  Real numbers with decimals",
+    "Character : Text strings",
+    "Date-times : A date + a time",
+    "Factors : Represent categorical variables of fixed and potentially orderable values"
   )
 )
 
@@ -470,7 +470,7 @@ Next: how to represent/organise data.
 ## Tidy data
 
 
-<img src = "img/data3.png", width = 50%, style = "position:absolute; top: 25%; left: 8%;"></img>
+<img src = "img/data3.png", width = 45%, style = "position:absolute; top: 25%; left: 8%;"></img>
 
 ---
 
@@ -727,6 +727,9 @@ Pipe for passing information in a prgram.
 Output of one set becomes input of another
 ---
 
+# Technical Element
+
+---
 
 ## Technical Element
 
