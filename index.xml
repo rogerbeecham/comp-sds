@@ -3995,7 +3995,7 @@ Figure 9: Mosaic plots of vehicle type and injury severity for London Boroughs.
 &lt;/div&gt;
 &lt;p&gt;The alphabetical &lt;em&gt;layout&lt;/em&gt; of boroughs helps with look-up-type tasks, but since we have already identified that patterns of pedestrian injuries by vehicle type varies by central-inner-outer London, we could further support this comparison by giving the mosaic plots a spatial arrangement, as in Figure &lt;a href=&#34;#fig:spatial-layout&#34;&gt;10&lt;/a&gt;. This ‘map’ may at first seem alien as you are most likely familiar seeing maps with a precise geographic arrangement. However, when studying spatial patterns in a dataset, such levels of precision are not always needed. Relaxing geography frees up space to introduce richer, more complex designs. In the layout in Figure &lt;a href=&#34;#fig:spatial-layout&#34;&gt;10&lt;/a&gt;, taken from &lt;a href=&#34;https://github.com/aftertheflood/londonsquared&#34;&gt;AfterTheFlood&lt;/a&gt;, each borough is represented as a square of regular size and arranged in its approximate geographic position, allowing the centrsl-inner-outer and London distinctions to be more efficiently made.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:spatial-layout&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;../../class/04-class_files/anim_real_grid.gif&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.&#34; width=&#34;90%&#34; /&gt;&lt;img src=&#34;../../../../../../../../class/04-class_files/mosaic_boroughs_spatial.png&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.&#34; width=&#34;90%&#34; /&gt;
+&lt;img src=&#34;../../class/04-class_files/anim_real_grid.gif&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.&#34; width=&#34;90%&#34; /&gt;&lt;img src=&#34;../../class/04-class_files/mosaic_boroughs_spatial.png&#34; alt=&#34;Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 10: Mosaic plots of vehicle type and injury severity for London Boroughs with spatial arrangement.
 &lt;/p&gt;
@@ -8142,18 +8142,14 @@ Munzner, T. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Pet
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 4&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploratory data analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/04-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/04-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/04-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 5&lt;/td&gt;
@@ -8367,18 +8363,14 @@ Munzner, T. 2014. &lt;em&gt;Visualization Analysis and Design&lt;/em&gt;. AK Pet
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 4&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Exploratory data analysis&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
-                &lt;font color=&#34;f1f1f1&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/font&gt;
-            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./reading/04-reading/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;./class/04-class/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
+                    href=&#34;./homework/04-homework/&#34;&gt;
+                    &lt;i class=&#34;fas fa-laptop-code&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:20%;text-align:right&#34;&gt;Session 5&lt;/td&gt;
