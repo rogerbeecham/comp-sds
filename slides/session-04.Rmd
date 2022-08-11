@@ -47,34 +47,7 @@ Do so with Stats19 -- how detailed comparison across many categorical variables 
 ???
 
 Anything on EDA > Tukay > statistical graphics
----
 
-## EDA and statistical graphics
-
-.small-font[doi: `10.1111/gean.12338`
-]
-
-<img src="img/ga_twitter.png", width = 40%, style = "position:absolute; top: 32%; left: 10%;"> </img>
-???
-
----
-
-## EDA and statistical graphics
-
-<br>
-.small-font[doi: `10.1162/99608f92.3ab8a587`]
-
-
-.tiny-font[
-> EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual systems.
-
-
-> We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
-
-> Hullman and Gelman 2021
-]
-
----
 
 ---
 ## EDA and statistical graphics
@@ -157,7 +130,7 @@ Despite the heavy spread, the distribution of casualty_age is right-skewed, and 
 
  Reasonably large number of observations needed due to the smoothing function it is possible to generate a density plot that suggests nonsensical values (e.g. negative ages in this case if I hadn’t censored the plot range).
 
-Boxplots encode the statistical properties directly.
+Boxplots encode the statistical properties directly but introduce hard borders.
 
 ---
 
@@ -223,7 +196,10 @@ show contingency table
 .small-font[
 * Show deviation from expectation
 ]
-
+--
+.small-font[
+* *+ Check for uncertainty*
+]
 
 ???
 
@@ -285,6 +261,63 @@ Modelling for expected behaviour helps with pattern identification.
 ???
 Emphasise flexibility
 
+---
+## EDA workflow
+
+
+.small-font[
+* Expose pattern
+]
+
+
+.small-font[
+* Model an expectation derived from pattern
+]
+
+
+.small-font[
+* Show deviation from expectation
+]
+
+.small-font[
+* *+ Check for uncertainty*
+]
+
+???
+
+Attention of vis community
+---
+
+## EDA workflow
+
+
+
+ <img src = "./img/harvard_challenges_eda.png", width = 20%, style = "position:absolute; top: 22%; left: 10%;"></img>
+
+<br><br><br>
+
+.tiny-font[
+> EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual systems.
+
+
+> We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+
+> Hullman and Gelman 2021
+]
+
+.tiny-font[doi: `10.1162/99608f92.3ab8a587`]
+
+---
+
+
+
+## EDA workflow
+
+.small-font[doi: `10.1111/gean.12338`
+]
+
+<img src="img/ga_twitter.png", width = 40%, style = "position:absolute; top: 32%; left: 10%;"> </img>
+???
 ---
 
 ## Comparison
