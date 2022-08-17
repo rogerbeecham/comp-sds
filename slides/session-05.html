@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Exploring spatial networks</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roger Beecham" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="slides-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, title-slide
+
+# Exploring spatial networks
+### Roger Beecham
+### <p>12 Aug 2022</p>
+<code>roger-beecham.com/comp-sds</code>
+
+---
+
+
+
+
+
+## Network data : nodes
+
+&lt;img src = "../class/05-class_files/node.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+Special class of data used to represent things (entities) and how they relate to one another.
+
+Nodes -- entities -- bikeshare stations, airports, authors
+
+---
+
+
+## Network data : nodes
+
+&lt;img src = "../class/05-class_files/node-size.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+Here's a layout of nodes in 2D, sized according number of connections.
+
+---
+
+
+## Network data : edges
+
+&lt;img src = "../class/05-class_files/node-edge.png", width = 50%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+* Edges -- connections -- bikeshare trips, flights, (co)authorship
+* This is graph layout in two dimensions -- Nodes are positioned such that those sharing greater connection – edges with greater weights (frequencies) – are closer than those that are less well-connected – that do not share edges with such large weights. Edges are drawn as lines connecting nodes.
+
+---
+
+##  OD data : nodes
+
+&lt;img src = "../class/05-class_files/node-spatial.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+Origin-Destination network data:
+* Nodes -- entities -- origin (O) and destination (D) locations -- they have an inherent 2D position
+
+
+---
+
+## OD data : nodes
+
+&lt;img src = "../class/05-class_files/node-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+
+---
+
+## OD data : edges (flows)
+
+&lt;img src = "../class/05-class_files/node-edge-spatial-map.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+* Edges -- connections -- flows linking OD locations
+---
+
+## OD data : directed edges (flows)
+
+&lt;img src = "../class/05-class_files/node-edge-spatial-map-bezier.png", width = 60%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+&lt;img src = "../class/05-class_files/bezier-legend.png", width = 10%, style = "position:absolute; top: 85%; left: 72%;"&gt;&lt;/img&gt;
+
+???
+
+* Edges -- are directed.
+* Problems with design -- layout fine, but occlusion/hairball effect.
+* Salience bias of longer flows hides interesting local structure
+* Can we conclude much about the geog of travel to work from this.
+---
+
+
+## OD data : matrix
+
+--
+
+&lt;img src = "../class/05-class_files/matrix-all.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+
+???
+
+There is some order -- ordered by frequency
+---
+
+## OD data : matrix
+
+&lt;img src = "../class/05-class_files/matrix-same-removed.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+Dominant workplace boroughs ... isolated larger numbers
+
+---
+
+
+## OD data : matrix
+
+&lt;img src = "../class/05-class_files/matrix-local.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+Local scaling column-wise (destination-wise)
+
+---
+
+## OD data : matrix (spatially arranged)
+
+&lt;img src = "../class/05-class_files/matrix-selected.png", width = 35%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+--
+
+&lt;img src = "../class/05-class_files/matrix-reordered-d.png", width = 30%, style = "position:absolute; top: 20%; left: 50%;"&gt;&lt;/img&gt;
+
+--
+
+&lt;img src = "../class/05-class_files/matrix-reordered-o.png", width = 30%, style = "position:absolute; top: 59%; left: 50%;"&gt;&lt;/img&gt;
+---
+
+
+## OD data : OD map
+
+&lt;img src = "../class/05-class_files/grid-grid.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+---
+
+## OD data : OD map
+
+&lt;img src = "../class/05-class_files/d-od-map-global.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+???
+
+Go to h-w pages
+
+---
+
+## OD data : OD map
+
+&lt;img src = "../class/05-class_files/d-od-map-local.png", width = 55%, style = "position:absolute; top: 20%; left: 10%;"&gt;&lt;/img&gt;
+
+---
+
+## Example analysis
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"slideNumberFormat": ""
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

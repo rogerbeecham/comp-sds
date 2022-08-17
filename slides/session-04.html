@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Exploratory data analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roger Beecham" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="slides-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, title-slide
+
+# Exploratory data analysis
+### Roger Beecham
+### <p>11 Aug 2022</p>
+<code>roger-beecham.com/comp-sds</code>
+
+---
+
+
+
+
+???
+Last session : heavy conceptual content
+
+EDA : more practical
+
+EDA : expose properties and structure of a dataset, and from here suggest directions for analytic inquiry.
+
+In an EDA, relationships are quickly inferred, anomalies labelled, assumptions tested and new hypotheses and ideas are formulated
+
+Do so with Stats19 -- how detailed comparison across many categorical variables can be effected using colour, layout and statistical computation
+
+---
+
+## EDA and statistical graphics
+
+.small-font[
+&gt; The simple graph has brought more information to the data analyst’s mind than any other device.
+&gt;
+&gt; John Tukay
+]
+
+???
+
+Anything on EDA &gt; Tukay &gt; statistical graphics
+
+
+---
+## EDA and statistical graphics
+
+.small-font[
+Two (initial) goals that EDA should address:]
+--
+.small-font[
+1. What type of **variation** occurs **within** variables of a dataset?
+2. What type of **covariation** occurs **between** variables of a dataset?
+]
+
+???
+
+Exploring structure and relationships
+
+---
+
+## EDA and statistical graphics
+
+.xtiny-font[
+&lt;table&gt;
+&lt;caption&gt;&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Measurement &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Statistics &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Chart idiom &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="3"&gt;&lt;td colspan="3" style="border-bottom: 0px solid;"&gt;Within-variable variation&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; mode | entropy &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; bar charts, dot plots ... &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; median | percentile &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; bar charts, dot plots ... &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Continuous &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; mean | variance &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; histograms, box plots, density plots ... &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="3"&gt;&lt;td colspan="3" style="border-bottom: 0px solid;"&gt;Between-variable variation&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Nominal &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; contingency tables &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; mosaic/spine plots ... &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Ordinal &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; rank correlation &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; slope/bump charts ... &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;padding-left: 2em;width: 8em; " indentlevel="1"&gt; Continuous &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; correlation &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; scatterplots, parallel coordinate plots ... &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+???
+
+That there are stats and graohics for doing those things
+
+---
+
+## Variation within continuous variables
+
+&lt;img src="../class/04-class_files/univariate-plots.png" width="60%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+???
+
+ *strip-plot* :
+ x-position, random vertical perturbation.
+ Scale poorly, but no need to impose an aggregation.
+ Location of the distribution – denser dots towards 20-25 age range – but also degree of spread across the age values.
+
+*Histograms* partition continuous variables into equal-range bins.
+Give distributions a “shape” that is expressive.
+Easy to identify location of a distribution and estimate relative densities between different parts of the distribution.
+
+Despite the heavy spread, the distribution of casualty_age is right-skewed, and we’d expect this given the location of the mean (36 years) relative to the median (33 years).
+
+ artificial edge-effects around the bins. Density plots overcome this -- smoothed histograms. Kernel density estimation (KDE) to show the probability density function of a variable – the relative amount of probability attached to each value of casualty_age.
+
+ Overall “shape” to the distribution can be immediately derived.
+
+ It is also possible to infer statistical properties: the mode of the distribution (the highest density), the mean (by visual averaging) and median (finding the midpoint of the area under the curve).
+
+ Reasonably large number of observations needed due to the smoothing function it is possible to generate a density plot that suggests nonsensical values (e.g. negative ages in this case if I hadn’t censored the plot range).
+
+Boxplots encode the statistical properties directly but introduce hard borders.
+
+---
+
+## Variation within continuous variables
+
+&lt;img src="../class/04-class_files/boxplot-by-class.png" width="60%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+???
+
+Pedestrians younger than the drivers hitting them, except for bikes. But notice differences in spread between drivers and pedestrians/
+
+---
+
+## Variation within and between categorical variables
+
+???
+
+Are crashes involving certain vehicle associated with more/less severe injury than others?
+
+show contingency table
+
+--
+&lt;img src = "../class/04-class_files/bars-title.png", width = 25%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
+
+&lt;img src = "../class/04-class_files/bars-freq.png", width = 25%, style = "position:absolute; top: 33%; left: 10%;"&gt;&lt;/img&gt;
+
+
+
+---
+
+## Variation within and between categorical variables
+
+&lt;img src = "../class/04-class_files/bars-assoc-title.png", width = 25%, style = "position:absolute; top: 25%; left: 10%;"&gt;&lt;/img&gt;
+
+&lt;img src = "../class/04-class_files/bars-assoc-stacked.png", width = 25%, style = "position:absolute; top: 32%; left: 10%;"&gt;&lt;/img&gt;
+
+--
+
+&lt;img src = "../class/04-class_files/bars-assoc-prop.png", width = 22%, style = "position:absolute; top: 32%; left: 35.5%;"&gt;&lt;/img&gt;
+
+--
+
+&lt;img src = "../class/04-class_files/bars-assoc-mosaic.png", width = 26%, style = "position:absolute; top: 32%; left: 58%;"&gt;&lt;/img&gt;
+
+
+---
+
+## EDA workflow
+--
+
+.small-font[
+* Expose pattern
+]
+--
+
+.small-font[
+* Model an expectation derived from pattern
+]
+
+--
+.small-font[
+* Show deviation from expectation
+]
+--
+.small-font[
+* *+ Check for uncertainty*
+]
+
+???
+
+Refer back to plots in previous slides
+
+---
+## EDA workflow
+
+.pull-left[.small-font[
+**Expectation**
+
+*Casualty severity does not vary depending on vehicle type*
+]]
+
+--
+
+.pull-right[.xtiny-font[
+&lt;table&gt;
+&lt;caption&gt;&lt;/caption&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="empty-cells: hide;border-bottom:hidden;" colspan="1"&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Observed&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Expected&lt;/div&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Signed chi-scores&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Vehicle type &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; KSI &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Slight &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Row Total &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; KSI Exp &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Slight Exp &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; KSI Resid &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Slight Resid &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Car &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 42305 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 137924 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 180229 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 43195 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 137034 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -4.28 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.40 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Van &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3786 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11422 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 15208 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3645 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11563 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.34 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.31 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Taxi &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2580 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9188 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 11768 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2820 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8948 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -4.53 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.54 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Bus &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2951 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8425 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 11376 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2726 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8650 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -2.41 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Motorcycle &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2137 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7102 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 9239 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2214 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7025 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.64 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.92 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; HGV &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2030 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3195 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 5225 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1252 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3973 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21.98 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -12.34 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Other &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1096 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3302 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 4398 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1054 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3344 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.29 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.73 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Bicycle &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1033 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3184 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 4217 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1011 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3206 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.70 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.39 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Column Total &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 57918 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; 183742 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;font-weight: bold;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;"&gt; NA &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]]
+
+???
+
+Chi-square residuals
+
+---
+
+## EDA workflow
+
+
+&lt;img src = "../class/04-class_files/borough-freqs-resids-title.png", width = 43%, style = "position:absolute; top: 21.5%; left: 8%;"&gt;&lt;/img&gt;
+--
+&lt;img src = "../class/04-class_files/borough-freqs-resids-day-obs.png", width = 18%, style = "position:absolute; top: 27%; left: 8%;"&gt;&lt;/img&gt;
+
+???
+
+Dominant pattern - but difficult to see variation net of this.
+
+--
+ &lt;img src = "../class/04-class_files/borough-freqs-resids-day.png", width = 10.35%, style = "position:absolute; top: 27%; left: 26.5%;"&gt;&lt;/img&gt;
+
+--
+
+ &lt;img src = "../class/04-class_files/borough-freqs-resids-period-obs.png", width = 7%, style = "position:absolute; top: 27%; left: 37.3%;"&gt;&lt;/img&gt;
+
+???
+
+Is the daytime pattern always consistent?
+Modelling for expected behaviour helps with pattern identification.
+
+--
+
+ &lt;img src = "../class/04-class_files/borough-freqs-resids-period-resids.png", width = 6.4%, style = "position:absolute; top: 27%; left: 44.7%;"&gt;&lt;/img&gt;
+
+???
+Emphasise flexibility
+
+---
+## EDA workflow
+
+
+.small-font[
+* Expose pattern
+]
+
+
+.small-font[
+* Model an expectation derived from pattern
+]
+
+
+.small-font[
+* Show deviation from expectation
+]
+
+.small-font[
+* *+ Check for uncertainty*
+]
+
+???
+
+Attention of vis community
+---
+
+## EDA workflow
+
+
+
+ &lt;img src = "./img/harvard_challenges_eda.png", width = 20%, style = "position:absolute; top: 22%; left: 10%;"&gt;&lt;/img&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.tiny-font[
+&gt; EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual systems.
+
+
+&gt; We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+
+&gt; Hullman and Gelman 2021
+]
+
+.tiny-font[doi: `10.1162/99608f92.3ab8a587`]
+
+---
+
+
+
+## EDA workflow
+
+.small-font[doi: `10.1111/gean.12338`
+]
+
+&lt;img src="img/ga_twitter.png", width = 40%, style = "position:absolute; top: 32%; left: 10%;"&gt; &lt;/img&gt;
+???
+---
+
+## Comparison
+
+???
+
+EDA should invite comparison -- we can achieve this with out vis design.
+--
+#### Juxtaposition
+.small-font[
+Laying the data items to be compared side-by-side. [[example](https://www.roger-beecham.com/comp-sds/class/03-class/#faceting-by-region-3)].
+]
+
+---
+
+## Comparison
+
+#### Juxtaposition
+.small-font[
+Laying the data items to be compared side-by-side. [[example](https://www.roger-beecham.com/comp-sds/class/03-class/#faceting-by-region-3)].
+]
+
+#### Superimposition
+.small-font[
+Laying the data items to be compared on top of each other on the same coordinate space. [[example](https://www.roger-beecham.com/comp-sds/class/02-class/#manipulate-dates-with-lubridate-1)].
+]
+
+---
+
+## Comparison
+
+#### Juxtaposition
+.small-font[
+Laying the data items to be compared side-by-side. [[example](https://www.roger-beecham.com/comp-sds/class/03-class/#faceting-by-region-3)].
+]
+
+#### Superimposition
+.small-font[
+Laying the data items to be compared on top of each other on the same coordinate space. [[example](https://www.roger-beecham.com/comp-sds/class/02-class/#manipulate-dates-with-lubridate-1)].
+]
+
+#### Direct encoding
+
+.small-font[
+Computing some comparison values and encoding those values explicitly. [[example](https://www.roger-beecham.com/comp-sds/class/04-class/#fig:borough-freqs-resids)].
+]
+
+???
+
+Back to notes
+
+---
+
+## Comparison: juxtaposition
+
+&lt;img src="../class/04-class_files/mosaic_harrow_westminster.png" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+
+
+## Comparison: juxtaposition
+
+&lt;img src = "../class/04-class_files/mosaic_boroughs-title.png", width = 55%, style = "position:absolute; top: 22%; left: 8%;"&gt;&lt;/img&gt;
+
+&lt;img src = "../class/04-class_files/mosaic_boroughs-1.png", width = 55%, style = "position:absolute; top: 28%; left: 8%;"&gt;&lt;/img&gt;
+
+---
+
+## Comparison: juxtaposition
+
+&lt;img src = "../class/04-class_files/mosaic_boroughs-title.png", width = 55%, style = "position:absolute; top: 22%; left: 8%;"&gt;&lt;/img&gt;
+
+&lt;img src = "../class/04-class_files/mosaic_boroughs-2.png", width = 55%, style = "position:absolute; top: 28%; left: 8%;"&gt;&lt;/img&gt;
+
+???
+
+Preattentive
+---
+
+## Comparison: juxtaposition
+
+&lt;img src = "../class/04-class_files/anim_real_grid.gif", width = 55%, style = "position:absolute; top: 22%; left: 8%;"&gt;&lt;/img&gt;
+
+???
+
+Layout
+---
+
+## Comparison: juxtaposition
+
+&lt;img src = "../class/04-class_files/mosaic_boroughs_spatial.png", width = 50%, style = "position:absolute; top: 22%; left: 8%;"&gt;&lt;/img&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"slideNumberFormat": ""
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
